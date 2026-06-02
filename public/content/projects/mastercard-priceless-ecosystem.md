@@ -1,15 +1,22 @@
 ---
 id: 6
-title: "Governing a Priceless High-Volume Ecosystem"
-slug: "mastercard-priceless-ecosystem"
-client: "Mastercard"
-role: "Senior Art Director"
-category: "Advertising"
-tags: ["Brand Governance", "High-Volume Operations", "Purpose-Driven", "Creative Systems"]
+title: Governing a Priceless High-Volume Ecosystem
+slug: mastercard-priceless-ecosystem
+client: Mastercard
+role: Senior Art Director
+category: Advertising
+tags:
+  - Brand Governance
+  - High-Volume Operations
+  - Purpose-Driven
+  - Creative Systems
 order: 4
-hero: "https://res.cloudinary.com/dktild7hr/image/upload/v1779716098/Screenshot_2026-05-25_at_10.33.59_d0lso8.png"
-aspect_ratio: "9:4"
-description: "Sustaining visual excellence and driving innovation across dozens of verticals to surpass VISA on the main brand tracker index."
+hero: >-
+  https://res.cloudinary.com/dktild7hr/image/upload/v1779716098/Screenshot_2026-05-25_at_10.33.59_d0lso8.png
+aspect_ratio: '9:4'
+description: >-
+  Sustaining visual excellence and driving innovation across dozens of verticals
+  to surpass VISA on the main brand tracker index.
 ---
 
 Managing a legacy brand like Mastercard in a hyper-competitive financial landscape requires more than good ideas — it demands relentless operational consistency. The challenge was to sustain the iconic "Priceless" positioning across a massive volume of simultaneous verticals: from major sponsorships (Copa America, Carnival) and LatAm Affluent campaigns, to rapid-response tactical promos. The operation needed bulletproof visual and strategic governance to prevent brand fragmentation while maintaining high-end craft.

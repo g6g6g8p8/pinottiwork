@@ -1,15 +1,21 @@
 ---
 id: 1
-title: "Architecting a Global #1 Content Ecosystem"
-slug: "mary-kay-global-ecosystem"
-client: "Mary Kay Brazil"
-role: "Creative Director & Head of Creative Operations"
-category: "Content"
-tags: ["DesignOps", "Creative Systems", "Full-Funnel", "Content Machine"]
+title: 'Architecting a Global #1 Content Ecosystem'
+slug: mary-kay-global-ecosystem
+client: Mary Kay Brazil
+role: Creative Director & Head of Creative Operations
+category: Content
+tags:
+  - DesignOps
+  - Creative Systems
+  - Full-Funnel
+  - Content Machine
 order: 1
-hero: "https://res.cloudinary.com/dktild7hr/image/upload/v1779638197/26_htziiz.png"
-aspect_ratio: "9:4"
-description: "Escaping the reactive 'always-on' loop to build a full-funnel machine that propelled Mary Kay Brazil to the #1 TikTok account globally."
+hero: 'https://res.cloudinary.com/dktild7hr/image/upload/v1779638197/26_htziiz.png'
+aspect_ratio: '9:4'
+description: >-
+  Escaping the reactive 'always-on' loop to build a full-funnel machine that
+  propelled Mary Kay Brazil to the #1 TikTok account globally.
 ---
 
 Mary Kay Brasil needed to rejuvenate its brand perception and connect with the Gen-Z audience without diluting the rigor of a global beauty powerhouse. The existing production model was centralized, slow, and expensive — locked in a reactive cycle that was filling the content calendar but failing to build an actual community or drive agile performance.

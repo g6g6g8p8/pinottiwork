@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
+import { useServerFn } from '@tanstack/react-start';
 import { parseMarkdownContent, type ContentBlock } from '../lib/parseMarkdown';
+import { getProject } from '../lib/content.functions';
 
 export interface Project {
   id: number;
@@ -20,24 +22,23 @@ export function useProject(slug: string | undefined) {
   const [project, setProject] = useState<Project | null>(null);
   const [content, setContent] = useState<ContentBlock[] | null>(null);
   const [loading, setLoading] = useState(true);
+  const fetchProject = useServerFn(getProject);
 
   useEffect(() => {
     if (!slug) { setLoading(false); return; }
     setLoading(true);
 
     let cancelled = false;
-    async function load() {
+    (async () => {
       try {
-        const res = await fetch(`/content/projects/${slug}.json`);
-        if (!res.ok) {
-          if (!cancelled) { setProject(null); setLoading(false); }
-          return;
-        }
-        const { data, content: body } = await res.json();
-        const proj: Project = { ...(data as any), image_url: data.hero };
-        if (!cancelled) {
-          setProject(proj);
-          setContent(parseMarkdownContent(body));
+        const result = await fetchProject({ data: { slug } });
+        if (cancelled) return;
+        if (!result) {
+          setProject(null);
+          setContent(null);
+        } else {
+          setProject(result.data as Project);
+          setContent(parseMarkdownContent(result.content));
         }
       } catch (e) {
         console.error('Error loading project:', e);
@@ -45,10 +46,9 @@ export function useProject(slug: string | undefined) {
       } finally {
         if (!cancelled) setLoading(false);
       }
-    }
-    load();
+    })();
     return () => { cancelled = true; };
-  }, [slug]);
+  }, [slug, fetchProject]);
 
   return { project, content, loading };
 }

@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import ProjectDetail from "../components/portfolio/ProjectDetail";
-import { getProjectMeta } from "../lib/project-meta.functions";
+import { getProjectMeta } from "../lib/content.functions";
 
 const SITE = "https://pinottiwork.lovable.app";
 

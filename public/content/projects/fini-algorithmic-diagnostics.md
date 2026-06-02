@@ -1,15 +1,21 @@
 ---
 id: 2
-title: "Scaling Cultural Relevance Through Algorithmic Diagnostics"
-slug: "fini-algorithmic-diagnostics"
-client: "Fini"
-role: "Creative Director & Head of Creative Operations"
-category: "Content"
-tags: ["Data-Driven", "DesignOps", "VTR Optimization", "Creative Systems"]
+title: Scaling Cultural Relevance Through Algorithmic Diagnostics
+slug: fini-algorithmic-diagnostics
+client: Fini
+role: Creative Director & Head of Creative Operations
+category: Content
+tags:
+  - Data-Driven
+  - DesignOps
+  - VTR Optimization
+  - Creative Systems
 order: 4
-hero: "https://res.cloudinary.com/dktild7hr/image/upload/v1779713809/Image_hnvh8i.gif"
-aspect_ratio: "4:3"
-description: "Pivoting an agile production pipeline using VTR diagnostics to shatter historical engagement KPIs without inflating studio budgets."
+hero: 'https://res.cloudinary.com/dktild7hr/image/upload/v1779713809/Image_hnvh8i.gif'
+aspect_ratio: '4:3'
+description: >-
+  Pivoting an agile production pipeline using VTR diagnostics to shatter
+  historical engagement KPIs without inflating studio budgets.
 ---
 
 Fini, a dominant brand in the candy industry, needed to maintain a massive cultural footprint on platforms like TikTok and Instagram. Producing high volumes of content blindly is a fast track to operational burnout and diluted brand equity. The challenge: sustain an aggressive output schedule and dynamic seasonal campaigns without massive external studio budgets, while actively improving audience retention.

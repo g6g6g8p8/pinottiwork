@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router';
 import type {} from '@tanstack/react-start';
-import { readFile } from 'node:fs/promises';
+import { readdir } from 'node:fs/promises';
 import path from 'node:path';
 
 const BASE_URL = 'https://pinottiwork.lovable.app';
@@ -11,9 +11,9 @@ export const Route = createFileRoute('/sitemap.xml')({
       GET: async () => {
         let slugs: string[] = [];
         try {
-          const file = path.join(process.cwd(), 'public', 'data', 'projects.json');
-          const raw = await readFile(file, 'utf-8');
-          slugs = (JSON.parse(raw) as Array<{ slug: string }>).map((p) => p.slug).filter(Boolean);
+          const dir = path.join(process.cwd(), 'public', 'content', 'projects');
+          const files = await readdir(dir);
+          slugs = files.filter((f) => f.endsWith('.md')).map((f) => f.replace(/\.md$/, ''));
         } catch {
           slugs = [];
         }

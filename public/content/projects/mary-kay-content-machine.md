@@ -1,15 +1,20 @@
 ---
 id: 12
-title: "Scaling a Social-First Content Machine"
-slug: "mary-kay-content-machine"
-client: "Mary Kay"
-role: "Creative Director"
-category: "Content"
-tags: ["Content", "Social Strategy", "Operations"]
+title: Scaling a Social-First Content Machine
+slug: mary-kay-content-machine
+client: Mary Kay
+role: Creative Director
+category: Content
+tags:
+  - Content
+  - Social Strategy
+  - Operations
 order: 2
-hero: "https://i.imgur.com/dwbgiNO.png"
-aspect_ratio: "9:4"
-description: "How a systemic overhaul turned Mary Kay Brasil into the #1 TikTok account in the brand's global network."
+hero: 'https://i.imgur.com/dwbgiNO.png'
+aspect_ratio: '9:4'
+description: >-
+  How a systemic overhaul turned Mary Kay Brasil into the #1 TikTok account in
+  the brand's global network.
 ---
 
 Mary Kay Brasil needed to rejuvenate its brand perception and connect with the Gen-Z audience while maintaining the rigor of a global beauty powerhouse. But the existing production model was centralized, slow, and expensive — locked in a reactive always-on cycle that was filling the calendar without building a community.
