@@ -11,43 +11,40 @@ export default function CareerWall() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-80px' }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
-      aria-label="Brands and agencies"
+      aria-label="Career highlights"
       className="py-2"
     >
-      <p className="text-[11px] font-semibold uppercase tracking-[.12em] text-foreground/40 mb-4 px-1">
-        Worked at
-      </p>
+      <h3 className="text-[14px] leading-[17px] font-medium opacity-60 mb-4 px-1">
+        CAREER HIGHLIGHTS
+      </h3>
 
-      <div
-        className="
-          grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 gap-2 md:gap-3
-        "
-      >
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-premium-md">
         {about.career_highlights.map((h, i) => (
           <motion.div
             key={h.id}
-            initial={{ opacity: 0, scale: 0.92 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-40px' }}
-            transition={{ duration: 0.35, delay: i * 0.04, ease: 'easeOut' }}
+            transition={{ duration: 0.4, delay: i * 0.05, ease: 'easeOut' }}
             className="
-              group relative aspect-square rounded-sf-md overflow-hidden
-              bg-foreground/5 border border-foreground/5
+              flex items-start gap-3 p-4 rounded-sf-xl
+              bg-card border border-foreground/5
               hover:border-foreground/15 transition-colors
             "
-            title={`${h.company} — at ${h.role}`}
           >
             <img
               src={h.logo_url}
               alt={h.company}
               loading="lazy"
-              className="
-                absolute inset-0 w-full h-full object-cover
-                grayscale opacity-60
-                group-hover:grayscale-0 group-hover:opacity-100
-                transition-all duration-300
-              "
+              className="w-10 h-10 rounded-[8px] bg-foreground/5 object-cover flex-shrink-0"
             />
+            <div className="flex-1 min-w-0">
+              <div className="text-[15px] leading-[18px] font-semibold truncate">{h.company}</div>
+              <div className="text-[12px] leading-[15px] text-foreground/60 mb-1">at {h.role}</div>
+              <p className="text-[12px] leading-[17px] text-foreground/70 line-clamp-2">
+                {h.period}
+              </p>
+            </div>
           </motion.div>
         ))}
       </div>

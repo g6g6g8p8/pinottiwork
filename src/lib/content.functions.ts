@@ -153,6 +153,11 @@ export interface CareerHighlight {
   order: number;
 }
 
+export interface AwardItem {
+  name: string;
+  logo: string;
+}
+
 export interface AboutData {
   name: string;
   email: string;
@@ -161,7 +166,7 @@ export interface AboutData {
   short_bio: string;
   what_i_do: string;
   brands: string[];
-  awards: string[];
+  awards: AwardItem[];
   career_highlights: CareerHighlight[];
 }
 
@@ -196,7 +201,9 @@ export const getAbout = createServerFn({ method: 'GET' }).handler(
         short_bio: (bio || '').trim(),
         what_i_do: data.what_i_do || '',
         brands: data.brands || [],
-        awards: data.awards || [],
+        awards: ((data.awards as any[]) || []).map((a: any) =>
+          typeof a === 'string' ? { name: a, logo: '' } : { name: a?.name || '', logo: a?.logo || '' }
+        ),
         career_highlights: (highlights as any[])
           .map((h: any, i: number) => ({
             id: h.id || i,

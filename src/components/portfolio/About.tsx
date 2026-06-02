@@ -137,9 +137,19 @@ export default function About() {
           <div className="space-y-5">
             <h3 className="text-[14px] leading-[17px] font-medium opacity-60">AWARDS</h3>
             <div className="bg-card rounded-2xl p-6">
-              <div className="space-y-2">
+              <div className="space-y-3">
                 {about.awards.map((a, i) => (
-                  <p key={i} className="text-body">{a}</p>
+                  <div key={i} className="flex items-center gap-3">
+                    {a.logo && (
+                      <img
+                        src={a.logo}
+                        alt={a.name}
+                        loading="lazy"
+                        className="w-8 h-8 object-contain flex-shrink-0"
+                      />
+                    )}
+                    <p className="text-body">{a.name}</p>
+                  </div>
                 ))}
               </div>
             </div>
