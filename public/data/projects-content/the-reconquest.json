@@ -1,0 +1,109 @@
+[
+  {
+    "id": "8e7ba48e-937b-46a1-8ef9-c37e6ffce6cc",
+    "type": "text",
+    "content": {
+      "text": "In a groundbreaking campaign by Mitsubishi Motors and agency Tech and Soul, the L200 Triton reconquered the legendary Fabio Rego Tunnel, an abandoned and flooded train passage in Jaguariaiva, Parana. Spanning 900 meters with water depths reaching up to 1 meter, the tunnel became the stage for a daring challenge: a world-first skimboarding feat by two-time world champion Lucas Fink."
+    },
+    "order": 1
+  },
+  {
+    "id": "1758ffd9-7594-4c7c-aa74-26425d5247b2",
+    "type": "video",
+    "content": {
+      "video": {
+        "url": "https://player.vimeo.com/video/622895482?h=99f788aaef",
+        "title": "First Impressions"
+      }
+    },
+    "order": 2
+  },
+  {
+    "id": "cb5e3667-16ba-4fb1-a7d9-67bbf04a77d4",
+    "type": "text",
+    "content": {
+      "text": "Renowned action photographer Pablo Vaz captured the event, bringing his expertise in extreme sports to highlight the synergy between athlete and machine. The production was managed by Sector One, ensuring seamless execution of this ambitious project."
+    },
+    "order": 4
+  },
+  {
+    "id": "e8c325a9-10f0-4651-afb0-6fef11092b4e",
+    "type": "gallery",
+    "content": {
+      "gallery": [
+        "https://github.com/g6g6g8p8/project/blob/1200/src/assets/the-reconquest/carrossel-1/1.jpg?raw=true",
+        "https://github.com/g6g6g8p8/project/blob/1200/src/assets/the-reconquest/carrossel-1/2.jpg?raw=true",
+        "https://github.com/g6g6g8p8/project/blob/1200/src/assets/the-reconquest/carrossel-1/3.jpg?raw=true",
+        "https://github.com/g6g6g8p8/project/blob/1200/src/assets/the-reconquest/carrossel-1/4.jpg?raw=true",
+        "https://github.com/g6g6g8p8/project/blob/1200/src/assets/the-reconquest/carrossel-1/5.jpg?raw=true"
+      ]
+    },
+    "order": 5
+  },
+  {
+    "id": "b92d3973-6ebb-436e-a5e2-4cebdc55cb29",
+    "type": "video",
+    "content": {
+      "video": {
+        "url": "https://player.vimeo.com/video/619980294?h=fd8b896854",
+        "title": "Trailer"
+      }
+    },
+    "order": 6
+  },
+  {
+    "id": "000a6507-bf20-4051-b91b-60a69f824c2a",
+    "type": "text",
+    "content": {
+      "text": "Supported by wakeboarding athletes Pedro Zucki and Gustavo Reichert, the action merged human skill with the unmatched capability of the L200 Triton and Eclipse Cross. The Reconquest also launched Mitsubishi's new 4You4Challenge platform, dedicated to empowering athletes to push the limits of what is possible."
+    },
+    "order": 7
+  },
+  {
+    "id": "1406ea2a-e7ec-44db-8d53-d2e46e6b0ab6",
+    "type": "gallery",
+    "content": {
+      "gallery": [
+        "https://github.com/g6g6g8p8/project/blob/1200/src/assets/the-reconquest/carrossel-2/1.jpg?raw=true",
+        "https://github.com/g6g6g8p8/project/blob/1200/src/assets/the-reconquest/carrossel-2/2.jpg?raw=true",
+        "https://github.com/g6g6g8p8/project/blob/1200/src/assets/the-reconquest/carrossel-2/3.jpg?raw=true",
+        "https://github.com/g6g6g8p8/project/blob/1200/src/assets/the-reconquest/carrossel-2/4.jpg?raw=true",
+        "https://github.com/g6g6g8p8/project/blob/1200/src/assets/the-reconquest/carrossel-2/5.jpg?raw=true",
+        "https://github.com/g6g6g8p8/project/blob/1200/src/assets/the-reconquest/carrossel-2/6.jpg?raw=true"
+      ]
+    },
+    "order": 8
+  },
+  {
+    "id": "5bef2200-0262-4e33-9c1f-4ed6ff8c4ffb",
+    "type": "video",
+    "content": {
+      "video": {
+        "url": "https://www.youtube.com/embed/Iwsu4Uv7y6s?si=o1Ru-BtF0oknCl8k",
+        "title": "Director's Cut"
+      }
+    },
+    "order": 9
+  },
+  {
+    "id": "b29f1aef-bd84-43af-9bb0-ee2a3d517655",
+    "type": "gallery",
+    "content": {
+      "gallery": [
+        "https://github.com/g6g6g8p8/project/blob/1200/src/assets/the-reconquest/_VAZ7713.png?raw=true",
+        "https://github.com/g6g6g8p8/project/blob/1200/src/assets/the-reconquest/_VAZ8052-Editar.jpg?raw=true",
+        "https://github.com/g6g6g8p8/project/blob/1200/src/assets/the-reconquest/_VAZ7945.jpg?raw=true",
+        "https://github.com/g6g6g8p8/project/blob/1200/src/assets/the-reconquest/_VAZ7931.jpg?raw=true"
+      ]
+    },
+    "order": 10
+  },
+  {
+    "id": "81ba0a95-9e38-47c6-861d-2841f8477a1d",
+    "type": "text",
+    "content": {
+      "text": "An extraordinary blend of performance, adventure, and creativity."
+    },
+    "order": 11
+  }
+]

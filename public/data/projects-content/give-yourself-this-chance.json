@@ -1,0 +1,48 @@
+[
+  {
+    "id": "fe127346-77eb-48f8-a3b1-acb8d5ee1126",
+    "type": "text",
+    "content": {
+      "text": "Mitsubishi Motors and Tech and Soul redefined versatility with the L200 Triton Sport in the Give Yourself This Chance campaign. Set to Rita Lee's iconic track, the film breaks stereotypes, showing women, young drivers, and families embracing the L200 as the perfect companion for city streets, countryside escapes, and beach adventures alike."
+    },
+    "order": 1
+  },
+  {
+    "id": "92782b9b-1568-45fc-808b-71b27fa66f43",
+    "type": "video",
+    "content": {
+      "video": {
+        "url": "https://player.vimeo.com/video/840171784",
+        "title": "60s Advert"
+      }
+    },
+    "order": 2
+  },
+  {
+    "id": "2a44e9e0-884e-4fb8-a373-ed62361f4c71",
+    "type": "text",
+    "content": {
+      "text": "With a powerful call to action, the campaign highlights how advanced technology and safety make this pickup more than just off-road."
+    },
+    "order": 3
+  },
+  {
+    "id": "4b9a023c-8412-4c79-8418-c70da9917763",
+    "type": "gallery",
+    "content": {
+      "gallery": [
+        "https://res.cloudinary.com/dktild7hr/video/upload/v1741707003/2_bvkglq.mov",
+        "https://res.cloudinary.com/dktild7hr/video/upload/v1741707004/3_zwzql7.mov"
+      ]
+    },
+    "order": 4
+  },
+  {
+    "id": "172d6554-dd3e-44da-9d0c-82c10f1b5e3a",
+    "type": "text",
+    "content": {
+      "text": "Spanning TV, OOH, and digital platforms, the message resonates with every lifestyle."
+    },
+    "order": 5
+  }
+]

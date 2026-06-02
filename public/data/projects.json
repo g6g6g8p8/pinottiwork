@@ -1,0 +1,159 @@
+[
+  {
+    "id": 1,
+    "title": "Architecting a Global #1 Content Ecosystem",
+    "slug": "mary-kay-global-ecosystem",
+    "client": "Mary Kay Brazil",
+    "role": "Creative Director & Head of Creative Operations",
+    "category": "Content",
+    "tags": [
+      "DesignOps",
+      "Creative Systems",
+      "Full-Funnel",
+      "Content Machine"
+    ],
+    "order": 1,
+    "hero": "https://res.cloudinary.com/dktild7hr/image/upload/v1779638197/26_htziiz.png",
+    "aspect_ratio": "9:4",
+    "description": "Escaping the reactive 'always-on' loop to build a full-funnel machine that propelled Mary Kay Brazil to the #1 TikTok account globally.",
+    "image_url": "https://res.cloudinary.com/dktild7hr/image/upload/v1779638197/26_htziiz.png",
+    "content_type": "text"
+  },
+  {
+    "id": 11,
+    "title": "Pink News",
+    "slug": "pink-news",
+    "client": "Mary Kay",
+    "role": "Creative Director",
+    "category": "Content",
+    "tags": [
+      "Advertising",
+      "Social Strategy"
+    ],
+    "order": 1,
+    "hero": "https://i.imgur.com/dwbgiNO.png",
+    "aspect_ratio": "4:3",
+    "description": "A bold newspaper ad turned into a viral digital campaign, earning global praise for Mary Kay Brasil.",
+    "image_url": "https://i.imgur.com/dwbgiNO.png",
+    "content_type": "text"
+  },
+  {
+    "id": 3,
+    "title": "Connecting Clients",
+    "slug": "connecting-clients",
+    "client": "Next IP",
+    "role": "Art Director",
+    "category": "Branding",
+    "tags": [],
+    "order": 2,
+    "hero": "https://i.imgur.com/uHszCZT.mp4",
+    "aspect_ratio": "4:3",
+    "description": "Adaptation is in their DNA, and innovation drives their brand forward.",
+    "image_url": "https://i.imgur.com/uHszCZT.mp4",
+    "content_type": "text"
+  },
+  {
+    "id": 12,
+    "title": "Scaling a Social-First Content Machine",
+    "slug": "mary-kay-content-machine",
+    "client": "Mary Kay",
+    "role": "Creative Director",
+    "category": "Content",
+    "tags": [
+      "Content",
+      "Social Strategy",
+      "Operations"
+    ],
+    "order": 2,
+    "hero": "https://i.imgur.com/dwbgiNO.png",
+    "aspect_ratio": "9:4",
+    "description": "How a systemic overhaul turned Mary Kay Brasil into the #1 TikTok account in the brand's global network.",
+    "image_url": "https://i.imgur.com/dwbgiNO.png",
+    "content_type": "text"
+  },
+  {
+    "id": 4,
+    "title": "Alternative Investments Platform",
+    "slug": "alternative-investments",
+    "client": "Jive Investments",
+    "role": "Art Director",
+    "category": "Branding",
+    "tags": [],
+    "order": 3,
+    "hero": "https://i.imgur.com/c5Is4jK.mp4",
+    "aspect_ratio": "4:3",
+    "description": "Storytelling, design and technology that redefined the Jive and Mauá experience.",
+    "image_url": "https://i.imgur.com/c5Is4jK.mp4",
+    "content_type": "text"
+  },
+  {
+    "id": 1,
+    "title": "The Reconquest",
+    "slug": "the-reconquest",
+    "client": "Mitsubishi Motors",
+    "role": "Art Director",
+    "category": "Branded Content",
+    "tags": [],
+    "order": 3,
+    "hero": "https://static.wixstatic.com/media/2925d5_2db42786c8134f379bd8d49d6404ffa1~mv2.jpg/v1/fill/w_1876,h_1250,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/2925d5_2db42786c8134f379bd8d49d6404ffa1~mv2.jpg",
+    "aspect_ratio": "4:3",
+    "description": "A skimboarding world champion reclaimed a flooded train tunnel, powered by the Mitsubishi L200 Triton.",
+    "image_url": "https://static.wixstatic.com/media/2925d5_2db42786c8134f379bd8d49d6404ffa1~mv2.jpg/v1/fill/w_1876,h_1250,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/2925d5_2db42786c8134f379bd8d49d6404ffa1~mv2.jpg",
+    "content_type": "text"
+  },
+  {
+    "id": 2,
+    "title": "Scaling Cultural Relevance Through Algorithmic Diagnostics",
+    "slug": "fini-algorithmic-diagnostics",
+    "client": "Fini",
+    "role": "Creative Director & Head of Creative Operations",
+    "category": "Content",
+    "tags": [
+      "Data-Driven",
+      "DesignOps",
+      "VTR Optimization",
+      "Creative Systems"
+    ],
+    "order": 4,
+    "hero": "https://res.cloudinary.com/dktild7hr/image/upload/v1779713809/Image_hnvh8i.gif",
+    "aspect_ratio": "4:3",
+    "description": "Pivoting an agile production pipeline using VTR diagnostics to shatter historical engagement KPIs without inflating studio budgets.",
+    "image_url": "https://res.cloudinary.com/dktild7hr/image/upload/v1779713809/Image_hnvh8i.gif",
+    "content_type": "text"
+  },
+  {
+    "id": 2,
+    "title": "Give yourself this chance",
+    "slug": "give-yourself-this-chance",
+    "client": "Mitsubishi Motors",
+    "role": "Art Director",
+    "category": "Advertising",
+    "tags": [],
+    "order": 4,
+    "hero": "https://res.cloudinary.com/dktild7hr/video/upload/v1741706287/destaque_r29tx5.mov",
+    "aspect_ratio": "4:3",
+    "description": "A pick-up truck is just for the countryside? Well, that's over.",
+    "image_url": "https://res.cloudinary.com/dktild7hr/video/upload/v1741706287/destaque_r29tx5.mov",
+    "content_type": "text"
+  },
+  {
+    "id": 6,
+    "title": "Governing a Priceless High-Volume Ecosystem",
+    "slug": "mastercard-priceless-ecosystem",
+    "client": "Mastercard",
+    "role": "Senior Art Director",
+    "category": "Advertising",
+    "tags": [
+      "Brand Governance",
+      "High-Volume Operations",
+      "Purpose-Driven",
+      "Creative Systems"
+    ],
+    "order": 4,
+    "hero": "https://res.cloudinary.com/dktild7hr/image/upload/v1779716098/Screenshot_2026-05-25_at_10.33.59_d0lso8.png",
+    "aspect_ratio": "9:4",
+    "description": "Sustaining visual excellence and driving innovation across dozens of verticals to surpass VISA on the main brand tracker index.",
+    "image_url": "https://res.cloudinary.com/dktild7hr/image/upload/v1779716098/Screenshot_2026-05-25_at_10.33.59_d0lso8.png",
+    "content_type": "text"
+  }
+]

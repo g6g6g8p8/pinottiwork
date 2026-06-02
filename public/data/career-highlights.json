@@ -1,0 +1,50 @@
+[
+  {
+    "id": 3,
+    "company": "Americanas.com",
+    "role": "WMcCANN",
+    "period": "Innovated QR Code TV merchandising, resulting in a 160% increase in app downloads.",
+    "logo_url": "https://media.licdn.com/dms/image/v2/D4D0BAQEoMTZW5hktPw/company-logo_100_100/company-logo_100_100/0/1688744936290/americanas_sa_logo?e=1747267200&v=beta&t=skVLC_oWx1zMHs-_u6IeCJSYt5hkBFZ_QucoEWc9yoc",
+    "order": 1
+  },
+  {
+    "id": 1,
+    "company": "Amazon",
+    "role": "WMcCANN",
+    "period": "Spearheaded the official launch campaign in Brazil, introducing the brand to a new market.",
+    "logo_url": "https://media.licdn.com/dms/image/v2/C560BAQHTvZwCx4p2Qg/company-logo_100_100/company-logo_100_100/0/1630640869849/amazon_logo?e=1747267200&v=beta&t=q6V29JIx6ftBESintWejU3v0wjl7aogUypx_eZB-_f8",
+    "order": 2
+  },
+  {
+    "id": 4,
+    "company": "L'Oréal",
+    "role": "WMcCANN",
+    "period": "Played a key role in securing the digital account through a successful pitch.",
+    "logo_url": "https://media.licdn.com/dms/image/v2/D4E0BAQFEB_g-FWxSrQ/company-logo_200_200/company-logo_200_200/0/1688397792617/loral_logo?e=1747267200&v=beta&t=VHkh3jVQhEFq6jxCvrcFssVW22FqSciTkohOWwKEBqQ",
+    "order": 3
+  },
+  {
+    "id": 5,
+    "company": "Mitsubishi Motors",
+    "role": "Tech & Soul",
+    "period": "Led creative teams on high-impact content and campaigns, including 'Give yourself this chance' for the L200 Triton Sport, 'The Reconquest', 'Every Mit Mile Counts', 'Mit Drivelines' and more.",
+    "logo_url": "https://media.licdn.com/dms/image/v2/D4D0BAQHR02lFt8M_fQ/company-logo_100_100/company-logo_100_100/0/1737492585497/mitsubishi_motors_brasil_logo?e=1747267200&v=beta&t=-2LybHjxjXW1MoOXaXC4ZEwhu0nIyDuctkhR3iKLY0s",
+    "order": 4
+  },
+  {
+    "id": 6,
+    "company": "Mastercard",
+    "role": "WMcCANN",
+    "period": "Art directed campaigns for over six years, earning recognition at Effie Awards and Midas Awards, notably the 'Copa America 2019' and 'Priceless Affluent' campaign.",
+    "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/3840px-Mastercard-logo.svg.png",
+    "order": 5
+  },
+  {
+    "id": 7,
+    "company": "Mary Kay",
+    "role": "Agência Crush",
+    "period": "Currently leading teams at Agência Crush to create standout contents and campaigns, keeping the brand #1 in their category.",
+    "logo_url": "https://media.licdn.com/dms/image/v2/D4E0BAQHd7nJnLy9PeA/company-logo_100_100/company-logo_100_100/0/1723630123904/mary_kay_do_brasil_logo?e=1747267200&v=beta&t=lKPK522r3HUEu1YreFblfTkj6RKT6ir9v3SVHpa_6hk",
+    "order": 6
+  }
+]
