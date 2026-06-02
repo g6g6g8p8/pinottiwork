@@ -122,12 +122,13 @@ export default function FeaturedProjects() {
       {layout.map((row, i) => {
         const cards = row.slugs.map((s) => projectMap[s]).filter(Boolean);
         if (cards.length === 0) return null;
+        const isFirstRow = i === 0;
 
         if (row.slot === 'hero') {
           const p = cards[0];
           return (
             <motion.div key={i} variants={itemVariants}>
-              <ProjectCard project={p} imageColor={imageColors[p.id]} forceAspect="hero" />
+              <ProjectCard project={p} imageColor={imageColors[p.id]} forceAspect="hero" priority={isFirstRow} />
             </motion.div>
           );
         }
@@ -139,9 +140,9 @@ export default function FeaturedProjects() {
               className="grid grid-cols-1 md:grid-cols-2 gap-premium-md md:gap-premium-lg"
               variants={{ animate: { transition: { staggerChildren: 0.08 } } }}
             >
-              {cards.map((p) => (
+              {cards.map((p, idx) => (
                 <motion.div key={p.id} variants={itemVariants}>
-                  <ProjectCard project={p} imageColor={imageColors[p.id]} forceAspect="card" layout="below" />
+                  <ProjectCard project={p} imageColor={imageColors[p.id]} forceAspect="card" layout="below" priority={isFirstRow && idx === 0} />
                 </motion.div>
               ))}
             </motion.div>
@@ -150,7 +151,7 @@ export default function FeaturedProjects() {
 
         return (
           <motion.div key={i} variants={itemVariants}>
-            <ProjectCard project={cards[0]} imageColor={imageColors[cards[0].id]} forceAspect="card" layout="below" />
+            <ProjectCard project={cards[0]} imageColor={imageColors[cards[0].id]} forceAspect="card" layout="below" priority={isFirstRow} />
           </motion.div>
         );
       })}
