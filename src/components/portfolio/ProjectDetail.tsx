@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate, useParams } from '@tanstack/react-router';
 import { X as CloseIcon, Share2, ChevronLeft, ChevronRight } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { useProject } from '../../hooks/useProject';
 import { getImageColor } from '../../lib/portfolio-utils';
 import Portal from './Portal';
@@ -68,10 +70,10 @@ export default function ProjectDetail() {
     switch (section.type) {
       case 'text':
         return (
-          <div className="prose max-w-none">
-            {section.content.text?.split('\n').map((paragraph, index) => (
-              <p key={index} className="text-body opacity-80">{paragraph}</p>
-            ))}
+          <div className="project-prose text-body max-w-none">
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {section.content.text ?? ''}
+            </ReactMarkdown>
           </div>
         );
 
