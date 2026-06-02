@@ -1,38 +1,27 @@
 import { useState, useEffect } from 'react';
+import { useServerFn } from '@tanstack/react-start';
 import type { Project } from './useProject';
+import { listProjects } from '../lib/content.functions';
 
 export function useProjects() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
+  const fetchProjects = useServerFn(listProjects);
 
   useEffect(() => {
     let cancelled = false;
-    async function load() {
+    (async () => {
       try {
-        const indexRes = await fetch('/data/projects.json');
-        const index = await indexRes.json();
-        const slugs: string[] = [...index]
-          .sort((a: any, b: any) => a.order - b.order)
-          .map((p: any) => p.slug);
-
-        const results = await Promise.all(
-          slugs.map(async (slug) => {
-            const res = await fetch(`/content/projects/${slug}.json`);
-            if (!res.ok) return null;
-            const { data } = await res.json();
-            return { ...(data as any), image_url: data.hero } as Project;
-          })
-        );
-        if (!cancelled) setProjects(results.filter(Boolean) as Project[]);
+        const result = await fetchProjects();
+        if (!cancelled) setProjects((result || []) as Project[]);
       } catch (e) {
         console.error('Error loading projects:', e);
       } finally {
         if (!cancelled) setLoading(false);
       }
-    }
-    load();
+    })();
     return () => { cancelled = true; };
-  }, []);
+  }, [fetchProjects]);
 
   return { projects, loading };
 }
