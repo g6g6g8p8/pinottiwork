@@ -28,7 +28,7 @@ interface ProjectCardProps {
 export default function ProjectCard({ project, imageColor, className, forceAspect, layout = 'overlay' }: ProjectCardProps) {
   const isMobile = useIsMobile();
   const prefetchProps = usePrefetchLink(`/projects/${project.slug}`);
-  const effectiveLayout = isMobile ? 'below' : layout;
+  const effectiveLayout = isMobile ? 'overlay' : layout;
 
   const getAspectRatioClass = () => {
     if (isMobile) return 'aspect-[4/5]';
