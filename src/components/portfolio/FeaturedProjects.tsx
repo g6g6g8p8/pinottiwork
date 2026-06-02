@@ -141,7 +141,7 @@ export default function FeaturedProjects() {
             >
               {cards.map((p) => (
                 <motion.div key={p.id} variants={itemVariants}>
-                  <ProjectCard project={p} imageColor={imageColors[p.id]} forceAspect="card" />
+                  <ProjectCard project={p} imageColor={imageColors[p.id]} forceAspect="card" layout="below" />
                 </motion.div>
               ))}
             </motion.div>
@@ -150,7 +150,7 @@ export default function FeaturedProjects() {
 
         return (
           <motion.div key={i} variants={itemVariants}>
-            <ProjectCard project={cards[0]} imageColor={imageColors[cards[0].id]} forceAspect="card" />
+            <ProjectCard project={cards[0]} imageColor={imageColors[cards[0].id]} forceAspect="card" layout="below" />
           </motion.div>
         );
       })}
