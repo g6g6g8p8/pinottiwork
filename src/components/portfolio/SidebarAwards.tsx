@@ -19,18 +19,26 @@ export default function SidebarAwards() {
                 aria-label={award.name}
                 className="
                   inline-flex items-center justify-center
-                  w-7 h-7 rounded-full overflow-hidden
-                  opacity-70 hover:opacity-100
+                  h-7 w-auto min-w-[28px] max-w-[56px]
+                  opacity-80 hover:opacity-100
                   transition-opacity cursor-default
                 "
               >
-                {award.logo ? (
-                  <img
-                    src={award.logo}
-                    alt={award.name}
-                    loading="lazy"
-                    className="w-full h-full object-contain grayscale hover:grayscale-0 transition-[filter] duration-300"
-                  />
+                {award.logo_light ? (
+                  <>
+                    <img
+                      src={award.logo_light}
+                      alt={award.name}
+                      loading="lazy"
+                      className="h-7 w-auto max-w-[56px] object-contain dark:hidden"
+                    />
+                    <img
+                      src={award.logo_dark}
+                      alt={award.name}
+                      loading="lazy"
+                      className="h-7 w-auto max-w-[56px] object-contain hidden dark:block"
+                    />
+                  </>
                 ) : (
                   <Trophy size={13} strokeWidth={1.8} className="text-foreground/60" />
                 )}
