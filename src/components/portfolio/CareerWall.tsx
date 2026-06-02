@@ -41,7 +41,7 @@ export default function CareerWall() {
             <div className="flex-1 min-w-0">
               <div className="text-[15px] leading-[18px] font-semibold truncate">{h.company}</div>
               <div className="text-[12px] leading-[15px] text-foreground/60 mb-1">at {h.role}</div>
-              <p className="text-[12px] leading-[17px] text-foreground/70 line-clamp-2">
+              <p className="text-[12px] leading-[17px] text-foreground/70">
                 {h.period}
               </p>
             </div>
