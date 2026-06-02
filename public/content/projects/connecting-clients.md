@@ -31,9 +31,12 @@ The partnership between Crush and Next Ip showcased the untapped creative potent
 
 :::gallery
 ![](https://res.cloudinary.com/dktild7hr/video/upload/v1741952999/pinotti/next-ip/cpwtmtkdgsxxktjeuokj.mp4)
+:::
+
+Finally, we restructured the entire website and redesigned key relationship materials, like brochures, that are so essential to Next Ip. A complete transformation - inside and out.
+
+:::gallery
 ![](https://res.cloudinary.com/dktild7hr/video/upload/v1741953000/pinotti/next-ip/buztda5ps4dssxj6cj5k.mp4)
 ![](https://res.cloudinary.com/dktild7hr/video/upload/v1741953005/pinotti/next-ip/g6u1oq567giicnqlgjeh.mp4)
 ![](https://res.cloudinary.com/dktild7hr/image/upload/v1741952998/pinotti/next-ip/aitifevfsa7uhlf9avky.png)
 :::
-
-Finally, we restructured the entire website and redesigned key relationship materials, like brochures, that are so essential to Next Ip. A complete transformation - inside and out.
