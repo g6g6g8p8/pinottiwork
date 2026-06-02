@@ -20,13 +20,28 @@ description: >-
 
 Mary Kay Brasil needed to rejuvenate its brand perception and connect with the Gen-Z audience without diluting the rigor of a global beauty powerhouse. The existing production model was centralized, slow, and expensive — locked in a reactive cycle that was filling the content calendar but failing to build an actual community or drive agile performance.
 
-[video](https://video.squarespace-cdn.com/content/v1/60d1f373986b3e43f5079d83/60cdedb9-a26b-4fd3-84bd-9d76b701b46a "Social Playbook")
+[video](https://vimeo.com/1197814166?fl=tl&fe=ec "Social Playbook")
+
+:::gallery
+![](https://res.cloudinary.com/dktild7hr/image/upload/v1779638736/SLIDES-1_s4jaj8.png)
+![](https://res.cloudinary.com/dktild7hr/image/upload/v1780424551/MACBOOK_xzyrjm.gif)
+![](https://res.cloudinary.com/dktild7hr/image/upload/v1780424564/PRINT-1_yriiut.png)
+:::
 
 ## The Diagnosis
 
 Through algorithmic diagnostics and a deep dive into the production funnel, I identified a core operational bottleneck. Traditional, over-produced studio content was too slow for the shifting digital landscape and failed to capture the native attention span of modern platforms. The disconnect between high-end studio craft and agile digital language was costing the brand its cultural relevance and bleeding operational budget. The goal wasn't just to make "more content" — it was to escape the reactive loop and build a system where volume, tight margins, and cultural relevance could coexist.
 
-![Operational Diagnostics Framework](https://res.cloudinary.com/dktild7hr/image/upload/v1779638736/SLIDES-1_s4jaj8.png)
+:::gallery
+![](https://res.cloudinary.com/dktild7hr/image/upload/v1780424725/1_jafzsk.png)
+![](https://res.cloudinary.com/dktild7hr/video/upload/v1780424762/2_xeapsp.mp4)
+![](https://res.cloudinary.com/dktild7hr/image/upload/v1780424729/3_nj1a2h.png)
+![](https://res.cloudinary.com/dktild7hr/video/upload/v1780424743/04_jyx5ks.mp4)
+![](https://res.cloudinary.com/dktild7hr/image/upload/v1780424730/5_rhmozg.png)
+![](https://res.cloudinary.com/dktild7hr/image/upload/v1780424727/7_pjxame.png)
+![](https://res.cloudinary.com/dktild7hr/video/upload/v1780424769/8_xs1lz1.mp4)
+![](https://res.cloudinary.com/dktild7hr/image/upload/v1780424729/9_f543oa.png)
+:::
 
 ## The Architecture
 
