@@ -70,15 +70,6 @@ export default function Home() {
         className="hidden lg:block pt-3 pb-6"
         style={{ opacity: titleOpacity, y: titleY }}
       >
-        <motion.p
-          key={selectedCategory}
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, ease: 'easeOut' }}
-          className="text-[11px] font-semibold uppercase tracking-[.07em] text-foreground/40 mb-1"
-        >
-          Creative Direction
-        </motion.p>
         <motion.h1
           key={`title-${selectedCategory}`}
           initial={{ opacity: 0, y: 12 }}
