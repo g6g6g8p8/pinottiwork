@@ -105,7 +105,7 @@ export default function FeaturedProjects() {
       >
         {filteredProjects.map((p) => (
           <motion.div key={p.id} variants={itemVariants}>
-            <ProjectCard project={p} imageColor={imageColors[p.id]} />
+            <ProjectCard project={p} imageColor={imageColors[p.id]} layout="below" />
           </motion.div>
         ))}
       </motion.div>
