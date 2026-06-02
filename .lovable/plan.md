@@ -1,97 +1,72 @@
+# Limpeza de código não usado
 
-# Migração para Markdown puro
+Varri o codebase procurando arquivos importados em zero lugares. Separei em **3 grupos** por nível de risco — você decide quais aprovar.
 
-Objetivo: um único arquivo `.md` por projeto (e um pro about). Some o `.json` paralelo e o `projects.json` index — tudo é derivado da pasta em runtime.
-
-## Como vai ficar editar
-
-**Adicionar projeto novo:** criar `public/content/projects/novo-projeto.md`:
-
-```markdown
----
-title: Novo Projeto
-slug: novo-projeto
-client: Cliente X
-role: Creative Director
-category: Branding
-order: 5
-hero: https://i.imgur.com/xxx.png
-aspect_ratio: 4:3
-description: Resumo curto que aparece no card.
-tags: []
 ---
 
-Conteúdo em markdown normal.
+## Grupo 1 — Remoção segura (zero impacto)
 
-:::gallery
-![](https://...mp4)
-![](https://...jpg)
-:::
+Arquivos sem nenhum import externo, puramente template/stub residual:
 
-[video](https://player.vimeo.com/video/123 "Legenda")
-```
+| Arquivo | Por quê remover |
+|---|---|
+| `src/lib/api/example.functions.ts` | Exemplo `getGreeting` do template TanStack. Nenhum import. |
+| `src/lib/api/` (pasta) | Fica vazia após o item acima. |
+| `src/lib/config.server.ts` | Só era usado pelo `example.functions.ts`. |
+| `src/types/database.ts` | Arquivo só com `export {}` e um comentário. Zero imports. |
+| `src/types/` (pasta) | Fica vazia. |
+| `src/hooks/use-mobile.tsx` | `useIsMobile` não é importado em lugar nenhum. O `ProjectCard` tem uma versão local própria (inline). |
 
-Salvou → site atualiza. Sem editar mais nenhum outro arquivo.
+Verificado com `grep -rn` em todo `src/`.
 
-**Reordenar home:** continua editando só `public/data/home-layout.md` (não muda).
+---
 
-**Editar metadados/conteúdo:** abre o `.md`, edita o frontmatter ou o corpo. Sem JSON escapado, sem `\n`, sem aspas escapadas.
+## Grupo 2 — Doc de migração já concluída
 
-**Onde edita:** VS Code local, ou direto no GitHub web UI (commit pelo navegador, deploy automático).
+| Arquivo | Por quê |
+|---|---|
+| `.lovable/plan.md` | Plano da migração JSON → Markdown que já foi executada. Conteúdo histórico. |
 
-## Estrutura final
+Posso remover, ou manter como registro. Padrão: **remover** (o histórico do chat já preserva).
 
+---
+
+## Grupo 3 — Pasta `src/components/ui/` inteira (shadcn) — **avaliar**
+
+**Achado:** dos 46 componentes shadcn instalados, **nenhum é importado por código de aplicação** (`portfolio/`, `routes/`, `hooks/`, `lib/`). Os únicos imports que existem são internos da própria pasta `ui/` (ex.: `sidebar.tsx` importa `input`, `sheet`, etc.) — ou seja, é um grafo isolado, todo morto.
+
+Verificado:
 ```text
-public/content/
-  about.md                          ← um arquivo só (frontmatter + bio)
-  career-highlights.md              ← um arquivo, lista no frontmatter
-  projects/
-    pink-news.md                    ← um arquivo por projeto
-    mary-kay-global-ecosystem.md
-    ...
-public/data/
-  home-layout.md                    ← mantém igual
+grep -rn "components/ui" src/ | grep -v "^src/components/ui/"
+→ (nada)
 ```
 
-Some: `public/content/projects/*.json`, `public/content/about.json`, `public/data/projects.json`, `public/data/career-highlights.json`, `public/data/projects-content/`.
+### Opção 3A — Remover toda a pasta `src/components/ui/` (46 arquivos)
+**Prós:** ~3-4k linhas a menos, build mais leve, codebase reflete o que realmente é usado (você usa só componentes próprios em `components/portfolio/`).
+**Contras:** se um dia quiser usar um componente shadcn, precisa rodar `npx shadcn add <nome>` de novo. Mas o `components.json` fica preservado — é trivial.
+**Deps do `package.json`:** mantenho como estão nesta limpeza (radix, cmdk, sonner, vaul…). Limpar deps tem risco maior e dá pra fazer num passo seguinte se você quiser.
 
-## Detalhes técnicos
+### Opção 3B — Manter a pasta `ui/` intacta
+Caso prefira ter a "biblioteca" pronta caso queira testar algo rápido.
 
-1. **Server functions novas** em `src/lib/content.functions.ts`:
-   - `listProjects()` — lê `public/content/projects/`, parseia frontmatter de cada `.md`, retorna array ordenado por `order`. Substitui `projects.json`.
-   - `getProject(slug)` — lê um `.md`, retorna `{ data, content }`. Substitui o fetch atual de `/content/projects/<slug>.json`.
-   - `getAbout()` — lê `about.md` + `career-highlights.md`.
-   - Reutilizar/adaptar `getAllProjectSlugs` e `getProjectMeta` que já existem em `src/lib/project-meta.functions.ts` (consolidar tudo num arquivo só).
+### Opção 3C — Remover só os claramente desnecessários, manter alguns "úteis em potencial"
+Não recomendo: cria meio-termo sem critério objetivo. Ou tudo ou nada.
 
-2. **Parser de frontmatter:** instalar `gray-matter` (padrão da indústria, pequeno, sem deps nativas — seguro pro runtime do Worker).
+---
 
-3. **Atualizar hooks** `useProjects`, `useProject`, `useAbout` pra chamar as server functions via `useServerFn` + `useQuery` (em vez de `fetch` direto pros arquivos estáticos). Mantém a mesma forma dos dados retornados — zero mudança nos componentes.
+## Não vou mexer (verifiquei e estão em uso)
 
-4. **Script de migração** (one-shot, depois deleto): lê os `.json` atuais, gera os `.md` consolidados, valida que o conteúdo bate, remove os `.json` e o `projects.json`.
+- `src/lib/error-capture.ts`, `error-page.ts`, `lovable-error-reporting.ts` → usados por `server.ts`, `start.ts`, `__root.tsx` (infra do template, importante).
+- `src/lib/parseMarkdown.ts`, `portfolio-utils.ts`, `prefetch.ts`, `categories.ts` → usados pelos componentes do portfolio.
+- Todos os componentes em `src/components/portfolio/` → usados.
+- `public/llms.txt`, `public/robots.txt`, `public/content/README.md` → conteúdo público / doc de edição.
 
-5. **Sitemap e SEO:** `src/routes/sitemap[.]xml.ts` e `getProjectMeta` continuam funcionando — só trocam a fonte de leitura.
+---
 
-6. **Validação leve:** a server function `listProjects` ignora arquivos sem `slug` no frontmatter e loga warning, em vez de quebrar o site se um `.md` estiver malformado.
+## O que preciso de você
 
-## Não muda
+1. **Grupo 1** — aprovo remover? (recomendação: sim)
+2. **Grupo 2** (`.lovable/plan.md`) — remover ou manter?
+3. **Grupo 3** — **3A (remover tudo de `ui/`)**, **3B (manter)**, ou outra?
 
-- Layout/visual da home, cards, project detail — nada.
-- `home-layout.md` — fica igual.
-- Markdown extensions atuais (`:::gallery`, `[video](...)`) — o parser em `src/lib/parseMarkdown.ts` continua igual.
-- URLs de mídia externas (imgur/cloudinary/vimeo) — sem mudança.
-
-## Entregáveis
-
-- `src/lib/content.functions.ts` consolidado
-- `gray-matter` instalado
-- Hooks `useProjects`/`useProject`/`useAbout` atualizados
-- `public/content/projects/*.md` regenerados com frontmatter completo
-- `public/content/about.md` consolidado
-- `public/content/career-highlights.md` novo
-- Arquivos antigos removidos
-- README curto em `public/content/README.md` explicando o formato pra você consultar depois
-
-## Riscos
-
-- Pequeno: se um `.md` tiver YAML inválido, esse projeto somem da listagem (log no console do server). Mitigação: validação no script de migração.
-- O `home-layout.md` referencia slugs — se você renomear um `.md`, o slug muda e a home quebra naquela linha. Mitigação: mantenho os slugs atuais idênticos na migração.
+Me responde com as escolhas e eu executo numa só leva.
