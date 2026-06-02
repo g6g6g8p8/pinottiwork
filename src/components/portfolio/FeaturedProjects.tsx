@@ -4,6 +4,8 @@ import { useProjects } from '../../hooks/useProjects';
 import { getImageColor } from '../../lib/portfolio-utils';
 import { useSearch } from '../../context/SearchContext';
 import ProjectCard from './ProjectCard';
+import AwardsStrip from './AwardsStrip';
+import CareerWall from './CareerWall';
 
 async function fetchHomeLayout(): Promise<Array<{ slot: string; slugs: string[] }>> {
   try {
@@ -120,6 +122,22 @@ export default function FeaturedProjects() {
       variants={{ animate: { transition: { staggerChildren: 0.1 } } }}
     >
       {layout.map((row, i) => {
+        if (row.slot === 'awards') {
+          return (
+            <motion.div key={`awards-${i}`} variants={itemVariants}>
+              <AwardsStrip />
+            </motion.div>
+          );
+        }
+
+        if (row.slot === 'career-wall') {
+          return (
+            <motion.div key={`career-${i}`} variants={itemVariants}>
+              <CareerWall />
+            </motion.div>
+          );
+        }
+
         const cards = row.slugs.map((s) => projectMap[s]).filter(Boolean);
         if (cards.length === 0) return null;
         const isFirstRow = i === 0;

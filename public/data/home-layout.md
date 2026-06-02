@@ -14,6 +14,10 @@
 
 # trio — um destaque + dois menores (posição: left ou right)
 
+# awards — faixa de troféus (sem slugs)
+
+# career-wall — logo wall das marcas/agências (sem slugs)
+
 #
 
 # CADA LINHA = uma linha do grid
@@ -23,5 +27,7 @@
 hero | mary-kay-global-ecosystem
 duo | pink-news | fini-algorithmic-diagnostics
 duo | give-yourself-this-chance | the-reconquest
+awards
 hero | mastercard-priceless-ecosystem
 duo | connecting-clients | alternative-investments
+career-wall

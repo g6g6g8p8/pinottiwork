@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from '@tanstack/react-router';
 import { Search, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAbout } from '../../hooks/useAbout';
+import SidebarAwards from './SidebarAwards';
 import { useSearch } from '../../context/SearchContext';
 import { getImageColor } from '../../lib/portfolio-utils';
 import { deriveCategories } from '../../lib/categories';
@@ -240,6 +241,8 @@ export default function Sidebar() {
       )}
 
       <div className="flex-1" />
+
+      {isHome && <SidebarAwards />}
 
       <div className="mt-6 pt-4 border-t border-foreground/10">
         <Link
