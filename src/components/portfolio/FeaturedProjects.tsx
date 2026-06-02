@@ -18,7 +18,7 @@ async function fetchHomeLayout(): Promise<Array<{ slot: string; slugs: string[] 
         const parts = line.split('|').map((s) => s.trim()).filter(Boolean);
         return { slot: parts[0], slugs: parts.slice(1) };
       })
-      .filter((r) => r.slot && r.slugs.length > 0);
+      .filter((r) => r.slot);
   } catch {
     return [];
   }
