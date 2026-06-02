@@ -4,6 +4,7 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useRouterState,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
@@ -115,13 +116,15 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const hideSidebar = pathname.startsWith("/about") || pathname.startsWith("/projects/");
 
   return (
     <QueryClientProvider client={queryClient}>
       <SearchProvider>
         <div className="min-h-screen bg-background text-foreground">
           <div className="flex max-w-[1400px] mx-auto">
-            <Sidebar />
+            {!hideSidebar && <Sidebar />}
             <main className="flex-1 min-w-0 pb-[100px] lg:pb-0">
               <Outlet />
             </main>
