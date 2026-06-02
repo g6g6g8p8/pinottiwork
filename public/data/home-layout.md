@@ -24,4 +24,4 @@ hero | mary-kay-global-ecosystem
 duo | pink-news | fini-algorithmic-diagnostics
 hero | mastercard-priceless-ecosystem
 duo | give-yourself-this-chance | the-reconquest
-duo | connecting-clients | alternative-investments
+trio | connecting-clients | alternative-investments
