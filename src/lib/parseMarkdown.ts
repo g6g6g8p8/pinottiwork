@@ -5,6 +5,7 @@ export interface ContentBlock {
     url?: string;
     title?: string;
     gallery?: string[];
+    autoplay?: boolean;
   };
   order: number;
 }
