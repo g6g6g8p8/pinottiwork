@@ -4,7 +4,8 @@ import { useAbout } from '../../hooks/useAbout';
 
 export default function SidebarAwards() {
   const { about } = useAbout();
-  if (!about || about.awards.length === 0) return null;
+  const awards = (about?.awards ?? []).filter((a) => !/latam/i.test(a.name));
+  if (!about || awards.length === 0) return null;
 
   return (
     <Tooltip.Provider delayDuration={150}>
@@ -12,7 +13,7 @@ export default function SidebarAwards() {
         aria-label="Awards"
         className="flex items-center justify-start gap-3 px-1 pb-3"
       >
-        {about.awards.map((award, i) => (
+        {awards.map((award, i) => (
           <Tooltip.Root key={i}>
             <Tooltip.Trigger asChild>
               <span
