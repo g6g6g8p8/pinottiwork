@@ -45,6 +45,11 @@ Through algorithmic diagnostics and a deep dive into the production funnel, I id
 
 As Head of Creative Operations, I architected a systemic transition from a strict studio-only model to a robust, full-funnel ecosystem. We balanced high-end design assets with decentralized mobile creators, building a native UGC-style production line that matched platform algorithms perfectly.
 
+:::gallery
+![](https://res.cloudinary.com/dktild7hr/video/upload/v1780426106/tiktok_marykaybrasil_7423790208056823046_yokvw3.mp4)
+![](https://res.cloudinary.com/dktild7hr/video/upload/v1780425781/tiktok_marykaybrasil_7498406125818203397_sc5hrk.mp4)
+:::
+
 I integrated the client directly into the pre-production phase and on-set routines. This systemic change, supported by agile project management flows, eliminated feedback latency and drastically reduced operational debt. We also centralized the content pipeline to feed a direct WhatsApp channel ("Quero+ Mary Kay"), providing the B2B2C sales force with agile, conversion-focused assets. To top it off, we modernized corporate communication by orchestrating a pioneering partnership with Elle magazine, introducing the virtual creator Ellen.
 
 :::gallery
