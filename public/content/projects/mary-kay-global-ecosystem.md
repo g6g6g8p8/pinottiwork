@@ -33,7 +33,6 @@ Through algorithmic diagnostics and a deep dive into the production funnel, I id
 :::gallery
 ![](https://res.cloudinary.com/dktild7hr/image/upload/v1780424725/1_jafzsk.png)
 ![](https://res.cloudinary.com/dktild7hr/video/upload/v1780424762/2_xeapsp.mp4)
-![](https://res.cloudinary.com/dktild7hr/image/upload/v1780424729/3_nj1a2h.png)
 ![](https://res.cloudinary.com/dktild7hr/video/upload/v1780424743/04_jyx5ks.mp4)
 ![](https://res.cloudinary.com/dktild7hr/image/upload/v1780424730/5_rhmozg.png)
 ![](https://res.cloudinary.com/dktild7hr/image/upload/v1780424727/7_pjxame.png)
