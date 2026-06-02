@@ -4,7 +4,8 @@ import { useAbout } from '../../hooks/useAbout';
 
 export default function SidebarAwards() {
   const { about } = useAbout();
-  if (!about || about.awards.length === 0) return null;
+  const awards = (about?.awards ?? []).filter((a) => !/latam/i.test(a.name));
+  if (!about || awards.length === 0) return null;
 
   return (
     <Tooltip.Provider delayDuration={150}>
