@@ -18,13 +18,17 @@ brands:
   - Nesfit
 awards:
   - name: Guinness World Records
-    logo: /__l5e/assets-v1/d11dddbd-4d79-4515-a0d4-aa0898cffe29/guinness.png
+    logo_light: /__l5e/assets-v1/bde9c092-e850-4a8a-a3dc-754e4d828b8f/guinness.png
+    logo_dark: /__l5e/assets-v1/bde9c092-e850-4a8a-a3dc-754e4d828b8f/guinness.png
   - name: 'Effie Awards Brasil: 1 Gold 2 Bronze'
-    logo: /__l5e/assets-v1/6c1cc2bf-7a4c-46f0-8a67-e2aa8c016317/effie-br.png
+    logo_light: /__l5e/assets-v1/962d9377-060d-4ee2-8dfb-7bb1bf574b5d/effie-br-light.png
+    logo_dark: /__l5e/assets-v1/7ecac27d-8931-4520-8c84-a2a1f93d4334/effie-br-dark.png
   - name: 'New York Festivals: Silver Midas'
-    logo: /__l5e/assets-v1/cf56780e-b607-41cc-b07f-f0892f576388/nyf.png
+    logo_light: /__l5e/assets-v1/e82f50ca-eb4a-4fc4-871e-39d68909b595/nyf.png
+    logo_dark: /__l5e/assets-v1/e82f50ca-eb4a-4fc4-871e-39d68909b595/nyf.png
   - name: 'Effie Awards Latam: Shortlist'
-    logo: /__l5e/assets-v1/765c57c0-3bd2-48df-9524-a43141bac8a0/effie-latam.png
+    logo_light: /__l5e/assets-v1/5ac33732-525b-4c40-88c6-eee9898f667e/effie-latam-light.png
+    logo_dark: /__l5e/assets-v1/5b4dfcbf-b28f-4e42-9be5-723bea1a0557/effie-latam-dark.png
 what_i_do: >-
   Creative Operations & DesignOps Architecture, Generative AI Integration &
   Advanced Workflows, Full-Funnel Content Ecosystems, Data-Driven Creative
