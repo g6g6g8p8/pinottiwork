@@ -266,11 +266,11 @@ export default function ProjectDetail() {
                 }}
               />
               <div className="absolute inset-x-0 bottom-0 p-6 z-10">
-                <p className="text-[11px] font-semibold uppercase tracking-[.07em] text-white/60 mb-1">{project.role}</p>
+                <p className="text-[11px] font-semibold uppercase tracking-[.07em] text-white/60 mb-1">{project.category}</p>
                 <h2 className="text-[22px] font-bold leading-tight tracking-[-0.02em] text-white mb-2">{project.title}</h2>
                 <p className="text-[14px] leading-[20px] text-white/80 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
-                  {[project.category, project.client].filter(Boolean).map((tag, i) => (
+                  {[project.role, project.client].filter(Boolean).map((tag, i) => (
                     <span key={i} className="px-3 py-1 bg-white/15 backdrop-blur-sm rounded-full text-[12px] text-white/90">
                       {tag}
                     </span>
