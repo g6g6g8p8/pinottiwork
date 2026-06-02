@@ -29,12 +29,14 @@ Free-form markdown body. Paragraphs work normally.
 :::
 
 [video](https://player.vimeo.com/video/123456 "Optional caption")
+[video autoplay](https://player.vimeo.com/video/123456 "Optional caption")
 ```
 
 ### Special blocks
 
 - `:::gallery ... :::` — carousel with one or more images/videos
-- `[video](URL "caption")` — embedded video player (Vimeo, mp4, etc.)
+- `[video](URL "caption")` — embedded video player (Vimeo, YouTube, mp4). Vimeo title/byline/portrait are always hidden.
+- `[video autoplay](URL "caption")` — same, but autoplays muted in loop (works for Vimeo, YouTube and mp4/mov)
 - `![](URL)` on its own line — single image
 - Regular paragraphs become text blocks
 

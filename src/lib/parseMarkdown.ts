@@ -5,6 +5,7 @@ export interface ContentBlock {
     url?: string;
     title?: string;
     gallery?: string[];
+    autoplay?: boolean;
   };
   order: number;
 }
@@ -13,7 +14,7 @@ export function parseMarkdownContent(body: string): ContentBlock[] {
   const blocks: ContentBlock[] = [];
   let order = 0;
 
-  const sections = body.split(/(:::gallery[\s\S]*?:::|\[video\]\([^)]+\))/g);
+  const sections = body.split(/(:::gallery[\s\S]*?:::|\[video(?:\s+autoplay)?\]\([^)]+\))/g);
 
   for (const section of sections) {
     const trimmed = section.trim();
@@ -31,11 +32,15 @@ export function parseMarkdownContent(body: string): ContentBlock[] {
       continue;
     }
 
-    const videoMatch = trimmed.match(/^\[video\]\(([^"]+?)(?:\s+"([^"]*)")?\)$/);
+    const videoMatch = trimmed.match(/^\[video(\s+autoplay)?\]\(([^"]+?)(?:\s+"([^"]*)")?\)$/);
     if (videoMatch) {
       blocks.push({
         type: 'video',
-        content: { url: videoMatch[1].trim(), title: videoMatch[2] || '' },
+        content: {
+          url: videoMatch[2].trim(),
+          title: videoMatch[3] || '',
+          autoplay: Boolean(videoMatch[1]),
+        },
         order: order++,
       });
       continue;
