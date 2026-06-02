@@ -1,10 +1,28 @@
 import { createServerFn } from '@tanstack/react-start';
-import { readFile, readdir } from 'node:fs/promises';
-import path from 'node:path';
 import matter from 'gray-matter';
 
-const PROJECTS_DIR = path.join(process.cwd(), 'public/content/projects');
-const CONTENT_DIR = path.join(process.cwd(), 'public/content');
+// Embed markdown content into the bundle at build time so it works in any
+// runtime (Node dev/preview + Cloudflare Workers production). Avoid fs/cwd —
+// those only work in the Lovable Node sandbox.
+const projectFiles = import.meta.glob('/public/content/projects/*.md', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+}) as Record<string, string>;
+
+const aboutFiles = import.meta.glob('/public/content/about.md', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+}) as Record<string, string>;
+
+const careerFiles = import.meta.glob('/public/content/career-highlights.md', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+}) as Record<string, string>;
+
+const PROJECT_PATH_PREFIX = '/public/content/projects/';
 
 export interface ProjectData {
   id?: number;
@@ -30,6 +48,10 @@ function safeSlug(s: string) {
   return s.replace(/[^a-z0-9-]/gi, '');
 }
 
+function slugFromPath(p: string) {
+  return p.slice(PROJECT_PATH_PREFIX.length).replace(/\.md$/, '');
+}
+
 function normalizeProject(raw: any, fallbackSlug: string): ProjectData {
   const slug = raw.slug || fallbackSlug;
   const hero = raw.hero || '';
@@ -49,68 +71,53 @@ function normalizeProject(raw: any, fallbackSlug: string): ProjectData {
   };
 }
 
-async function readProjectFile(slug: string): Promise<ProjectFull | null> {
+function readProjectBySlug(slug: string): ProjectFull | null {
+  const safe = safeSlug(slug);
+  const raw = projectFiles[`${PROJECT_PATH_PREFIX}${safe}.md`];
+  if (!raw) return null;
   try {
-    const safe = safeSlug(slug);
-    const file = path.join(PROJECTS_DIR, `${safe}.md`);
-    const raw = await readFile(file, 'utf-8');
     const { data, content } = matter(raw);
     if (!data || !data.title) return null;
     return { data: normalizeProject(data, safe), content };
-  } catch {
+  } catch (e) {
+    console.warn(`[content] failed to parse ${safe}.md:`, e);
     return null;
   }
 }
 
 export const listProjects = createServerFn({ method: 'GET' }).handler(
   async (): Promise<ProjectData[]> => {
-    try {
-      const files = await readdir(PROJECTS_DIR);
-      const mds = files.filter((f) => f.endsWith('.md'));
-      const items = await Promise.all(
-        mds.map(async (f) => {
-          const slug = f.replace(/\.md$/, '');
-          try {
-            const raw = await readFile(path.join(PROJECTS_DIR, f), 'utf-8');
-            const { data } = matter(raw);
-            if (!data || !data.title) {
-              console.warn(`[content] skipping ${f}: missing title in frontmatter`);
-              return null;
-            }
-            return normalizeProject(data, slug);
-          } catch (e) {
-            console.warn(`[content] failed to parse ${f}:`, e);
-            return null;
-          }
-        }),
-      );
-      return (items.filter(Boolean) as ProjectData[]).sort((a, b) => a.order - b.order);
-    } catch (e) {
-      console.error('[content] listProjects failed:', e);
-      return [];
+    const items: ProjectData[] = [];
+    for (const [path, raw] of Object.entries(projectFiles)) {
+      const slug = slugFromPath(path);
+      try {
+        const { data } = matter(raw);
+        if (!data || !data.title) {
+          console.warn(`[content] skipping ${slug}.md: missing title`);
+          continue;
+        }
+        items.push(normalizeProject(data, slug));
+      } catch (e) {
+        console.warn(`[content] failed to parse ${slug}.md:`, e);
+      }
     }
+    return items.sort((a, b) => a.order - b.order);
   },
 );
 
 export const getProject = createServerFn({ method: 'GET' })
   .inputValidator((d: { slug: string }) => d)
   .handler(async ({ data }): Promise<ProjectFull | null> => {
-    return readProjectFile(data.slug);
+    return readProjectBySlug(data.slug);
   });
 
 export const getAllProjectSlugs = createServerFn({ method: 'GET' }).handler(
   async (): Promise<string[]> => {
-    try {
-      const files = await readdir(PROJECTS_DIR);
-      return files.filter((f) => f.endsWith('.md')).map((f) => f.replace(/\.md$/, ''));
-    } catch {
-      return [];
-    }
+    return Object.keys(projectFiles).map(slugFromPath);
   },
 );
 
-// Lightweight meta used by sitemap / SEO head — preserves the shape of the
-// previous project-meta.functions.ts API.
+// Lightweight meta used by sitemap / SEO head.
 export interface ProjectMeta {
   title: string;
   description: string;
@@ -123,7 +130,7 @@ export interface ProjectMeta {
 export const getProjectMeta = createServerFn({ method: 'GET' })
   .inputValidator((d: { slug: string }) => d)
   .handler(async ({ data }): Promise<ProjectMeta | null> => {
-    const p = await readProjectFile(data.slug);
+    const p = readProjectBySlug(data.slug);
     if (!p) return null;
     return {
       title: p.data.title,
@@ -161,15 +168,23 @@ export interface AboutData {
 export const getAbout = createServerFn({ method: 'GET' }).handler(
   async (): Promise<AboutData | null> => {
     try {
-      const aboutRaw = await readFile(path.join(CONTENT_DIR, 'about.md'), 'utf-8');
+      const aboutRaw = aboutFiles['/public/content/about.md'];
+      if (!aboutRaw) {
+        console.error('[content] about.md not found in bundle');
+        return null;
+      }
       const { data, content: bio } = matter(aboutRaw);
 
       let highlights: any[] = [];
-      try {
-        const chRaw = await readFile(path.join(CONTENT_DIR, 'career-highlights.md'), 'utf-8');
-        const parsed = matter(chRaw);
-        highlights = parsed.data?.highlights || [];
-      } catch {
+      const chRaw = careerFiles['/public/content/career-highlights.md'];
+      if (chRaw) {
+        try {
+          const parsed = matter(chRaw);
+          highlights = parsed.data?.highlights || [];
+        } catch {
+          highlights = (data as any).career_highlights || [];
+        }
+      } else {
         highlights = (data as any).career_highlights || [];
       }
 
