@@ -20,12 +20,10 @@ description: >-
 
 Mary Kay Brasil needed to rejuvenate its brand perception and connect with the Gen-Z audience without diluting the rigor of a global beauty powerhouse. The existing production model was centralized, slow, and expensive — locked in a reactive cycle that was filling the content calendar but failing to build an actual community or drive agile performance.
 
-[video](https://vimeo.com/1197814166?fl=tl&fe=ec "Social Playbook")
+[video autoplay](https://vimeo.com/1197814166?fl=tl&fe=ec "First Things First: Social Playbook")
 
 :::gallery
 ![](https://res.cloudinary.com/dktild7hr/image/upload/v1779638736/SLIDES-1_s4jaj8.png)
-![](https://res.cloudinary.com/dktild7hr/image/upload/v1780424551/MACBOOK_xzyrjm.gif)
-![](https://res.cloudinary.com/dktild7hr/image/upload/v1780424564/PRINT-1_yriiut.png)
 :::
 
 ## The Diagnosis
