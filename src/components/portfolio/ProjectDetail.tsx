@@ -238,9 +238,9 @@ export default function ProjectDetail() {
 
       <div className="lg:grid lg:grid-cols-[42%_58%] lg:gap-0 lg:min-h-screen">
         {/* Left col - poster */}
-        <div className="lg:sticky lg:top-0 lg:h-screen lg:overflow-hidden lg:flex lg:items-center lg:px-[2.625rem] lg:py-[2.625rem]">
-          <div className="lg:w-full">
-            <div className="aspect-[4/5] w-full lg:aspect-[3/4] xl:aspect-[4/5] overflow-hidden lg:rounded-sf-xl relative">
+        <div className="lg:sticky lg:top-0 lg:h-screen lg:overflow-hidden lg:flex lg:items-stretch lg:px-[2.625rem] lg:py-[2.625rem] 2xl:py-20">
+          <div className="lg:w-full lg:h-full lg:flex lg:justify-center">
+            <div className="aspect-[4/5] w-full lg:aspect-auto lg:h-full lg:w-auto lg:max-w-full overflow-hidden lg:rounded-sf-xl relative">
               {isVideo ? (
                 <video
                   src={project.image_url}
