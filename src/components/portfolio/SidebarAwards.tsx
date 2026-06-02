@@ -10,21 +10,30 @@ export default function SidebarAwards() {
     <Tooltip.Provider delayDuration={150}>
       <div
         aria-label="Awards"
-        className="flex items-center justify-start gap-3 px-1 pb-3 mb-3 border-b border-foreground/5"
+        className="flex items-center justify-start gap-3 px-1 pb-3"
       >
         {about.awards.map((award, i) => (
           <Tooltip.Root key={i}>
             <Tooltip.Trigger asChild>
               <span
-                aria-label={award}
+                aria-label={award.name}
                 className="
                   inline-flex items-center justify-center
-                  w-6 h-6 rounded-full
-                  text-foreground/45 hover:text-foreground
-                  transition-colors cursor-default
+                  w-7 h-7 rounded-full overflow-hidden
+                  opacity-70 hover:opacity-100
+                  transition-opacity cursor-default
                 "
               >
-                <Trophy size={13} strokeWidth={1.8} />
+                {award.logo ? (
+                  <img
+                    src={award.logo}
+                    alt={award.name}
+                    loading="lazy"
+                    className="w-full h-full object-contain grayscale hover:grayscale-0 transition-[filter] duration-300"
+                  />
+                ) : (
+                  <Trophy size={13} strokeWidth={1.8} className="text-foreground/60" />
+                )}
               </span>
             </Tooltip.Trigger>
             <Tooltip.Portal>
@@ -38,7 +47,7 @@ export default function SidebarAwards() {
                   shadow-md
                 "
               >
-                {award}
+                {award.name}
                 <Tooltip.Arrow className="fill-foreground" />
               </Tooltip.Content>
             </Tooltip.Portal>

@@ -17,10 +17,14 @@ brands:
   - Deca
   - Nesfit
 awards:
-  - Guinness World Records
-  - 'Effie Awards Brasil: 1 Gold 2 Bronze'
-  - 'New York Festivals: Silver Midas'
-  - 'Effie Awards Latam: Shortlist'
+  - name: Guinness World Records
+    logo: /__l5e/assets-v1/d11dddbd-4d79-4515-a0d4-aa0898cffe29/guinness.png
+  - name: 'Effie Awards Brasil: 1 Gold 2 Bronze'
+    logo: /__l5e/assets-v1/6c1cc2bf-7a4c-46f0-8a67-e2aa8c016317/effie-br.png
+  - name: 'New York Festivals: Silver Midas'
+    logo: /__l5e/assets-v1/cf56780e-b607-41cc-b07f-f0892f576388/nyf.png
+  - name: 'Effie Awards Latam: Shortlist'
+    logo: /__l5e/assets-v1/765c57c0-3bd2-48df-9524-a43141bac8a0/effie-latam.png
 what_i_do: >-
   Creative Operations & DesignOps Architecture, Generative AI Integration &
   Advanced Workflows, Full-Funnel Content Ecosystems, Data-Driven Creative

@@ -27,7 +27,6 @@
 hero | mary-kay-global-ecosystem
 duo | pink-news | fini-algorithmic-diagnostics
 duo | give-yourself-this-chance | the-reconquest
-awards
 hero | mastercard-priceless-ecosystem
 duo | connecting-clients | alternative-investments
 career-wall
