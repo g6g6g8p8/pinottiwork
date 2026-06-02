@@ -147,16 +147,41 @@ export default function ProjectDetail() {
 
       case 'video': {
         const videoSrc = section.content.url || '';
+        const autoplay = Boolean(section.content.autoplay);
         const isVideoUrl = videoSrc.endsWith('.mp4') || videoSrc.endsWith('.mov');
         const isYouTube = videoSrc.includes('youtube.com') || videoSrc.includes('youtu.be');
         const isVimeo = videoSrc.includes('vimeo.com');
         let videoUrl = videoSrc;
 
         if (isYouTube) {
-          videoUrl = videoUrl.replace('watch?v=', 'embed/') + '?controls=1&rel=0&modestbranding=1&showinfo=0';
+          const ytId =
+            videoSrc.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/))([\w-]+)/)?.[1] || '';
+          const params = new URLSearchParams({
+            controls: '1',
+            rel: '0',
+            modestbranding: '1',
+            showinfo: '0',
+          });
+          if (autoplay) {
+            params.set('autoplay', '1');
+            params.set('mute', '1');
+            params.set('loop', '1');
+            params.set('playlist', ytId);
+          }
+          videoUrl = `https://www.youtube.com/embed/${ytId}?${params.toString()}`;
         } else if (isVimeo) {
-          const vimeoId = videoUrl.split('/').pop();
-          videoUrl = `https://player.vimeo.com/video/${vimeoId}?title=0&byline=0&portrait=0`;
+          const vimeoId = videoSrc.match(/vimeo\.com\/(?:video\/)?(\d+)/)?.[1] || '';
+          const params = new URLSearchParams({
+            title: '0',
+            byline: '0',
+            portrait: '0',
+          });
+          if (autoplay) {
+            params.set('autoplay', '1');
+            params.set('muted', '1');
+            params.set('loop', '1');
+          }
+          videoUrl = `https://player.vimeo.com/video/${vimeoId}?${params.toString()}`;
         }
 
         return (
