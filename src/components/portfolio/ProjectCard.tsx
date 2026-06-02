@@ -23,9 +23,10 @@ interface ProjectCardProps {
   className?: string;
   forceAspect?: 'hero' | 'card';
   layout?: 'overlay' | 'below';
+  priority?: boolean;
 }
 
-export default function ProjectCard({ project, imageColor, className, forceAspect, layout = 'overlay' }: ProjectCardProps) {
+export default function ProjectCard({ project, imageColor, className, forceAspect, layout = 'overlay', priority = false }: ProjectCardProps) {
   const isMobile = useIsMobile();
   const prefetchProps = usePrefetchLink(`/projects/${project.slug}`);
   const effectiveLayout = isMobile ? 'overlay' : layout;
@@ -82,7 +83,8 @@ export default function ProjectCard({ project, imageColor, className, forceAspec
       alt={project.title}
       className="w-full h-full object-cover z-0"
       variants={imageVariants}
-      loading="lazy"
+      loading={priority ? 'eager' : 'lazy'}
+      fetchPriority={priority ? 'high' : 'auto'}
       sizes="(max-width: 768px) 100vw, 50vw"
     />
   );

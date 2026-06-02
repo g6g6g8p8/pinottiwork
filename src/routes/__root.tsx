@@ -92,10 +92,28 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:description", content: "Creative Director based in São Paulo, Brazil — branding, content, advertising, and design." },
       { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/HSUrHagACuTloBekbUvWP2EuSu53/social-images/social-1780412197201-a65636fb-40b5-4fcc-9dab-3a64a764e897_rw_1200.webp" },
       { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/HSUrHagACuTloBekbUvWP2EuSu53/social-images/social-1780412197201-a65636fb-40b5-4fcc-9dab-3a64a764e897_rw_1200.webp" },
+      { property: "og:site_name", content: "Giulio Pinotti" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Giulio Pinotti",
+          jobTitle: "Creative Director",
+          url: "https://pinottiwork.lovable.app",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "São Paulo",
+            addressCountry: "BR",
+          },
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,
