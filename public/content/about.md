@@ -17,18 +17,10 @@ brands:
   - Deca
   - Nesfit
 awards:
-  - name: Guinness World Records
-    logo_light: /__l5e/assets-v1/82513fd8-032a-453c-a4fe-4f3ec765a4e0/guinness.png
-    logo_dark: /__l5e/assets-v1/82513fd8-032a-453c-a4fe-4f3ec765a4e0/guinness.png
-  - name: 'Effie Awards Brasil: 1 Gold 2 Bronze'
-    logo_light: /__l5e/assets-v1/962d9377-060d-4ee2-8dfb-7bb1bf574b5d/effie-br-light.png
-    logo_dark: /__l5e/assets-v1/7ecac27d-8931-4520-8c84-a2a1f93d4334/effie-br-dark.png
-  - name: 'New York Festivals: Silver Midas'
-    logo_light: /__l5e/assets-v1/e82f50ca-eb4a-4fc4-871e-39d68909b595/nyf.png
-    logo_dark: /__l5e/assets-v1/e82f50ca-eb4a-4fc4-871e-39d68909b595/nyf.png
-  - name: 'Effie Awards Latam: Shortlist'
-    logo_light: /__l5e/assets-v1/5ac33732-525b-4c40-88c6-eee9898f667e/effie-latam-light.png
-    logo_dark: /__l5e/assets-v1/5b4dfcbf-b28f-4e42-9be5-723bea1a0557/effie-latam-dark.png
+  - Guinness World Records
+  - 'Effie Awards Brasil: 1 Gold 2 Bronze'
+  - 'Effie Awards Latam: Shortlist'
+  - 'New York Festivals: Silver Midas'
 what_i_do: >-
   Creative Operations & DesignOps Architecture, Generative AI Integration &
   Advanced Workflows, Full-Funnel Content Ecosystems, Data-Driven Creative
