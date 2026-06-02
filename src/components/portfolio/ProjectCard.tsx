@@ -114,12 +114,12 @@ export default function ProjectCard({ project, imageColor, className, forceAspec
                   className="absolute inset-0 z-10 pointer-events-none"
                   style={{
                     background: imageColor
-                      ? `linear-gradient(to top, ${imageColor}cc 0%, ${imageColor}22 60%, transparent 100%)`
-                      : 'linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.2) 60%, transparent 100%)',
+                      ? `linear-gradient(to right, ${imageColor}b3 0%, ${imageColor}66 40%, transparent 70%)`
+                      : 'linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 40%, transparent 70%)',
                   }}
                 />
-                <div className="absolute inset-x-0 bottom-0 p-premium-lg z-20 glass-lg">
-                  <p className="text-[11px] font-semibold uppercase tracking-[.07em] text-white/60 mb-1">
+                <div className="absolute top-0 left-0 p-premium-lg z-20 max-w-[75%] md:max-w-[55%]">
+                  <p className="text-[11px] font-semibold uppercase tracking-[.07em] text-white/70 mb-1">
                     {project.role}
                   </p>
                   <h2 className="text-sf-title-3 text-white mb-2">{project.title}</h2>
