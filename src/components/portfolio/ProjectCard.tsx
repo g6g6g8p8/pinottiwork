@@ -44,7 +44,7 @@ export default function ProjectCard({ project, imageColor, className, forceAspec
 
   const isVideo = (url: string) => url.endsWith('.mp4') || url.endsWith('.mov');
 
-  const displayTags = [project.category, project.client].filter(Boolean);
+  
 
   const cardVariants = {
     initial: { opacity: 1, y: 0 },
@@ -120,40 +120,23 @@ export default function ProjectCard({ project, imageColor, className, forceAspec
                           ? `linear-gradient(to top, ${imageColor}ee 0%, ${imageColor}44 55%, transparent 100%)`
                           : 'linear-gradient(to top, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.3) 55%, transparent 100%)')
                       : (imageColor
-                          ? `linear-gradient(to right, ${imageColor}b3 0%, ${imageColor}66 40%, transparent 70%)`
-                          : 'linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 40%, transparent 70%)'),
+                          ? `linear-gradient(to right, ${imageColor}b3 0%, ${imageColor}55 22%, transparent 40%)`
+                          : 'linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.22) 22%, transparent 40%)'),
                   }}
                 />
                 {isMobile ? (
                   <div className="absolute inset-x-0 bottom-0 p-6 z-20">
                     <p className="text-[11px] font-semibold uppercase tracking-[.07em] text-white/60 mb-1">{project.role}</p>
                     <h2 className="text-[22px] font-bold leading-tight tracking-[-0.02em] text-white mb-2">{project.title}</h2>
-                    <p className="text-[14px] leading-[20px] text-white/80 mb-4">{project.description}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {displayTags.map((tag, index) => (
-                        <span key={index} className="px-3 py-1 bg-white/15 backdrop-blur-sm rounded-full text-[12px] text-white/90">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+                    <p className="text-[14px] leading-[20px] text-white/80">{project.description}</p>
                   </div>
                 ) : (
-                  <div className="absolute top-0 left-0 p-premium-lg z-20 max-w-[55%]">
+                  <div className="absolute top-0 left-0 p-premium-lg z-20 max-w-[28%]">
                     <p className="text-[11px] font-semibold uppercase tracking-[.07em] text-white/70 mb-1">
                       {project.role}
                     </p>
                     <h2 className="text-sf-title-3 text-white mb-2">{project.title}</h2>
-                    <p className="text-sf-body text-white/90 mb-premium-md">{project.description}</p>
-                    <div className="flex flex-wrap gap-premium-sm">
-                      {displayTags.map((tag, index) => (
-                        <span
-                          key={index}
-                          className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-[12px] text-white/90"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+                    <p className="text-sf-body text-white/90">{project.description}</p>
                   </div>
                 )}
               </>
@@ -167,17 +150,7 @@ export default function ProjectCard({ project, imageColor, className, forceAspec
               {project.role}
             </p>
             <h2 className="text-sf-title-3 text-foreground mb-2">{project.title}</h2>
-            <p className="text-sf-body text-foreground/70 mb-premium-md">{project.description}</p>
-            <div className="flex flex-wrap gap-premium-sm">
-              {displayTags.map((tag, index) => (
-                <span
-                  key={index}
-                  className="px-3 py-1 bg-foreground/10 rounded-full text-[12px] text-foreground/80"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
+            <p className="text-sf-body text-foreground/70">{project.description}</p>
           </div>
         )}
       </motion.div>
