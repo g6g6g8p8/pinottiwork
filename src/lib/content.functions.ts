@@ -155,7 +155,8 @@ export interface CareerHighlight {
 
 export interface AwardItem {
   name: string;
-  logo: string;
+  logo_light: string;
+  logo_dark: string;
 }
 
 export interface AboutData {
