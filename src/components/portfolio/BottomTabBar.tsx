@@ -116,14 +116,14 @@ export default function BottomTabBar() {
       </AnimatePresence>
 
       <div
-        className="fixed left-1/2 -translate-x-1/2 z-[90] lg:hidden"
+        className="fixed left-3 right-3 z-[90] lg:hidden"
         style={{ bottom: 'calc(12px + env(safe-area-inset-bottom))' }}
       >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.4, ease: 'easeOut' }}
-          className="flex items-center gap-1
+          className="flex items-center
             bg-background/85
             backdrop-blur-xl
             rounded-full
