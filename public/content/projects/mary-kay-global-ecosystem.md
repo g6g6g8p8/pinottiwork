@@ -49,7 +49,7 @@ As Head of Creative Operations, I architected a systemic transition from a stric
 ![](https://res.cloudinary.com/dktild7hr/video/upload/v1780425781/tiktok_marykaybrasil_7498406125818203397_sc5hrk.mp4)
 :::
 
-I integrated the client directly into the pre-production phase and on-set routines. This systemic change, supported by agile project management flows, eliminated feedback latency and drastically reduced operational debt. We also centralized the content pipeline to feed a direct WhatsApp channel ("Quero+ Mary Kay"), providing the B2B2C sales force with agile, conversion-focused assets. To top it off, we modernized corporate communication by orchestrating a pioneering partnership with Elle magazine, introducing the virtual creator Ellen.
+I integrated the client directly into the pre-production phase and on-set routines. This systemic change, supported by agile project management flows, eliminated feedback latency and drastically reduced operational debt. We also centralized the content pipeline to feed a direct WhatsApp channel ("Quero+ Mary Kay"), providing the B2B2C sales force with agile, conversion-focused assets.
 
 :::gallery
 ![](https://res.cloudinary.com/dktild7hr/image/upload/v1780424113/02_djtio0.png)
