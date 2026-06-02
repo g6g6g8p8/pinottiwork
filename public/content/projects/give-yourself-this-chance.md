@@ -1,15 +1,16 @@
 ---
 id: 2
-title: "Give yourself this chance"
-slug: "give-yourself-this-chance"
-client: "Mitsubishi Motors"
-role: "Art Director"
-category: "Advertising"
+title: Give yourself this chance
+slug: give-yourself-this-chance
+client: Mitsubishi Motors
+role: Art Director
+category: Advertising
 tags: []
 order: 4
-hero: "https://res.cloudinary.com/dktild7hr/video/upload/v1741706287/destaque_r29tx5.mov"
-aspect_ratio: "4:3"
-description: "A pick-up truck is just for the countryside? Well, that's over."
+hero: >-
+  https://res.cloudinary.com/dktild7hr/video/upload/v1741706287/destaque_r29tx5.mov
+aspect_ratio: '4:3'
+description: 'A pick-up truck is just for the countryside? Well, that''s over.'
 ---
 
 Mitsubishi Motors and Tech and Soul redefined versatility with the L200 Triton Sport in the Give Yourself This Chance campaign. Set to Rita Lee's iconic track, the film breaks stereotypes, showing women, young drivers, and families embracing the L200 as the perfect companion for city streets, countryside escapes, and beach adventures alike.

@@ -1,15 +1,19 @@
 ---
 id: 11
-title: "Pink News"
-slug: "pink-news"
-client: "Mary Kay"
-role: "Creative Director"
-category: "Content"
-tags: ["Advertising", "Social Strategy"]
+title: Pink News
+slug: pink-news
+client: Mary Kay
+role: Creative Director
+category: Content
+tags:
+  - Advertising
+  - Social Strategy
 order: 1
-hero: "https://i.imgur.com/dwbgiNO.png"
-aspect_ratio: "4:3"
-description: "A bold newspaper ad turned into a viral digital campaign, earning global praise for Mary Kay Brasil."
+hero: 'https://i.imgur.com/dwbgiNO.png'
+aspect_ratio: '4:3'
+description: >-
+  A bold newspaper ad turned into a viral digital campaign, earning global
+  praise for Mary Kay Brasil.
 ---
 
 In March 2024, Mary Kay made a splash in Folha de Sao Paulo newspaper with an editorial ad celebrating the brand's impact on the lives of thousands of Brazilian women.

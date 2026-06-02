@@ -1,15 +1,15 @@
 ---
 id: 3
-title: "Connecting Clients"
-slug: "connecting-clients"
-client: "Next IP"
-role: "Art Director"
-category: "Branding"
+title: Connecting Clients
+slug: connecting-clients
+client: Next IP
+role: Art Director
+category: Branding
 tags: []
 order: 2
-hero: "https://i.imgur.com/uHszCZT.mp4"
-aspect_ratio: "4:3"
-description: "Adaptation is in their DNA, and innovation drives their brand forward."
+hero: 'https://i.imgur.com/uHszCZT.mp4'
+aspect_ratio: '4:3'
+description: 'Adaptation is in their DNA, and innovation drives their brand forward.'
 ---
 
 For Next Ip, adapting is as essential as breathing. With over 20 years of experience in the communications industry, operating across Brazil, resilience is not just a trend - it is the backbone of the company.

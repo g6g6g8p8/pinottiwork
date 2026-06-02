@@ -1,15 +1,18 @@
 ---
 id: 1
-title: "The Reconquest"
-slug: "the-reconquest"
-client: "Mitsubishi Motors"
-role: "Art Director"
-category: "Branded Content"
+title: The Reconquest
+slug: the-reconquest
+client: Mitsubishi Motors
+role: Art Director
+category: Branded Content
 tags: []
 order: 3
-hero: "https://static.wixstatic.com/media/2925d5_2db42786c8134f379bd8d49d6404ffa1~mv2.jpg/v1/fill/w_1876,h_1250,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/2925d5_2db42786c8134f379bd8d49d6404ffa1~mv2.jpg"
-aspect_ratio: "4:3"
-description: "A skimboarding world champion reclaimed a flooded train tunnel, powered by the Mitsubishi L200 Triton."
+hero: >-
+  https://static.wixstatic.com/media/2925d5_2db42786c8134f379bd8d49d6404ffa1~mv2.jpg/v1/fill/w_1876,h_1250,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/2925d5_2db42786c8134f379bd8d49d6404ffa1~mv2.jpg
+aspect_ratio: '4:3'
+description: >-
+  A skimboarding world champion reclaimed a flooded train tunnel, powered by the
+  Mitsubishi L200 Triton.
 ---
 
 In a groundbreaking campaign by Mitsubishi Motors and agency Tech and Soul, the L200 Triton reconquered the legendary Fabio Rego Tunnel, an abandoned and flooded train passage in Jaguariaiva, Parana. Spanning 900 meters with water depths reaching up to 1 meter, the tunnel became the stage for a daring challenge: a world-first skimboarding feat by two-time world champion Lucas Fink.
