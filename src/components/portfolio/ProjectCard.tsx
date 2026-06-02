@@ -33,11 +33,11 @@ export default function ProjectCard({ project, imageColor, className, forceAspec
   const getAspectRatioClass = () => {
     if (isMobile) return 'aspect-[4/5]';
     if (forceAspect === 'hero') return 'aspect-[5/2]';
-    if (forceAspect === 'card') return 'aspect-[4/5]';
+    if (forceAspect === 'card') return 'aspect-[4/3]';
     switch (project.aspect_ratio) {
       case '3:4': return 'aspect-[3/4]';
       case '9:4': return 'aspect-[5/2]';
-      default:    return 'aspect-[4/5]';
+      default:    return 'aspect-[4/3]';
     }
   };
 

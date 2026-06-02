@@ -97,7 +97,7 @@ export default function FeaturedProjects() {
   if (isFiltered) {
     return (
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 gap-premium-md md:gap-premium-lg"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-premium-md md:gap-premium-lg"
         initial="initial"
         animate="animate"
         key={`${selectedCategory}-${searchQuery}`}
@@ -105,7 +105,7 @@ export default function FeaturedProjects() {
       >
         {filteredProjects.map((p) => (
           <motion.div key={p.id} variants={itemVariants}>
-            <ProjectCard project={p} imageColor={imageColors[p.id]} layout="below" />
+            <ProjectCard project={p} imageColor={imageColors[p.id]} forceAspect="card" layout="below" />
           </motion.div>
         ))}
       </motion.div>
