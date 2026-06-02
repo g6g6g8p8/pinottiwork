@@ -18,8 +18,8 @@ brands:
   - Nesfit
 awards:
   - name: Guinness World Records
-    logo_light: /__l5e/assets-v1/bde9c092-e850-4a8a-a3dc-754e4d828b8f/guinness.png
-    logo_dark: /__l5e/assets-v1/bde9c092-e850-4a8a-a3dc-754e4d828b8f/guinness.png
+    logo_light: /__l5e/assets-v1/82513fd8-032a-453c-a4fe-4f3ec765a4e0/guinness.png
+    logo_dark: /__l5e/assets-v1/82513fd8-032a-453c-a4fe-4f3ec765a4e0/guinness.png
   - name: 'Effie Awards Brasil: 1 Gold 2 Bronze'
     logo_light: /__l5e/assets-v1/962d9377-060d-4ee2-8dfb-7bb1bf574b5d/effie-br-light.png
     logo_dark: /__l5e/assets-v1/7ecac27d-8931-4520-8c84-a2a1f93d4334/effie-br-dark.png
