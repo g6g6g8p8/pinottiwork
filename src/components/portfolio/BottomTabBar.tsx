@@ -159,21 +159,6 @@ export default function BottomTabBar() {
             })}
           </div>
 
-          <div className="w-px h-8 bg-foreground/15 shrink-0" />
-
-          <motion.button
-            onClick={openSearch}
-            whileTap={{ scale: 0.92 }}
-            className={`shrink-0 flex flex-col items-center gap-[3px] px-3 py-1
-              transition-colors duration-200
-              ${searchOpen || searchQuery
-                ? 'text-foreground'
-                : 'text-foreground/40'
-              }`}
-          >
-            <Search size={22} strokeWidth={searchOpen || searchQuery ? 2.2 : 1.6} />
-            <span className="text-[10px] font-medium leading-none">Search</span>
-          </motion.button>
         </motion.div>
       </div>
     </Portal>
