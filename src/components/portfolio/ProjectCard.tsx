@@ -126,14 +126,14 @@ export default function ProjectCard({ project, imageColor, className, forceAspec
                 />
                 {isMobile ? (
                   <div className="absolute inset-x-0 bottom-0 p-6 z-20">
-                    <p className="text-[11px] font-semibold uppercase tracking-[.07em] text-white/60 mb-1">{project.role}</p>
+                    <p className="text-[11px] font-semibold uppercase tracking-[.07em] text-white/60 mb-1">{project.category}</p>
                     <h2 className="text-[22px] font-bold leading-tight tracking-[-0.02em] text-white mb-2">{project.title}</h2>
                     <p className="text-[14px] leading-[20px] text-white/80">{project.description}</p>
                   </div>
                 ) : (
                   <div className="absolute top-0 left-0 p-premium-lg z-20 max-w-[28%]">
                     <p className="text-[11px] font-semibold uppercase tracking-[.07em] text-white/70 mb-1">
-                      {project.role}
+                      {project.category}
                     </p>
                     <h2 className="text-sf-title-3 text-white mb-2">{project.title}</h2>
                     <p className="text-sf-body text-white/90">{project.description}</p>
@@ -147,7 +147,7 @@ export default function ProjectCard({ project, imageColor, className, forceAspec
         {effectiveLayout === 'below' && (
           <div className="pt-premium-md">
             <p className="text-[11px] font-semibold uppercase tracking-[.07em] text-foreground/50 mb-1">
-              {project.role}
+              {project.category}
             </p>
             <h2 className="text-sf-title-3 text-foreground mb-2">{project.title}</h2>
             <p className="text-sf-body text-foreground/70">{project.description}</p>
