@@ -1,35 +1,20 @@
-## Goal
-No desktop (lg+), reproduzir o estilo da App Store na Home:
-- **Hero (slot `hero`)**: mantém texto sobreposto sobre a imagem com gradient (como hoje).
-- **Cards menores (slot `duo` e demais)**: imagem limpa (sem overlay/sem texto por cima); título, role, descrição e tags ficam **abaixo** da imagem.
-- **Mobile**: continua como está hoje (texto sempre sobre a imagem) — a mudança é só `lg:` para cima.
-- **Filtered grid** (busca/categoria): também usa o estilo "texto abaixo" no desktop, já que são todos cards pequenos.
+## Objetivo
+No overlay do `ProjectCard` (hero no desktop + todos os cards no mobile), mover o texto sobreposto para a **esquerda** (não ocupar a largura toda) e suavizar o fundo de leitura, inspirado no print da App Store.
 
 ## Mudanças
 
-### 1. `src/components/portfolio/ProjectCard.tsx`
-- Adicionar prop `layout?: 'overlay' | 'below'` (default `'overlay'`, comportamento atual).
-- Quando `layout === 'below'`:
-  - Renderizar a imagem dentro do bloco com `rounded-sf-xl` e sombra, **sem** o overlay de gradient e **sem** o bloco `glass-lg` de texto.
-  - Abaixo da imagem, renderizar um bloco de texto com:
-    - eyebrow (`role`) em `text-foreground/50` uppercase
-    - `h2` título em `text-foreground`
-    - descrição em `text-foreground/70`
-    - tags com fundo `bg-foreground/10` em vez de `bg-white/20`
-  - Hover lift (`y: -6`) e leve aumento da sombra continuam; manter `imageVariants` scale.
-- No mobile (`isMobile`) forçar sempre `overlay` (mantém comportamento atual mesmo se `layout='below'` for passado).
+### `src/components/portfolio/ProjectCard.tsx` — bloco `effectiveLayout === 'overlay'`
 
-### 2. `src/components/portfolio/FeaturedProjects.tsx`
-- Passar `layout="below"` para os cards do slot `duo` e do fallback (não-hero).
-- Hero continua sem `layout` (overlay).
-- No grid filtrado, passar `layout="below"` também.
+1. **Gradient overlay**: trocar o gradient de baixo→topo por um gradient da **esquerda→direita** mais suave, garantindo legibilidade do lado esquerdo sem escurecer a imagem inteira. Usar `imageColor` com opacidade menor (ex: `${imageColor}99` à esquerda → `transparent` ~60% para a direita), fallback preto similar.
 
-### 3. Sem mudanças em
-- `home-layout.md`
-- hooks, rotas, sidebar, mobile navbar.
+2. **Bloco de texto**:
+   - Reposicionar: sair de `inset-x-0 bottom-0` (largura total, ancorado embaixo) para ancorado à **esquerda e topo** (`top-0 left-0`), com `max-w-[60%]` no desktop hero e `max-w-[75%]` no mobile.
+   - Remover a classe `glass-lg` (fundo muito marcado) — deixar só o gradient como fundo de leitura. Manter padding generoso (`p-premium-lg`).
+   - Manter eyebrow (role), título, descrição e tags, com cores `text-white*` como hoje.
+
+3. **Sem mudanças** no layout `'below'` (desktop cards menores) — continua igual.
 
 ## Detalhes técnicos
-- A detecção mobile dentro do `ProjectCard` já existe via `useIsMobile` (<768px). A regra "App Store style só no desktop" se traduz como: `effectiveLayout = isMobile ? 'overlay' : layout`.
-- Aspect ratio dos cards menores continua `aspect-[4/5]` (forceAspect="card"), igual hoje.
-- Tags: usar os mesmos `[project.category, project.client]`, só trocando classes de cor para tema claro/escuro neutro.
-- Tipografia: reutilizar `text-sf-title-3` para título e `text-sf-body` para descrição, apenas trocando as classes de cor de `text-white*` para `text-foreground*`.
+- `effectiveLayout = isMobile ? 'overlay' : layout` continua igual, então a mudança vale para: mobile (todos os cards) + desktop hero.
+- Tags continuam com `bg-white/20 backdrop-blur-sm` (já suaves).
+- Sem mexer em `FeaturedProjects.tsx`, grid, ou aspect ratios.
