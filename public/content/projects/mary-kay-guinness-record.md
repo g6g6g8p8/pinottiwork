@@ -20,9 +20,17 @@ description: >-
 
 Operating a global B2B2C brand requires more than just filling a content calendar; it demands true community engagement. The challenge was to modernize the brand's communication and mobilize its massive independent sales force in a fragmented digital landscape. We needed to architect a cultural event that would unite thousands of consultants under a single, powerful brand purpose, going beyond traditional advertising to create real social impact.
 
+[video autoplay](https://res.cloudinary.com/dktild7hr/video/upload/v1780524169/2025-12-01_11-42-43_cxa1kr.mp4)
+
 ## The Diagnosis (The Insight)
 
 Traditional campaigns and standard always-on content were not enough to generate the spontaneous media (PR) and the deep, emotional community engagement required for a historic milestone. The sales force needed to be the protagonists, not just the audience. The strategic vision for "Live de Batom por Elas" (Lipstick Live by Them) was born to leverage the community's collective power, putting the consultants at the very center of the narrative.
+
+:::gallery
+![](https://res.cloudinary.com/dktild7hr/image/upload/v1779638493/CRUSH_LIVE_MK_02_jeupit.jpg)
+![](https://res.cloudinary.com/dktild7hr/image/upload/v1779638493/CRUSH_LIVE_MK_03_vdc8zn.jpg)
+![](https://res.cloudinary.com/dktild7hr/image/upload/v1779638494/CRUSH_LIVE_MK_04_vvr9ct.jpg)  
+:::
 
 ## The System (The Architecture)
 
@@ -32,9 +40,18 @@ As the Creative Director and Head of Creative Operations, my focus was on direct
 - **Content Orchestration:** We structured the creative pipeline to empower the consultants, ensuring that the strategic and content directions were perfectly aligned with the brand's business objectives.
 - **Community Protagonism:** The system was designed to allow the consultants to lead the live event, effectively transforming a creative strategy into an unprecedented community mobilization.
 
+:::gallery
+![](https://res.cloudinary.com/dktild7hr/video/upload/v1780524243/S01_09.12_REELS_Proposito_v3_legendado_auduao.mp4)
+![](https://res.cloudinary.com/dktild7hr/video/upload/v1780524254/S01_15.12_REELS_Impacto_vxlvpr.mp4)
+:::
+
 ## The Impact (The Results)
 
 The operational efficiency and strategic direction culminated in the crowning achievement of a highly successful 3-year operation on the account.
+
+:::gallery
+![](https://res.cloudinary.com/dktild7hr/video/upload/v1780524289/S02_12.12_REELS_Entrega_zo5xb0.mp4)
+:::
 
 - **Global Milestone:** Successfully achieved the official Guinness World Records title for the brand with the "Live de Batom por Elas" campaign.
 - **Community Mobilization:** Established a historic milestone that proved the operation's capability to mobilize the community and modernize communication with the sales force.
