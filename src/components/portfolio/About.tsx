@@ -8,6 +8,19 @@ export default function About() {
   const { about, loading } = useAbout();
   const navigate = useNavigate();
   const [toast, setToast] = React.useState('');
+  const [lightboxOpen, setLightboxOpen] = React.useState(false);
+
+  React.useEffect(() => {
+    if (!lightboxOpen) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setLightboxOpen(false); };
+    window.addEventListener('keydown', onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      window.removeEventListener('keydown', onKey);
+      document.body.style.overflow = prev;
+    };
+  }, [lightboxOpen]);
 
   const handleShare = async () => {
     const shareData = {
@@ -64,7 +77,14 @@ export default function About() {
           {/* Profile */}
           <div className="bg-card rounded-2xl p-6">
             <div className="flex items-center gap-4 mb-4">
-              <img src={about.avatar_url} alt="" className="w-16 h-16 rounded-full" loading="lazy" />
+              <button
+                type="button"
+                onClick={() => setLightboxOpen(true)}
+                className="rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground/40"
+                aria-label="Open profile picture"
+              >
+                <img src={about.avatar_url} alt="" className="w-16 h-16 rounded-full cursor-zoom-in hover:opacity-90 transition-opacity" loading="lazy" />
+              </button>
               <div>
                 <h1 className="text-[22px] leading-[27px]">{about.name}</h1>
                 <a href={`mailto:${about.email}`} className="text-body opacity-60">{about.email}</a>
@@ -175,6 +195,30 @@ export default function About() {
           </button>
         </div>
       </div>
+
+      {lightboxOpen && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          onClick={() => setLightboxOpen(false)}
+          className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md flex items-center justify-center p-6 animate-in fade-in"
+        >
+          <button
+            type="button"
+            onClick={() => setLightboxOpen(false)}
+            aria-label="Close"
+            className="absolute top-4 right-4 w-9 h-9 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+          >
+            <CloseIcon size={18} />
+          </button>
+          <img
+            src={about.avatar_url}
+            alt=""
+            onClick={(e) => e.stopPropagation()}
+            className="max-w-[92vw] max-h-[88vh] object-contain rounded-lg shadow-2xl"
+          />
+        </div>
+      )}
     </div>
   );
 }
