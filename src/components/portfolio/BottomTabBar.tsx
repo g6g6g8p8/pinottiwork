@@ -136,7 +136,7 @@ export default function BottomTabBar() {
               const isActive = selectedCategory === cat.id && !searchOpen;
               const Icon = cat.icon;
               const shortName =
-                cat.name === 'All Projects' ? 'All'
+                cat.name === 'Selected Works' ? 'Selected'
                 : cat.name === 'Branded Content' ? 'Branded C.'
                 : cat.name === 'Advertising' ? 'Advertis.'
                 : cat.name === 'Photography' ? 'Photo'
