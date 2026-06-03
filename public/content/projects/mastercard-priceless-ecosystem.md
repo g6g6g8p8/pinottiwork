@@ -31,4 +31,4 @@ During four highly intensive years, I served as a core pillar in the creative st
 
 **The Impact**
 
-The operational rigor and creative excellence generated historic business impact. Most notably, we made history by successfully surpassing VISA and establishing a new record on the main brand tracker index. The ecosystem garnered over 25 national and international advertising and innovation awards — and the systemic pivot during the pandemic drove tangible human impact, generating actions that resulted in the donation of over 5 million meals to those in need.
+The operational rigor and creative excellence generated historic business impact. Most notably, we made history by successfully surpassing VISA and establishing a new record on the main brand tracker index.
