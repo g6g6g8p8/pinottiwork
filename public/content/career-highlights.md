@@ -56,9 +56,7 @@ highlights:
     logo: >-
       https://res.cloudinary.com/dktild7hr/image/upload/v1779877840/images-2_tdxxti.jpg
     description: >-
-      Restructured agile production pipelines based on algorithmic diagnostics
-      (VTR), shattering historical engagement KPIs and sustaining 70+ assets per
+      Restructured agile production pipelines based on algorithmic diagnostics, shattering historical engagement KPIs and sustaining 70+ assets per
       month.
     order: 7
 ---
-
