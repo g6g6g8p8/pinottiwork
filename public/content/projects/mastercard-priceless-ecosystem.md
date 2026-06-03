@@ -29,8 +29,6 @@ A global brand cannot rely on isolated creative bursts; it needs a cohesive crea
 
 During four highly intensive years, I served as a core pillar in the creative structure, bridging elite art direction with complex account demands. We engineered a resilient production flow capable of handling extreme scale and sudden market pivots.
 
-When the pandemic hit, the system's agility allowed us to pivot massive sponsorship budgets directly into a purpose-driven digital engine. We orchestrated fully remote branded content architectures, integrated virtual Lives, and rapidly deployed campaigns like "Priceless Masks" and "Create New Habits" without missing a beat in production quality.
-
 **The Impact**
 
 The operational rigor and creative excellence generated historic business impact. Most notably, we made history by successfully surpassing VISA and establishing a new record on the main brand tracker index. The ecosystem garnered over 25 national and international advertising and innovation awards — and the systemic pivot during the pandemic drove tangible human impact, generating actions that resulted in the donation of over 5 million meals to those in need.
