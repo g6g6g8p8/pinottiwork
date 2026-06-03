@@ -79,7 +79,7 @@ export default function Home() {
           className="text-[34px] xl:text-[40px] font-bold tracking-[-0.03em] leading-tight"
         >
           {selectedCategory === 'all' || !selectedCategory
-            ? 'All Work'
+            ? 'Selected Works'
             : categories.find((c) => c.id === selectedCategory)?.name ?? 'Work'}
         </motion.h1>
       </motion.div>
