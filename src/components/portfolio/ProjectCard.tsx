@@ -111,7 +111,20 @@ export default function ProjectCard({ project, imageColor, className, forceAspec
         >
           <div className={`w-full rounded-sf-xl ${getAspectRatioClass()} relative`}>
             {mediaEl}
-            {effectiveLayout === 'overlay' && (
+            {project.slug === 'mary-kay-guinness-record' && (
+              <motion.img
+                src={guinnessAsset.url}
+                alt="Guinness World Record"
+                className="absolute top-3 right-3 md:top-4 md:right-4 z-30 w-12 h-12 md:w-16 md:h-16 rounded-full pointer-events-none"
+                style={{
+                  boxShadow: '0 4px 14px rgba(0,0,0,0.35), 0 0 0 2px rgba(255,255,255,0.9)',
+                  background: 'white',
+                }}
+                initial={{ opacity: 0, scale: 0.6, rotate: -15 }}
+                animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                transition={{ delay: 0.25, duration: 0.5, ease: [0.34, 1.56, 0.64, 1] }}
+              />
+            )}
               <>
                 <div
                   className="absolute inset-0 z-10 pointer-events-none"
