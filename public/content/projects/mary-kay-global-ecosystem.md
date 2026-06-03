@@ -3,7 +3,7 @@ id: 1
 title: 'Architecting a Global #1 Content Ecosystem'
 slug: mary-kay-global-ecosystem
 client: Mary Kay Brazil
-role: Creative Director & Operations
+role: Creative Director & Head of Creative Operations
 category: Content
 tags:
   - DesignOps
@@ -15,15 +15,17 @@ hero: 'https://res.cloudinary.com/dktild7hr/image/upload/v1780423754/15-b_zhcxb5
 aspect_ratio: '9:4'
 description: >-
   Escaping the reactive 'always-on' loop to build a full-funnel machine that
-  propelled Mary Kay Brazil to the #1 social account globally.
+  propelled Mary Kay Brazil to their top.
 ---
 
 Mary Kay Brasil needed to rejuvenate its brand perception and connect with the Gen-Z audience without diluting the rigor of a global beauty powerhouse. The existing production model was centralized, slow, and expensive — locked in a reactive cycle that was filling the content calendar but failing to build an actual community or drive agile performance.
 
-[video autoplay](https://vimeo.com/1197814166?fl=tl&fe=ec "First Things First: Social Playbook")
+[video autoplay](https://vimeo.com/1198004054?fl=tl&fe=ec "First Things First: Social Playbook")
 
 :::gallery
 ![](https://res.cloudinary.com/dktild7hr/image/upload/v1779638736/SLIDES-1_s4jaj8.png)
+![](https://res.cloudinary.com/dktild7hr/image/upload/v1780481583/PRINT-1-feed_tfjrs9.png)
+![](https://res.cloudinary.com/dktild7hr/image/upload/v1780481741/PRINT-1-feed_xqqo9c.gif)  
 :::
 
 ## The Diagnosis
@@ -31,7 +33,7 @@ Mary Kay Brasil needed to rejuvenate its brand perception and connect with the G
 Through algorithmic diagnostics and a deep dive into the production funnel, I identified a core operational bottleneck. Traditional, over-produced studio content was too slow for the shifting digital landscape and failed to capture the native attention span of modern platforms. The disconnect between high-end studio craft and agile digital language was costing the brand its cultural relevance and bleeding operational budget. The goal wasn't just to make "more content" — it was to escape the reactive loop and build a system where volume, tight margins, and cultural relevance could coexist.
 
 :::gallery
-![](https://res.cloudinary.com/dktild7hr/image/upload/v1780424725/1_jafzsk.png)
+![](https://res.cloudinary.com/dktild7hr/video/upload/v1780426106/tiktok_marykaybrasil_7423790208056823046_yokvw3.mp4)
 ![](https://res.cloudinary.com/dktild7hr/video/upload/v1780424762/2_xeapsp.mp4)
 ![](https://res.cloudinary.com/dktild7hr/video/upload/v1780424743/04_jyx5ks.mp4)
 ![](https://res.cloudinary.com/dktild7hr/image/upload/v1780424730/5_rhmozg.png)
@@ -45,7 +47,6 @@ Through algorithmic diagnostics and a deep dive into the production funnel, I id
 As Head of Creative Operations, I architected a systemic transition from a strict studio-only model to a robust, full-funnel ecosystem. We balanced high-end design assets with decentralized mobile creators, building a native UGC-style production line that matched platform algorithms perfectly.
 
 :::gallery
-![](https://res.cloudinary.com/dktild7hr/video/upload/v1780426106/tiktok_marykaybrasil_7423790208056823046_yokvw3.mp4)
 ![](https://res.cloudinary.com/dktild7hr/video/upload/v1780425781/tiktok_marykaybrasil_7498406125818203397_sc5hrk.mp4)
 :::
 
