@@ -11,6 +11,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import socialShareAsset from "../assets/social-share.png.asset.json";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SearchProvider } from "../context/SearchContext";
 import Sidebar from "../components/portfolio/Sidebar";
@@ -90,8 +91,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Giulio Pinotti, Creative Director" },
       { name: "twitter:description", content: "Creative Director based in São Paulo, Brazil — branding, content, advertising, and design." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/HSUrHagACuTloBekbUvWP2EuSu53/social-images/social-1780412197201-a65636fb-40b5-4fcc-9dab-3a64a764e897_rw_1200.webp" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/HSUrHagACuTloBekbUvWP2EuSu53/social-images/social-1780412197201-a65636fb-40b5-4fcc-9dab-3a64a764e897_rw_1200.webp" },
+      { property: "og:image", content: `https://pinotti.work${socialShareAsset.url}` },
+      { name: "twitter:image", content: `https://pinotti.work${socialShareAsset.url}` },
       { property: "og:site_name", content: "Giulio Pinotti" },
     ],
     links: [
