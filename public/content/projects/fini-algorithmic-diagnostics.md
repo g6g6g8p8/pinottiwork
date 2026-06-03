@@ -1,6 +1,6 @@
 ---
 id: 2
-title: Scaling Cultural Relevance Through Algorithmic Diagnostics
+title: Scaling Cultural Relevance for Fini
 slug: fini-algorithmic-diagnostics
 client: Fini
 role: Creative Director & Head of Creative Operations
@@ -11,10 +11,10 @@ tags:
   - VTR Optimization
   - Creative Systems
 order: 4
-hero: 'https://res.cloudinary.com/dktild7hr/image/upload/v1779713809/Image_hnvh8i.gif'
+hero: 'https://res.cloudinary.com/dktild7hr/image/upload/v1780484279/main_vxvqfp.png'
 aspect_ratio: '4:3'
 description: >-
-  Pivoting an agile production pipeline using data diagnostics to shatter
+  An agile production pipeline using data to shatter
   historical engagement KPIs without inflating studio budgets.
 ---
 
