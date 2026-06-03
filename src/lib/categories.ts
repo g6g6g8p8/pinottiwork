@@ -29,7 +29,7 @@ export function deriveCategories(projects: Project[]): Category[] {
 
   ordered.push({
     id: 'all',
-    name: 'All Projects',
+    name: 'Selected Works',
     count: projects.length,
     icon: CATEGORY_ICONS['all'],
   });
