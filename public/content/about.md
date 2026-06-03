@@ -34,7 +34,7 @@ what_i_do: >-
   Advanced Workflows, Full-Funnel Content Ecosystems, Data-Driven Creative
   Diagnostics & Iteration, Hybrid Production Models (Studio + Creators
   Network), Cross-Functional Team Leadership & Governance.
-avatar_url: 'https://mir-s3-cdn-cf.behance.net/user/276/9b72854339955.64ee5fc4bef75.png'
+avatar_url: '/src/assets/profile.png'
 ---
 
 I believe creativity only reaches its true business value when backed by flawless operational engineering.
