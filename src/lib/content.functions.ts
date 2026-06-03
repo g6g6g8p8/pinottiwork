@@ -37,6 +37,7 @@ export interface ProjectData {
   image_url: string;
   aspect_ratio: string;
   description: string;
+  og_image?: string;
 }
 
 export interface ProjectFull {
@@ -68,6 +69,7 @@ function normalizeProject(raw: any, fallbackSlug: string): ProjectData {
     image_url: hero,
     aspect_ratio: raw.aspect_ratio || '4:3',
     description: raw.description || '',
+    og_image: raw.og_image || undefined,
   };
 }
 
@@ -125,6 +127,7 @@ export interface ProjectMeta {
   client?: string;
   role?: string;
   category?: string;
+  og_image?: string;
 }
 
 export const getProjectMeta = createServerFn({ method: 'GET' })
@@ -139,6 +142,7 @@ export const getProjectMeta = createServerFn({ method: 'GET' })
       client: p.data.client,
       role: p.data.role,
       category: p.data.category,
+      og_image: p.data.og_image,
     };
   });
 

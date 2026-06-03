@@ -1,25 +1,35 @@
-## Goal
+## Problema
 
-Add a small circular "Guinness World Record" badge overlay on the top-right corner of the project card image — Behance-style award seal — specifically for the `mary-kay-guinness-record` project.
+Hoje `src/routes/projects.$slug.tsx` já gera `og:title` e `og:description` por projeto, mas:
 
-## Design
+1. A maioria dos `hero` é vídeo (`.mp4`/`.mov`) — o código pula `og:image` nesse caso, então WhatsApp/X/LinkedIn caem no preview default do site.
+2. `SITE` aponta para `pinottiwork.lovable.app`, mas o domínio canônico é `pinotti.work` (usado no sitemap/head meta). Isso quebra `og:url` e canonical.
+3. Não há campo dedicado para uma imagem de share quando o autor quiser sobrescrever o hero.
 
-- Position: absolute top-right of the card image, with comfortable inset (e.g., 12–16px).
-- Shape: small circular badge (≈48–56px desktop, ≈40px mobile) using the existing `src/assets/awards/guinness.png` asset.
-- Style: subtle white ring + soft shadow so it reads as an applied seal, like Behance's "Featured" / award medals.
-- Slight entrance animation (fade + scale) so it feels premium.
-- Pointer-events disabled so it doesn't interfere with the card link.
+## Mudanças
 
-## Implementation
+### 1. `public/content/projects/*.md` (opcional, por projeto)
+Suportar um campo de frontmatter novo: `og_image: <url>`. Quando presente, usado direto como `og:image`/`twitter:image`. Não obrigatório — só documento no README.
 
-1. **`src/components/portfolio/ProjectCard.tsx`**
-   - Import the guinness asset JSON.
-   - Add an optional badge overlay rendered when `project.slug === 'mary-kay-guinness-record'`.
-   - Place it inside the image container (above gradient/overlay, z-30) so it sits on top-right regardless of `overlay` vs `below` layout.
-   - Use `motion.img` with a small whileHover scale for delight, matching the card's existing motion vocabulary.
+### 2. `src/lib/content.functions.ts`
+- Adicionar `og_image?: string` em `ProjectMeta` e `normalizeProject`/`getProjectMeta` retornarem o valor (quando existir).
 
-No changes to content markdown, categories, or routing. Scope strictly visual.
+### 3. `src/routes/projects.$slug.tsx`
+- Trocar `SITE` para `https://pinotti.work`.
+- Nova função `resolveOgImage(meta)`:
+  - Se `meta.og_image` → usa.
+  - Senão se `meta.hero` é imagem → usa `meta.hero`.
+  - Senão se `meta.hero` é vídeo imgur (`i.imgur.com/<id>.mp4`) ou Cloudinary (`res.cloudinary.com/.../video/upload/...mp4|mov`) → deriva poster trocando extensão para `.jpg` (ambos provedores servem thumbnail nesse padrão).
+  - Senão → omite (cai no default do site).
+- Sempre que houver imagem resolvida, emitir `og:image`, `og:image:alt` (= título), `twitter:card: summary_large_image`, `twitter:image`.
+- Atualizar `image` no JSON-LD para a mesma URL resolvida.
 
-## Open question
+### 4. `public/content/README.md`
+- Documentar `og_image` como opcional (1-2 linhas).
 
-Should the badge appear **only on the homepage card** (FeaturedProjects), or also on the **project detail hero** at `/projects/mary-kay-guinness-record`? Default plan: card only (homepage). I can extend to the detail hero if you want.
+## Verificação
+
+- `curl -s https://pinotti.work/projects/mary-kay-guinness-record | grep -E 'og:(title|description|image|url)'` deve mostrar dados do projeto.
+- Testar com validador do LinkedIn/X para 1 projeto com hero de vídeo (imgur) e 1 com hero de imagem.
+
+Sem mudanças em UI/comportamento do app — só metadados de SSR.

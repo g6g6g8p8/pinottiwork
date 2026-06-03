@@ -19,6 +19,7 @@ hero: https://i.imgur.com/xxx.png   # image OR mp4 URL
 aspect_ratio: '4:3'             # '4:3' | '9:4' | etc.
 description: Short summary shown on cards and OG share previews.
 tags: []                        # optional, unused on cards/detail today
+og_image: https://...           # optional, overrides the share image (use when hero is a video)
 ---
 
 Free-form markdown body. Paragraphs work normally.
