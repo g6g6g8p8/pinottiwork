@@ -125,6 +125,7 @@ export default function ProjectCard({ project, imageColor, className, forceAspec
                 transition={{ delay: 0.25, duration: 0.5, ease: [0.34, 1.56, 0.64, 1] }}
               />
             )}
+            {effectiveLayout === 'overlay' && (
               <>
                 <div
                   className="absolute inset-0 z-10 pointer-events-none"
