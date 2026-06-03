@@ -32,7 +32,7 @@ awards:
 what_i_do: >-
   Creative Operations & DesignOps Architecture, Generative AI Integration &
   Advanced Workflows, Full-Funnel Content Ecosystems, Data-Driven Creative
-  Diagnostics (VTR & Retention), Hybrid Production Models (Studio + Creators
+  Diagnostics & Iteration, Hybrid Production Models (Studio + Creators
   Network), Cross-Functional Team Leadership & Governance.
 avatar_url: 'https://mir-s3-cdn-cf.behance.net/user/276/9b72854339955.64ee5fc4bef75.png'
 ---
@@ -47,6 +47,6 @@ Navigating high-volume corporate environments revealed a universal truth: the gr
 
 As Creative Director and Head of Creative Operations at Agência Crush, I became the bridge between business strategy and content execution — treating creative operations like a product, deploying DesignOps methodologies, automated project frameworks, and hybrid production models to eliminate friction and accelerate time-to-market.
 
-For Fini, I restructured agile production pipelines based on algorithmic diagnostics like VTR, shattering historical engagement KPIs without sacrificing pop-culture warmth. For Mary Kay Brazil, I architected a full-funnel content ecosystem that drove the brand to the #1 TikTok account globally — a strategic leadership that culminated in a Guinness World Records title for "Live de Batom por Elas".
+For Fini, I restructured agile production pipelines based on algorithmic diagnostics, shattering historical engagement KPIs without sacrificing pop-culture warmth. For Mary Kay Brazil, I architected a full-funnel content ecosystem that drove the brand to the #1 social account globally — a strategic leadership that culminated in a Guinness World Records title for "Live de Batom por Elas".
 
 I don't just evaluate ideas; I map workflows and build infrastructure. Whether orchestrating a hybrid content factory or guiding a premium legacy brand through a digital transformation, my goal is to create environments where top-tier creativity scales with speed, precision, and healthy business margins.
