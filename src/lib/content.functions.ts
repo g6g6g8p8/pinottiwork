@@ -127,6 +127,7 @@ export interface ProjectMeta {
   client?: string;
   role?: string;
   category?: string;
+  og_image?: string;
 }
 
 export const getProjectMeta = createServerFn({ method: 'GET' })
@@ -141,6 +142,7 @@ export const getProjectMeta = createServerFn({ method: 'GET' })
       client: p.data.client,
       role: p.data.role,
       category: p.data.category,
+      og_image: p.data.og_image,
     };
   });
 
