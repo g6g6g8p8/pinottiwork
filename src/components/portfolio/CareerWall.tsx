@@ -1,8 +1,40 @@
+import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useAbout } from '../../hooks/useAbout';
 
 export default function CareerWall() {
   const { about } = useAbout();
+  const scrollerRef = useRef<HTMLDivElement>(null);
+  const hintedRef = useRef(false);
+
+  useEffect(() => {
+    const el = scrollerRef.current;
+    if (!el || hintedRef.current) return;
+    if (typeof window === 'undefined') return;
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting && !hintedRef.current) {
+            hintedRef.current = true;
+            window.setTimeout(() => {
+              el.scrollTo({ left: 60, behavior: 'smooth' });
+              window.setTimeout(() => {
+                el.scrollTo({ left: 0, behavior: 'smooth' });
+              }, 350);
+            }, 250);
+            observer.disconnect();
+          }
+        }
+      },
+      { threshold: 0.5 },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [about]);
+
   if (!about || about.career_highlights.length === 0) return null;
 
   return (
@@ -19,9 +51,11 @@ export default function CareerWall() {
       </h3>
 
       <div
+        ref={scrollerRef}
         className="flex gap-premium-md overflow-x-auto snap-x snap-mandatory pb-2 -mx-1 px-1"
         style={{ scrollbarWidth: 'none' }}
       >
+
         {about.career_highlights.map((h, i) => (
           <motion.div
             key={h.id}
