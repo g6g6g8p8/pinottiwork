@@ -25,7 +25,8 @@
 # Formato: slot | slug | [slug2] | [slug3]
 
 hero | mary-kay-global-ecosystem
-duo | pink-news | fini-algorithmic-diagnostics
+duo | pink-news | mary-kay-guinness-record
+hero | fini-algorithmic-diagnostics
 duo | give-yourself-this-chance | the-reconquest
 hero | mastercard-priceless-ecosystem
 duo | connecting-clients | alternative-investments
