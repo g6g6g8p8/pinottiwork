@@ -29,7 +29,6 @@ Traditional campaigns and standard always-on content were not enough to generate
 :::gallery
 ![](https://res.cloudinary.com/dktild7hr/image/upload/v1779638493/CRUSH_LIVE_MK_02_jeupit.jpg)
 ![](https://res.cloudinary.com/dktild7hr/image/upload/v1779638493/CRUSH_LIVE_MK_03_vdc8zn.jpg)
-![](https://res.cloudinary.com/dktild7hr/image/upload/v1779638494/CRUSH_LIVE_MK_04_vvr9ct.jpg)  
 :::
 
 ## The System (The Architecture)
@@ -41,7 +40,6 @@ As the Creative Director and Head of Creative Operations, my focus was on direct
 - **Community Protagonism:** The system was designed to allow the consultants to lead the live event, effectively transforming a creative strategy into an unprecedented community mobilization.
 
 :::gallery
-![](https://res.cloudinary.com/dktild7hr/video/upload/v1780524243/S01_09.12_REELS_Proposito_v3_legendado_auduao.mp4)
 ![](https://res.cloudinary.com/dktild7hr/video/upload/v1780524254/S01_15.12_REELS_Impacto_vxlvpr.mp4)
 :::
 
