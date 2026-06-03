@@ -3,6 +3,7 @@ import { Link } from '@tanstack/react-router';
 import { motion } from 'framer-motion';
 import type { Project } from '../../hooks/useProject';
 import { usePrefetchLink } from '../../lib/prefetch';
+import guinnessAsset from '../../assets/awards/guinness.png.asset.json';
 
 function useIsMobile() {
   const [isMobile, setIsMobile] = useState(false);
