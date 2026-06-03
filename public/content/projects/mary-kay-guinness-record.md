@@ -16,13 +16,13 @@ description: >-
   How a systemic community mobilization culminated in a Guinness World Records title for Mary Kay causing massive social impact.
 ---
 
-## The Challenge (The Pain)
+## The Challenge
 
 Operating a global B2B2C brand requires more than just filling a content calendar; it demands true community engagement. The challenge was to modernize the brand's communication and mobilize its massive independent sales force in a fragmented digital landscape. We needed to architect a cultural event that would unite thousands of consultants under a single, powerful brand purpose, going beyond traditional advertising to create real social impact.
 
 [video autoplay](https://res.cloudinary.com/dktild7hr/video/upload/v1780524169/2025-12-01_11-42-43_cxa1kr.mp4)
 
-## The Diagnosis (The Insight)
+## Insight
 
 Traditional campaigns and standard always-on content were not enough to generate the spontaneous media (PR) and the deep, emotional community engagement required for a historic milestone. The sales force needed to be the protagonists, not just the audience. The strategic vision for "Live de Batom por Elas" (Lipstick Live by Them) was born to leverage the community's collective power, putting the consultants at the very center of the narrative.
 
@@ -31,11 +31,16 @@ Traditional campaigns and standard always-on content were not enough to generate
 ![](https://res.cloudinary.com/dktild7hr/image/upload/v1779638493/CRUSH_LIVE_MK_03_vdc8zn.jpg)
 :::
 
-## The System (The Architecture)
+## The campaing
 
-As the Creative Director and Head of Creative Operations, my focus was on directing the core strategy and orchestrating the content infrastructure for the campaign.
+As the Creative Director and Head of Creative Operations, my focus was on directing the core strategy and creating the content for the campaign.
 
-- **Operational Engineering:** To handle massive real-time participation, the creative execution needed to be sustained by flawless operational processes.
+:::gallery
+![](https://res.cloudinary.com/dktild7hr/video/upload/v1780525320/depimentos_smiiq4.mp4)
+![](https://res.cloudinary.com/dktild7hr/video/upload/v1780525432/MK_REEL_MECANICA_LEGENDADO_hm76vi.mp4)
+![](https://res.cloudinary.com/dktild7hr/video/upload/v1780525498/S02_19.11_REELS_Embaixadora_dsceyd.mp4)
+:::
+
 - **Content Orchestration:** We structured the creative pipeline to empower the consultants, ensuring that the strategic and content directions were perfectly aligned with the brand's business objectives.
 - **Community Protagonism:** The system was designed to allow the consultants to lead the live event, effectively transforming a creative strategy into an unprecedented community mobilization.
 
