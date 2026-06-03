@@ -69,6 +69,7 @@ function normalizeProject(raw: any, fallbackSlug: string): ProjectData {
     image_url: hero,
     aspect_ratio: raw.aspect_ratio || '4:3',
     description: raw.description || '',
+    og_image: raw.og_image || undefined,
   };
 }
 
