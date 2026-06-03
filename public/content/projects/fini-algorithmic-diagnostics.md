@@ -14,7 +14,7 @@ order: 4
 hero: 'https://res.cloudinary.com/dktild7hr/image/upload/v1779713809/Image_hnvh8i.gif'
 aspect_ratio: '4:3'
 description: >-
-  Pivoting an agile production pipeline using VTR diagnostics to shatter
+  Pivoting an agile production pipeline using data diagnostics to shatter
   historical engagement KPIs without inflating studio budgets.
 ---
 
@@ -26,10 +26,10 @@ Instead of relying solely on creative intuition, I initiated a deep algorithmic 
 
 **The Architecture**
 
-Acting on this data, I restructured our entire agile production pipeline into a new hybrid model. We pivoted video production and editing guidelines to prioritize VTR optimization, ensuring every frame worked alongside the algorithm to retain attention.
+Acting on this data, I restructured our entire agile production pipeline into a new hybrid model. We pivoted video production and editing guidelines to prioritize optimization, ensuring every frame worked alongside the algorithm to retain attention.
 
-I decentralized production by transforming the internal creative team into hybrid content creators (CGC). Products were sent directly to their homes, allowing them to shoot natively in their own routines, merging agile pre-production with authentic social language. We managed this entire ecosystem remotely through Monday and Google Slides — keeping clients integrated during pre-production drastically reduced approval times and reflows.
+I decentralized production by transforming the internal creative team into hybrid content creators (CGC). Products were sent directly to their homes, allowing them to shoot natively in their own routines, merging agile pre-production with authentic social language. We managed this entire ecosystem remotely through Monday, Slack and Google Slides — keeping clients integrated during pre-production drastically reduced approval times and reflows.
 
 **The Impact**
 
-This systemic pivot proved that data-driven operations amplify creative resonance and business KPIs. We sustained a rigorous output of 70+ assets per month, completely eliminating operational bottlenecks. We shattered the brand's historical engagement KPIs — specific cultural activations, such as the Festa Junina campaign featuring a strategic squad of influencers (including Vic and Clara), generated over 170,000 pure organic interactions. The agile pipeline effortlessly sustained massive seasonal demands, translating brand concepts into authentic, high-performing pop-culture hits.
+This systemic pivot proved that data-driven operations amplify creative resonance and business KPIs. We sustained a rigorous output of 70+ assets per month, completely eliminating operational bottlenecks. We shattered the brand's historical engagement KPIs — specific cultural activations, such as the Festa Junina campaign featuring a strategic squad of influencers, generated over 170,000 pure organic interactions. The agile pipeline effortlessly sustained massive seasonal demands, translating brand concepts into authentic, high-performing pop-culture hits.
