@@ -18,7 +18,10 @@ export default function CareerWall() {
         CAREER HIGHLIGHTS
       </h3>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-premium-md">
+      <div
+        className="flex gap-premium-md overflow-x-auto snap-x snap-mandatory pb-2 -mx-1 px-1"
+        style={{ scrollbarWidth: 'none' }}
+      >
         {about.career_highlights.map((h, i) => (
           <motion.div
             key={h.id}
@@ -27,24 +30,28 @@ export default function CareerWall() {
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.4, delay: i * 0.05, ease: 'easeOut' }}
             className="
-              flex items-start gap-3 p-4 rounded-sf-xl
-              bg-card border border-foreground/5
-              hover:border-foreground/15 transition-colors
+              snap-start shrink-0
+              w-[320px] aspect-[4/3]
+              bg-card rounded-2xl p-6
+              border border-foreground/5 hover:border-foreground/15
+              transition-colors flex flex-col
             "
           >
-            <img
-              src={h.logo_url}
-              alt={h.company}
-              loading="lazy"
-              className="w-10 h-10 rounded-[8px] bg-foreground/5 object-cover flex-shrink-0"
-            />
-            <div className="flex-1 min-w-0">
-              <div className="text-[15px] leading-[18px] font-semibold truncate">{h.company}</div>
-              <div className="text-[12px] leading-[15px] text-foreground/60 mb-1">at {h.role}</div>
-              <p className="text-[12px] leading-[17px] text-foreground/70">
-                {h.period}
-              </p>
+            <div className="flex items-start gap-4 mb-4">
+              <img
+                src={h.logo_url}
+                alt={h.company}
+                loading="lazy"
+                className="w-[54px] h-[54px] rounded-[8px] bg-foreground/5 object-cover flex-shrink-0"
+              />
+              <div className="flex-1 min-w-0 space-y-1">
+                <div className="text-[22px] leading-[27px] font-semibold truncate">{h.company}</div>
+                <div className="text-[16px] leading-[19px] text-foreground/60 truncate">at {h.role}</div>
+              </div>
             </div>
+            <p className="text-[16px] leading-[24px] text-foreground/80 flex-1 overflow-hidden">
+              {h.period}
+            </p>
           </motion.div>
         ))}
       </div>
