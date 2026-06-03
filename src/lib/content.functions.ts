@@ -37,6 +37,7 @@ export interface ProjectData {
   image_url: string;
   aspect_ratio: string;
   description: string;
+  og_image?: string;
 }
 
 export interface ProjectFull {
