@@ -202,7 +202,7 @@ export const getAbout = createServerFn({ method: 'GET' }).handler(
         name: data.name || '',
         email: data.email || '',
         title: data.title || '',
-        avatar_url: data.avatar_url === '/src/assets/profile.png' ? '/assets/profile.png' : (data.avatar_url || data.avatar || ''),
+        avatar_url: data.avatar_url || data.avatar || '',
         short_bio: (bio || '').trim(),
         what_i_do: data.what_i_do || '',
         brands: data.brands || [],
