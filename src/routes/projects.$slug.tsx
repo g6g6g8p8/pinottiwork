@@ -1,8 +1,27 @@
 import { createFileRoute } from "@tanstack/react-router";
 import ProjectDetail from "../components/portfolio/ProjectDetail";
-import { getProjectMeta } from "../lib/content.functions";
+import { getProjectMeta, type ProjectMeta } from "../lib/content.functions";
 
-const SITE = "https://pinottiwork.lovable.app";
+const SITE = "https://pinotti.work";
+
+function resolveOgImage(meta: ProjectMeta | null | undefined): string | null {
+  if (!meta) return null;
+  if (meta.og_image) return meta.og_image;
+  const hero = meta.hero || "";
+  if (!hero) return null;
+  const isVideo = /\.(mp4|mov)$/i.test(hero);
+  if (!isVideo) return hero;
+  // Derive poster from common video providers
+  if (/i\.imgur\.com\//i.test(hero)) {
+    return hero.replace(/\.(mp4|mov)$/i, ".jpg");
+  }
+  if (/res\.cloudinary\.com\/.*\/video\/upload\//i.test(hero)) {
+    return hero
+      .replace(/\/video\/upload\//i, "/image/upload/")
+      .replace(/\.(mp4|mov)$/i, ".jpg");
+  }
+  return null;
+}
 
 export const Route = createFileRoute("/projects/$slug")({
   loader: async ({ params }) => {
@@ -21,6 +40,8 @@ export const Route = createFileRoute("/projects/$slug")({
     if (description.length > 300) description = description.slice(0, 297) + "…";
     if (!description) description = "Selected project by Giulio Pinotti, Creative Director.";
 
+    const ogImage = resolveOgImage(meta);
+
     const meta_tags: Array<Record<string, string>> = [
       { title },
       { name: "description", content: description },
@@ -29,9 +50,13 @@ export const Route = createFileRoute("/projects/$slug")({
       { property: "og:type", content: "article" },
       { property: "og:url", content: url },
     ];
-    if (meta?.hero && !/\.(mp4|mov)$/i.test(meta.hero)) {
-      meta_tags.push({ property: "og:image", content: meta.hero });
-      meta_tags.push({ name: "twitter:image", content: meta.hero });
+    if (ogImage) {
+      meta_tags.push({ property: "og:image", content: ogImage });
+      meta_tags.push({ property: "og:image:alt", content: meta?.title || title });
+      meta_tags.push({ name: "twitter:card", content: "summary_large_image" });
+      meta_tags.push({ name: "twitter:image", content: ogImage });
+      meta_tags.push({ name: "twitter:title", content: title });
+      meta_tags.push({ name: "twitter:description", content: description });
     }
 
     const scripts = meta
@@ -44,7 +69,7 @@ export const Route = createFileRoute("/projects/$slug")({
               headline: meta.title,
               name: meta.title,
               description: baseDesc || description,
-              image: meta.hero,
+              image: ogImage || meta.hero,
               url,
               creator: {
                 "@type": "Person",
