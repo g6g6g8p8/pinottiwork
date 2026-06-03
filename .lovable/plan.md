@@ -1,55 +1,35 @@
-## Problema
 
-Hoje, no detalhe de projeto (`ProjectDetail.tsx`), os blocos de texto vindos dos arquivos `.md` em `public/content/projects/` são renderizados como `<p>` simples, dividindo apenas por quebras de linha. Resultado: `##`, `**bold**`, listas e links aparecem como texto cru ("## The Diagnosis", "**Bold**"), como visível no case Mary Kay.
+## 1. Logos dos prêmios sumiram
 
-## Solução
+**Causa:** o front-matter de `public/content/about.md` está com `awards` como lista de strings simples (`- Guinness World Records`, etc.). Como não há `logo_light`/`logo_dark`, o parser em `getAbout` devolve strings vazias, e:
+- `About.tsx` só renderiza `<img>` quando `a.logo_light` existe → some.
+- `SidebarAwards.tsx` cai no fallback `<Trophy />` → volta a ser ícone.
 
-Usar um renderizador real de Markdown nos blocos `type: 'text'`, preservando o pipeline atual (gallery, video, image continuam tratados por regex antes do parse).
+**Correção:** reconverter `awards` em `about.md` para objetos com `name` + `logo_light` + `logo_dark`, apontando para os assets já existentes em `src/assets/awards/*.asset.json`:
 
-### 1. Dependências
+- Guinness World Records → `guinness.png` (mesmo logo para light/dark)
+- Effie Awards Brasil: 1 Gold 2 Bronze → `effie-br-light.png` / `effie-br-dark.png`
+- Effie Awards Latam: Shortlist → `effie-latam-light.png` / `effie-latam-dark.png`
+- New York Festivals: Silver Midas → `nyf.png`
 
-Adicionar:
-- `react-markdown` — renderizador
-- `remark-gfm` — suporte GFM (listas com `-`, tabelas, links automáticos, strikethrough)
+URLs serão lidas dos arquivos `.asset.json` (campo `url`) e embutidas como strings absolutas no front-matter YAML.
 
-### 2. `src/components/portfolio/ProjectDetail.tsx`
+`SidebarAwards.tsx` continua filtrando "latam" como antes (logo Effie Latam fica só no About).
 
-No `case 'text'` do `renderContent`, substituir o `.split('\n').map(...)` por:
+## 2. Career Highlights horizontal no desktop home
 
-```tsx
-<div className="prose prose-invert max-w-none opacity-80">
-  <ReactMarkdown remarkPlugins={[remarkGfm]}>
-    {section.content.text ?? ''}
-  </ReactMarkdown>
-</div>
-```
+Alvo: `src/components/portfolio/CareerWall.tsx` (renderizado pela Home no desktop).
 
-### 3. Estilos tipográficos
+Mudanças:
+- Reutilizar **o mesmo bloco visual** do About (`bg-card rounded-2xl p-6`, logo 54×54, nome 22px, "at {role}" 16/19, period 16/24).
+- Trocar grid por **scroll horizontal de linha única**: container `flex gap-premium-md overflow-x-auto snap-x snap-mandatory` com cada card `snap-start shrink-0`.
+- **Altura fixa = altura de um ProjectCard sem destaque** = `aspect-[4/3]` aplicado a uma coluna desktop. Vou aplicar `aspect-[4/3]` ao card de highlight com largura fixa (ex.: `w-[320px]`) para casar com a cadência dos ProjectCards no grid abaixo.
+- Card vira layout vertical: logo no topo, depois company / role / period, com o texto do `period` podendo respirar dentro do quadrado.
+- Esconder a scrollbar com utility já usada no projeto (ou adicionar regra mínima em `styles.css` se necessário).
+- Animação de entrada mantida; sem mudanças em mobile (continua grid 1 col se aplicável — vou conferir: hoje é `grid-cols-1 md:grid-cols-2 lg:grid-cols-3`, vou trocar para horizontal em todos os tamanhos já que é uma decisão de layout consistente; se quiser mobile diferente me avisa).
 
-Como o projeto usa Tailwind v4 sem o plugin `@tailwindcss/typography`, mapear elementos via CSS dirigido ao container (em `src/styles.css` ou classes utilitárias inline) para casar com o design system:
+## Arquivos a alterar
+- `public/content/about.md` — reescrever bloco `awards`.
+- `src/components/portfolio/CareerWall.tsx` — novo layout horizontal usando o mesmo "bloco do About".
 
-- `h2` → estilo similar ao `text-sf-headline` usado em vídeos (display font, maior, negrito, `mt-8 mb-3`)
-- `h3` → menor, semibold, `mt-6 mb-2`
-- `p` → manter `text-body opacity-80` (já default)
-- `strong` → `font-semibold text-foreground` (sem reduzir opacidade)
-- `ul`/`ol` → list-disc/decimal com `pl-5 space-y-1`
-- `a` → underline, hover muda opacidade
-- `blockquote` → border-l, italic, opacidade reduzida
-
-Preferência: adicionar uma classe utilitária no container (ex.: `.project-prose`) em `src/styles.css` com regras `.project-prose h2 { ... }` etc., evitando depender do plugin typography.
-
-### 4. Markdown nativo nos arquivos
-
-Os arquivos já usam sintaxe markdown válida (`##`, `**`, listas). Nenhuma migração de conteúdo é necessária — eles passarão a renderizar corretamente após a mudança.
-
-### 5. Edge cases
-
-- `:::gallery` e `[video](...)` continuam sendo extraídos antes pelo `parseMarkdown.ts` (split no regex), então não vão parar em `ReactMarkdown`.
-- Imagens "soltas" (`![](url)`) viram blocos `type: 'image'` no parser atual — comportamento preservado.
-- Em mobile, validar espaçamento de h2/h3 dentro do `space-y-8` do container.
-
-## QA
-
-- Abrir `/projects/mary-kay-global-ecosystem`: verificar que "The Diagnosis", "The Architecture", "The Impact" aparecem como headings reais e os trechos em `**` como bold.
-- Abrir `/projects/mary-kay-content-machine`: idem para h2 e bold.
-- Conferir que galerias e vídeos continuam funcionando.
+Sem mudanças em `About.tsx`, `SidebarAwards.tsx` ou em `content.functions.ts` (o parser já suporta objetos com `logo_light`/`logo_dark`).
