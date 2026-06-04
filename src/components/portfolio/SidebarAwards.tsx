@@ -13,17 +13,26 @@ export default function SidebarAwards() {
         aria-label="Awards"
         className="flex items-center justify-start gap-3 px-1 pb-3"
       >
-        {awards.map((award, i) => (
+        {awards.map((award, i) => {
+          // Per-award size overrides (base h-9 = 36px, max-w 73px)
+          const isNYF = /new york|midas|nyf/i.test(award.name);
+          const isGuinness = /guinness/i.test(award.name);
+          const sizeClass = isNYF
+            ? 'h-[43px] max-w-[88px] min-w-[43px]'
+            : isGuinness
+              ? 'h-[32px] max-w-[66px] min-w-[32px]'
+              : 'h-9 max-w-[73px] min-w-[36px]';
+          const imgClass = isNYF
+            ? 'h-[43px] max-w-[88px]'
+            : isGuinness
+              ? 'h-[32px] max-w-[66px]'
+              : 'h-9 max-w-[73px]';
+          return (
           <Tooltip.Root key={i}>
             <Tooltip.Trigger asChild>
               <span
                 aria-label={award.name}
-                className="
-                  inline-flex items-center justify-center
-                  h-9 w-auto min-w-[36px] max-w-[73px]
-                  opacity-80 hover:opacity-100
-                  transition-opacity cursor-default
-                "
+                className={`inline-flex items-center justify-center w-auto opacity-80 hover:opacity-100 transition-opacity cursor-default ${sizeClass}`}
               >
                 {award.logo_light ? (
                   <>
@@ -31,13 +40,13 @@ export default function SidebarAwards() {
                       src={award.logo_light}
                       alt={award.name}
                       loading="lazy"
-                      className="h-9 w-auto max-w-[73px] object-contain dark:hidden"
+                      className={`w-auto object-contain dark:hidden ${imgClass}`}
                     />
                     <img
                       src={award.logo_dark}
                       alt={award.name}
                       loading="lazy"
-                      className="h-9 w-auto max-w-[73px] object-contain hidden dark:block"
+                      className={`w-auto object-contain hidden dark:block ${imgClass}`}
                     />
                   </>
                 ) : (
