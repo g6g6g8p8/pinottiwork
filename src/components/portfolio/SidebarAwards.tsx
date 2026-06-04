@@ -70,7 +70,8 @@ export default function SidebarAwards() {
               </Tooltip.Content>
             </Tooltip.Portal>
           </Tooltip.Root>
-        ))}
+          );
+        })}
       </div>
     </Tooltip.Provider>
   );
