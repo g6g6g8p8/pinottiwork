@@ -20,7 +20,7 @@ export default function SidebarAwards() {
                 aria-label={award.name}
                 className="
                   inline-flex items-center justify-center
-                  h-7 w-auto min-w-[28px] max-w-[56px]
+                  h-9 w-auto min-w-[36px] max-w-[73px]
                   opacity-80 hover:opacity-100
                   transition-opacity cursor-default
                 "
@@ -31,17 +31,17 @@ export default function SidebarAwards() {
                       src={award.logo_light}
                       alt={award.name}
                       loading="lazy"
-                      className="h-7 w-auto max-w-[56px] object-contain dark:hidden"
+                      className="h-9 w-auto max-w-[73px] object-contain dark:hidden"
                     />
                     <img
                       src={award.logo_dark}
                       alt={award.name}
                       loading="lazy"
-                      className="h-7 w-auto max-w-[56px] object-contain hidden dark:block"
+                      className="h-9 w-auto max-w-[73px] object-contain hidden dark:block"
                     />
                   </>
                 ) : (
-                  <Trophy size={13} strokeWidth={1.8} className="text-foreground/60" />
+                  <Trophy size={17} strokeWidth={1.8} className="text-foreground/60" />
                 )}
               </span>
             </Tooltip.Trigger>
