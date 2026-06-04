@@ -1,39 +1,41 @@
-## Problema
+## Diagnóstico
 
-A versão atual tenta mapear o progresso do scroll vertical para `scrollLeft` do carrossel, mas a seção tem altura pequena (≈ uma viewport ou menos), então o carrossel só "vê" o scroll por um intervalo curto e na prática nada se move de forma perceptível — em mobile ainda menos, porque a seção entra e sai do viewport quase instantaneamente.
+Confirmei no preview: o carrossel até está rolando lateralmente conforme a página desce, mas a seção **não está pinando** — ela renderiza com a altura do conteúdo natural (curta), então o auto-scroll horizontal completo acontece em pouquíssimos pixels de scroll vertical, e logo abaixo já aparecem outros projetos. Visualmente parece "não funcionar".
 
-## Solução
+A causa é que a estratégia atual depende de `scrollLeft` + `useLayoutEffect` para definir `height` da `section`, e em alguns momentos (hidratação SSR, ordem de efeitos, ResizeObserver) o `pinHeight` não é aplicado a tempo. Sem altura extra na seção, não há range vertical para o pin segurar.
 
-Trocar a abordagem por um **pin + horizontal scroll** clássico, que funciona igual em desktop e mobile:
+## Solução (refatoração)
 
-1. Envelopar a seção `CareerWall` num **wrapper alto** (ex.: `height = 100vh + scrollDistance`, onde `scrollDistance ≈ scrollWidth − clientWidth`).
-2. Dentro do wrapper, um container `sticky top-0 h-screen` (ou `h-[80vh]` para deixar respiro) que segura o carrossel fixo na tela enquanto o usuário rola.
-3. Um listener de scroll calcula o progresso dentro do wrapper (0 → 1) e aplica em `scrollLeft` do trilho, igual à lógica atual mas agora com um range de scroll garantido e proporcional ao conteúdo.
-4. Manter `requestAnimationFrame` para suavidade e respeitar `prefers-reduced-motion` (sem pin nesse caso, vira scroll horizontal manual normal).
+Reescrever `CareerWall.tsx` usando o pattern canônico de **scroll horizontal pinado com transform**, baseado em Framer Motion `useScroll` + `useTransform`. Vantagens: zero dependência de medir/aplicar `scrollLeft`, comportamento idêntico em desktop e mobile, sem hydration mismatch.
 
-Resultado: ao descer a página, o carrossel "gruda" e desliza lateralmente da primeira até a última card; depois o pin solta e a página continua. Comporta-se igual no mobile, sem depender de gesto lateral.
+Estrutura:
 
-## Detalhes técnicos
+```
+<section ref={targetRef} style={{ height: `${cardsCount * 90}vh` }}>
+  <div className="sticky top-0 h-screen overflow-hidden flex flex-col justify-center">
+    <h3>CAREER HIGHLIGHTS</h3>
+    <motion.div style={{ x }} className="flex gap-... will-change-transform">
+      {cards}
+    </motion.div>
+  </div>
+</section>
+```
 
-- Arquivo: `src/components/portfolio/CareerWall.tsx` (única mudança).
-- Estrutura JSX:
-  ```
-  <section ref={wrapperRef} style={{ height: pinHeight }}>
-    <div className="sticky top-0 h-screen flex flex-col justify-center">
-      <h3>CAREER HIGHLIGHTS</h3>
-      <div ref={scrollerRef} className="flex gap-... overflow-hidden">
-        {cards}
-      </div>
-    </div>
-  </section>
-  ```
-- `pinHeight` calculado em `useLayoutEffect` a partir de `scrollerRef.current.scrollWidth − clientWidth + window.innerHeight`, recalculado em `resize`.
-- Listener de scroll global: `progress = clamp((scrollY − wrapperTop) / (pinHeight − vh), 0, 1)` → `scroller.scrollLeft = progress * maxScroll`.
-- `overflow-hidden` no trilho (em vez de `overflow-x-auto`) para o usuário não conseguir empurrar o scroll lateral manualmente e brigar com o pin; mantém `snap` desligado.
-- Fallback `prefers-reduced-motion`: não pinar, voltar para `overflow-x-auto` com scroll-snap (comportamento antigo).
-- Sem mudanças em outros componentes, estilos globais ou conteúdo.
+- `useScroll({ target: targetRef, offset: ['start start', 'end end'] })` → `scrollYProgress` de 0→1 enquanto a seção atravessa o viewport pinado.
+- `x = useTransform(scrollYProgress, [0, 1], ['0%', '-X%'])` onde X é calculado a partir do número de cards (ex.: `((cards - 1) * 320 + gaps - viewportWidth) / trackWidth * 100`). Mais simples: usar valores em px medidos via `useMeasure` ou aproximar com `-(cardsCount * 340 - vw)`. Vou medir o track real com `useLayoutEffect` em uma ref do track e do viewport, recalcular em resize.
+- Altura da seção fixa em `(cardsCount * 80vh)` ou `100vh + trackWidth - viewportWidth` (px), aplicada via inline style; usar um valor `null` durante SSR (renderiza altura mínima) e atualizar pós-mount sem causar hydration mismatch (a `<section>` recebe `style` apenas no client após `useEffect`, evitando warning ao deixar atributo ausente no markup SSR e adicioná-lo via efeito).
+- Sticky `top-0 h-screen overflow-hidden` garante pin durante todo o range vertical.
+- `prefers-reduced-motion`: fallback para scroll horizontal manual (overflow-x-auto, snap), sem pin.
+
+Vou também:
+- Confirmar que nenhum ancestral entre `<section>` e `<body>` introduz `overflow:hidden` (já verificado: não há). Sticky funciona.
+- Não tocar em `BottomTabBar`, `FeaturedProjects` ou outros componentes (os warnings de hydration e keys que apareceram no console são pré-existentes e não relacionados).
+
+## Arquivos
+
+- `src/components/portfolio/CareerWall.tsx` — reescrever inteiro com o pattern acima.
 
 ## Fora de escopo
 
-- Tamanhos dos logos dos prêmios (já ajustados antes).
-- Estilo visual das cards.
+- Hydration warning de `BottomTabBar`.
+- Warning de keys em `FeaturedProjects` (cards usam `key={p.id}`, o warning é em outro caminho — investigar em ticket próprio se persistir).
