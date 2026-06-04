@@ -1,41 +1,32 @@
-## Diagnóstico
+## Mudança
 
-Confirmei no preview: o carrossel até está rolando lateralmente conforme a página desce, mas a seção **não está pinando** — ela renderiza com a altura do conteúdo natural (curta), então o auto-scroll horizontal completo acontece em pouquíssimos pixels de scroll vertical, e logo abaixo já aparecem outros projetos. Visualmente parece "não funcionar".
+Substituir o `CareerWall` atual (pin + scroll horizontal com Framer Motion `useScroll`/`useTransform`) por um layout vertical clean com **reveal on-scroll**: cada card entra com fade + leve translateY quando aparece no viewport. Sem sequestrar scroll, sem medir larguras, funciona igual em desktop e mobile.
 
-A causa é que a estratégia atual depende de `scrollLeft` + `useLayoutEffect` para definir `height` da `section`, e em alguns momentos (hidratação SSR, ordem de efeitos, ResizeObserver) o `pinHeight` não é aplicado a tempo. Sem altura extra na seção, não há range vertical para o pin segurar.
+## Implementação
 
-## Solução (refatoração)
+Reescrever `src/components/portfolio/CareerWall.tsx`:
 
-Reescrever `CareerWall.tsx` usando o pattern canônico de **scroll horizontal pinado com transform**, baseado em Framer Motion `useScroll` + `useTransform`. Vantagens: zero dependência de medir/aplicar `scrollLeft`, comportamento idêntico em desktop e mobile, sem hydration mismatch.
-
-Estrutura:
-
-```
-<section ref={targetRef} style={{ height: `${cardsCount * 90}vh` }}>
-  <div className="sticky top-0 h-screen overflow-hidden flex flex-col justify-center">
-    <h3>CAREER HIGHLIGHTS</h3>
-    <motion.div style={{ x }} className="flex gap-... will-change-transform">
-      {cards}
-    </motion.div>
-  </div>
-</section>
-```
-
-- `useScroll({ target: targetRef, offset: ['start start', 'end end'] })` → `scrollYProgress` de 0→1 enquanto a seção atravessa o viewport pinado.
-- `x = useTransform(scrollYProgress, [0, 1], ['0%', '-X%'])` onde X é calculado a partir do número de cards (ex.: `((cards - 1) * 320 + gaps - viewportWidth) / trackWidth * 100`). Mais simples: usar valores em px medidos via `useMeasure` ou aproximar com `-(cardsCount * 340 - vw)`. Vou medir o track real com `useLayoutEffect` em uma ref do track e do viewport, recalcular em resize.
-- Altura da seção fixa em `(cardsCount * 80vh)` ou `100vh + trackWidth - viewportWidth` (px), aplicada via inline style; usar um valor `null` durante SSR (renderiza altura mínima) e atualizar pós-mount sem causar hydration mismatch (a `<section>` recebe `style` apenas no client após `useEffect`, evitando warning ao deixar atributo ausente no markup SSR e adicioná-lo via efeito).
-- Sticky `top-0 h-screen overflow-hidden` garante pin durante todo o range vertical.
-- `prefers-reduced-motion`: fallback para scroll horizontal manual (overflow-x-auto, snap), sem pin.
-
-Vou também:
-- Confirmar que nenhum ancestral entre `<section>` e `<body>` introduz `overflow:hidden` (já verificado: não há). Sticky funciona.
-- Não tocar em `BottomTabBar`, `FeaturedProjects` ou outros componentes (os warnings de hydration e keys que apareceram no console são pré-existentes e não relacionados).
-
-## Arquivos
-
-- `src/components/portfolio/CareerWall.tsx` — reescrever inteiro com o pattern acima.
+- Layout: grid vertical responsivo
+  - Mobile: 1 coluna
+  - `sm`: 2 colunas
+  - `lg`: 3 colunas
+  - gap usando os tokens já existentes (`gap-premium-md`)
+- Cada card mantém o visual atual (logo 54px + company + role + period, `aspect-[4/3]`, `rounded-2xl`, borda sutil com hover).
+- Reveal por card usando Framer Motion `motion.div` + `whileInView`:
+  - `initial={{ opacity: 0, y: 16 }}`
+  - `whileInView={{ opacity: 1, y: 0 }}`
+  - `viewport={{ once: true, amount: 0.3 }}`
+  - `transition={{ duration: 0.5, ease: 'easeOut', delay: index * 0.06 }}` (stagger leve por ordem visual)
+- Respeitar `prefers-reduced-motion`: se o usuário preferir movimento reduzido, renderizar sem `motion` (estático, sem animação) — usar `useReducedMotion()` do framer-motion.
+- Manter o título `CAREER HIGHLIGHTS` no mesmo estilo atual.
+- Remover tudo relacionado ao pin: `sectionRef`/`viewportRef`/`trackRef`, `useScroll`, `useTransform`, `useMotionValue`, cálculo de `distance`, `ResizeObserver`, `sectionStyle`, `mounted`, e o fallback `overflow-x-auto`.
 
 ## Fora de escopo
 
-- Hydration warning de `BottomTabBar`.
-- Warning de keys em `FeaturedProjects` (cards usam `key={p.id}`, o warning é em outro caminho — investigar em ticket próprio se persistir).
+- Não tocar em `BottomTabBar`, `FeaturedProjects`, `Sidebar*`, conteúdo dos highlights, ou `useAbout`.
+- Warnings de hydration/keys pré-existentes em outros componentes.
+
+## Arquivos
+
+- `src/components/portfolio/CareerWall.tsx` — reescrever inteiro.
+- `.lovable/plan.md` — atualizar com a nova abordagem.
