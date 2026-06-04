@@ -46,6 +46,7 @@ export default function CareerWall() {
 
   return (
     <motion.section
+      ref={sectionRef}
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-80px' }}
