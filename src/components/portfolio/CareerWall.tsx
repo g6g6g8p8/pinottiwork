@@ -60,7 +60,7 @@ export default function CareerWall() {
   const xRaw = useTransform(scrollYProgress, [0, 1], [0, -distance]);
   const x = useSpring(xRaw, { stiffness: 120, damping: 22, mass: 0.4 });
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const measure = () => {
       const vp = viewportRef.current;
       const tr = trackRef.current;
