@@ -156,8 +156,3 @@ export default function CareerWall() {
     </section>
   );
 }
-
-// Avoid SSR mismatch warning for useLayoutEffect.
-if (typeof window === 'undefined') {
-  (useLayoutEffect as unknown as typeof useEffect) = useEffect;
-}
