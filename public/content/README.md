@@ -73,8 +73,33 @@ highlights:
 
 ## Media
 
-Use external URLs (imgur, cloudinary, vimeo, etc.). The site doesn't host
-images itself — paste the URL and you're done.
+Mídia (imagens, GIFs, vídeos) é servida pelo **Lovable Assets** — CDN próprio
+do Lovable (Cloudflare R2), sem conta externa, sem limite de plano. Cada
+upload gera uma URL imutável no formato `/__l5e/assets-v1/{uuid}/{arquivo}`
+que você cola no markdown (`hero:`, `![](...)`, `[video autoplay](...)`).
+
+### Subindo mídia para um novo case
+
+1. Mande o(s) arquivo(s) no chat do Lovable. Eles ficam disponíveis em
+   `/mnt/user-uploads/<arquivo>`.
+2. Peça pra eu (agente) subir — eu rodo no sandbox:
+
+   ```bash
+   mkdir -p src/assets/cases/<slug-do-projeto>
+   lovable-assets create \
+     --file /mnt/user-uploads/<arquivo> \
+     --filename <arquivo> \
+     > src/assets/cases/<slug-do-projeto>/<arquivo>.asset.json
+   ```
+
+3. O comando devolve um JSON com o campo `url`. Eu colo essa URL no `.md`
+   do case (`hero:`, `![](url)` ou `[video autoplay](url)`).
+
+Para vídeos como hero, defina também `og_image:` no frontmatter com uma
+URL de imagem (poster), senão a prévia de compartilhamento sai sem imagem.
+
+URLs externas (Vimeo, YouTube, imgur) continuam funcionando — só não use
+mais Cloudinary; a conta gratuita esbarrou no limite de banda.
 
 ## Why this format?
 
