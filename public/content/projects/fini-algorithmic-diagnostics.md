@@ -11,7 +11,7 @@ tags:
   - VTR Optimization
   - Creative Systems
 order: 4
-hero: 'https://res.cloudinary.com/dktild7hr/image/upload/v1780484279/main_vxvqfp.png'
+hero: '/__l5e/assets-v1/c750d3ed-b467-4d1c-923d-9e94f8879336/main_vxvqfp.png'
 aspect_ratio: '4:3'
 description: >-
   An agile production pipeline using data to shatter

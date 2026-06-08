@@ -12,7 +12,7 @@ tags:
   - Creative Systems
 order: 4
 hero: >-
-  https://res.cloudinary.com/dktild7hr/image/upload/v1779716098/Screenshot_2026-05-25_at_10.33.59_d0lso8.png
+  /__l5e/assets-v1/0e1acb09-8851-4179-92d6-4f40aac862cc/Screenshot_2026-05-25_at_10.33.59_d0lso8.png
 aspect_ratio: '9:4'
 description: >-
   Sustaining visual excellence and driving innovation across dozens of verticals
