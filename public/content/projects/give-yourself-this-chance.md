@@ -9,6 +9,7 @@ tags: []
 order: 4
 hero: >-
   /__l5e/assets-v1/73686a31-8bfe-4e05-92c6-b02ddc8305d3/destaque_r29tx5.mov
+og_image: /__l5e/assets-v1/99820272-9d23-457c-835b-8d77dd47b2b8/destaque_poster.jpg
 aspect_ratio: '4:3'
 description: 'A pick-up truck is just for the countryside? Well, that''s over.'
 ---
