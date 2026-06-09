@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState, useMemo } from 'react';
 import { Link, useLocation, useNavigate } from '@tanstack/react-router';
-import { Search, X } from 'lucide-react';
+import { Search, X, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAbout } from '../../hooks/useAbout';
 import SidebarAwards from './SidebarAwards';
@@ -8,6 +8,28 @@ import { useSearch } from '../../context/SearchContext';
 import { getImageColor } from '../../lib/portfolio-utils';
 import { deriveCategories } from '../../lib/categories';
 import { useProjects } from '../../hooks/useProjects';
+
+type SuggestionType = 'project' | 'client' | 'category' | 'tag';
+
+interface Suggestion {
+  key: string;
+  label: string;
+  type: SuggestionType;
+  normalized: string;
+  slug?: string;
+  subtitle?: string;
+}
+
+function normalize(s: string) {
+  return s.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '');
+}
+
+const TYPE_LABEL: Record<SuggestionType, string> = {
+  project: 'Project',
+  client: 'Client',
+  category: 'Category',
+  tag: 'Tag',
+};
 
 export default function Sidebar() {
   const { about } = useAbout();
@@ -18,27 +40,59 @@ export default function Sidebar() {
   const inputRef = useRef<HTMLInputElement>(null);
   const [activeColor, setActiveColor] = useState<string>('');
   const [searchFocused, setSearchFocused] = useState(false);
-  const [imageColors, setImageColors] = useState<Record<number, string>>({});
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const isHome = location.pathname === '/';
   const categories = deriveCategories(projectsData);
   const showDropdown = searchFocused;
 
-  const searchResults = useMemo(() => {
-    if (!searchQuery.trim()) return [];
-    const q = searchQuery.toLowerCase();
-    return projectsData.filter((p) =>
-      p.title.toLowerCase().includes(q) ||
-      p.description.toLowerCase().includes(q) ||
-      p.client?.toLowerCase().includes(q) ||
-      p.category?.toLowerCase().includes(q)
-    );
-  }, [searchQuery, projectsData]);
+  // Build flat suggestion index from projects
+  const index = useMemo<Suggestion[]>(() => {
+    const out: Suggestion[] = [];
+    const seen = new Set<string>();
+    const push = (label: string, type: SuggestionType, extra: Partial<Suggestion> = {}) => {
+      if (!label) return;
+      const key = `${type}:${label.toLowerCase()}`;
+      if (seen.has(key)) return;
+      seen.add(key);
+      out.push({ key, label, type, normalized: normalize(label), ...extra });
+    };
+    for (const p of projectsData) {
+      push(p.title, 'project', {
+        slug: p.slug,
+        subtitle: [p.client, p.category].filter(Boolean).join(' — '),
+      });
+      if (p.client) push(p.client, 'client');
+      if (p.category) push(p.category, 'category');
+      if (Array.isArray(p.tags)) for (const t of p.tags) push(t, 'tag');
+    }
+    return out;
+  }, [projectsData]);
 
-  const suggestions = useMemo(() => {
-    if (searchQuery.trim()) return [];
-    return projectsData.slice(0, 4);
-  }, [searchQuery, projectsData]);
+  const suggestions = useMemo<Suggestion[]>(() => {
+    const q = normalize(searchQuery.trim());
+    if (!q) {
+      // Empty state: a mix of projects, clients, categories
+      const projects = index.filter((s) => s.type === 'project').slice(0, 4);
+      const clients = index.filter((s) => s.type === 'client').slice(0, 2);
+      const cats = index.filter((s) => s.type === 'category').slice(0, 2);
+      return [...projects, ...clients, ...cats].slice(0, 8);
+    }
+    const prefix: Suggestion[] = [];
+    const sub: Suggestion[] = [];
+    for (const s of index) {
+      const i = s.normalized.indexOf(q);
+      if (i === 0) prefix.push(s);
+      else if (i > 0) sub.push(s);
+    }
+    const rank = (t: SuggestionType) =>
+      t === 'project' ? 0 : t === 'client' ? 1 : t === 'category' ? 2 : 3;
+    const sorter = (a: Suggestion, b: Suggestion) =>
+      rank(a.type) - rank(b.type) || a.label.localeCompare(b.label);
+    return [...prefix.sort(sorter), ...sub.sort(sorter)].slice(0, 8);
+  }, [searchQuery, index]);
+
+  useEffect(() => { setActiveIndex(0); }, [searchQuery, searchFocused]);
 
   useEffect(() => {
     let cancelled = false;
@@ -55,19 +109,24 @@ export default function Sidebar() {
     return () => { cancelled = true; };
   }, [selectedCategory, projectsData]);
 
-  useEffect(() => {
-    let cancelled = false;
-    async function loadColors() {
-      const colors: Record<number, string> = {};
-      const items = searchQuery ? searchResults : suggestions;
-      for (const p of items) {
-        colors[p.id] = await getImageColor(p.image_url);
-      }
-      if (!cancelled) setImageColors(colors);
+  function commitSuggestion(s: Suggestion) {
+    setSearchFocused(false);
+    if (s.type === 'project' && s.slug) {
+      setSearchQuery('');
+      navigate({ to: '/projects/$slug', params: { slug: s.slug } });
+      return;
     }
-    loadColors();
-    return () => { cancelled = true; };
-  }, [searchResults, suggestions, searchQuery]);
+    if (s.type === 'category') {
+      const match = categories.find((c) => c.name.toLowerCase() === s.label.toLowerCase());
+      if (match) setSelectedCategory(match.id);
+      setSearchQuery('');
+      if (location.pathname !== '/') navigate({ to: '/' });
+      return;
+    }
+    // client or tag → filter list by text
+    setSearchQuery(s.label);
+    if (location.pathname !== '/') navigate({ to: '/' });
+  }
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
@@ -85,13 +144,36 @@ export default function Sidebar() {
     return () => window.removeEventListener('keydown', handler);
   }, [setSearchQuery]);
 
-  function handleResultClick(slug: string) {
-    setSearchFocused(false);
-    setSearchQuery('');
-    navigate({ to: '/projects/$slug', params: { slug } });
+  function handleInputKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
+    if (!showDropdown || suggestions.length === 0) return;
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      setActiveIndex((i) => (i + 1) % suggestions.length);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      setActiveIndex((i) => (i - 1 + suggestions.length) % suggestions.length);
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      const pick = suggestions[activeIndex];
+      if (pick) commitSuggestion(pick);
+    }
   }
 
-  const displayItems = searchQuery ? searchResults : suggestions;
+  function renderHighlight(label: string) {
+    const q = searchQuery.trim();
+    if (!q) return label;
+    const nl = normalize(label);
+    const nq = normalize(q);
+    const i = nl.indexOf(nq);
+    if (i < 0) return label;
+    return (
+      <>
+        {label.slice(0, i)}
+        <strong className="font-semibold text-foreground">{label.slice(i, i + q.length)}</strong>
+        {label.slice(i + q.length)}
+      </>
+    );
+  }
 
   return (
     <aside className="hidden lg:flex flex-col w-[240px] xl:w-[260px] shrink-0
@@ -113,6 +195,15 @@ export default function Sidebar() {
           onChange={(e) => setSearchQuery(e.target.value)}
           onFocus={() => setSearchFocused(true)}
           onBlur={() => setTimeout(() => setSearchFocused(false), 150)}
+          onKeyDown={handleInputKeyDown}
+          role="combobox"
+          aria-expanded={showDropdown}
+          aria-controls="sidebar-search-listbox"
+          aria-activedescendant={
+            showDropdown && suggestions[activeIndex]
+              ? `sidebar-sugg-${suggestions[activeIndex].key}`
+              : undefined
+          }
           className="w-full h-8 pl-8 pr-8
             bg-foreground/10
             text-[13px] placeholder:text-foreground/40
@@ -142,55 +233,61 @@ export default function Sidebar() {
                 shadow-[0_8px_32px_rgba(0,0,0,0.18)]
                 overflow-hidden"
             >
-              <div className="px-3 pt-3 pb-1.5">
+              <div className="px-3 pt-2.5 pb-1.5">
                 <p className="text-[10px] font-semibold uppercase tracking-[.07em] text-foreground/40">
-                  {searchQuery ? `${searchResults.length} result${searchResults.length !== 1 ? 's' : ''}` : 'Suggestions'}
+                  {searchQuery.trim()
+                    ? `${suggestions.length} result${suggestions.length !== 1 ? 's' : ''}`
+                    : 'Suggestions'}
                 </p>
               </div>
 
-              {searchQuery && searchResults.length === 0 && (
+              {suggestions.length === 0 ? (
                 <div className="px-3 pb-3 text-[12px] text-foreground/50">
-                  No projects found.
+                  No matches.
                 </div>
-              )}
-
-              {displayItems.length > 0 && (
-                <div className="grid grid-cols-2 gap-1.5 px-2 pb-2">
-                  {displayItems.map((project) => (
-                    <button
-                      key={project.id}
-                      onClick={() => handleResultClick(project.slug)}
-                      className="group relative rounded-sf-sm overflow-hidden aspect-[4/3]
-                        hover:ring-2 hover:ring-white/20 transition-all"
-                    >
-                      {project.image_url.endsWith('.mp4') || project.image_url.endsWith('.mov') ? (
-                        <video
-                          src={project.image_url}
-                          className="w-full h-full object-cover"
-                          autoPlay loop muted playsInline
-                        />
-                      ) : (
-                        <img
-                          src={project.image_url}
-                          alt={project.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        />
-                      )}
-                      <div
-                        className="absolute inset-0 flex items-end p-2"
-                        style={{
-                          background: imageColors[project.id]
-                            ? `linear-gradient(to top, ${imageColors[project.id]}cc 0%, transparent 60%)`
-                            : 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%)',
-                        }}
-                      >
-                        <p className="text-[11px] font-medium text-white leading-tight line-clamp-2">
-                          {project.title}
-                        </p>
-                      </div>
-                    </button>
-                  ))}
-                </div>
+              ) : (
+                <ul
+                  id="sidebar-search-listbox"
+                  role="listbox"
+                  className="pb-1.5"
+                >
+                  {suggestions.map((s, i) => {
+                    const isActive = i === activeIndex;
+                    return (
+                      <li key={s.key} role="none">
+                        <button
+                          id={`sidebar-sugg-${s.key}`}
+                          role="option"
+                          aria-selected={isActive}
+                          onMouseEnter={() => setActiveIndex(i)}
+                          onMouseDown={(e) => e.preventDefault()}
+                          onClick={() => commitSuggestion(s)}
+                          className={`group w-full flex items-center gap-2 px-3 py-1.5 text-left
+                            transition-colors
+                            ${isActive ? 'bg-foreground/8' : 'hover:bg-foreground/5'}`}
+                        >
+                          <div className="flex-1 min-w-0">
+                            <p className="text-[13px] text-foreground/70 truncate leading-tight">
+                              {renderHighlight(s.label)}
+                            </p>
+                            {s.subtitle && (
+                              <p className="text-[11px] text-foreground/40 truncate leading-tight mt-0.5">
+                                {s.subtitle}
+                              </p>
+                            )}
+                          </div>
+                          <span className="text-[10px] uppercase tracking-[.06em] text-foreground/35 shrink-0">
+                            {TYPE_LABEL[s.type]}
+                          </span>
+                          <ArrowRight
+                            size={12}
+                            className={`shrink-0 transition-opacity ${isActive ? 'opacity-60' : 'opacity-0'}`}
+                          />
+                        </button>
+                      </li>
+                    );
+                  })}
+                </ul>
               )}
             </motion.div>
           )}

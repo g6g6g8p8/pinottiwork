@@ -1,31 +1,44 @@
-## Pendência
+## Objetivo
 
-Apenas **1** dos 2 cases precisa de `og_image`:
+Substituir o grid de thumbnails do dropdown de busca (Sidebar desktop) por uma **lista de texto com autocomplete inteligente** que reage conforme o usuário digita.
 
-- `mary-kay-guinness-record.md` — hero já é `.jpg`, o `resolveOgImage` em `projects.$slug.tsx` reusa o próprio hero como og:image. **Nada a fazer.**
-- `give-yourself-this-chance.md` — hero é `.mov` (sem poster derivável agora que saímos do Cloudinary). Precisa de `og_image` explícito no frontmatter.
+## Comportamento
 
-## Plano
+**Estado vazio (input focado, sem texto):**
+- Título "Suggestions"
+- Lista com 5–6 termos populares derivados do conteúdo: títulos de projetos em destaque + nomes de clientes recorrentes + categorias. Cada item mostra um pequeno rótulo à direita (`Project`, `Client`, `Category`).
 
-1. Baixar o `.mov` do hero (`destaque_r29tx5.mov`) do CDN para `/tmp/`.
-2. Extrair um frame com `ffmpeg` (~1s, JPG qualidade alta, mantendo proporção do vídeo).
-3. Subir o JPG via `lovable-assets create` → `src/assets/cases/give-yourself-this-chance/destaque_poster.jpg.asset.json`.
-4. Adicionar uma linha `og_image: '<url-do-cdn>'` no frontmatter de `give-yourself-this-chance.md`.
-5. `bun run build` para validar.
+**Digitando:**
+- Constrói um índice de tokens a partir de todos os projetos: `title`, `client`, `category`, `tags` (quando existir).
+- Faz match por **prefixo primeiro, depois substring** (case-insensitive, sem acento).
+- Exibe até 8 sugestões, ordenadas: prefixo > substring; dentro do mesmo nível, Projects antes de Clients/Categories.
+- Cada linha mostra:
+  - Texto da sugestão com o trecho digitado em **negrito** (highlight).
+  - Rótulo discreto à direita: `Project` · `Client` · `Category`.
+  - Em projetos, subtítulo cinza com `client — category`.
+- Mensagem "No matches" quando vazio.
 
-## Comportamento no site
+**Interação:**
+- Click / Enter em **Project** → navega para `/projects/$slug`.
+- Click / Enter em **Client** ou **Category** → preenche `searchQuery` com o termo (e, se Category, também aplica `setSelectedCategory`) para filtrar a home.
+- Setas ↑/↓ para mover, Enter para confirmar, Esc para fechar (já existe).
+- `Cmd/Ctrl+K` continua focando o input.
 
-- **Hero da página**: continua sendo o vídeo `.mov` tocando em loop, igual hoje. Nada muda visualmente.
-- **Compartilhamento (WhatsApp, Twitter, LinkedIn, Slack, etc.)**: passa a mostrar o frame extraído como preview, em vez de aparecer sem imagem.
+## Escopo de arquivos
 
-O código já suporta isso: `resolveOgImage()` em `src/routes/projects.$slug.tsx` prioriza `meta.og_image` quando existe e cai no hero só como fallback.
+- **`src/components/portfolio/Sidebar.tsx`** — única alteração. Remover o grid de thumbnails (`displayItems`, `imageColors`, `getImageColor` no efeito de cores das sugestões) e renderizar a nova lista textual com índice em memória + highlight.
+- Sem mudanças em rotas, contexto, dados ou backend.
+- Sem mudanças no `BottomTabBar` (mobile mantém chips de categorias como hoje) — confirme se também quer reformular o mobile.
+
+## Detalhes técnicos
+
+- Índice construído com `useMemo` sobre `projects`: `{ label, type: 'project'|'client'|'category', slug?, normalized }`. Deduplicado por `(type,label)`.
+- Normalização: `label.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu,'')`.
+- Highlight: split do label pelo índice do match e render do trecho em `<strong>`.
+- Navegação por teclado: índice ativo em `useState`, handlers no `onKeyDown` do input.
+- Acessibilidade: `role="listbox"` no dropdown, `role="option"` + `aria-selected` nos itens, `aria-activedescendant` no input.
 
 ## Fora de escopo
 
-- Nenhuma mudança em componentes/código — `og_image` já é lido pelo `head()` do route.
-- Outros cases — todos os demais heros são imagens estáticas e já funcionam como og:image.
-
-## Entregáveis
-
-- 1 `.asset.json` novo (poster JPG)
-- 1 linha adicionada no frontmatter de `give-yourself-this-chance.md`
+- Mobile (BottomTabBar) — manter como está, salvo pedido contrário.
+- Mudanças visuais em outros componentes ou no layout do dropdown além do conteúdo.
