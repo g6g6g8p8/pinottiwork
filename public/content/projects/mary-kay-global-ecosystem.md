@@ -4,7 +4,7 @@ title: 'Under the hood of a Global Powerhouse'
 slug: mary-kay-global-ecosystem
 client: Mary Kay Brazil
 role: Creative Director & Head of Creative Operations
-category: Content
+category: Content System
 tags:
   - DesignOps
   - Creative Systems
