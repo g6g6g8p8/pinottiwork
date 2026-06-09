@@ -10,7 +10,7 @@ tags:
   - Brand Storytelling
   - Early Career
 order: 5
-hero: '/__l5e/assets-v1/56ee55b8-bdc6-4313-83f1-02b8d07d49d2/amazon-conta-com-a-gente.gif'
+hero: '/__l5e/assets-v1/bcdb0eb0-a191-4a8c-96e9-253f839fc7dd/amazon-gamer.gif'
 aspect_ratio: '16:9'
 description: >-
   Campanha oficial de lançamento da Amazon no Brasil, com a mensagem de que os brasileiros podiam contar com a marca.
