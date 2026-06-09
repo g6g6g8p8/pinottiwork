@@ -98,7 +98,7 @@ export default function CareerWall() {
             {highlights.map((h) => (
               <div
                 key={h.id}
-                className="snap-start shrink-0 w-[78vw] sm:w-[48vw] lg:w-[32vw] aspect-[4/3]"
+                className="snap-start shrink-0 w-[78vw] sm:w-[48vw] lg:w-[32vw] aspect-[8/3]"
               >
                 <Card h={h} />
               </div>
@@ -143,7 +143,7 @@ export default function CareerWall() {
               className="
                 shrink-0
                 w-[78vw] sm:w-[48vw] lg:w-[32vw]
-                aspect-[4/3]
+                aspect-[8/3]
               "
             >
               <Card h={h} />
