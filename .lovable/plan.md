@@ -1,44 +1,17 @@
-## Objetivo
+## Goal
+Os cards da faixa "CAREER HIGHLIGHTS" estão muito altos (aspect 4/3). Reduzir a altura pela metade, mantendo a largura e o layout horizontal com scroll.
 
-Substituir o grid de thumbnails do dropdown de busca (Sidebar desktop) por uma **lista de texto com autocomplete inteligente** que reage conforme o usuário digita.
+## Mudança
+Arquivo: `src/components/portfolio/CareerWall.tsx`
 
-## Comportamento
+- Trocar `aspect-[4/3]` por `aspect-[8/3]` nos dois pontos (fallback de reduced motion + track principal), o que reduz a altura à metade mantendo a largura atual (`w-[78vw] sm:w-[48vw] lg:w-[32vw]`).
+- Reduzir paddings/typografia internos do `Card` para caber bem na nova altura:
+  - `p-6` → `p-4`
+  - Logo `w-[54px] h-[54px]` → `w-10 h-10`
+  - Título `text-[22px]/27px` → `text-[17px]/22px`
+  - Subtítulo `text-[16px]/19px` → `text-[13px]/17px`
+  - Período `text-[16px]/24px` → `text-[13px]/18px`
+  - `mb-4` do header → `mb-2`
 
-**Estado vazio (input focado, sem texto):**
-- Título "Suggestions"
-- Lista com 5–6 termos populares derivados do conteúdo: títulos de projetos em destaque + nomes de clientes recorrentes + categorias. Cada item mostra um pequeno rótulo à direita (`Project`, `Client`, `Category`).
-
-**Digitando:**
-- Constrói um índice de tokens a partir de todos os projetos: `title`, `client`, `category`, `tags` (quando existir).
-- Faz match por **prefixo primeiro, depois substring** (case-insensitive, sem acento).
-- Exibe até 8 sugestões, ordenadas: prefixo > substring; dentro do mesmo nível, Projects antes de Clients/Categories.
-- Cada linha mostra:
-  - Texto da sugestão com o trecho digitado em **negrito** (highlight).
-  - Rótulo discreto à direita: `Project` · `Client` · `Category`.
-  - Em projetos, subtítulo cinza com `client — category`.
-- Mensagem "No matches" quando vazio.
-
-**Interação:**
-- Click / Enter em **Project** → navega para `/projects/$slug`.
-- Click / Enter em **Client** ou **Category** → preenche `searchQuery` com o termo (e, se Category, também aplica `setSelectedCategory`) para filtrar a home.
-- Setas ↑/↓ para mover, Enter para confirmar, Esc para fechar (já existe).
-- `Cmd/Ctrl+K` continua focando o input.
-
-## Escopo de arquivos
-
-- **`src/components/portfolio/Sidebar.tsx`** — única alteração. Remover o grid de thumbnails (`displayItems`, `imageColors`, `getImageColor` no efeito de cores das sugestões) e renderizar a nova lista textual com índice em memória + highlight.
-- Sem mudanças em rotas, contexto, dados ou backend.
-- Sem mudanças no `BottomTabBar` (mobile mantém chips de categorias como hoje) — confirme se também quer reformular o mobile.
-
-## Detalhes técnicos
-
-- Índice construído com `useMemo` sobre `projects`: `{ label, type: 'project'|'client'|'category', slug?, normalized }`. Deduplicado por `(type,label)`.
-- Normalização: `label.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu,'')`.
-- Highlight: split do label pelo índice do match e render do trecho em `<strong>`.
-- Navegação por teclado: índice ativo em `useState`, handlers no `onKeyDown` do input.
-- Acessibilidade: `role="listbox"` no dropdown, `role="option"` + `aria-selected` nos itens, `aria-activedescendant` no input.
-
-## Fora de escopo
-
-- Mobile (BottomTabBar) — manter como está, salvo pedido contrário.
-- Mudanças visuais em outros componentes ou no layout do dropdown além do conteúdo.
+## Fora do escopo
+Sem mudanças em dados, animação de scroll horizontal, ou outros componentes.
