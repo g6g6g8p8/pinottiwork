@@ -12,7 +12,7 @@
 
 # duo — dois projetos lado a lado (60/40 ou 40/60)
 
-# trio — um destaque + dois menores (posição: left ou right)
+# trio — três projetos lado a lado no desktop (1/3 cada); empilha no mobile
 
 # awards — faixa de troféus (sem slugs)
 
