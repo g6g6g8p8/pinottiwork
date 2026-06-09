@@ -2,7 +2,7 @@
 id: 11
 title: Pink News
 slug: pink-news
-client: Mary Kay
+client: Mary Kay Brazil
 role: Creative Director
 category: Content
 tags:
