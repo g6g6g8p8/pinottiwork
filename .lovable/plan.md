@@ -1,106 +1,52 @@
 ## Objetivo
-
-Adicionar o case **Amazon.com.br – Conta com a gente** (campanha de lançamento da Amazon no Brasil, 2019) ao portfólio como novo projeto e exibi-lo em duo no final da home, pareado com outro Advertising existente.
+Adicionar o case **Mitsubishi – Cada Km Mit Conta** (parceria com SAS Brasil no Rally dos Sertões) ao portfólio e colocá-lo num duo final com `give-yourself-this-chance`.
 
 ## 1. Novo arquivo de projeto
+Criar `public/content/projects/mit-cada-km-mit-conta.md`:
 
-Criar `public/content/projects/amazon-conta-com-a-gente.md` com a estrutura usada pelos demais cases:
+- `title`: "Mitsubishi: Cada Km Mit Conta"
+- `slug`: `mit-cada-km-mit-conta`
+- `client`: Mitsubishi Motors
+- `role`: **Art Director**
+- `category`: **Social Impact**
+- `tags`: Brand Purpose, TV & Film, Social Impact, Early Career
+- `order`: 6
+- `aspect_ratio`: `16:9`
+- `hero`: placeholder temporário (você envia o still oficial depois — deixo um asset neutro ou reuso um frame editorial simples até a troca)
+- `description`: "No Rally dos Sertões, cada quilômetro rodado com a Mitsubishi virou doação para o SAS Brasil levar saúde a regiões onde só um 4x4 chega."
 
-- `title`: "Amazon.com.br: Conta com a gente"
-- `slug`: `amazon-conta-com-a-gente`
-- `client`: Amazon.com.br
-- `role`: **Art Director** (conforme escolhido)
-- `category`: **Advertising**
-- `tags`: Launch Campaign, TV & Film, Brand Storytelling, Early Career
-- `order`: 5 (depois dos atuais)
-- `hero`: still gerado (ver passo 2)
-- `aspect_ratio`: `16:9` (formato dos filmes)
-- `description`: linha curta — "Campanha oficial de lançamento da Amazon no Brasil, com a mensagem de que os brasileiros podiam contar com a marca."
+Corpo (mesma linguagem dos outros cases) com:
+- **The Challenge** — o SAS Brasil precisava chegar a regiões remotas que só veículos 4x4 alcançam.
+- **Insight** — transformar a aventura a bordo das Mitsubishis em doação real para o SAS.
+- Filme manifesto: `[video](https://vimeo.com/625822810)`
+- **The Campaign** — para cada km rodado com a hashtag `#CadaKmMitConta` e foto do painel, R$1 doado ao SAS Brasil durante o Rally dos Sertões.
+- Filme de resultado: `[video](https://vimeo.com/625841483)`
+- **Credits** — CD Fabiano Feijó · AD Giulio Pinotti · CW José Scorzelli, Eduardo Cometti · Content William Santos · Prod. Eduardo "Duba" Guimarães.
 
-Conteúdo do corpo (markdown), na mesma linguagem dos outros cases:
-
-```text
-## The Challenge
-A chegada oficial da Amazon ao Brasil exigia uma mensagem inequívoca: a
-marca estava aqui para ficar e para servir o público brasileiro com a mesma
-confiabilidade de sempre.
-
-## Insight
-"Conta com a gente" — uma promessa simples, direta e calorosa, traduzida
-em histórias do cotidiano de diferentes brasileiros que poderiam, a partir
-de agora, contar com a Amazon.
-
-[video](https://vimeo.com/315103707)
-
-## The Campaign
-Filme-manifesto de 45s + quatro filmes complementares de 15s, cada um
-mostrando um perfil de cliente: Vovô, Mãe, Gamer e Menina.
-
-:::gallery
-[video](https://vimeo.com/315120054)
-[video](https://vimeo.com/315120096)
-[video](https://vimeo.com/315120078)
-[video](https://vimeo.com/315120116)
-:::
-
-## Credits
-Creative Director: Alexandre Prado · Art Directors: Giulio Pinotti, Diego Silva
-· Copywriter: Paulo Fontana · Production: Consulado · Audio: HitMaker
-```
-
-> Observação: usarei a sintaxe `[video](url)` / `:::gallery` exatamente como os
-> outros cases já fazem. Se o renderer atual de ProjectDetail ainda não suportar
-> embed direto do Vimeo, ajusto o componente para reconhecer URLs `vimeo.com` e
-> renderizar via `<iframe player.vimeo.com/video/ID>`. Verifico isso na hora de
-> implementar e, se necessário, faço a pequena extensão no parser de vídeo.
-
-## 2. Hero / capa do card
-
-Gerar uma imagem **still** representando a campanha (composição minimalista,
-paleta Amazon — preto, branco e laranja Amazon `#FF9900`, com tipografia
-discreta "Conta com a gente"), salvar em `src/assets/amazon-conta-com-a-gente.jpg`
-em 16:9, fazer upload via `lovable-assets` e referenciar a URL `/__l5e/...` no
-campo `hero` do markdown.
-
-Não consigo extrair frame real do Vimeo automaticamente; se você preferir mandar
-um still oficial depois, é só substituir o arquivo.
+## 2. Hero / capa
+Como você vai enviar o still depois, vou usar um placeholder neutro temporário (gero um still minimalista 16:9 com paleta Mitsubishi/Sertões — vermelho Mitsu, areia, tipografia discreta "Cada Km Mit Conta"). Quando me mandar o frame oficial, troco o asset mantendo o mesmo path.
 
 ## 3. Encaixe na home
-
-Hoje o final de `public/data/home-layout.md` é:
-
-```text
-duo | the-reconquest | give-yourself-this-chance
-hero | mastercard-priceless-ecosystem
-duo | connecting-clients | alternative-investments
+Layout atual termina com:
 ```
-
-Proposta (mantém Advertising com Advertising e cria o duo novo no final):
-
-```text
-hero  | the-reconquest
-hero  | mastercard-priceless-ecosystem
-duo   | connecting-clients | alternative-investments
-duo   | amazon-conta-com-a-gente | give-yourself-this-chance
+duo | amazon-conta-com-a-gente | give-yourself-this-chance
 ```
+Proposta — promover Amazon a hero solo e fechar com o novo duo:
+```
+hero | amazon-conta-com-a-gente
+duo  | mit-cada-km-mit-conta | give-yourself-this-chance
+```
+Isso evita repetir `give-yourself-this-chance` e dá destaque solo ao Amazon, mantendo dois cases Mitsubishi pareados no fim (Cada Km + Give Yourself).
 
-- `give-yourself-this-chance` (Mitsubishi, Advertising) vira par natural do
-  Amazon — ambos são filmes de marca de early/ad-craft career.
-- `the-reconquest` ganha destaque solo como hero (estava dividindo espaço).
-- Amazon entra como o último bloco da home, fechando a narrativa com a
-  campanha de lançamento mais reconhecível do portfólio.
-
-Se preferir não promover o Reconquest a hero, alternativa B é manter o duo
-atual e só acrescentar `duo | amazon-conta-com-a-gente | give-yourself-this-chance`
-na última linha — mas aí `give-yourself` aparece duas vezes na home, o que
-prefiro evitar.
+Alternativa B se preferir manter Amazon em duo: substituir o duo final por
+```
+duo | amazon-conta-com-a-gente | mit-cada-km-mit-conta
+hero | give-yourself-this-chance
+```
 
 ## Detalhes técnicos
-
-- Único arquivo de conteúdo novo: `public/content/projects/amazon-conta-com-a-gente.md`.
-- Único arquivo editado: `public/data/home-layout.md` (4 linhas finais).
-- Asset novo: `public/.../amazon-conta-com-a-gente.jpg` via `lovable-assets`.
-- Se o renderer atual não suportar embed de Vimeo, pequena extensão em
-  `ProjectDetail`/parser de vídeo para aceitar URLs `vimeo.com/<id>` →
-  `https://player.vimeo.com/video/<id>`.
-- Sem mudanças em rotas, schema, ou outros componentes.
+- Arquivo novo: `public/content/projects/mit-cada-km-mit-conta.md`.
+- Asset hero novo: `src/assets/mit-cada-km-mit-conta.jpg` (placeholder via `imagegen` + upload `lovable-assets`).
+- Edit em `public/data/home-layout.md` (duas últimas linhas).
+- Vimeo embeds usam a mesma sintaxe `[video](https://vimeo.com/<id>)` já adotada no case Amazon — sem mudanças no parser.
+- Nenhuma alteração de rota, schema ou componente.
