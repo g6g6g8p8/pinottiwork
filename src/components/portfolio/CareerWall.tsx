@@ -18,23 +18,23 @@ function Card({ h }: { h: CareerHighlight }) {
         transition-colors flex flex-col
       "
     >
-      <div className="flex items-start gap-3 mb-2">
+      <div className="flex items-start gap-3 md:gap-4 mb-2">
         <img
           src={h.logo_url}
           alt={h.company}
           loading="lazy"
-          className="w-10 h-10 rounded-[8px] bg-foreground/5 object-cover flex-shrink-0"
+          className="w-10 h-10 md:w-12 md:h-12 rounded-[8px] bg-foreground/5 object-cover flex-shrink-0"
         />
         <div className="flex-1 min-w-0 space-y-0.5">
-          <div className="text-[17px] leading-[22px] font-semibold truncate">
+          <div className="text-[17px] leading-[22px] md:text-[20px] md:leading-[25px] lg:text-[22px] lg:leading-[27px] font-semibold truncate">
             {h.company}
           </div>
-          <div className="text-[13px] leading-[17px] text-foreground/60 truncate">
+          <div className="text-[13px] leading-[17px] md:text-[15px] md:leading-[19px] text-foreground/60 truncate">
             at {h.role}
           </div>
         </div>
       </div>
-      <p className="text-[13px] leading-[18px] text-foreground/80 flex-1 overflow-hidden">
+      <p className="text-[13px] leading-[18px] md:text-[15px] md:leading-[21px] text-foreground/80 flex-1 overflow-hidden">
         {h.period}
       </p>
     </div>
