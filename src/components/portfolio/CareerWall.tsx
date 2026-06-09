@@ -34,7 +34,7 @@ function Card({ h }: { h: CareerHighlight }) {
           </div>
         </div>
       </div>
-      <p className="text-[13px] leading-[18px] md:text-[15px] md:leading-[21px] text-foreground/80 flex-1 overflow-hidden">
+      <p className="text-[13px] leading-[18px] md:text-[15px] md:leading-[21px] text-foreground/80 flex-1">
         {h.period}
       </p>
     </div>
@@ -98,7 +98,7 @@ export default function CareerWall() {
             {highlights.map((h) => (
               <div
                 key={h.id}
-                className="snap-start shrink-0 w-[78vw] sm:w-[48vw] lg:w-[32vw] aspect-[8/3]"
+                className="snap-start shrink-0 w-[78vw] sm:w-[48vw] lg:w-[32vw]"
               >
                 <Card h={h} />
               </div>
@@ -143,7 +143,6 @@ export default function CareerWall() {
               className="
                 shrink-0
                 w-[78vw] sm:w-[48vw] lg:w-[32vw]
-                aspect-[8/3]
               "
             >
               <Card h={h} />
