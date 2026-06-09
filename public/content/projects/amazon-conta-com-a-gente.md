@@ -26,6 +26,12 @@ A chegada oficial da Amazon ao Brasil exigia uma mensagem inequívoca: a marca e
 
 [video](https://vimeo.com/315103707)
 
+:::gallery
+![Vovô](/__l5e/assets-v1/141163dd-ebab-45b1-8ad9-c999fba796d3/amazon-vovo.gif)
+![Mãe](/__l5e/assets-v1/33ba6d46-5cdb-435b-8ea5-7e486d9f6f5d/amazon-mae.gif)
+![Menina](/__l5e/assets-v1/4956c4a7-99d8-420f-bde5-a2eba97726ba/amazon-menina.gif)
+:::
+
 ## The Campaign
 
 Filme-manifesto de 45s seguido de quatro filmes complementares de 15s, cada um mostrando um perfil de cliente: Vovô, Mãe, Gamer e Menina.
