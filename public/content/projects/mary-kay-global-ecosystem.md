@@ -1,6 +1,6 @@
 ---
 id: 1
-title: 'Architecting a Global #1 Content Ecosystem'
+title: 'Under the hood of a Global Powerhouse Content Ecosystem'
 slug: mary-kay-global-ecosystem
 client: Mary Kay Brazil
 role: Creative Director & Head of Creative Operations
@@ -14,7 +14,7 @@ order: 1
 hero: '/__l5e/assets-v1/cde1f0aa-0b9d-4e82-8785-5791b785100a/15-b_zhcxb5.png'
 aspect_ratio: '9:4'
 description: >-
-  Escaping the reactive 'always-on' loop to build a full-funnel machine that
+  Escaping the reactive 'always-on' loop to build a full-funnel Content Ecosystem that
   propelled Mary Kay Brazil to their top.
 ---
 
