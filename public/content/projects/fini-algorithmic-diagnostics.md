@@ -1,10 +1,10 @@
 ---
 id: 2
-title: Scaling Cultural Relevance for Fini
+title: Fini: A The Content System for Fun
 slug: fini-algorithmic-diagnostics
 client: Fini
 role: Creative Director & Head of Creative Operations
-category: Content
+category: Content System
 tags:
   - Data-Driven
   - DesignOps
