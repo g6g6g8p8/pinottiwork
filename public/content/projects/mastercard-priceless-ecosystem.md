@@ -1,6 +1,6 @@
 ---
 id: 6
-title: 6 years of Priceless
+title: 6 years of a Priceless Journey
 slug: mastercard-priceless-ecosystem
 client: Mastercard
 role: Senior Art Director
