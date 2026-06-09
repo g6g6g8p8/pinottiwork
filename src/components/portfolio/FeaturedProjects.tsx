@@ -143,14 +143,17 @@ export default function FeaturedProjects() {
           );
         }
 
-        if (row.slot === 'duo') {
+        if (row.slot === 'duo' || row.slot === 'trio') {
+          const gridCols = row.slot === 'trio'
+            ? 'grid-cols-1 md:grid-cols-3'
+            : 'grid-cols-1 md:grid-cols-2';
           return (
             <motion.div
               key={i}
-              className="grid grid-cols-1 md:grid-cols-2 gap-premium-md md:gap-premium-lg"
+              className={`grid ${gridCols} gap-premium-md md:gap-premium-lg`}
               variants={{ animate: { transition: { staggerChildren: 0.08 } } }}
             >
-              {cards.map((p, idx) => (
+              {cards.slice(0, row.slot === 'trio' ? 3 : 2).map((p, idx) => (
                 <motion.div key={p.id} variants={itemVariants}>
                   <ProjectCard project={p} imageColor={imageColors[p.id]} forceAspect="card" layout="below" priority={isFirstRow && idx === 0} />
                 </motion.div>
