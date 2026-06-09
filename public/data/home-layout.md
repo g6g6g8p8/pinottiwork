@@ -31,4 +31,5 @@ career-wall
 hero | the-reconquest
 hero | mastercard-priceless-ecosystem
 duo | connecting-clients | alternative-investments
-duo | amazon-conta-com-a-gente | give-yourself-this-chance
+hero | amazon-conta-com-a-gente
+duo | mit-cada-km-mit-conta | give-yourself-this-chance
