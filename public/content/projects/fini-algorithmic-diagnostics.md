@@ -1,6 +1,6 @@
 ---
 id: 2
-title: Fini: A The Content System for Fun
+title: 'Fini: A The Content System for Fun'
 slug: fini-algorithmic-diagnostics
 client: Fini
 role: Creative Director & Head of Creative Operations

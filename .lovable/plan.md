@@ -1,17 +1,25 @@
-## Goal
-Os cards da faixa "CAREER HIGHLIGHTS" estão muito altos (aspect 4/3). Reduzir a altura pela metade, mantendo a largura e o layout horizontal com scroll.
+## Causa
+
+O frontmatter de `public/content/projects/fini-algorithmic-diagnostics.md` tem:
+
+```
+title: Fini: A The Content System for Fun
+```
+
+O `:` sem aspas torna o YAML inválido. O parser (`gray-matter` / js-yaml) em `src/lib/content.functions.ts` lança erro, o `listProjects` ignora o arquivo, e o slug some do `projectMap`. Como `FeaturedProjects.tsx` filtra slugs inexistentes (`cards.length === 0 → return null`), o card do hero do Fini desaparece da home.
 
 ## Mudança
-Arquivo: `src/components/portfolio/CareerWall.tsx`
 
-- Trocar `aspect-[4/3]` por `aspect-[8/3]` nos dois pontos (fallback de reduced motion + track principal), o que reduz a altura à metade mantendo a largura atual (`w-[78vw] sm:w-[48vw] lg:w-[32vw]`).
-- Reduzir paddings/typografia internos do `Card` para caber bem na nova altura:
-  - `p-6` → `p-4`
-  - Logo `w-[54px] h-[54px]` → `w-10 h-10`
-  - Título `text-[22px]/27px` → `text-[17px]/22px`
-  - Subtítulo `text-[16px]/19px` → `text-[13px]/17px`
-  - Período `text-[16px]/24px` → `text-[13px]/18px`
-  - `mb-4` do header → `mb-2`
+Arquivo: `public/content/projects/fini-algorithmic-diagnostics.md`
+
+Trocar a linha do título por uma versão com aspas:
+
+```yaml
+title: 'Fini: A The Content System for Fun'
+```
+
+Confirmar com o usuário se o título correto é mesmo "Fini: A The Content System for Fun" (parece ter um "A" sobrando — talvez devesse ser "Fini: The Content System for Fun" ou "Fini: A Content System for Fun"). Aplicar a correção final junto com as aspas.
 
 ## Fora do escopo
-Sem mudanças em dados, animação de scroll horizontal, ou outros componentes.
+
+Nenhuma mudança em código, layout ou outros projetos. Só o frontmatter do arquivo do Fini.
