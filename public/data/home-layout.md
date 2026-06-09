@@ -12,7 +12,7 @@
 
 # duo — dois projetos lado a lado (60/40 ou 40/60)
 
-# trio — três projetos lado a lado no desktop (1/3 cada); empilha no mobile
+# trio — um destaque + dois menores (posição: left ou right)
 
 # awards — faixa de troféus (sem slugs)
 
@@ -27,9 +27,8 @@
 hero | mary-kay-global-ecosystem
 duo | pink-news | mary-kay-guinness-record
 hero | fini-algorithmic-diagnostics
+trio | the-reconquest | give-yourself-this-chance | mit-cada-km-mit-conta
 career-wall
-hero | the-reconquest
 hero | mastercard-priceless-ecosystem
 duo | connecting-clients | alternative-investments
 hero | amazon-conta-com-a-gente
-duo | mit-cada-km-mit-conta | give-yourself-this-chance
