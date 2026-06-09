@@ -3,7 +3,7 @@ title: 'Live de Batom por Elas'
 slug: mary-kay-guinness-record
 client: Mary Kay Brazil
 role: Creative Director
-category: Advertising
+category: Social Impact
 tags:
   - Creative Systems
   - PR & Community
