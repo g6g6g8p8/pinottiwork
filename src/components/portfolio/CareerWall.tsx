@@ -13,28 +13,28 @@ function Card({ h }: { h: CareerHighlight }) {
   return (
     <div
       className="
-        bg-card rounded-2xl p-6 h-full w-full
+        bg-card rounded-2xl p-4 h-full w-full
         border border-foreground/5 hover:border-foreground/15
         transition-colors flex flex-col
       "
     >
-      <div className="flex items-start gap-4 mb-4">
+      <div className="flex items-start gap-3 mb-2">
         <img
           src={h.logo_url}
           alt={h.company}
           loading="lazy"
-          className="w-[54px] h-[54px] rounded-[8px] bg-foreground/5 object-cover flex-shrink-0"
+          className="w-10 h-10 rounded-[8px] bg-foreground/5 object-cover flex-shrink-0"
         />
-        <div className="flex-1 min-w-0 space-y-1">
-          <div className="text-[22px] leading-[27px] font-semibold truncate">
+        <div className="flex-1 min-w-0 space-y-0.5">
+          <div className="text-[17px] leading-[22px] font-semibold truncate">
             {h.company}
           </div>
-          <div className="text-[16px] leading-[19px] text-foreground/60 truncate">
+          <div className="text-[13px] leading-[17px] text-foreground/60 truncate">
             at {h.role}
           </div>
         </div>
       </div>
-      <p className="text-[16px] leading-[24px] text-foreground/80 flex-1 overflow-hidden">
+      <p className="text-[13px] leading-[18px] text-foreground/80 flex-1 overflow-hidden">
         {h.period}
       </p>
     </div>
@@ -98,7 +98,7 @@ export default function CareerWall() {
             {highlights.map((h) => (
               <div
                 key={h.id}
-                className="snap-start shrink-0 w-[78vw] sm:w-[48vw] lg:w-[32vw] aspect-[4/3]"
+                className="snap-start shrink-0 w-[78vw] sm:w-[48vw] lg:w-[32vw] aspect-[8/3]"
               >
                 <Card h={h} />
               </div>
@@ -143,7 +143,7 @@ export default function CareerWall() {
               className="
                 shrink-0
                 w-[78vw] sm:w-[48vw] lg:w-[32vw]
-                aspect-[4/3]
+                aspect-[8/3]
               "
             >
               <Card h={h} />
