@@ -27,9 +27,8 @@ A chegada oficial da Amazon ao Brasil exigia uma mensagem inequívoca: a marca e
 [video](https://vimeo.com/315103707)
 
 :::gallery
-![Vovô](/__l5e/assets-v1/141163dd-ebab-45b1-8ad9-c999fba796d3/amazon-vovo.gif)
-![Mãe](/__l5e/assets-v1/33ba6d46-5cdb-435b-8ea5-7e486d9f6f5d/amazon-mae.gif)
-![Menina](/__l5e/assets-v1/4956c4a7-99d8-420f-bde5-a2eba97726ba/amazon-menina.gif)
+![Mãe](/__l5e/assets-v1/f0cbe867-5cf6-4eb4-b35a-14ade6c985e9/amazon-mae.gif)
+![Menina](/__l5e/assets-v1/cfc46071-19d0-4f6f-8db8-501fec46b894/amazon-menina.gif)
 :::
 
 ## The Campaign
