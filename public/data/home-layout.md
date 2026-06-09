@@ -28,6 +28,6 @@ hero | mary-kay-global-ecosystem
 duo | pink-news | mary-kay-guinness-record
 hero | fini-algorithmic-diagnostics
 career-wall
-duo | give-yourself-this-chance | the-reconquest
+duo | the-reconquest | give-yourself-this-chance
 hero | mastercard-priceless-ecosystem
 duo | connecting-clients | alternative-investments
