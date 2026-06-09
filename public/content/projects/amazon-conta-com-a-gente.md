@@ -29,6 +29,7 @@ A chegada oficial da Amazon ao Brasil exigia uma mensagem inequívoca: a marca e
 :::gallery
 ![Mãe](/__l5e/assets-v1/f0cbe867-5cf6-4eb4-b35a-14ade6c985e9/amazon-mae.gif)
 ![Menina](/__l5e/assets-v1/cfc46071-19d0-4f6f-8db8-501fec46b894/amazon-menina.gif)
+![Extra](/__l5e/assets-v1/90540da0-02c4-43cd-82bc-58cfc1773024/amazon-extra.gif)
 :::
 
 ## The Campaign
