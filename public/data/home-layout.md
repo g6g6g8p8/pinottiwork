@@ -30,5 +30,4 @@ hero | fini-algorithmic-diagnostics
 trio | the-reconquest | give-yourself-this-chance | mit-cada-km-mit-conta
 career-wall
 hero | mastercard-priceless-ecosystem
-duo | connecting-clients | alternative-investments
-hero | amazon-conta-com-a-gente
+trio | connecting-clients | alternative-investments | amazon-conta-com-a-gente
