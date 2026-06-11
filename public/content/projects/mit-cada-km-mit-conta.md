@@ -13,22 +13,22 @@ order: 6
 hero: '/__l5e/assets-v1/f8d20835-a604-4bc8-bb60-40c41d345a17/mit-cada-km-mit-conta.jpg'
 aspect_ratio: '16:9'
 description: >-
-  No Rally dos Sertões, cada quilômetro rodado com a Mitsubishi virou doação para o SAS Brasil levar saúde a regiões onde só um 4x4 chega.
+  At Rally dos Sertões, every kilometer driven with Mitsubishi became a donation for SAS Brasil to bring healthcare to regions only a 4x4 can reach.
 ---
 
 ## The Challenge
 
-O SAS Brasil leva atendimento médico a comunidades isoladas do sertão — lugares onde a estrada acaba e só um 4x4 consegue chegar. Para ampliar esse alcance, a ONG precisava de mais combustível, mais quilômetros e mais visibilidade.
+SAS Brasil delivers medical care to isolated communities in Brazil's backlands — places where the road ends and only a 4x4 can get through. To extend that reach, the NGO needed more fuel, more kilometers and more visibility.
 
 ## Insight
 
-A aventura a bordo de uma Mitsubishi podia virar cuidado real. Cada quilômetro rodado com a marca durante o Rally dos Sertões se transformaria em doação direta para o SAS Brasil seguir adiante.
+The adventure of driving a Mitsubishi could turn into real care. Every kilometer driven with the brand during Rally dos Sertões would become a direct donation to keep SAS Brasil moving forward.
 
 [video](https://vimeo.com/625822810)
 
 ## The Campaign
 
-Para cada quilômetro rodado, R$1 era doado ao SAS Brasil. Bastava postar uma foto do painel da Mitsubishi com a hashtag #CadaKmMitConta. A travessia dos pilotos pelo sertão virou uma corrida coletiva por mais atendimento médico nas regiões mais remotas do país.
+For every kilometer driven, R$1 was donated to SAS Brasil. All it took was posting a photo of the Mitsubishi dashboard with the hashtag #CadaKmMitConta. The drivers' journey through the backlands turned into a collective race for more medical care in the country's most remote regions.
 
 [video](https://vimeo.com/625841483)
 

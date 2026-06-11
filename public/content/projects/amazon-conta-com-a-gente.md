@@ -18,23 +18,23 @@ description: >-
 
 ## The Challenge
 
-A chegada oficial da Amazon ao Brasil exigia uma mensagem inequívoca: a marca estava aqui para ficar e para servir o público brasileiro com a mesma confiabilidade de sempre.
+Amazon's official arrival in Brazil demanded an unmistakable message: the brand was here to stay and to serve the Brazilian audience with the same reliability it was known for worldwide.
 
 ## Insight
 
-"Conta com a gente" — uma promessa simples, direta e calorosa, traduzida em histórias do cotidiano de diferentes brasileiros que poderiam, a partir de agora, contar com a Amazon.
+"Conta com a gente" ("You can count on us") — a simple, direct and warm promise, translated into everyday stories of different Brazilians who, from now on, could count on Amazon.
 
 [video](https://vimeo.com/315103707)
 
 :::gallery
-![Mãe](/__l5e/assets-v1/f0cbe867-5cf6-4eb4-b35a-14ade6c985e9/amazon-mae.gif)
-![Menina](/__l5e/assets-v1/cfc46071-19d0-4f6f-8db8-501fec46b894/amazon-menina.gif)
+![Mother](/__l5e/assets-v1/f0cbe867-5cf6-4eb4-b35a-14ade6c985e9/amazon-mae.gif)
+![Girl](/__l5e/assets-v1/cfc46071-19d0-4f6f-8db8-501fec46b894/amazon-menina.gif)
 ![Extra](/__l5e/assets-v1/90540da0-02c4-43cd-82bc-58cfc1773024/amazon-extra.gif)
 :::
 
 ## The Campaign
 
-Filme-manifesto de 45s seguido de quatro filmes complementares de 15s, cada um mostrando um perfil de cliente: Vovô, Mãe, Gamer e Menina.
+A 45s manifesto film followed by four complementary 15s films, each portraying a customer profile: Grandpa, Mother, Gamer and Girl.
 
 [video](https://vimeo.com/315120054)
 

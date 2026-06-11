@@ -31,7 +31,7 @@ Traditional campaigns and standard always-on content were not enough to generate
 ![](/__l5e/assets-v1/fdd46c56-771b-42d1-80f8-a040507300be/CRUSH_LIVE_MK_03_vdc8zn.jpg)
 :::
 
-## The campaing
+## The Campaign
 
 As the Creative Director and Head of Creative Operations, my focus was on directing the core strategy and creating the content for the campaign.
 
