@@ -1,44 +1,49 @@
-## 1. Ícones distintos por categoria
+## What gets added
 
-Hoje em `src/lib/categories.ts` o mapa `CATEGORY_ICONS` só cobre alguns slugs; "Content", "Content System" e "Social Impact" caem no fallback `FileText` — por isso aparecem iguais.
+Six new files under `public/content/projects/`, one per case. All bodies in English. None are added to `public/data/home-layout.md` (so they don't appear on the home grid, but they do show up in `/about`, the sidebar, and `/projects/{slug}`).
 
-Atualizar `CATEGORY_ICONS` com chaves para todas as categorias existentes nos projetos:
+Each project gets `order: 99+` so the existing homepage ordering is untouched, and a `category` chosen from the existing taxonomy (icons already covered after the last task).
 
-- `all` → LayoutGrid
-- `branding` → Tag
-- `advertising` → Megaphone
-- `branded content` → Film
-- `content` → FileText
-- `content system` → LayoutPanelTop (ou Layers)
-- `social impact` → HeartHandshake (ou Sparkles)
-- `design` → Pen
-- `digital` → Monitor
-- `photography` → Camera
+| Slug | Title | Client | Category | Hero | Media |
+|---|---|---|---|---|---|
+| `coca-cola-bye-bye-straws` | Bye Bye, Straws | Coca-Cola | Social Impact | first .gif from the portfolio page | 4 gifs + 3 png stills + body text + credits |
+| `elvive-orgulho-dos-cachos` | Extraordinary Oil Curls | L'Oréal Paris Elvive | Advertising | first .png key visual | 6 key-visual pngs + YouTube film embed |
+| `americanas-qr-code` | QR Code App Download | Americanas.com | Advertising | Vimeo poster (no static cover on page) | Vimeo film + 4 stills you'll send + credits |
+| `mastercard-supereconomics` | Supereconomics | Mastercard | Branded Content | first portfolio image (you'll confirm or send) | 4 teaser films (URLs you'll paste) + body + credits |
+| `mastercard-like-magic` | Like Magic | Mastercard | Advertising | first Behance hi-res | 3 hi-res Behance modules + short EN description |
+| `mitsubishi-espn-tennis` | ESPN Tennis Broadcasts Sponsorship | Mitsubishi Motors | Branded Content | first Behance hero png | 3 Behance hero stills + 3 Giulio Vimeo films + 3 Pimp Studio vinhetas + merged EN body + credits |
 
-Resultado: cada item da sidebar e da bottom tab bar mobile fica com um ícone visualmente único.
+## Media pipeline
 
-## 2. Scroll lateral no mobile (bottom tab bar)
+For every still/gif on the source pages I'll:
 
-Em `src/components/portfolio/BottomTabBar.tsx` a barra usa `flex-1 min-w-0` + `truncate`, espremendo todos os botões na largura do telefone. Mudar para:
+1. `curl` the source URL (Behance `mir-s3-cdn-cf` / Adobe Portfolio `cdn.myportfolio.com`) into `/tmp/`.
+2. `lovable-assets create --file /tmp/<file> --filename <name>` and write the pointer to `src/assets/cases/<slug>/<name>.asset.json`.
+3. Embed via the JSON's `url` field in the markdown (`hero:`, `![](...)` inside a `:::gallery`, etc.).
 
-- container interno com `overflow-x-auto no-scrollbar` e `flex` (sem `w-full`);
-- cada botão com largura natural (`shrink-0`, padding horizontal maior, sem `flex-1`);
-- remover os apelidos abreviados (`Branded C.`, `Advertis.`, `Photo`) — com scroll dá pra mostrar o nome inteiro;
-- manter o pill arredondado e o efeito de ativo.
+Videos stay as remote embeds:
 
-Assim no mobile a barra rola horizontalmente quando há muitas categorias, sem cortar texto.
+- Vimeo (Giulio's, Pimp Studio's, Coca-Cola's, Americanas') → `[video autoplay](https://vimeo.com/{id})` for short loops, `[video](...)` for hero-length films.
+- YouTube (Elvive `8olnVU6eeYc`) → `[video](https://www.youtube.com/watch?v=...)`.
+- For each project with a video hero, set `og_image` to the chosen static cover so share previews still work.
 
-## 3. Traduzir cases PT → EN
+Where the page exposes no static cover (Americanas, some Mitsubishi vinhetas), I'll use the first gallery image as `hero` so cards still have artwork.
 
-Três arquivos em `public/content/projects/` têm corpo em português. Reescrever apenas o conteúdo em inglês, preservando frontmatter, embeds (`[video]`, `:::gallery`), créditos e estrutura de headings:
+## English copy
 
-- `amazon-conta-com-a-gente.md` — The Challenge / Insight / The Campaign / Credits
-- `mary-kay-guinness-record.md` — The Challenge / Insight / The Campaign / The Impact
-- `mit-cada-km-mit-conta.md` — The Challenge / Insight / The Campaign / Credits
+Coca-Cola, Elvive, Americanas, Like Magic, Mitsubishi ESPN are already in English on the source pages — I'll lift verbatim, tighten lightly. The Pimp Studio page (Mitsubishi) is in Portuguese; I'll translate its production-side context and merge with the Behance English summary into one body with sections: The Brief / The Idea / The Films / Credits.
 
-Títulos, slugs, nomes de campanhas próprias (ex.: "Conta com a gente", "Live de Batom por Elas", "Cada Km Mit Conta") e hashtags ficam como estão — só o texto descritivo vira inglês.
+Credits lines stay in the existing project format: `Creative Director … · Art Director … · Copywriter … · Production …`.
 
-## Detalhes técnicos
+## Pending on you
 
-- Arquivos editados: `src/lib/categories.ts`, `src/components/portfolio/BottomTabBar.tsx`, e os 3 markdowns acima.
-- Sem mudanças de schema, rotas ou lógica de dados.
+1. **Supereconomics**: the 4 teaser video URLs (Vimeo or YouTube).
+2. **Americanas**: the 4 supporting still images.
+
+I'll start writing everything as soon as build mode is on. When you drop those assets/URLs later I'll plug them into the already-created files (or I can wait for both before starting — say the word).
+
+## Out of scope
+
+- No changes to `home-layout.md`, sidebar logic, category icons, or `BottomTabBar`.
+- No edits to existing case markdowns.
+- No new routes or schema.
