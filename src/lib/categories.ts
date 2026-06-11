@@ -1,7 +1,8 @@
 import {
   LayoutGrid, Tag, FileText,
   Megaphone, Pen, Film,
-  Monitor, Camera, type LucideIcon,
+  Monitor, Camera, LayoutPanelTop, HeartHandshake,
+  type LucideIcon,
 } from 'lucide-react';
 import type { Project } from '../hooks/useProject';
 
@@ -9,7 +10,9 @@ export const CATEGORY_ICONS: Record<string, LucideIcon> = {
   'all':             LayoutGrid,
   'branding':        Tag,
   'content':         FileText,
+  'content system':  LayoutPanelTop,
   'advertising':     Megaphone,
+  'social impact':   HeartHandshake,
   'design':          Pen,
   'branded content': Film,
   'digital':         Monitor,

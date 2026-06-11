@@ -1,29 +1,44 @@
-## Objetivo
-Permitir uma linha com até 3 projetos lado a lado no desktop, configurável via `public/data/home-layout.md`.
+## 1. Ícones distintos por categoria
 
-## Mudanças
+Hoje em `src/lib/categories.ts` o mapa `CATEGORY_ICONS` só cobre alguns slugs; "Content", "Content System" e "Social Impact" caem no fallback `FileText` — por isso aparecem iguais.
 
-### 1. `src/components/portfolio/FeaturedProjects.tsx`
-Adicionar handler para `row.slot === 'trio'`:
-- Desktop (md+): `grid-cols-3` lado a lado
-- Mobile: stack vertical (`grid-cols-1`), igual ao duo
-- Mesmo `gap-premium-md md:gap-premium-lg`
-- Cada card usa `forceAspect="card"` + `layout="below"` (consistente com duo)
-- Stagger animation idêntica ao duo
-- Se menos de 3 slugs forem fornecidos, renderiza só os que existirem (1 ou 2)
+Atualizar `CATEGORY_ICONS` com chaves para todas as categorias existentes nos projetos:
 
-### 2. `public/data/home-layout.md`
-Atualizar o comentário do header — já menciona `trio` mas com semântica antiga ("um destaque + dois menores"). Trocar por:
-```
-# trio — três projetos lado a lado no desktop (1/3 cada)
-```
-Sem mudar nenhuma linha ativa do layout atual.
+- `all` → LayoutGrid
+- `branding` → Tag
+- `advertising` → Megaphone
+- `branded content` → Film
+- `content` → FileText
+- `content system` → LayoutPanelTop (ou Layers)
+- `social impact` → HeartHandshake (ou Sparkles)
+- `design` → Pen
+- `digital` → Monitor
+- `photography` → Camera
 
-## Como usar
-```
-trio | slug-1 | slug-2 | slug-3
-```
+Resultado: cada item da sidebar e da bottom tab bar mobile fica com um ícone visualmente único.
 
-## Fora de escopo
-- Nenhuma mudança em `ProjectCard`, rotas, dados ou Cloud
-- Sem alterar a ordem atual dos projetos na home (só habilita o slot)
+## 2. Scroll lateral no mobile (bottom tab bar)
+
+Em `src/components/portfolio/BottomTabBar.tsx` a barra usa `flex-1 min-w-0` + `truncate`, espremendo todos os botões na largura do telefone. Mudar para:
+
+- container interno com `overflow-x-auto no-scrollbar` e `flex` (sem `w-full`);
+- cada botão com largura natural (`shrink-0`, padding horizontal maior, sem `flex-1`);
+- remover os apelidos abreviados (`Branded C.`, `Advertis.`, `Photo`) — com scroll dá pra mostrar o nome inteiro;
+- manter o pill arredondado e o efeito de ativo.
+
+Assim no mobile a barra rola horizontalmente quando há muitas categorias, sem cortar texto.
+
+## 3. Traduzir cases PT → EN
+
+Três arquivos em `public/content/projects/` têm corpo em português. Reescrever apenas o conteúdo em inglês, preservando frontmatter, embeds (`[video]`, `:::gallery`), créditos e estrutura de headings:
+
+- `amazon-conta-com-a-gente.md` — The Challenge / Insight / The Campaign / Credits
+- `mary-kay-guinness-record.md` — The Challenge / Insight / The Campaign / The Impact
+- `mit-cada-km-mit-conta.md` — The Challenge / Insight / The Campaign / Credits
+
+Títulos, slugs, nomes de campanhas próprias (ex.: "Conta com a gente", "Live de Batom por Elas", "Cada Km Mit Conta") e hashtags ficam como estão — só o texto descritivo vira inglês.
+
+## Detalhes técnicos
+
+- Arquivos editados: `src/lib/categories.ts`, `src/components/portfolio/BottomTabBar.tsx`, e os 3 markdowns acima.
+- Sem mudanças de schema, rotas ou lógica de dados.

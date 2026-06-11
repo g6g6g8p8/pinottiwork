@@ -131,16 +131,10 @@ export default function BottomTabBar() {
             shadow-[0_8px_32px_rgba(0,0,0,0.18)]
             px-2 py-2"
         >
-          <div className="flex items-stretch w-full">
+          <div className="flex items-stretch gap-1 w-full overflow-x-auto no-scrollbar">
             {categories.map((cat) => {
               const isActive = selectedCategory === cat.id && !searchOpen;
               const Icon = cat.icon;
-              const shortName =
-                cat.name === 'Selected Works' ? 'Selected'
-                : cat.name === 'Branded Content' ? 'Branded C.'
-                : cat.name === 'Advertising' ? 'Advertis.'
-                : cat.name === 'Photography' ? 'Photo'
-                : cat.name;
               return (
                 <motion.button
                   key={cat.id}
@@ -149,13 +143,13 @@ export default function BottomTabBar() {
                     if (location.pathname !== '/') navigate({ to: '/' });
                   }}
                   whileTap={{ scale: 0.9 }}
-                  className={`flex-1 min-w-0 flex flex-col items-center justify-center gap-[3px] px-1 py-1
+                  className={`shrink-0 flex flex-col items-center justify-center gap-[3px] px-3 py-1
                     transition-all duration-200
                     ${isActive ? 'text-foreground' : 'text-foreground/40'}`}
                 >
                   <Icon size={22} strokeWidth={isActive ? 2.2 : 1.6} />
-                  <span className="text-[10px] font-medium leading-none truncate max-w-full">
-                    {shortName}
+                  <span className="text-[10px] font-medium leading-none whitespace-nowrap">
+                    {cat.name}
                   </span>
                 </motion.button>
               );
