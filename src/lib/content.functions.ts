@@ -38,6 +38,7 @@ export interface ProjectData {
   aspect_ratio: string;
   description: string;
   og_image?: string;
+  published: boolean;
 }
 
 export interface ProjectFull {
