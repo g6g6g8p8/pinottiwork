@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'Mitsubishi: Multiverse'
 slug: mitsubishi-multiverso
 client: Mitsubishi Motors
