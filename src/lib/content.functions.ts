@@ -114,7 +114,9 @@ export const listProjects = createServerFn({ method: 'GET' }).handler(
 export const getProject = createServerFn({ method: 'GET' })
   .inputValidator((d: { slug: string }) => d)
   .handler(async ({ data }): Promise<ProjectFull | null> => {
-    return readProjectBySlug(data.slug);
+    const p = readProjectBySlug(data.slug);
+    if (!p || !p.data.published) return null;
+    return p;
   });
 
 export const getAllProjectSlugs = createServerFn({ method: 'GET' }).handler(
