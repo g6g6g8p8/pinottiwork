@@ -71,6 +71,7 @@ function normalizeProject(raw: any, fallbackSlug: string): ProjectData {
     aspect_ratio: raw.aspect_ratio || '4:3',
     description: raw.description || '',
     og_image: raw.og_image || undefined,
+    published: raw.published !== false && raw.draft !== true,
   };
 }
 
