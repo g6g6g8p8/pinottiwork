@@ -1,116 +1,66 @@
-# Plan — Mit Sertões images + Related Projects + Clickable Client/Role/Category
+## Goal
 
-Three connected changes, all driven by existing markdown frontmatter (`client`, `role`, `category`). No backend changes.
+Create 5 new project pages and extend `mastercard-like-magic` with the TVC, all in English, with copy adapted from the source articles + every still I can pull from the source pages uploaded to Lovable Assets.
 
----
+## Source → Project mapping
 
-## 1. Pull mit-mile images into `mit-cada-km-mit-conta`
+| Source URL | Action | Slug |
+| --- | --- | --- |
+| clubedecriacao `new-generation` | Create | `mitsubishi-new-generation` |
+| clubedecriacao `multiverso` | Create | `mitsubishi-multiverso` |
+| clubedecriacao `mastercard-jazz` | Create | `mastercard-jazz` |
+| clubedecriacao `magico-em-filme-da-mastercard` | **Merge** into existing | `mastercard-like-magic` |
+| clubedecriacao `waffle` | Create | `forno-de-minas-waffle` |
+| behance `Coleção de Memórias` | Create | `mastercard-collection-of-memories` |
 
-The source page (`giuliopinotti.myportfolio.com/mit-mile`) has 2 Vimeo films already in the markdown + **~85 stills** (KVs, dashboard user-generated posts, OOH, press). I will:
+## What I'll do per source
 
-1. Download each `cdn.myportfolio.com/...` image at its highest available size (`_rw_1920` → `_rw_1200` → `_rw_600` fallback).
-2. Upload to `src/assets/cases/mit-cada-km-mit-conta/` via `lovable-assets`, writing `.asset.json` pointers.
-3. Insert as gallery blocks inside the existing English markdown, grouped to keep the page readable:
-   - **Key Visuals** (3–4 main KVs near the top)
-   - keep existing Campaign Vimeo
-   - **Dashboard Posts** (user-generated dashboard photos with the hashtag)
-   - **Press & OOH** (newspaper / out-of-home)
-   - keep existing Results Vimeo
-   - **Behind the scenes / extras**
+1. **Deep scrape for media.** For each clubedecriacao article: use `browser--navigate_to_url` + `browser--extract` (or Firecrawl `scrape` with `formats: ['html','links','screenshot']`) to pull every WP image (`wp-content/uploads/...`), Vimeo/YouTube IDs, and embedded photo galleries. For the Behance page, pull the two Vimeo IDs already identified (213956861, 213955546) plus any project stills exposed in the gallery viewer (fall back to `browser--screenshot` of the full page if Behance lazy-loads).
+2. **Upload stills.** `curl` each image to `/tmp`, then `lovable-assets create --file` → write `src/assets/cases/<slug>/<name>.asset.json`. Skip Behance gallery thumbs that are just "other projects" cards.
+3. **Write the markdown** at `public/content/projects/<slug>.md` with English copy translated/adapted from the article body, a short `description`, frontmatter (`title`, `client`, `role: Art Director` or `Creative Director` where credits show CD level, `category`, `order`, `hero`, `aspect_ratio`), video embeds via `[video](...)`, image galleries via `:::gallery`, and a final `## Credits` block with the key agency/production credits in English.
+4. **Order values.** New projects get `order: 24..29` (after current max ~23) so the curated home grid stays untouched. No changes to `home-layout.md`.
 
-**Open question:** pull **all ~85** stills, or curate to the strongest ~25? Galleries over ~25 hurt scroll. I'd recommend curate; will pull all if you prefer.
+## Per-project specifics
 
-Hero, credits, category, slug — unchanged.
+### `mitsubishi-new-generation` (NEW)
+- client: Mitsubishi Motors · role: Art Director · category: Advertising
+- Videos: `https://www.youtube.com/watch?v=U3KIL4otQ2s` (L200 Triton Sport), `https://www.youtube.com/watch?v=fwedmzWiL2g` (4You4NewGeneration)
+- Body: English adaptation of the Tech and Soul brief — repositioning Mitsubishi around the "4×4 lifestyle" for a new generation; introduces the "4you4" signature across the lineup.
 
----
+### `mitsubishi-multiverso` (NEW)
+- client: Mitsubishi Motors · role: Art Director · category: Advertising
+- Video: `https://www.youtube.com/watch?v=IXlz6D22rtA` (Outlander Sport 2021)
+- Body: First Tech and Soul campaign for Mitsubishi; "the new diamond" positioning; original score recorded in NY with singer Tansu.
 
-## 2. Related Projects at the bottom of every project page
+### `mastercard-jazz` (NEW)
+- client: Mastercard · role: Art Director · category: Branding (photo-led festival launch)
+- No video. Hero + gallery from Maurício Nahas photos + OOH pieces if the scrape returns them. If the page only yields thumbnails, I'll use the largest WP version available.
+- Body: WMcCann campaign for the first Mastercard Jazz festival at Ibirapuera, 2019.
 
-New component `RelatedProjects` rendered in `ProjectDetail.tsx`, above the Share button.
+### `mastercard-like-magic` (EXTEND)
+- Keep existing print KVs and copy.
+- Add a new `## The Film` section above current gallery with the TVC (need to look up the Vimeo/YouTube URL via deeper scrape of the article; if no public embed survives, link to the article as reference).
+- Append film credits (Side Cinema / Pablo Fusco & Renato Assad / DOP Mariano Monti / Clan VFX / Timbre).
 
-**Logic** (uses existing `useProjects` hook):
+### `forno-de-minas-waffle` (NEW)
+- client: Forno de Minas · role: Art Director · category: Advertising
+- Online + merchandising campaign "Combina com Tudo" / "Goes with Everything", WMcCann 2015. Photos by Marcelo Resende.
+- Body in English; gallery of whatever stills the scrape returns.
 
-- Exclude the current project.
-- **Pool A — More from {client}**: up to 3 projects with same `client`.
-- **Pool B — More in {category}**: up to 3 projects with same `category`, excluding any already in Pool A.
-- Each pool sorted by `order` asc.
-- Render each non-empty pool as its own labeled row. If both empty, render nothing.
-
-**UI** (matches portfolio's existing tokens):
-
-- Section eyebrow: `text-[11px] font-semibold uppercase tracking-[.07em] opacity-60` (same as the poster eyebrow).
-- Grid: 2 cols on mobile, 3 on `lg`, `gap-4`.
-- Each card: 4:5 cover with title + category overlay (reuse `ProjectCard` if its API allows; otherwise small inline card built from the same tokens — `rounded-sf-xl`, glass overlay, hover scale).
-- Container: `mt-16 pt-12 border-t border-border/40`.
-
----
-
-## 3. Clickable Client / Role / Category → filtered list pages
-
-Make the existing chips on the project poster (Client, Role) and the eyebrow (Category) clickable, leading to new filtered list routes.
-
-### New routes (file-based)
-
-- `src/routes/clients.$client.tsx` → `/clients/<slug>`
-- `src/routes/roles.$role.tsx` → `/roles/<slug>`
-- `src/routes/categories.$category.tsx` → `/categories/<slug>`
-
-Each route:
-- `head()` with route-specific `title` / `description` / `og:title` / `og:description` (e.g. `Projects for Mary Kay — Giulio Pinotti`).
-- Uses `listProjects` server fn → filters client-side by slugified param.
-- Page layout reuses the same `ProjectCard` grid as Home.
-
-Empty state: "No projects found" + link back home.
-
-### Slug helper
-
-Add to `src/lib/portfolio-utils.ts`:
-
-```ts
-export const toSlug = (s: string) =>
-  s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-```
-
-Filter: `projects.filter(p => toSlug(p.client) === param)`.
-
-### ProjectDetail chip updates
-
-Replace `<span>` chips with `<Link>`s, same pill style + `hover:bg-white/25 transition-colors`:
-
-```tsx
-<Link to="/clients/$client" params={{ client: toSlug(project.client) }}>
-  {project.client}
-</Link>
-```
-
-Same treatment for the Role pill and the Category eyebrow.
-
-The new Related Projects card grid will also link via the same routes.
-
-### Sitemap
-
-Add one entry per unique client / role / category to `src/routes/sitemap[.]xml.ts`.
-
----
+### `mastercard-collection-of-memories` (NEW)
+- client: Mastercard · role: Art Director · category: Advertising
+- Two Vimeo films: `https://vimeo.com/213956861` (1:12), `https://vimeo.com/213955546` (1:03)
+- Body: 2017 Mastercard "Coleção de Memórias" — two emotional films about the things that turn into memory, directed by Tatiana Jacobsohn.
 
 ## Files touched
 
-- `public/content/projects/mit-cada-km-mit-conta.md` — galleries added
-- `src/assets/cases/mit-cada-km-mit-conta/*.asset.json` — new image pointers
-- `src/lib/portfolio-utils.ts` — `toSlug`
-- `src/components/portfolio/ProjectDetail.tsx` — chips become `<Link>`s + render `<RelatedProjects />`
-- `src/components/portfolio/RelatedProjects.tsx` *(new)*
-- `src/components/portfolio/ProjectList.tsx` *(new, shared by the 3 filter routes)*
-- `src/routes/clients.$client.tsx` *(new)*
-- `src/routes/roles.$role.tsx` *(new)*
-- `src/routes/categories.$category.tsx` *(new)*
-- `src/routes/sitemap[.]xml.ts` — add filter URLs
+- New: `public/content/projects/{mitsubishi-new-generation,mitsubishi-multiverso,mastercard-jazz,forno-de-minas-waffle,mastercard-collection-of-memories}.md`
+- Edited: `public/content/projects/mastercard-like-magic.md`
+- New under `src/assets/cases/<slug>/`: one `<file>.asset.json` per uploaded still
+- No code changes (categories/clients/roles routes auto-pick up new slugs from frontmatter)
+- No edits to `home-layout.md` or `sitemap[.]xml.ts` (sitemap regenerates from project frontmatter)
 
----
+## Stopping conditions
 
-## Questions before I build
-
-1. **Image count for mit-mile**: pull **all ~85**, or **curate ~25**?
-2. **Related Projects layout**: two labeled rows (`More from {client}` + `More in {category}`) — OK? Or single combined "Related" row capped at 4?
-3. **Sitemap**: include the new filter pages? (Recommend yes.)
+- If deep scrape returns zero usable images for a project, I'll still publish the page (videos + copy + credits) and flag which projects need user-supplied stills.
+- If a Vimeo/YouTube ID 404s on embed test, I'll drop it from the page and note it in the closing summary.
