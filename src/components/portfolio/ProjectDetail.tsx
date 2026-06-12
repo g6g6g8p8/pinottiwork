@@ -337,6 +337,9 @@ export default function ProjectDetail() {
               </div>
             ))}
 
+            <RelatedProjects current={project} />
+
+
             <div className="mt-16 flex items-center justify-center lg:hidden">
               <button
                 onClick={handleShare}
