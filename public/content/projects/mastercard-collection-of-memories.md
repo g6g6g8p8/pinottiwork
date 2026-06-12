@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'Mastercard: Collection of Memories'
 slug: mastercard-collection-of-memories
 client: Mastercard
