@@ -9,7 +9,7 @@ tags:
   - Financial Education
   - Content Series
 order: 25
-hero: ''
+hero: 'https://vumbnail.com/187872917.jpg'
 aspect_ratio: '4:3'
 description: >-
   A financial education content series for Mastercard, framing everyday money habits as small superpowers anyone can train.
@@ -21,7 +21,12 @@ In Brazil, the credit card tends to be cast as the villain of the household budg
 
 The campaign rolled out as a cast of everyday superheroes, each tied to one money skill: paying the bills on time, mastering the card, breaking down expenses, stretching what you earn.
 
-> Teaser films and supporting assets coming soon.
+## The Films
+
+[video](https://vimeo.com/187872917 "Mastercard Supereconomics — Stretchy Woman")
+[video](https://vimeo.com/187872922 "Mastercard Supereconomics — Card Guru")
+[video](https://vimeo.com/187872926 "Mastercard Supereconomics — Incredible Bill Man")
+[video](https://vimeo.com/187872991 "Mastercard Supereconomics — Spending Demolisher")
 
 ## Credits
 
