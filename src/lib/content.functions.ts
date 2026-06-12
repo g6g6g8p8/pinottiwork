@@ -100,7 +100,9 @@ export const listProjects = createServerFn({ method: 'GET' }).handler(
           console.warn(`[content] skipping ${slug}.md: missing title`);
           continue;
         }
-        items.push(normalizeProject(data, slug));
+        const project = normalizeProject(data, slug);
+        if (!project.published) continue;
+        items.push(project);
       } catch (e) {
         console.warn(`[content] failed to parse ${slug}.md:`, e);
       }
