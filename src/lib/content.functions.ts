@@ -38,6 +38,7 @@ export interface ProjectData {
   aspect_ratio: string;
   description: string;
   og_image?: string;
+  published: boolean;
 }
 
 export interface ProjectFull {
@@ -70,6 +71,7 @@ function normalizeProject(raw: any, fallbackSlug: string): ProjectData {
     aspect_ratio: raw.aspect_ratio || '4:3',
     description: raw.description || '',
     og_image: raw.og_image || undefined,
+    published: raw.published !== false && raw.draft !== true,
   };
 }
 
@@ -98,7 +100,9 @@ export const listProjects = createServerFn({ method: 'GET' }).handler(
           console.warn(`[content] skipping ${slug}.md: missing title`);
           continue;
         }
-        items.push(normalizeProject(data, slug));
+        const project = normalizeProject(data, slug);
+        if (!project.published) continue;
+        items.push(project);
       } catch (e) {
         console.warn(`[content] failed to parse ${slug}.md:`, e);
       }
@@ -110,12 +114,19 @@ export const listProjects = createServerFn({ method: 'GET' }).handler(
 export const getProject = createServerFn({ method: 'GET' })
   .inputValidator((d: { slug: string }) => d)
   .handler(async ({ data }): Promise<ProjectFull | null> => {
-    return readProjectBySlug(data.slug);
+    const p = readProjectBySlug(data.slug);
+    if (!p || !p.data.published) return null;
+    return p;
   });
 
 export const getAllProjectSlugs = createServerFn({ method: 'GET' }).handler(
   async (): Promise<string[]> => {
-    return Object.keys(projectFiles).map(slugFromPath);
+    return Object.keys(projectFiles)
+      .map(slugFromPath)
+      .filter((slug) => {
+        const p = readProjectBySlug(slug);
+        return p?.data.published === true;
+      });
   },
 );
 
@@ -134,7 +145,7 @@ export const getProjectMeta = createServerFn({ method: 'GET' })
   .inputValidator((d: { slug: string }) => d)
   .handler(async ({ data }): Promise<ProjectMeta | null> => {
     const p = readProjectBySlug(data.slug);
-    if (!p) return null;
+    if (!p || !p.data.published) return null;
     return {
       title: p.data.title,
       description: p.data.description,

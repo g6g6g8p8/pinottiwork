@@ -47,6 +47,22 @@ Free-form markdown body. Paragraphs work normally.
 2. (Optional) Add the slug to `public/data/home-layout.md` if you want it on the home grid
 3. Save — done. The site picks it up on next request.
 
+### Toggle a project on/off (without deleting)
+
+Add `published: false` (or the alias `draft: true`) to the frontmatter to hide
+a project from the site while keeping the file. Default is published, so
+existing files need no change.
+
+```yaml
+---
+title: Mastercard Jazz
+published: false   # hides from home, lists, search, sitemap; /projects/<slug> → 404
+---
+```
+
+Slugs referenced in `public/data/home-layout.md` that point to an unpublished
+project are silently skipped — no need to also edit the layout file.
+
 ### Reordering
 
 - **List order** (sidebar, /about projects list): edit `order` in each project's frontmatter
