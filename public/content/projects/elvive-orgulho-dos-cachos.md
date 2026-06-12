@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "L'Oréal Paris Elvive: Curl Pride"
 slug: elvive-orgulho-dos-cachos
 client: L'Oréal Paris Elvive
