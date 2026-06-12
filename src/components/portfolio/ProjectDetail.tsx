@@ -4,10 +4,11 @@ import { X as CloseIcon, Share2, ChevronLeft, ChevronRight } from 'lucide-react'
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { useProject } from '../../hooks/useProject';
-import { getImageColor } from '../../lib/portfolio-utils';
+import { getImageColor, toSlug } from '../../lib/portfolio-utils';
 import Portal from './Portal';
 import { SkeletonDetail } from './Skeleton';
 import Toast from './Toast';
+import RelatedProjects from './RelatedProjects';
 import type { ContentBlock } from '../../lib/parseMarkdown';
 
 export default function ProjectDetail() {
