@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'Mastercard: Like Magic'
 slug: mastercard-like-magic
 client: Mastercard
@@ -22,7 +23,7 @@ An acceptance campaign for Mastercard built around a simple promise: with the ca
 
 ## The Film
 
-The TV cut extends the idea into motion: a magician walks through a craft fair, makes cash float into the air and turns it into a Mastercard — an invitation to discover the card's benefits, like the *Programa Surpreenda* loyalty platform where paying for one product gets you another on the house.
+The TV cut extends the idea into motion: a magician walks through a craft fair, makes cash float into the air and turns it into a Mastercard — an invitation to discover the card's benefits, like the _Programa Surpreenda_ loyalty platform where paying for one product gets you another on the house.
 
 ## Key Visuals
 
