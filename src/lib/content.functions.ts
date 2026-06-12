@@ -121,7 +121,12 @@ export const getProject = createServerFn({ method: 'GET' })
 
 export const getAllProjectSlugs = createServerFn({ method: 'GET' }).handler(
   async (): Promise<string[]> => {
-    return Object.keys(projectFiles).map(slugFromPath);
+    return Object.keys(projectFiles)
+      .map(slugFromPath)
+      .filter((slug) => {
+        const p = readProjectBySlug(slug);
+        return p?.data.published === true;
+      });
   },
 );
 
