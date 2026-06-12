@@ -9,7 +9,7 @@ tags:
   - Digital
   - Food
 order: 27
-hero: ''
+hero: 'https://vumbnail.com/187879596.jpg'
 aspect_ratio: '16:9'
 description: >-
   An online + sampling campaign introducing Brazilians to the Forno de Minas waffle — under one simple promise: it goes with everything.
@@ -25,7 +25,9 @@ Forno de Minas is the brand that made the Brazilian pão de queijo a household s
 
 The platform extended into in-store merchandising, tabloids and sampling at schools and events across Belo Horizonte, São Paulo, Rio de Janeiro and Curitiba — plus a recipe contest with food bloggers built around the product.
 
-> Stills from the campaign are being recovered from archive — gallery coming soon.
+## The Film
+
+[video](https://vimeo.com/187879596 "Forno de Minas — Waffle: Goes With Everything")
 
 ## Credits
 

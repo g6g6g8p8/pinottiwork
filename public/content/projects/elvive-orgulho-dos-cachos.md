@@ -19,7 +19,9 @@ description: >-
 
 Curly hair has spent decades being treated as a "problem" to be straightened out. Elvive Extraordinary Oil Curls flipped that script: the campaign turned every curl into a statement, with key visuals and a film built around real women owning the way their hair actually grows.
 
-[video](https://www.youtube.com/watch?v=8olnVU6eeYc "L'Oréal Paris — Orgulho dos Cachos")
+## The Film
+
+[video](https://vimeo.com/261569045 "Elseve Extraordinary Oil Curls — Curl Pride")
 
 :::gallery
 ![](/__l5e/assets-v1/e2d389de-4fdc-4886-8e5a-b56b77a46fe7/kv-01.png)
