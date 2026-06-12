@@ -2,6 +2,15 @@ export function cn(...classes: (string | boolean | undefined)[]) {
   return classes.filter(Boolean).join(' ');
 }
 
+export function toSlug(s: string): string {
+  return (s || '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
 export async function getImageColor(imageUrl: string): Promise<string> {
   if (typeof window === 'undefined') return '#000000';
   return new Promise((resolve) => {

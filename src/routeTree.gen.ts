@@ -12,7 +12,10 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as RolesRoleRouteImport } from './routes/roles.$role'
 import { Route as ProjectsSlugRouteImport } from './routes/projects.$slug'
+import { Route as ClientsClientRouteImport } from './routes/clients.$client'
+import { Route as CategoriesCategoryRouteImport } from './routes/categories.$category'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
@@ -29,9 +32,24 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RolesRoleRoute = RolesRoleRouteImport.update({
+  id: '/roles/$role',
+  path: '/roles/$role',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProjectsSlugRoute = ProjectsSlugRouteImport.update({
   id: '/projects/$slug',
   path: '/projects/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ClientsClientRoute = ClientsClientRouteImport.update({
+  id: '/clients/$client',
+  path: '/clients/$client',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CategoriesCategoryRoute = CategoriesCategoryRouteImport.update({
+  id: '/categories/$category',
+  path: '/categories/$category',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -39,34 +57,68 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/categories/$category': typeof CategoriesCategoryRoute
+  '/clients/$client': typeof ClientsClientRoute
   '/projects/$slug': typeof ProjectsSlugRoute
+  '/roles/$role': typeof RolesRoleRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/categories/$category': typeof CategoriesCategoryRoute
+  '/clients/$client': typeof ClientsClientRoute
   '/projects/$slug': typeof ProjectsSlugRoute
+  '/roles/$role': typeof RolesRoleRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/categories/$category': typeof CategoriesCategoryRoute
+  '/clients/$client': typeof ClientsClientRoute
   '/projects/$slug': typeof ProjectsSlugRoute
+  '/roles/$role': typeof RolesRoleRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/sitemap.xml' | '/projects/$slug'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/sitemap.xml'
+    | '/categories/$category'
+    | '/clients/$client'
+    | '/projects/$slug'
+    | '/roles/$role'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/sitemap.xml' | '/projects/$slug'
-  id: '__root__' | '/' | '/about' | '/sitemap.xml' | '/projects/$slug'
+  to:
+    | '/'
+    | '/about'
+    | '/sitemap.xml'
+    | '/categories/$category'
+    | '/clients/$client'
+    | '/projects/$slug'
+    | '/roles/$role'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/sitemap.xml'
+    | '/categories/$category'
+    | '/clients/$client'
+    | '/projects/$slug'
+    | '/roles/$role'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  CategoriesCategoryRoute: typeof CategoriesCategoryRoute
+  ClientsClientRoute: typeof ClientsClientRoute
   ProjectsSlugRoute: typeof ProjectsSlugRoute
+  RolesRoleRoute: typeof RolesRoleRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -92,11 +144,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/roles/$role': {
+      id: '/roles/$role'
+      path: '/roles/$role'
+      fullPath: '/roles/$role'
+      preLoaderRoute: typeof RolesRoleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/projects/$slug': {
       id: '/projects/$slug'
       path: '/projects/$slug'
       fullPath: '/projects/$slug'
       preLoaderRoute: typeof ProjectsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/clients/$client': {
+      id: '/clients/$client'
+      path: '/clients/$client'
+      fullPath: '/clients/$client'
+      preLoaderRoute: typeof ClientsClientRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/categories/$category': {
+      id: '/categories/$category'
+      path: '/categories/$category'
+      fullPath: '/categories/$category'
+      preLoaderRoute: typeof CategoriesCategoryRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -106,18 +179,11 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  CategoriesCategoryRoute: CategoriesCategoryRoute,
+  ClientsClientRoute: ClientsClientRoute,
   ProjectsSlugRoute: ProjectsSlugRoute,
+  RolesRoleRoute: RolesRoleRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}

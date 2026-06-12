@@ -4,10 +4,11 @@ import { X as CloseIcon, Share2, ChevronLeft, ChevronRight } from 'lucide-react'
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { useProject } from '../../hooks/useProject';
-import { getImageColor } from '../../lib/portfolio-utils';
+import { getImageColor, toSlug } from '../../lib/portfolio-utils';
 import Portal from './Portal';
 import { SkeletonDetail } from './Skeleton';
 import Toast from './Toast';
+import RelatedProjects from './RelatedProjects';
 import type { ContentBlock } from '../../lib/parseMarkdown';
 
 export default function ProjectDetail() {
@@ -293,15 +294,34 @@ export default function ProjectDetail() {
                 }}
               />
               <div className="absolute inset-x-0 bottom-0 p-6 z-10">
-                <p className="text-[11px] font-semibold uppercase tracking-[.07em] text-white/60 mb-1">{project.category}</p>
+                <Link
+                  to="/categories/$category"
+                  params={{ category: toSlug(project.category) }}
+                  className="inline-block text-[11px] font-semibold uppercase tracking-[.07em] text-white/60 hover:text-white mb-1 transition-colors"
+                >
+                  {project.category}
+                </Link>
                 <h2 className="text-[22px] font-bold leading-tight tracking-[-0.02em] text-white mb-2">{project.title}</h2>
                 <p className="text-[14px] leading-[20px] text-white/80 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
-                  {[project.role, project.client].filter(Boolean).map((tag, i) => (
-                    <span key={i} className="px-3 py-1 bg-white/15 backdrop-blur-sm rounded-full text-[12px] text-white/90">
-                      {tag}
-                    </span>
-                  ))}
+                  {project.role && (
+                    <Link
+                      to="/roles/$role"
+                      params={{ role: toSlug(project.role) }}
+                      className="px-3 py-1 bg-white/15 hover:bg-white/25 backdrop-blur-sm rounded-full text-[12px] text-white/90 transition-colors"
+                    >
+                      {project.role}
+                    </Link>
+                  )}
+                  {project.client && (
+                    <Link
+                      to="/clients/$client"
+                      params={{ client: toSlug(project.client) }}
+                      className="px-3 py-1 bg-white/15 hover:bg-white/25 backdrop-blur-sm rounded-full text-[12px] text-white/90 transition-colors"
+                    >
+                      {project.client}
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>
@@ -316,6 +336,9 @@ export default function ProjectDetail() {
                 {renderContent(section)}
               </div>
             ))}
+
+            <RelatedProjects current={project} />
+
 
             <div className="mt-16 flex items-center justify-center lg:hidden">
               <button
