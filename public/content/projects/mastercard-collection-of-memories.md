@@ -9,8 +9,8 @@ tags:
   - Branded Content
   - TV
 order: 28
-hero: 'https://vumbnail.com/213956861.jpg'
-og_image: 'https://vumbnail.com/213956861.jpg'
+hero: 'https://vumbnail.com/212125069.jpg'
+og_image: 'https://vumbnail.com/212125069.jpg'
 aspect_ratio: '16:9'
 description: >-
   Two short films for Mastercard about what really stays with us — the small moments worth turning into memory.
@@ -24,9 +24,9 @@ The films sit in the same emotional territory as Mastercard's global "Priceless"
 
 ## The Films
 
-[video](https://vimeo.com/213956861 "Mastercard — Coleção de Memórias (long form)")
-[video](https://vimeo.com/213955546 "Mastercard — Coleção de Memórias (short form)")
+[video](https://vimeo.com/212125069 "Mastercard — Collection of Memories")
+[video](https://vimeo.com/212130154 "Mastercard — How to build your own Collection of Memories")
 
 ## Credits
 
-Agency: WMcCann · Client: Mastercard · Direction: Tatiana Jacobsohn · Creative Team includes Giulio Pinotti
+Agency: WMcCann · Client: Mastercard · Content Direction: Eduardo de Oliveira · Creative Director: Duda Hernandez · Creative Team: Giulio Pinotti, Tatiana Jacobsohn · Production Company: Fantástica Filmes e Post · Sound: HEYHEYMYMY
