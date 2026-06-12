@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as RolesRoleRouteImport } from './routes/roles.$role'
 import { Route as ProjectsSlugRouteImport } from './routes/projects.$slug'
 import { Route as ClientsClientRouteImport } from './routes/clients.$client'
 
@@ -28,6 +29,11 @@ const AboutRoute = AboutRouteImport.update({
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RolesRoleRoute = RolesRoleRouteImport.update({
+  id: '/roles/$role',
+  path: '/roles/$role',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjectsSlugRoute = ProjectsSlugRouteImport.update({
@@ -47,6 +53,7 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/clients/$client': typeof ClientsClientRoute
   '/projects/$slug': typeof ProjectsSlugRoute
+  '/roles/$role': typeof RolesRoleRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -54,6 +61,7 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/clients/$client': typeof ClientsClientRoute
   '/projects/$slug': typeof ProjectsSlugRoute
+  '/roles/$role': typeof RolesRoleRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -62,6 +70,7 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/clients/$client': typeof ClientsClientRoute
   '/projects/$slug': typeof ProjectsSlugRoute
+  '/roles/$role': typeof RolesRoleRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -71,8 +80,15 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/clients/$client'
     | '/projects/$slug'
+    | '/roles/$role'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/sitemap.xml' | '/clients/$client' | '/projects/$slug'
+  to:
+    | '/'
+    | '/about'
+    | '/sitemap.xml'
+    | '/clients/$client'
+    | '/projects/$slug'
+    | '/roles/$role'
   id:
     | '__root__'
     | '/'
@@ -80,6 +96,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/clients/$client'
     | '/projects/$slug'
+    | '/roles/$role'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -88,6 +105,7 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ClientsClientRoute: typeof ClientsClientRoute
   ProjectsSlugRoute: typeof ProjectsSlugRoute
+  RolesRoleRoute: typeof RolesRoleRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -113,6 +131,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/roles/$role': {
+      id: '/roles/$role'
+      path: '/roles/$role'
+      fullPath: '/roles/$role'
+      preLoaderRoute: typeof RolesRoleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/projects/$slug': {
       id: '/projects/$slug'
       path: '/projects/$slug'
@@ -136,6 +161,7 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   ClientsClientRoute: ClientsClientRoute,
   ProjectsSlugRoute: ProjectsSlugRoute,
+  RolesRoleRoute: RolesRoleRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
