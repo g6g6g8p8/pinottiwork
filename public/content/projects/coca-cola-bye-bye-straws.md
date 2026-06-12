@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'Coca-Cola: Bye Bye, Straws'
 slug: coca-cola-bye-bye-straws
 client: Coca-Cola
