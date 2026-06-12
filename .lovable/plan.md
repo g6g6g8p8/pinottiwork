@@ -1,46 +1,46 @@
-## Vimeo → Project mapping (identified via Vimeo oEmbed)
+# Toggle project visibility via frontmatter
 
-| Vimeo ID | Title | Project |
-| --- | --- | --- |
-| 187879596 | Forno de Minas — Waffle ("Combina com tudo") | `forno-de-minas-waffle` |
-| 261569045 | L'Oréal Paris — Elseve Óleo Extraordinário Cachos ("Orgulho dos Cachos") | `elvive-orgulho-dos-cachos` |
-| 212125069 | Mastercard — Coleção de Memórias | `mastercard-collection-of-memories` |
-| 212130154 | Mastercard — Como fazer a sua Coleção de Memórias | `mastercard-collection-of-memories` |
-| 187872917 | Mastercard — Mulher que Estica (Supereconômicos) | `mastercard-supereconomics` |
-| 187872922 | Mastercard — Guru dos Cartões (Supereconômicos) | `mastercard-supereconomics` |
-| 187872926 | Mastercard — Incrível Homem das Contas (Supereconômicos) | `mastercard-supereconomics` |
-| 187872991 | Mastercard — Demolidor de Gastos (Supereconômicos) | `mastercard-supereconomics` |
+Hoje a única forma de tirar um projeto do site é apagar o `.md`. Vou adicionar um flag no frontmatter pra ligar/desligar projetos preservando o conteúdo.
 
-## What I'll change
+## Como vai funcionar (lado do usuário)
 
-Markdown-only edits. No code, no assets, no home-grid changes.
+No topo de qualquer `public/content/projects/*.md`:
 
-### `forno-de-minas-waffle.md`
-- Add a `## The Film` section above the placeholder note with `[video](https://vimeo.com/187879596 "Forno de Minas — Waffle: Goes With Everything")`.
-- Remove the "stills coming soon" blockquote (the film now carries the page).
-- Switch frontmatter `hero` to `https://vumbnail.com/187879596.jpg` so the project gets a proper thumbnail on the sidebar/related cards.
+```yaml
+---
+title: Mastercard Jazz
+published: false   # <- some do site
+# ou
+draft: true        # <- mesmo efeito, alias amigável
+---
+```
 
-### `elvive-orgulho-dos-cachos.md`
-- Insert a `## The Film` section after the intro copy with `[video](https://vimeo.com/261569045 "Elseve Óleo Extraordinário Cachos — Orgulho dos Cachos")`.
-- Leave the existing KV gallery and credits intact.
+Regras:
+- **Default = publicado.** Arquivos existentes não precisam de mudança nenhuma.
+- `published: false` **ou** `draft: true` → projeto fica oculto em: home, listas de categoria/cliente/role, sitemap, related projects, busca.
+- A página direta `/projects/<slug>` retorna **404** quando despublicado (consistente com sitemap e SEO).
+- Se um slug despublicado estiver referenciado em `public/data/home-layout.md`, ele é silenciosamente ignorado (linha do grid encolhe, sem quebrar layout).
 
-### `mastercard-collection-of-memories.md`
-- Replace the current two-Vimeo block (213956861 / 213955546 — both 404 now per the original scrape note) with the two confirmed films:
-  - `[video](https://vimeo.com/212125069 "Mastercard — Coleção de Memórias")`
-  - `[video](https://vimeo.com/212130154 "Mastercard — Como fazer a sua Coleção de Memórias")`
-- Update `hero` and `og_image` to `https://vumbnail.com/212125069.jpg`.
-- Adjust credits line to match the new oEmbed credits (Direção de conteúdo: Eduardo de Oliveira; CD: Duda Hernandez; Criação: Giulio Pinotti, Tatiana Jacobsohn; Produtora: Fantástica Filmes e Post; Som: HEYHEYMYMY) — phrased in English.
+## Mudanças técnicas (1 arquivo principal)
 
-### `mastercard-supereconomics.md`
-- Add a `## The Films` section with all four Supereconômicos films as a video gallery (one `[video](...)` per line):
-  - 187872917 — "Stretchy Woman"
-  - 187872922 — "Card Guru"
-  - 187872926 — "Incredible Bill Man"
-  - 187872991 — "Spending Demolisher"
-- Append the shared production credits to the project's Credits block (Content Direction: Eduardo de Oliveira; CD: Duda Hernandez; Creative Integration: Clauber Volinsky; Head of Digital Art: Duda di Pietro; Creative: Giulio Pinotti, Tatiana Jacobsohn) if not already present.
+**`src/lib/content.functions.ts`**
+- Estender `ProjectData` com `published: boolean`.
+- Em `normalizeProject`: `published = raw.published !== false && raw.draft !== true` (default true; só fica false se explicitamente desligado).
+- `listProjects` passa a filtrar `p.published` antes de retornar — assim home, listas, related, sitemap e busca herdam o filtro sem nenhuma outra alteração.
+- `getProject` / `getProjectMeta`: retornam `null` quando `published === false`, fazendo o route loader cair no `notFoundComponent` natural.
 
-## Out of scope
+Nada muda em componentes (`FeaturedProjects`, `ProjectList`, `RelatedProjects`, `sitemap[.]xml.ts`) — todos consomem `listProjects`/`getProject` e já vão receber só o que está publicado.
 
-- No still-image scraping for any of these (Vimeo poster via `vumbnail.com` is enough for cards).
-- No new project files, no route/home-layout changes, no sitemap edits (sitemap regenerates from frontmatter).
-- I will read each target `.md` before editing to keep the existing copy/structure intact.
+## Documentação
+
+Adicionar uma nota curta em `public/content/README.md` explicando o flag, com exemplo:
+
+```md
+## Toggle a project on/off
+Set `published: false` (or `draft: true`) in the frontmatter to hide a project
+from the site without deleting the file. Default is published.
+```
+
+## Fora do escopo
+- UI admin pra alternar com clique (pode vir depois; por enquanto é edição direta do `.md`, mesmo fluxo que você já usa).
+- Agendamento (publish_at) — dá pra adicionar depois reusando o mesmo gate.
