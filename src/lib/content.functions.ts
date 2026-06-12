@@ -145,7 +145,7 @@ export const getProjectMeta = createServerFn({ method: 'GET' })
   .inputValidator((d: { slug: string }) => d)
   .handler(async ({ data }): Promise<ProjectMeta | null> => {
     const p = readProjectBySlug(data.slug);
-    if (!p) return null;
+    if (!p || !p.data.published) return null;
     return {
       title: p.data.title,
       description: p.data.description,
