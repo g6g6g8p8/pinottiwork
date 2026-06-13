@@ -19,7 +19,7 @@ description: >-
 
 When Tech and Soul launched the **4You4** platform for Mitsubishi Motors Brasil, the idea was to anchor the entire brand around a new generation of drivers — more diverse, more plural, more connected to the technology inside the car than to the mud outside. From that repositioning, every campaign that followed had to carry the same DNA: 4x4 spirit, redefined.
 
-Over four years, I was part of the creative team that built and expanded that platform across product launches, branded content, and a major sports sponsorship — each piece a different expression of the same underlying idea.
+Over 2+ years, I was part of the creative team that built and expanded that platform across product launches, branded content, and a major sports sponsorship — each piece a different expression of the same underlying idea.
 
 ---
 
