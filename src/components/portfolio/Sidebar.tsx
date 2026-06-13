@@ -326,9 +326,6 @@ export default function Sidebar() {
                     <span className={`text-[13px] flex-1 ${isActive ? 'font-medium' : ''}`}>
                       {cat.name}
                     </span>
-                    {count > 0 && (
-                      <span className="text-[11px] text-foreground/35 tabular-nums">{count}</span>
-                    )}
                   </motion.button>
                 </li>
               );
