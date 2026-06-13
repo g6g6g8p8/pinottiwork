@@ -75,17 +75,17 @@ Three 5-second idents ran throughout the sponsored broadcasts on ESPN and Band.
 
 If 4You4Rally borrowed the language of tennis, this is the original rally — the off-road events Mitsubishi has been running in Brazil for decades, and the reason the brand's 4x4 credentials are not a marketing claim. Across three films, the platform plugs directly into the community of drivers, families and crews that live the sport every weekend.
 
-**Mitsubishi Cup — #4you4racers.** The most traditional single-make cross-country speed rally in Latin America. Pure adrenaline, pro-level competition, and the clearest demonstration of what a Mitsubishi 4x4 can do when the road runs out.
+**Mitsubishi Cup.** The most traditional single-make cross-country speed rally in Latin America. Pure adrenaline, pro-level competition, and the clearest demonstration of what a Mitsubishi 4x4 can do when the road runs out.
 
-[video](https://www.youtube.com/watch?v=lEU_j5bIJfo "Mitsubishi Cup — #4you4racers")
+[video](https://www.youtube.com/watch?v=lEU_j5bIJfo "4you4racers")
 
-**Mitsubishi MotorSports — #4you4adventure.** The regularity rally — same off-road DNA, opened up to family and friends. The 4x4 as a shared adventure instead of a stopwatch.
+**Mitsubishi MotorSports.** The regularity rally — same off-road DNA, opened up to family and friends. The 4x4 as a shared adventure instead of a stopwatch.
 
-[video](https://www.youtube.com/watch?v=3U7iNWmUkKo "Mitsubishi MotorSports — #4you4adventure")
+[video](https://www.youtube.com/watch?v=3U7iNWmUkKo "4you4adventure")
 
 **Mitsubishi Experience.** The brand experience film that ties the rally circuit back into the 4You4 platform — the events, the people, the terrain, all under one signature.
 
-[video](https://www.youtube.com/watch?v=O44F4Rhu5dg "Mitsubishi Experience")
+[video](https://www.youtube.com/watch?v=O44F4Rhu5dg "4you4experience")
 
 ---
 
