@@ -33,6 +33,10 @@ From this campaign onward, every Mitsubishi product in Brazil would carry the 4Y
 
 [video](https://www.youtube.com/watch?v=fwedmzWiL2g "4You4 — New Generation Manifesto")
 
+A field-side endorsement for the L200 Triton Sport with country-music duo Fernando & Sorocaba, where rural life meets the truck's tech — the most literal expression of "4You4" for Mitsubishi's heartland audience.
+
+[video](https://www.youtube.com/watch?v=4GHOZE61kO4 "L200 Triton Sport — Field & Technology, with Fernando & Sorocaba")
+
 :::gallery
 ![](/__l5e/assets-v1/d63eeb0d-ea0a-4df7-a806-d6486de19519/kv-01.jpg)
 ![](/__l5e/assets-v1/98b5e73b-5f03-475b-bc9f-c5ab44ebfc6a/kv-02.jpg)
@@ -86,6 +90,24 @@ Three 5-second idents ran throughout the sponsored broadcasts on ESPN and Band.
 ![](/__l5e/assets-v1/48ac5e83-686e-4224-9748-26f9cdbd5afe/hero-02.png)
 ![](/__l5e/assets-v1/83fd0020-a714-487c-9497-3a3a5f4f75a1/hero-03.png)
 :::
+
+---
+
+## MIT Rallies — Where 4x4 Lives For Real
+
+If 4You4Rally borrowed the language of tennis, this is the original rally — the off-road events Mitsubishi has been running in Brazil for decades, and the reason the brand's 4x4 credentials are not a marketing claim. Across three films, the platform plugs directly into the community of drivers, families and crews that live the sport every weekend.
+
+**Mitsubishi Cup — #4you4racers.** The most traditional single-make cross-country speed rally in Latin America. Pure adrenaline, pro-level competition, and the clearest demonstration of what a Mitsubishi 4x4 can do when the road runs out.
+
+[video](https://www.youtube.com/watch?v=lEU_j5bIJfo "Mitsubishi Cup — #4you4racers")
+
+**Mitsubishi MotorSports — #4you4adventure.** The regularity rally — same off-road DNA, opened up to family and friends. The 4x4 as a shared adventure instead of a stopwatch.
+
+[video](https://www.youtube.com/watch?v=3U7iNWmUkKo "Mitsubishi MotorSports — #4you4adventure")
+
+**Mitsubishi Experience.** The brand experience film that ties the rally circuit back into the 4You4 platform — the events, the people, the terrain, all under one signature.
+
+[video](https://www.youtube.com/watch?v=O44F4Rhu5dg "Mitsubishi Experience")
 
 ---
 
