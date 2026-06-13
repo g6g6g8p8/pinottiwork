@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'Mastercard Jazz'
 slug: mastercard-jazz
 client: Mastercard
