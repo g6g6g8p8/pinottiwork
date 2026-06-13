@@ -2,7 +2,7 @@
 title: '6 Years of a Priceless Journey'
 slug: mastercard-priceless-ecosystem
 client: Mastercard
-role: Art Director
+role: Senior Art Director
 category: Advertising
 tags:
   - Brand Governance
@@ -14,7 +14,7 @@ hero: >-
   /__l5e/assets-v1/0e1acb09-8851-4179-92d6-4f40aac862cc/Screenshot_2026-05-25_at_10.33.59_d0lso8.png
 aspect_ratio: '9:4'
 description: >-
-  Sustaining the Priceless platform across dozens of verticals and making history on the main brand tracker index.
+  Six years sustaining the Priceless platform across dozens of verticals — from Copa América to jazz festivals — and making history on the main brand tracker index.
 ---
 
 Managing a legacy brand like Mastercard at scale means something most portfolios don't show: the work between the big campaigns. The governance, the visual consistency across dozens of simultaneous verticals, the ability to pivot fast without breaking the brand. For six years, I was a core part of that creative structure at WMcCann — bridging elite art direction with complex account demands across sponsorships, product launches, affluent segments, cultural activations, and rapid-response tactical content.
@@ -33,6 +33,14 @@ That dual meaning became the umbrella concept for the entire campaign.
 
 [video](https://player.vimeo.com/video/882200378?h=fa6e81ef49 "Aproxime — Copa América 2019")
 
+Beyond the brand film, "Aproxime" drove a series of activations: the **Impossible Mascots**, where children with special needs walked onto the field alongside the Brazilian national team; the story of **Murilo**, a Brazilian boy and passionate Argentine fan — a portrait of the emotional connections football makes possible; and a crowd activation that united thousands of voices in a single chant.
+
+[video](https://player.vimeo.com/video/817092515?h=0845daaeae "Impossible Mascots")
+
+[video](https://player.vimeo.com/video/876537385?h=2792316215 "Murilo — The Brazilian boy with an Argentine passion")
+
+[video](https://player.vimeo.com/video/836365351?h=50a20ab83d "Crowd's United Chant")
+
 The results set a new benchmark. Aproxime became a global reference within the Mastercard network — and on the main brand tracker index, the campaign surpassed VISA for the first time, establishing a new record.
 
 ---
@@ -41,7 +49,7 @@ The results set a new benchmark. Aproxime became a global reference within the M
 
 As Mastercard expanded its Affluent proposition across Latin America and the Caribbean, the brief was to translate the premium tier's benefits — airport lounges, cashback abroad, room upgrades, chef experiences — into a campaign that felt genuinely elevated, not just functional.
 
-The campaign starred rock musician Derrick Green of Sepultura. The casting alone repositioned what "luxury" looks like in Brazil: less aspirational cliché, more genuine cultural weight. Each film focused on a single benefit, unified by the platform line: _Start living new experiences. Start something Priceless._
+The campaign starred rock musician Derrick Green of Sepultura. The casting alone repositioned what "luxury" looks like in Brazil: less aspirational cliché, more genuine cultural weight. Each film focused on a single benefit, unified by the platform line: *Start living new experiences. Start something Priceless.*
 
 [video](https://player.vimeo.com/video/848462193?h=f73b028b13 "Boingo Wi-Fi")
 
@@ -89,3 +97,13 @@ Out-of-home took over bus shelters and prime urban surfaces across São Paulo. O
 [video](https://player.vimeo.com/video/848393121?h=3fe594dc6c "Mastercard Jazz — Campaign Film")
 
 ---
+
+## Credits
+
+**Aproxime / Copa América 2019** — Agency: WMcCann · CCO: Hugo Rodrigues, André Marques · Creative Director: Alexandre Prado · Art Director: Giulio Pinotti
+
+**Mastercard Black Latam** — Agency: WMcCann · Creative Director: Alexandre Prado · Art Director: Giulio Pinotti
+
+**Collection of Memories** — Agency: WMcCann · Creative Director: Duda Hernandez · Creative Team: Giulio Pinotti, Tatiana Jacobsohn · Production: Fantástica Filmes e Post · Sound: HEYHEYMYMY
+
+**Mastercard Jazz** — Agency: WMcCann · CCO: Hugo Rodrigues, André Marques · COO: Kevin Zung · Creative Director: Alexandre Prado · Creative Team: Bruno Mukai, Erica Igue, Francisco Oliveira, Giulio Pinotti, Leandro Oliveira, Paulo Fontana · Photographer: Maurício Nahas · Image Retouching: Fujocka Creative Images
