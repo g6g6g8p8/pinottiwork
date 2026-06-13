@@ -1,46 +1,50 @@
-# Toggle project visibility via frontmatter
+# Add MIT Rallies + L200 Triton Sport videos to 4You4 Platform
 
-Hoje a única forma de tirar um projeto do site é apagar o `.md`. Vou adicionar um flag no frontmatter pra ligar/desligar projetos preservando o conteúdo.
+Single-file edit: `public/content/projects/mitsubishi-4you4-platform.md`.
 
-## Como vai funcionar (lado do usuário)
+## Video metadata (pulled from YouTube)
 
-No topo de qualquer `public/content/projects/*.md`:
+| ID | Title | Description (PT) |
+|---|---|---|
+| lEU_j5bIJfo | Mitsubishi Cup — #4you4racers | Tradicional rally monomarca de velocidade cross country da América Latina. |
+| 3U7iNWmUkKo | Mitsubishi MotorSports — #4you4adventure | Rally de regularidade. Encare desafios com família e amigos a bordo do seu Mit 4x4. |
+| O44F4Rhu5dg | Mitsubishi Experience | (Brand experience film — descrição não acessível; tratado como vivência 4x4 da marca.) |
+| 4GHOZE61kO4 | L200 Triton Sport — Campo e Tecnologia (com Fernando & Sorocaba) | Sertanejos endossam a L200 unindo campo + tecnologia. |
 
-```yaml
----
-title: Mastercard Jazz
-published: false   # <- some do site
-# ou
-draft: true        # <- mesmo efeito, alias amigável
----
+## Edits
+
+### A) Extend "New Generation — The Platform Launch"
+Append one more `[video]` after the existing two, with a short English lead-in line in the project's tone — framing the L200 Triton Sport as the platform's flagship in the field, voiced through country-music duo Fernando & Sorocaba:
+
+```
+A field-side endorsement for the L200 Triton Sport with country-music duo Fernando & Sorocaba, where rural life meets the truck's tech — the most literal expression of "4You4" for Mitsubishi's heartland audience.
+
+[video](https://www.youtube.com/watch?v=4GHOZE61kO4 "L200 Triton Sport — Field & Technology, with Fernando & Sorocaba")
 ```
 
-Regras:
-- **Default = publicado.** Arquivos existentes não precisam de mudança nenhuma.
-- `published: false` **ou** `draft: true` → projeto fica oculto em: home, listas de categoria/cliente/role, sitemap, related projects, busca.
-- A página direta `/projects/<slug>` retorna **404** quando despublicado (consistente com sitemap e SEO).
-- Se um slug despublicado estiver referenciado em `public/data/home-layout.md`, ele é silenciosamente ignorado (linha do grid encolhe, sem quebrar layout).
+### B) New section: "MIT Rallies — Where 4x4 Lives For Real"
+Insert as a new `---` section after **4You4Rally — ESPN Tennis Sponsorship** and before **MIT Drivelines**. Establishes that 4You4 isn't only a film universe — Mitsubishi runs the actual rallies that built its 4x4 reputation.
 
-## Mudanças técnicas (1 arquivo principal)
+Body (English, matching the existing voice):
 
-**`src/lib/content.functions.ts`**
-- Estender `ProjectData` com `published: boolean`.
-- Em `normalizeProject`: `published = raw.published !== false && raw.draft !== true` (default true; só fica false se explicitamente desligado).
-- `listProjects` passa a filtrar `p.published` antes de retornar — assim home, listas, related, sitemap e busca herdam o filtro sem nenhuma outra alteração.
-- `getProject` / `getProjectMeta`: retornam `null` quando `published === false`, fazendo o route loader cair no `notFoundComponent` natural.
+```
+## MIT Rallies — Where 4x4 Lives For Real
 
-Nada muda em componentes (`FeaturedProjects`, `ProjectList`, `RelatedProjects`, `sitemap[.]xml.ts`) — todos consomem `listProjects`/`getProject` e já vão receber só o que está publicado.
+If 4You4Rally borrowed the language of tennis, this is the original rally — the off-road events Mitsubishi has been running in Brazil for decades, and the reason the brand's 4x4 credentials are not a marketing claim. Across three films, the platform plugs directly into the community of drivers, families and crews that live the sport every weekend.
 
-## Documentação
+**Mitsubishi Cup — #4you4racers.** The most traditional single-make cross-country speed rally in Latin America. Pure adrenaline, pro-level competition, and the clearest demonstration of what a Mitsubishi 4x4 can do when the road runs out.
 
-Adicionar uma nota curta em `public/content/README.md` explicando o flag, com exemplo:
+[video](https://www.youtube.com/watch?v=lEU_j5bIJfo "Mitsubishi Cup — #4you4racers")
 
-```md
-## Toggle a project on/off
-Set `published: false` (or `draft: true`) in the frontmatter to hide a project
-from the site without deleting the file. Default is published.
+**Mitsubishi MotorSports — #4you4adventure.** The regularity rally — same off-road DNA, opened up to family and friends. The 4x4 as a shared adventure instead of a stopwatch.
+
+[video](https://www.youtube.com/watch?v=3U7iNWmUkKo "Mitsubishi MotorSports — #4you4adventure")
+
+**Mitsubishi Experience.** The brand experience film that ties the rally circuit back into the 4You4 platform — the events, the people, the terrain, all under one signature.
+
+[video](https://www.youtube.com/watch?v=O44F4Rhu5dg "Mitsubishi Experience")
 ```
 
-## Fora do escopo
-- UI admin pra alternar com clique (pode vir depois; por enquanto é edição direta do `.md`, mesmo fluxo que você já usa).
-- Agendamento (publish_at) — dá pra adicionar depois reusando o mesmo gate.
+## Out of scope
+- No frontmatter / hero / image changes.
+- No edits to other project files.
