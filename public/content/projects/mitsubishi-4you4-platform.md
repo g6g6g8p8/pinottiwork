@@ -63,12 +63,6 @@ Three full-3D short films follow a Pajero Sport crossing forest, plantation and 
 
 Three 5-second idents ran throughout the sponsored broadcasts on ESPN and Band.
 
-[video](https://player.vimeo.com/video/669976550?h=d6f2f0ae5f "4You4Rally Tennis — Ident 01")
-
-[video](https://player.vimeo.com/video/669976579?h=da73edf3b6 "4You4Rally Tennis — Ident 02")
-
-[video](https://player.vimeo.com/video/669976499?h=dc910e38c1 "4You4Rally Tennis — Ident 03")
-
 :::gallery
 ![](/__l5e/assets-v1/8a62f011-4cad-49a6-9d0d-160618755440/hero-01.png)
 ![](/__l5e/assets-v1/48ac5e83-686e-4224-9748-26f9cdbd5afe/hero-02.png)
