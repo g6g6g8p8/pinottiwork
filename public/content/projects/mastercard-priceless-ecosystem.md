@@ -2,7 +2,7 @@
 title: '6 Years of a Priceless Journey'
 slug: mastercard-priceless-ecosystem
 client: Mastercard
-role: Senior Art Director
+role: Art Director
 category: Advertising
 tags:
   - Brand Governance
@@ -32,14 +32,6 @@ The word "aproxime" appeared on every contactless POS terminal in Brazil. It mea
 That dual meaning became the umbrella concept for the entire campaign.
 
 [video](https://player.vimeo.com/video/882200378?h=fa6e81ef49 "Aproxime — Copa América 2019")
-
-Beyond the brand film, "Aproxime" drove a series of activations: the **Impossible Mascots**, where children with special needs walked onto the field alongside the Brazilian national team; the story of **Murilo**, a Brazilian boy and passionate Argentine fan — a portrait of the emotional connections football makes possible; and a crowd activation that united thousands of voices in a single chant.
-
-[video](https://player.vimeo.com/video/817092515?h=0845daaeae "Impossible Mascots")
-
-[video](https://player.vimeo.com/video/876537385?h=2792316215 "Murilo — The Brazilian boy with an Argentine passion")
-
-[video](https://player.vimeo.com/video/836365351?h=50a20ab83d "Crowd's United Chant")
 
 The results set a new benchmark. Aproxime became a global reference within the Mastercard network — and on the main brand tracker index, the campaign surpassed VISA for the first time, establishing a new record.
 
@@ -83,11 +75,3 @@ Out-of-home took over bus shelters and prime urban surfaces across São Paulo. O
 [video](https://player.vimeo.com/video/848393121?h=3fe594dc6c "Mastercard Jazz — Campaign Film")
 
 ---
-
-## Credits
-
-**Aproxime / Copa América 2019** — Agency: WMcCann · CCO: Hugo Rodrigues, André Marques · Creative Director: Alexandre Prado · Art Director: Giulio Pinotti
-
-**Mastercard Black Latam** — Agency: WMcCann · Creative Director: Alexandre Prado · Art Director: Giulio Pinotti
-
-**Mastercard Jazz** — Agency: WMcCann · CCO: Hugo Rodrigues, André Marques · COO: Kevin Zung · Creative Director: Alexandre Prado · Creative Team: Bruno Mukai, Erica Igue, Francisco Oliveira, Giulio Pinotti, Leandro Oliveira, Paulo Fontana · Photographer: Maurício Nahas · Image Retouching: Fujocka Creative Images
