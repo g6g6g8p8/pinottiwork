@@ -98,13 +98,3 @@ A branded content platform that turned the 4x4 DNA into a travel proposition —
 [video](https://www.youtube.com/watch?v=K_5Q0fRKW5c "MIT Drivelines — Campaign Film")
 
 ---
-
-## Credits
-
-**New Generation** — Agency: Tech and Soul · CCO: Flavio Waiteman · Creative Directors: Renan Bulgari, Daniel Magri, Fabiano Feijó · Art Director: Giulio Pinotti · Copywriter: José Scorzelli
-
-**Outlander Sport / Multiverse** — Agency: Tech and Soul · Creative Directors: Flavio Waiteman, Fabiano Feijó · Creative Team: Eduardo Martins, Guga Dias da Costa, Paulo Ottaviani, Willem Carpio, Giulio Pinotti, José Scorzelli · 3D: Eduardo Martins, Rodrigo de Angelis · Music: BloodAudio / Otávio de Moraes · Vocals: Tansu Akerman
-
-**4You4Rally / ESPN Tennis** — Agency: Tech and Soul · Creative Director: Fabiano Feijó · Art Director: Giulio Pinotti · Copywriter: José Scorzelli · 3D Production: Pimp Studio
-
-**MIT Drivelines** — Agency: Tech and Soul · CCO: Flavio Waiteman · Creative Director: Fabiano Feijó · Art Director: Giulio Pinotti
