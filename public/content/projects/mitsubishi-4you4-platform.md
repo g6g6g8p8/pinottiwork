@@ -2,7 +2,7 @@
 title: 'The 4You4 Platform'
 slug: mitsubishi-4you4-platform
 client: Mitsubishi Motors
-role: Senior Art Director
+role: Art Director
 category: Advertising
 tags:
   - Brand Platform
@@ -10,16 +10,16 @@ tags:
   - Branded Content
   - 3D
 order: 7
-hero: /__l5e/assets-v1/ba3adc95-d620-48b7-ac9e-e852ec01a699/hero-cover.webp
-og_image: /__l5e/assets-v1/ba3adc95-d620-48b7-ac9e-e852ec01a699/hero-cover.webp
+hero: /__l5e/assets-v1/d63eeb0d-ea0a-4df7-a806-d6486de19519/kv-01.jpg
+og_image: /__l5e/assets-v1/d63eeb0d-ea0a-4df7-a806-d6486de19519/kv-01.jpg
 aspect_ratio: '16:9'
 description: >-
-  From a new brand platform to a travel companion, a 3D universe and a tennis sponsorship — 2+ years building the creative legs of Mitsubishi's 4You4 identity in Brazil.
+  From a new brand platform to a travel companion, a 3D universe and a tennis sponsorship — four years building the creative legs of Mitsubishi's 4You4 identity in Brazil.
 ---
 
 When Tech and Soul launched the **4You4** platform for Mitsubishi Motors Brasil, the idea was to anchor the entire brand around a new generation of drivers — more diverse, more plural, more connected to the technology inside the car than to the mud outside. From that repositioning, every campaign that followed had to carry the same DNA: 4x4 spirit, redefined.
 
-Over 2+ years, I was part of the creative team that built and expanded that platform across product launches, branded content, and a major sports sponsorship — each piece a different expression of the same underlying idea.
+Over four years, I was part of the creative team that built and expanded that platform across product launches, branded content, and a major sports sponsorship — each piece a different expression of the same underlying idea.
 
 ---
 
@@ -33,10 +33,6 @@ From this campaign onward, every Mitsubishi product in Brazil would carry the 4Y
 
 [video](https://www.youtube.com/watch?v=fwedmzWiL2g "4You4 — New Generation Manifesto")
 
-A field-side endorsement for the L200 Triton Sport with country-music duo Fernando & Sorocaba, where rural life meets the truck's tech — the most literal expression of "4You4" for Mitsubishi's heartland audience.
-
-[video](https://www.youtube.com/watch?v=4GHOZE61kO4 "L200 Triton Sport — Field & Technology, with Fernando & Sorocaba")
-
 :::gallery
 ![](/__l5e/assets-v1/d63eeb0d-ea0a-4df7-a806-d6486de19519/kv-01.jpg)
 ![](/__l5e/assets-v1/98b5e73b-5f03-475b-bc9f-c5ab44ebfc6a/kv-02.jpg)
@@ -47,11 +43,27 @@ A field-side endorsement for the L200 Triton Sport with country-music duo Fernan
 
 ---
 
+## Outlander Sport — The New Diamond
+
+Launching the Outlander Sport 2021 with a fully 3D film that leaned into the model's positioning as "the new diamond of Mitsubishi" — a nod to the brand's three-diamond DNA, translated into an image of the car crossing a string of possible universes, holding its shape under any kind of pressure.
+
+An original track was composed specifically for the campaign by Flavio Waiteman and Otávio de Moraes, and recorded in New York with singer Tansu Akerman.
+
+[video](https://www.youtube.com/watch?v=IXlz6D22rtA "Outlander Sport 2021 — The New Diamond of Mitsubishi")
+
+:::gallery
+![](/__l5e/assets-v1/fcd48167-6a46-4f0e-906d-94a0a90b855a/kv-01.png)
+![](/__l5e/assets-v1/32535570-ffa5-4c6b-8323-9ad4256cb11f/kv-02.png)
+![](/__l5e/assets-v1/751e2672-f631-4ab1-9c7b-da8ae6bf376d/kv-03.png)
+:::
+
+---
+
 ## 4You4Rally — ESPN Tennis Sponsorship
 
 Mitsubishi sponsored more than 200 tennis matches on ESPN throughout 2021 — Australian Open, US Open, Masters 1000, ATP Finals. Instead of standard media placement, the brand wanted to show how its 4x4 identity actually connects with the sport.
 
-The answer was in the language: off-road, Mitsubishi owns _rally_. On a tennis court, a _rally_ is the most intense exchange in the game. **4You4Rally** lived exactly in that overlap.
+The answer was in the language: off-road, Mitsubishi owns *rally*. On a tennis court, a *rally* is the most intense exchange in the game. **4You4Rally** lived exactly in that overlap.
 
 Three full-3D short films follow a Pajero Sport crossing forest, plantation and beach terrain until it arrives at tennis courts built in the middle of nowhere — collapsing the two universes into a single image.
 
@@ -63,29 +75,17 @@ Three full-3D short films follow a Pajero Sport crossing forest, plantation and 
 
 Three 5-second idents ran throughout the sponsored broadcasts on ESPN and Band.
 
+[video](https://player.vimeo.com/video/669976550?h=d6f2f0ae5f "4You4Rally Tennis — Ident 01")
+
+[video](https://player.vimeo.com/video/669976579?h=da73edf3b6 "4You4Rally Tennis — Ident 02")
+
+[video](https://player.vimeo.com/video/669976499?h=dc910e38c1 "4You4Rally Tennis — Ident 03")
+
 :::gallery
 ![](/__l5e/assets-v1/8a62f011-4cad-49a6-9d0d-160618755440/hero-01.png)
 ![](/__l5e/assets-v1/48ac5e83-686e-4224-9748-26f9cdbd5afe/hero-02.png)
 ![](/__l5e/assets-v1/83fd0020-a714-487c-9497-3a3a5f4f75a1/hero-03.png)
 :::
-
----
-
-## MIT Rallies — Where 4x4 Lives For Real
-
-If 4You4Rally borrowed the language of tennis, this is the original rally — the off-road events Mitsubishi has been running in Brazil for decades, and the reason the brand's 4x4 credentials are not a marketing claim. Across three films, the platform plugs directly into the community of drivers, families and crews that live the sport every weekend.
-
-**Mitsubishi Cup.** The most traditional single-make cross-country speed rally in Latin America. Pure adrenaline, pro-level competition, and the clearest demonstration of what a Mitsubishi 4x4 can do when the road runs out.
-
-[video](https://www.youtube.com/watch?v=lEU_j5bIJfo "4you4racers")
-
-**Mitsubishi MotorSports.** The regularity rally — same off-road DNA, opened up to family and friends. The 4x4 as a shared adventure instead of a stopwatch.
-
-[video](https://www.youtube.com/watch?v=3U7iNWmUkKo "4you4adventure")
-
-**Mitsubishi Experience.** The brand experience film that ties the rally circuit back into the 4You4 platform — the events, the people, the terrain, all under one signature.
-
-[video](https://www.youtube.com/watch?v=O44F4Rhu5dg "4you4experience")
 
 ---
 
@@ -97,8 +97,14 @@ A branded content platform that turned the 4x4 DNA into a travel proposition —
 
 [video](https://www.youtube.com/watch?v=K_5Q0fRKW5c "MIT Drivelines — Campaign Film")
 
-A creator-led chapter for the platform: photographer Pablo Vaz takes MIT Drivelines into the Serra do Rio do Rastro in Santa Catarina, reaching the kind of landscapes only a Mitsubishi 4x4 can get you to — the travel-company idea proven in the field by someone who actually lives it.
-
-[video](https://www.youtube.com/watch?v=ymxmQWYt8e0 "Drivelines — Pablo Vaz · Rio do Rastro")
-
 ---
+
+## Credits
+
+**New Generation** — Agency: Tech and Soul · CCO: Flavio Waiteman · Creative Directors: Renan Bulgari, Daniel Magri, Fabiano Feijó · Art Director: Giulio Pinotti · Copywriter: José Scorzelli
+
+**Outlander Sport / Multiverse** — Agency: Tech and Soul · Creative Directors: Flavio Waiteman, Fabiano Feijó · Creative Team: Eduardo Martins, Guga Dias da Costa, Paulo Ottaviani, Willem Carpio, Giulio Pinotti, José Scorzelli · 3D: Eduardo Martins, Rodrigo de Angelis · Music: BloodAudio / Otávio de Moraes · Vocals: Tansu Akerman
+
+**4You4Rally / ESPN Tennis** — Agency: Tech and Soul · Creative Director: Fabiano Feijó · Art Director: Giulio Pinotti · Copywriter: José Scorzelli · 3D Production: Pimp Studio
+
+**MIT Drivelines** — Agency: Tech and Soul · CCO: Flavio Waiteman · Creative Director: Fabiano Feijó · Art Director: Giulio Pinotti
