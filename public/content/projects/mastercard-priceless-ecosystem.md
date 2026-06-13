@@ -57,6 +57,20 @@ The campaign starred rock musician Derrick Green of Sepultura. The casting alone
 
 ---
 
+## Collection of Memories — Two Films About What Stays
+
+Not every piece of the account was built around a sponsorship or a product benefit. Collection of Memories was a pair of short films that sat squarely inside the emotional core of the Priceless platform — exploring the difference between what you buy and what you keep.
+
+The films worked in the territory of everyday Brazilian life: small gestures, people, trips that quietly accumulate into who you are. No big production spectacle. Just warmth, restraint, and a distinctly Brazilian emotional register.
+
+For me, this was one of the earliest pieces on the account — and one that made clear what the Priceless platform could do when it wasn't selling a benefit, just telling a truth.
+
+[video](https://vimeo.com/212125069 "Collection of Memories")
+
+[video](https://vimeo.com/212130154 "How to Build Your Own Collection of Memories")
+
+---
+
 ## Mastercard Jazz — A New Festival in São Paulo
 
 In 2019, Mastercard created its first jazz festival in Brazil — a free, two-day event at Auditório Ibirapuera with a lineup mixing international names like Christian Scott aTunde Adjuah with new Brazilian voices like Bixiga 70 and Xênia França.
