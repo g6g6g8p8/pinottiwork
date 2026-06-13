@@ -2,7 +2,7 @@
 title: 'The 4You4 Platform'
 slug: mitsubishi-4you4-platform
 client: Mitsubishi Motors
-role: Art Director
+role: Senior Art Director
 category: Advertising
 tags:
   - Brand Platform
@@ -14,7 +14,7 @@ hero: /__l5e/assets-v1/d63eeb0d-ea0a-4df7-a806-d6486de19519/kv-01.jpg
 og_image: /__l5e/assets-v1/d63eeb0d-ea0a-4df7-a806-d6486de19519/kv-01.jpg
 aspect_ratio: '16:9'
 description: >-
-  From a new brand platform to a travel companion, a 3D universe and a tennis sponsorship — four years building the creative legs of Mitsubishi's 4You4 identity in Brazil.
+  From a new brand platform to a travel companion, a 3D universe and a tennis sponsorship — 2+ years building the creative legs of Mitsubishi's 4You4 identity in Brazil.
 ---
 
 When Tech and Soul launched the **4You4** platform for Mitsubishi Motors Brasil, the idea was to anchor the entire brand around a new generation of drivers — more diverse, more plural, more connected to the technology inside the car than to the mud outside. From that repositioning, every campaign that followed had to carry the same DNA: 4x4 spirit, redefined.
