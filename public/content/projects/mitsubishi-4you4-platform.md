@@ -10,8 +10,8 @@ tags:
   - Branded Content
   - 3D
 order: 7
-hero: /__l5e/assets-v1/d63eeb0d-ea0a-4df7-a806-d6486de19519/kv-01.jpg
-og_image: /__l5e/assets-v1/d63eeb0d-ea0a-4df7-a806-d6486de19519/kv-01.jpg
+hero: /__l5e/assets-v1/ba3adc95-d620-48b7-ac9e-e852ec01a699/hero-cover.webp
+og_image: /__l5e/assets-v1/ba3adc95-d620-48b7-ac9e-e852ec01a699/hero-cover.webp
 aspect_ratio: '16:9'
 description: >-
   From a new brand platform to a travel companion, a 3D universe and a tennis sponsorship — 2+ years building the creative legs of Mitsubishi's 4You4 identity in Brazil.
@@ -96,5 +96,9 @@ A branded content platform that turned the 4x4 DNA into a travel proposition —
 "Comissárias" presented curated road trip routes across Brazil — adventure, culture, gastronomy, family — all accessible via the MIT Drivelines hotsite, where Mitsubishi owners also unlocked partner benefits at hotels and restaurants along the routes.
 
 [video](https://www.youtube.com/watch?v=K_5Q0fRKW5c "MIT Drivelines — Campaign Film")
+
+A creator-led chapter for the platform: photographer Pablo Vaz takes MIT Drivelines into the Serra do Rio do Rastro in Santa Catarina, reaching the kind of landscapes only a Mitsubishi 4x4 can get you to — the travel-company idea proven in the field by someone who actually lives it.
+
+[video](https://www.youtube.com/watch?v=ymxmQWYt8e0 "Drivelines — Pablo Vaz · Rio do Rastro")
 
 ---
