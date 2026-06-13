@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'The 4You4 Platform'
 slug: mitsubishi-4you4-platform
 client: Mitsubishi Motors
