@@ -14,7 +14,7 @@ hero: >-
   /__l5e/assets-v1/0e1acb09-8851-4179-92d6-4f40aac862cc/Screenshot_2026-05-25_at_10.33.59_d0lso8.png
 aspect_ratio: '9:4'
 description: >-
-  Six years sustaining the Priceless platform across dozens of verticals — from Copa América to jazz festivals — and making history on the main brand tracker index.
+  Sustaining the Priceless platform across dozens of verticals and making history on the main brand tracker index.
 ---
 
 Managing a legacy brand like Mastercard at scale means something most portfolios don't show: the work between the big campaigns. The governance, the visual consistency across dozens of simultaneous verticals, the ability to pivot fast without breaking the brand. For six years, I was a core part of that creative structure at WMcCann — bridging elite art direction with complex account demands across sponsorships, product launches, affluent segments, cultural activations, and rapid-response tactical content.

@@ -1,5 +1,5 @@
 ---
-title: 'Amazon.com.br: Count On Us'
+title: 'Count On Us'
 slug: amazon-count-on-us
 client: Amazon.com.br
 role: Art Director
@@ -13,7 +13,7 @@ order: 5
 hero: '/__l5e/assets-v1/bcdb0eb0-a191-4a8c-96e9-253f839fc7dd/amazon-gamer.gif'
 aspect_ratio: '16:9'
 description: >-
-  Official launch campaign for Amazon in Brazil, with the message that Brazilians could count on the brand.
+  Official launch campaign for Amazon in Brazil.
 ---
 
 ## The Challenge
