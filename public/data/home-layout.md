@@ -27,6 +27,7 @@
 hero | mary-kay-global-ecosystem
 duo | pink-news | mary-kay-guinness-record
 hero | fini-algorithmic-diagnostics
+hero | mitsubishi-4you4-platform
 trio | the-reconquest | give-yourself-this-chance | mit-cada-km-mit-conta
 career-wall
 hero | mastercard-priceless-ecosystem
