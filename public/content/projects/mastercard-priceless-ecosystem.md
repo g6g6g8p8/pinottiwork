@@ -10,8 +10,7 @@ tags:
   - Purpose-Driven
   - Creative Systems
 order: 4
-hero: >-
-  /__l5e/assets-v1/0e1acb09-8851-4179-92d6-4f40aac862cc/Screenshot_2026-05-25_at_10.33.59_d0lso8.png
+hero: /assets/mastercard/hero-cooking.jpg
 aspect_ratio: '9:4'
 description: >-
   Six years sustaining the Priceless platform across dozens of verticals — from Copa América to jazz festivals — and making history on the main brand tracker index.
@@ -23,25 +22,11 @@ The insight that drove everything: to beat VISA, every touchpoint had to feel co
 
 ---
 
-## Aproxime — Copa América 2019
+## Get Closer — Copa América 2019
 
-The most complex and impactful activation of the entire account. Mastercard was the official sponsor of Copa América 2019, and the challenge was to turn that sponsorship into something that went beyond logo placement and media buys — it needed to elevate the brand through a distinct idea that only Mastercard could own.
+The most complex and impactful activation of the entire account — a campaign that turned a single word printed on every POS terminal in Brazil into the umbrella concept for Mastercard's Copa América sponsorship. On the main brand tracker index, it surpassed VISA for the first time, establishing a new record.
 
-The word "aproxime" appeared on every contactless POS terminal in Brazil. It means "bring closer" — a functional instruction that also carried an emotional charge perfectly aligned with how Brazilians experience football: together, close, warm.
-
-That dual meaning became the umbrella concept for the entire campaign.
-
-[video](https://player.vimeo.com/video/882200378?h=fa6e81ef49 "Aproxime — Copa América 2019")
-
-Beyond the brand film, "Aproxime" drove a series of activations: the **Impossible Mascots**, where children with special needs walked onto the field alongside the Brazilian national team; the story of **Murilo**, a Brazilian boy and passionate Argentine fan — a portrait of the emotional connections football makes possible; and a crowd activation that united thousands of voices in a single chant.
-
-[video](https://player.vimeo.com/video/817092515?h=0845daaeae "Impossible Mascots")
-
-[video](https://player.vimeo.com/video/876537385?h=2792316215 "Murilo — The Brazilian boy with an Argentine passion")
-
-[video](https://player.vimeo.com/video/836365351?h=50a20ab83d "Crowd's United Chant")
-
-The results set a new benchmark. Aproxime became a global reference within the Mastercard network — and on the main brand tracker index, the campaign surpassed VISA for the first time, establishing a new record.
+→ [See the full case: Get Closer](/project/mastercard-get-closer)
 
 ---
 
@@ -100,7 +85,7 @@ Out-of-home took over bus shelters and prime urban surfaces across São Paulo. O
 
 ## Credits
 
-**Aproxime / Copa América 2019** — Agency: WMcCann · CCO: Hugo Rodrigues, André Marques · Creative Director: Alexandre Prado · Art Director: Giulio Pinotti
+**Get Closer / Copa América 2019** — Agency: WMcCann · CCO: Hugo Rodrigues, André Marques · Creative Director: Alexandre Prado · Art Director: Giulio Pinotti
 
 **Mastercard Black Latam** — Agency: WMcCann · Creative Director: Alexandre Prado · Art Director: Giulio Pinotti
 
