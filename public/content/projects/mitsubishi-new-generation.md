@@ -43,22 +43,6 @@ From this campaign onward, every Mitsubishi product in Brazil would carry the 4Y
 
 ---
 
-## Outlander Sport — The New Diamond
-
-Launching the Outlander Sport 2021 with a fully 3D film that leaned into the model's positioning as "the new diamond of Mitsubishi" — a nod to the brand's three-diamond DNA, translated into an image of the car crossing a string of possible universes, holding its shape under any kind of pressure.
-
-An original track was composed specifically for the campaign by Flavio Waiteman and Otávio de Moraes, and recorded in New York with singer Tansu Akerman.
-
-[video](https://www.youtube.com/watch?v=IXlz6D22rtA "Outlander Sport 2021 — The New Diamond of Mitsubishi")
-
-:::gallery
-![](/__l5e/assets-v1/fcd48167-6a46-4f0e-906d-94a0a90b855a/kv-01.png)
-![](/__l5e/assets-v1/32535570-ffa5-4c6b-8323-9ad4256cb11f/kv-02.png)
-![](/__l5e/assets-v1/751e2672-f631-4ab1-9c7b-da8ae6bf376d/kv-03.png)
-:::
-
----
-
 ## 4You4Rally — ESPN Tennis Sponsorship
 
 Mitsubishi sponsored more than 200 tennis matches on ESPN throughout 2021 — Australian Open, US Open, Masters 1000, ATP Finals. Instead of standard media placement, the brand wanted to show how its 4x4 identity actually connects with the sport.
