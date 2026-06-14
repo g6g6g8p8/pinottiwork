@@ -19,7 +19,7 @@ description: >-
 
 We introduced QR codes into Brazilian television merchandising — a format that had always been built around a host reading a script and a logo on screen. 
 
-[video](https://vimeo.com/625807152 "Baixe o App pelo QR Code — TV Merchandising")
+[video](https://vimeo.com/625807152 "How we did it")
 
 With a single scannable code, the audience could go from the couch to the Americanas app in seconds.
 
@@ -30,5 +30,3 @@ With a single scannable code, the audience could go from the couch to the Americ
 The results spoke for themselves: after this, every TV merchandising slot started carrying a QR code.
 
 ![](https://mir-s3-cdn-cf.behance.net/project_modules/disp/5c2882135092929.61e17c5b5041a.gif)
-
-![](https://mir-s3-cdn-cf.behance.net/project_modules/disp/fdfe18135092929.61e17c5b4f12f.gif)
