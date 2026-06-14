@@ -1,6 +1,6 @@
 ---
 id: 2
-title: 'Agile Production & Algorithmic Governance'
+title: 'Bring the Fun Back to Fini'
 slug: fini-algorithmic-diagnostics
 client: Fini
 role: Creative Director
@@ -9,7 +9,7 @@ order: 2
 hero: 'https://assets.pinotti.work/fini/content/Download%20(49)-2634.mp4'
 aspect_ratio: '9:4'
 description: >-
-  How a systemic operational shift rescued agency margins and slashed TikTok CPE by 62%.
+  Operational shift that rescued agency margins and slashed TikTok CPE by 62%.
 tags:
   - DesignOps
   - Creative Systems
@@ -64,7 +64,7 @@ I re-engineered the creative pipeline by establishing a specialized, decentraliz
 ## 4. The Impact
 
 :::stats
--62% | reduction in TikTok CPE (R$ 0.20)
+-62% | TikTok CPE (R$ 0.20)
 +75% | gen-z retention (VTR)
 +75% | creative team's time to think
 :::
