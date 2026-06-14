@@ -18,22 +18,6 @@ description: >-
 
 Managing a legacy brand like Mastercard at scale means something most portfolios don't show: the work between the big campaigns. The governance, the visual consistency across dozens of simultaneous verticals, the ability to pivot fast without breaking the brand. For six years, I was a core part of that creative structure at WMcCann — bridging elite art direction with complex account demands across sponsorships, product launches, affluent segments, cultural activations, and rapid-response tactical content.
 
-The insight that drove everything: to beat VISA, every touchpoint had to feel connected. Not just visually — strategically. A festival activation, a TV film, a contactless payment mechanic, a LatAm affluent campaign — all had to live inside the same "Priceless Experience" ecosystem with the same rigorous craft and storytelling logic.
-
----
-
-## Aproxime — Copa América 2019
-
-The most complex and impactful activation of the entire account. Mastercard was the official sponsor of Copa América 2019, and the challenge was to turn that sponsorship into something that went beyond logo placement and media buys — it needed to elevate the brand through a distinct idea that only Mastercard could own.
-
-The word "aproxime" appeared on every contactless POS terminal in Brazil. It means "bring closer" — a functional instruction that also carried an emotional charge perfectly aligned with how Brazilians experience football: together, close, warm.
-
-That dual meaning became the umbrella concept for the entire campaign.
-
-[video](https://player.vimeo.com/video/882200378?h=fa6e81ef49 "Aproxime — Copa América 2019")
-
-The results set a new benchmark. Aproxime became a global reference within the Mastercard network — and on the main brand tracker index, the campaign surpassed VISA for the first time, establishing a new record.
-
 ---
 
 ## Mastercard Black — Priceless Travel, Latin America
@@ -84,9 +68,6 @@ Out-of-home took over bus shelters and prime urban surfaces across São Paulo. O
 ![](https://assets.pinotti.work/mastercard/logo.mp4)
 ![](https://assets.pinotti.work/mastercard/jazz_02_2.jpg)
 ![](https://assets.pinotti.work/mastercard/jazz_02.jpg)
-![](https://assets.pinotti.work/mastercard/coverage.mp4)
 :::
-
-[video](https://player.vimeo.com/video/848393121?h=3fe594dc6c "Mastercard Jazz — Campaign Film")
 
 ---
