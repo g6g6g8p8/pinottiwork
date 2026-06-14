@@ -59,6 +59,12 @@ I integrated the client directly into the pre-production phase and on-set routin
 
 ## The Impact
 
+:::stats
+3.4M | organic interactions in 2025
++75% | Gen-Z audience growth
+#1 | TikTok account — Mary Kay worldwide
+:::
+
 The operational overhaul directly translated into historic business milestones. We maximized margins by sustaining a high-volume output of top-tier assets while significantly lowering the cost-per-asset. The ecosystem proved its cultural relevance without over-reliance on paid media, generating only in 2025 over 3.4M organic interactions and propelling a +75% increase in the Gen-Z audience across digital channels.
 
 [video](https://player.vimeo.com/video/1197811675?h=99f788aaef "2025 Recap")
