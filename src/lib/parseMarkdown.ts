@@ -33,6 +33,16 @@ export function parseMarkdownContent(body: string): ContentBlock[] {
       continue;
     }
 
+    const projectMatch = trimmed.match(/^:::project\s+slug=([\w-]+)\s*:::$/);
+    if (projectMatch) {
+      blocks.push({
+        type: 'project-card',
+        content: { slug: projectMatch[1] },
+        order: order++,
+      });
+      continue;
+    }
+
     const videoMatch = trimmed.match(/^\[video(\s+autoplay)?\]\(([^"]+?)(?:\s+"([^"]*)")?\)$/);
     if (videoMatch) {
       blocks.push({
