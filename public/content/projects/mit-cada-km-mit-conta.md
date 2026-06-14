@@ -43,7 +43,7 @@ For every kilometer driven, R$1 was donated to SAS Brasil. All it took was posti
 
 ## Results
 
-[video](https://vimeo.com/625841483)
+[video autoplay](https://vimeo.com/625841483)
 
 :::gallery
 ![Press coverage](/__l5e/assets-v1/1d0d39ce-8c30-431c-84ac-6b8950aeb3cb/result-01.jpg)
