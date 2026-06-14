@@ -11,7 +11,8 @@ tags:
   - Full-Funnel
   - Content Machine
 order: 1
-hero: '/__l5e/assets-v1/cde1f0aa-0b9d-4e82-8785-5791b785100a/15-b_zhcxb5.png'
+hero: 'https://assets.pinotti.work/marykay/VIDEO__A_realistic_pink_Jeep_C.mp4'
+og_image: '/__l5e/assets-v1/cde1f0aa-0b9d-4e82-8785-5791b785100a/15-b_zhcxb5.png'
 aspect_ratio: '9:4'
 description: >-
   Escaping the reactive 'always-on' loop to build a full-funnel Content Ecosystem that
