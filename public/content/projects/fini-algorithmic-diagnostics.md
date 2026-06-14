@@ -32,4 +32,10 @@ I decentralized production by transforming the internal creative team into hybri
 
 **The Impact**
 
+:::stats
+70+ | assets per month
+170K+ | organic interactions — Festa Junina
+0 | operational bottlenecks
+:::
+
 This systemic pivot proved that data-driven operations amplify creative resonance and business KPIs. We sustained a rigorous output of 70+ assets per month, completely eliminating operational bottlenecks. We shattered the brand's historical engagement KPIs — specific cultural activations, such as the Festa Junina campaign featuring a strategic squad of influencers, generated over 170,000 pure organic interactions. The agile pipeline effortlessly sustained massive seasonal demands, translating brand concepts into authentic, high-performing pop-culture hits.
