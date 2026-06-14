@@ -41,6 +41,12 @@ For every kilometer driven, R$1 was donated to SAS Brasil. All it took was posti
 ![Dashboard post](/__l5e/assets-v1/acad0233-1d5e-4342-8cfc-69f8a3e94b10/dash-06.png)
 :::
 
+:::stats
+900m | flooded tunnel — Rally dos Sertões
+R$1 | donated per kilometer driven
+1st | world-first skimboarding feat in open water
+:::
+
 ## Results
 
 [video autoplay](https://vimeo.com/625841483)
