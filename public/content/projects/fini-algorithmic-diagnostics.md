@@ -6,7 +6,7 @@ client: Fini
 role: Creative Director
 category: Creative Operations
 order: 2
-hero: 'https://assets.pinotti.work/fini/content/Download%20(49)-2634.mp4'
+hero: 'https://assets.pinotti.work/fini/content/Download%20%2849%29-2634.mp4'
 aspect_ratio: '9:4'
 description: >-
   Operational shift that rescued agency margins and slashed TikTok CPE by 62%.
@@ -31,8 +31,8 @@ An audit crossing paid media with internal timesheets exposed a systemic flaw: t
 Traditional long-form videos (>10 seconds) with internal actors were underperforming. The creative department didn't need better ideas; it needed a **mechanical shift in governance and pacing** to match modern media algorithms.
 
 :::gallery
-![](https://assets.pinotti.work/fini/content/Download%20(2).mp4)
-![](https://assets.pinotti.work/fini/content/Download%20(10).mp4)
+![](https://assets.pinotti.work/fini/content/Download%20%282%29.mp4)
+![](https://assets.pinotti.work/fini/content/Download%20%2810%29.mp4)
 :::
 
 ## 3. The System
@@ -56,9 +56,9 @@ I re-engineered the creative pipeline by establishing a specialized, decentraliz
 ## Tiktok
 
 :::gallery
-![](https://assets.pinotti.work/fini/content/Download%20(5)-2829.mp4)
-![](https://assets.pinotti.work/fini/content/Download%20(19)-2757.mp4)
-![](https://assets.pinotti.work/fini/content/Download%20(17)-2769.mp4)
+![](https://assets.pinotti.work/fini/content/Download%20%285%29-2829.mp4)
+![](https://assets.pinotti.work/fini/content/Download%20%2819%29-2757.mp4)
+![](https://assets.pinotti.work/fini/content/Download%20%2817%29-2769.mp4)
 :::
 
 ## 4. The Impact
