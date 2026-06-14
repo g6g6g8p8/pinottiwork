@@ -16,6 +16,7 @@ import type { ContentBlock } from '../../lib/parseMarkdown';
 export default function ProjectDetail() {
   const { slug } = useParams({ from: '/projects/$slug' });
   const { project, content, loading } = useProject(slug);
+  const { projects: allProjects } = useProjects();
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState<Record<number, number>>({});
   const [toast, setToast] = useState('');
