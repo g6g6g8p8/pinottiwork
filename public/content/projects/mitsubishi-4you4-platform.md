@@ -10,8 +10,8 @@ tags:
   - Branded Content
   - 3D
 order: 7
-hero: /__l5e/assets-v1/d63eeb0d-ea0a-4df7-a806-d6486de19519/kv-01.jpg
-og_image: /__l5e/assets-v1/d63eeb0d-ea0a-4df7-a806-d6486de19519/kv-01.jpg
+hero: /__l5e/assets-v1/ba3adc95-d620-48b7-ac9e-e852ec01a699/hero-cover.webp
+og_image: /__l5e/assets-v1/ba3adc95-d620-48b7-ac9e-e852ec01a699/hero-cover.webp
 aspect_ratio: '16:9'
 description: >-
   From a new brand platform to a travel companion, a 3D universe and a tennis sponsorship — four years building the creative legs of Mitsubishi's 4You4 identity in Brazil.
