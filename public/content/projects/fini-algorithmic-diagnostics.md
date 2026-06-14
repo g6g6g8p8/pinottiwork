@@ -4,7 +4,7 @@ title: 'A Fun Content System'
 slug: fini-algorithmic-diagnostics
 client: Fini
 role: Creative Director
-category: Content System
+category: Content
 tags:
   - Data-Driven
   - DesignOps

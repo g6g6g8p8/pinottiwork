@@ -1,6 +1,6 @@
 ---
 id: 2
-title: L200 Triton Sport – Give yourself this chance
+title: Give yourself this chance
 slug: give-yourself-this-chance
 client: Mitsubishi Motors
 role: Art Director
