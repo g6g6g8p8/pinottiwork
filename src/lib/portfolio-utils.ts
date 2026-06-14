@@ -11,41 +11,44 @@ export function toSlug(s: string): string {
     .replace(/^-|-$/g, '');
 }
 
-export async function getImageColor(imageUrl: string): Promise<string> {
+// region: 'bottom' for mobile/detail (gradient rises from bottom)
+//         'left'   for desktop card/hero (gradient goes left → right)
+export async function getImageColor(imageUrl: string, region: 'bottom' | 'left' = 'bottom'): Promise<string> {
   if (typeof window === 'undefined') return '#000000';
   return new Promise((resolve) => {
     const img = new Image();
     img.crossOrigin = 'Anonymous';
 
     img.onload = () => {
+      const SIZE = 120; // normalised canvas — same pixels regardless of display size
       const canvas = document.createElement('canvas');
+      canvas.width = SIZE;
+      canvas.height = SIZE;
       const ctx = canvas.getContext('2d');
       if (!ctx) { resolve('#000000'); return; }
+      ctx.drawImage(img, 0, 0, SIZE, SIZE);
 
-      canvas.width = img.width;
-      canvas.height = img.height;
-      ctx.drawImage(img, 0, 0);
-
-      let data: Uint8ClampedArray;
+      let pixels: Uint8ClampedArray;
       try {
-        data = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+        if (region === 'left') {
+          // left third — where the desktop gradient anchors
+          pixels = ctx.getImageData(0, 0, Math.floor(SIZE * 0.33), SIZE).data;
+        } else {
+          // bottom third — where mobile + detail gradient anchors
+          pixels = ctx.getImageData(0, Math.floor(SIZE * 0.66), SIZE, Math.floor(SIZE * 0.34)).data;
+        }
       } catch {
         resolve('#000000');
         return;
       }
+
       let r = 0, g = 0, b = 0, count = 0;
-
-      const startY = Math.floor(canvas.height * 0.66);
-      for (let y = startY; y < canvas.height; y++) {
-        for (let x = 0; x < canvas.width; x++) {
-          const i = (y * canvas.width + x) * 4;
-          r += data[i];
-          g += data[i + 1];
-          b += data[i + 2];
-          count++;
-        }
+      for (let i = 0; i < pixels.length; i += 4) {
+        r += pixels[i];
+        g += pixels[i + 1];
+        b += pixels[i + 2];
+        count++;
       }
-
       r = Math.floor(r / count);
       g = Math.floor(g / count);
       b = Math.floor(b / count);
