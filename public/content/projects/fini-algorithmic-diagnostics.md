@@ -31,8 +31,8 @@ An audit crossing paid media with internal timesheets exposed a systemic flaw: t
 Traditional long-form videos (>10 seconds) with internal actors were underperforming. The creative department didn't need better ideas; it needed a **mechanical shift in governance and pacing** to match modern media algorithms.
 
 :::gallery
-![](<https://assets.pinotti.work/fini/content/Download%20(2).mp4>)
-![](<https://assets.pinotti.work/fini/content/Download%20(10).mp4>)
+![](https://assets.pinotti.work/fini/content/Download%20(2).mp4)
+![](https://assets.pinotti.work/fini/content/Download%20(10).mp4)
 :::
 
 ## 3. The System
@@ -56,9 +56,9 @@ I re-engineered the creative pipeline by establishing a specialized, decentraliz
 ## Tiktok
 
 :::gallery
-![](<https://assets.pinotti.work/fini/content/Download%20(5)-2829.mp4>)
-![](<https://assets.pinotti.work/fini/content/Download%20(19)-2757.mp4>)
-![](<https://assets.pinotti.work/fini/content/Download%20(17)-2769.mp4>)
+![](https://assets.pinotti.work/fini/content/Download%20(5)-2829.mp4)
+![](https://assets.pinotti.work/fini/content/Download%20(19)-2757.mp4)
+![](https://assets.pinotti.work/fini/content/Download%20(17)-2769.mp4)
 :::
 
 ## 4. The Impact
