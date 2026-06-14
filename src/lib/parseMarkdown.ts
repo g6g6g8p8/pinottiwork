@@ -1,11 +1,12 @@
 export interface ContentBlock {
-  type: 'text' | 'image' | 'gallery' | 'video';
+  type: 'text' | 'image' | 'gallery' | 'video' | 'project-card';
   content: {
     text?: string;
     url?: string;
     title?: string;
     gallery?: string[];
     autoplay?: boolean;
+    slug?: string;
   };
   order: number;
 }
@@ -14,7 +15,7 @@ export function parseMarkdownContent(body: string): ContentBlock[] {
   const blocks: ContentBlock[] = [];
   let order = 0;
 
-  const sections = body.split(/(:::gallery[\s\S]*?:::|\[video(?:\s+autoplay)?\]\([^)]+\))/g);
+  const sections = body.split(/(:::gallery[\s\S]*?:::|:::project\s+slug=[\w-]+\s*:::|\[video(?:\s+autoplay)?\]\([^)]+\))/g);
 
   for (const section of sections) {
     const trimmed = section.trim();
