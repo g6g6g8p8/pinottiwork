@@ -234,6 +234,17 @@ export default function ProjectDetail() {
         );
       }
 
+      case 'project-card': {
+        const targetSlug = section.content.slug;
+        const target = allProjects.find((p) => p.slug === targetSlug);
+        if (!target) return null;
+        return (
+          <div className="max-w-md">
+            <ProjectCard project={target} forceAspect="card" layout="below" />
+          </div>
+        );
+      }
+
       default:
         return null;
     }
