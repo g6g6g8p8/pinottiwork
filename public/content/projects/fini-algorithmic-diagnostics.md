@@ -64,12 +64,9 @@ I re-engineered the creative pipeline by establishing a specialized, decentraliz
 ## 4. The Impact
 
 :::stats
-70+ | assets per month
-170K+ | organic interactions — Festa Junina
-0 | operational bottlenecks
+-62% | reduction in TikTok CPE (R$ 0.20)
++75% | gen-z retention (VTR)
++75% | creative team's time to think
 :::
 
-- **62% Reduction in TikTok CPE:** Traditional acted videos cost R$ 0.53 per engagement. Moving to the hyper-native "Faceless" model dropped the cost to R$ 0.20, preventing a 165% cost penalty for the brand.
-- **+75% Gen-Z Retention (VTR):** Midpoint video retention had collapsed to 11%. By launching an outsourced native creator network, view-through rates among Gen-Z reached 20.31% at a highly efficient R$ 0.29 cost.
 - **Massive Organic Scale:** By giving external creators full production autonomy, a single initiative (Rafa Baricala) generated nearly 3 million organic views and an 8%+ engagement rate, breaking reliance on paid amplification.
-- **Reclaimed Bandwidth & Margin Protection:** Offloading production to the automated system **freed up 75% of the internal creative team's time**. This newly recovered capacity was redirected entirely into high-impact, revenue-generating seasonal campaigns (Halloween, Winter, Easter), protecting agency profit margins.
