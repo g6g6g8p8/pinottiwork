@@ -48,7 +48,7 @@ As Head of Creative Operations, I architected a systemic transition from a stric
 ![](/__l5e/assets-v1/4ebad2c9-a355-4442-95f5-b2b4e4a32f4e/tiktok_marykaybrasil_7498406125818203397_sc5hrk.mp4)
 :::
 
-![](https://assets.pinotti.work/marykay/Crush_Carrossel_MK.mp4)
+[video autoplay](https://assets.pinotti.work/marykay/Crush_Carrossel_MK.mp4)
 
 I integrated the client directly into the pre-production phase and on-set routines. This systemic change, supported by agile project management flows, eliminated feedback latency and drastically reduced operational debt. We also centralized the content pipeline to feed a direct WhatsApp channel ("Quero+ Mary Kay"), providing the B2B2C sales force with agile, conversion-focused assets.
 
