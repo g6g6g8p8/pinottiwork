@@ -43,7 +43,3 @@ A 45s manifesto film followed by four complementary 15s films, each portraying a
 [video](https://vimeo.com/315120078)
 
 [video](https://vimeo.com/315120116)
-
-## Credits
-
-Creative Director: Alexandre Prado · Art Directors: Giulio Pinotti, Diego Silva · Copywriter: Paulo Fontana · Production: Consulado · Audio: HitMaker

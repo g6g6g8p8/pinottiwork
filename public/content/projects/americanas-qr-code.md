@@ -15,11 +15,10 @@ description: >-
   The results were so strong that, from then on, every slot started carrying one.
 ---
 
-## The Campaign
 
 We introduced QR codes into Brazilian television merchandising — a format that had always been built around a host reading a script and a logo on screen. 
 
-[video](https://vimeo.com/625807152 "How we did it")
+[video](https://vimeo.com/625807152 "How We Did It")
 
 With a single scannable code, the audience could go from the couch to the Americanas app in seconds.
 
