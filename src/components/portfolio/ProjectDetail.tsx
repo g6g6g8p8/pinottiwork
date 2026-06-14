@@ -231,6 +231,21 @@ export default function ProjectDetail() {
         );
       }
 
+      case 'stats': {
+        const stats = section.content.stats || [];
+        const cols = stats.length <= 2 ? 'grid-cols-2' : stats.length === 3 ? 'grid-cols-3' : 'grid-cols-2 md:grid-cols-4';
+        return (
+          <div className={`grid ${cols} divide-x divide-border border-y border-border py-6`}>
+            {stats.map((stat, i) => (
+              <div key={i} className="flex flex-col items-center justify-center px-4 py-2 text-center first:pl-0 last:pr-0">
+                <span className="text-[36px] md:text-[44px] font-bold leading-none tracking-[-0.03em] text-foreground">{stat.value}</span>
+                <span className="mt-2 text-[11px] font-semibold uppercase tracking-[.07em] text-foreground/50">{stat.label}</span>
+              </div>
+            ))}
+          </div>
+        );
+      }
+
       default:
         return null;
     }
