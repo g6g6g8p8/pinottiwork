@@ -10,8 +10,8 @@ tags:
   - Branded Content
   - 3D
 order: 7
-hero: /__l5e/assets-v1/ba3adc95-d620-48b7-ac9e-e852ec01a699/hero-cover.webp
-og_image: /__l5e/assets-v1/ba3adc95-d620-48b7-ac9e-e852ec01a699/hero-cover.webp
+hero: https://assets.pinotti.work/mitsubishi/062a30142785687.626d685a666c8.webp
+og_image: https://assets.pinotti.work/mitsubishi/062a30142785687.626d685a666c8.webp
 aspect_ratio: '16:9'
 description: >-
   From a new brand platform to a travel companion, a 3D universe and a tennis sponsorship — four years building the creative legs of Mitsubishi's 4You4 identity in Brazil.
@@ -43,22 +43,6 @@ From this campaign onward, every Mitsubishi product in Brazil would carry the 4Y
 
 ---
 
-## Outlander Sport — The New Diamond
-
-Launching the Outlander Sport 2021 with a fully 3D film that leaned into the model's positioning as "the new diamond of Mitsubishi" — a nod to the brand's three-diamond DNA, translated into an image of the car crossing a string of possible universes, holding its shape under any kind of pressure.
-
-An original track was composed specifically for the campaign by Flavio Waiteman and Otávio de Moraes, and recorded in New York with singer Tansu Akerman.
-
-[video](https://www.youtube.com/watch?v=IXlz6D22rtA "Outlander Sport 2021 — The New Diamond of Mitsubishi")
-
-:::gallery
-![](/__l5e/assets-v1/fcd48167-6a46-4f0e-906d-94a0a90b855a/kv-01.png)
-![](/__l5e/assets-v1/32535570-ffa5-4c6b-8323-9ad4256cb11f/kv-02.png)
-![](/__l5e/assets-v1/751e2672-f631-4ab1-9c7b-da8ae6bf376d/kv-03.png)
-:::
-
----
-
 ## 4You4Rally — ESPN Tennis Sponsorship
 
 Mitsubishi sponsored more than 200 tennis matches on ESPN throughout 2021 — Australian Open, US Open, Masters 1000, ATP Finals. Instead of standard media placement, the brand wanted to show how its 4x4 identity actually connects with the sport.
@@ -67,19 +51,11 @@ The answer was in the language: off-road, Mitsubishi owns _rally_. On a tennis c
 
 Three full-3D short films follow a Pajero Sport crossing forest, plantation and beach terrain until it arrives at tennis courts built in the middle of nowhere — collapsing the two universes into a single image.
 
-[video](https://vimeo.com/567865944 "4You4Rally — Floresta")
+[video](https://vimeo.com/567865944 "4You4Rally — Woods")
 
-[video](https://vimeo.com/567866638 "4You4Rally — Campo")
+[video](https://vimeo.com/567866638 "4You4Rally — Countryside")
 
-[video](https://vimeo.com/568442383 "4You4Rally — Praia")
-
-Three 5-second idents ran throughout the sponsored broadcasts on ESPN and Band.
-
-[video](https://player.vimeo.com/video/669976550?h=d6f2f0ae5f "4You4Rally Tennis — Ident 01")
-
-[video](https://player.vimeo.com/video/669976579?h=da73edf3b6 "4You4Rally Tennis — Ident 02")
-
-[video](https://player.vimeo.com/video/669976499?h=dc910e38c1 "4You4Rally Tennis — Ident 03")
+[video](https://vimeo.com/568442383 "4You4Rally — Beach")
 
 :::gallery
 ![](/__l5e/assets-v1/8a62f011-4cad-49a6-9d0d-160618755440/hero-01.png)
@@ -97,14 +73,4 @@ A branded content platform that turned the 4x4 DNA into a travel proposition —
 
 [video](https://www.youtube.com/watch?v=K_5Q0fRKW5c "MIT Drivelines — Campaign Film")
 
----
-
-## Credits
-
-**New Generation** — Agency: Tech and Soul · CCO: Flavio Waiteman · Creative Directors: Renan Bulgari, Daniel Magri, Fabiano Feijó · Art Director: Giulio Pinotti · Copywriter: José Scorzelli
-
-**Outlander Sport / Multiverse** — Agency: Tech and Soul · Creative Directors: Flavio Waiteman, Fabiano Feijó · Creative Team: Eduardo Martins, Guga Dias da Costa, Paulo Ottaviani, Willem Carpio, Giulio Pinotti, José Scorzelli · 3D: Eduardo Martins, Rodrigo de Angelis · Music: BloodAudio / Otávio de Moraes · Vocals: Tansu Akerman
-
-**4You4Rally / ESPN Tennis** — Agency: Tech and Soul · Creative Director: Fabiano Feijó · Art Director: Giulio Pinotti · Copywriter: José Scorzelli · 3D Production: Pimp Studio
-
-**MIT Drivelines** — Agency: Tech and Soul · CCO: Flavio Waiteman · Creative Director: Fabiano Feijó · Art Director: Giulio Pinotti
+[video](https://www.youtube.com/watch?v=ymxmQWYt8e0 "MIT Drivelines – Serra do Rio do Rastro")
