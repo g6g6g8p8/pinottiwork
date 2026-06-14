@@ -44,7 +44,7 @@ export default function FeaturedProjects() {
     async function loadColors() {
       const colors: Record<number, string> = {};
       for (const p of projects) {
-        if (p.image_url) colors[p.id] = await getImageColor(p.image_url);
+        if (p.image_url) colors[p.id] = await getImageColor(p.image_url, 'left');
       }
       if (!cancelled) setImageColors(colors);
     }
