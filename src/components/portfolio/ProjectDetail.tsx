@@ -22,7 +22,7 @@ export default function ProjectDetail() {
 
   useEffect(() => {
     if (project?.image_url) {
-      getImageColor(project.image_url).then(setImageColor);
+      getImageColor(project.image_url, 'bottom').then(setImageColor);
     }
   }, [project?.image_url]);
 
