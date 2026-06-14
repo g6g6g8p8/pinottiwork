@@ -20,7 +20,7 @@ export function parseMarkdownContent(body: string): ContentBlock[] {
   const blocks: ContentBlock[] = [];
   let order = 0;
 
-  const sections = body.split(/(:::gallery[\s\S]*?:::|:::stats[\s\S]*?:::|\\[video(?:\\s+autoplay)?\\]\\([^)]+\\))/g);
+  const sections = body.split(/(:::gallery[\s\S]*?:::|:::stats[\s\S]*?:::|\[video(?:\s+autoplay)?\]\([^)]+\))/g);
 
   for (const section of sections) {
     const trimmed = section.trim();
