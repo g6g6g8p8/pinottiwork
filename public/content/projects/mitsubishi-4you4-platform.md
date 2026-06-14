@@ -10,11 +10,11 @@ tags:
   - Branded Content
   - 3D
 order: 7
-hero: /__l5e/assets-v1/ba3adc95-d620-48b7-ac9e-e852ec01a699/hero-cover.webp
-og_image: /__l5e/assets-v1/ba3adc95-d620-48b7-ac9e-e852ec01a699/hero-cover.webp
+hero: https://assets.pinotti.work/mitsubishi/062a30142785687.626d685a666c8.webp
+og_image: https://assets.pinotti.work/mitsubishi/062a30142785687.626d685a666c8.webp
 aspect_ratio: '16:9'
 description: >-
-  From a new brand platform to a travel companion, a 3D universe and a tennis sponsorship — 2+ years building the creative legs of Mitsubishi's 4You4 identity in Brazil.
+  2+ years building the creative legs of Mitsubishi's 4You4 identity in Brazil.
 ---
 
 When Tech and Soul launched the **4You4** platform for Mitsubishi Motors Brasil, the idea was to anchor the entire brand around a new generation of drivers — more diverse, more plural, more connected to the technology inside the car than to the mud outside. From that repositioning, every campaign that followed had to carry the same DNA: 4x4 spirit, redefined.
@@ -55,11 +55,11 @@ The answer was in the language: off-road, Mitsubishi owns _rally_. On a tennis c
 
 Three full-3D short films follow a Pajero Sport crossing forest, plantation and beach terrain until it arrives at tennis courts built in the middle of nowhere — collapsing the two universes into a single image.
 
-[video](https://vimeo.com/567865944 "4You4Rally — Floresta")
+[video](https://vimeo.com/567865944 "Woods")
 
-[video](https://vimeo.com/567866638 "4You4Rally — Campo")
+[video](https://vimeo.com/567866638 "Countryside")
 
-[video](https://vimeo.com/568442383 "4You4Rally — Praia")
+[video](https://vimeo.com/568442383 "Beach")
 
 Three 5-second idents ran throughout the sponsored broadcasts on ESPN and Band.
 
@@ -99,6 +99,4 @@ A branded content platform that turned the 4x4 DNA into a travel proposition —
 
 A creator-led chapter for the platform: photographer Pablo Vaz takes MIT Drivelines into the Serra do Rio do Rastro in Santa Catarina, reaching the kind of landscapes only a Mitsubishi 4x4 can get you to — the travel-company idea proven in the field by someone who actually lives it.
 
-[video](https://www.youtube.com/watch?v=ymxmQWYt8e0 "Drivelines — Pablo Vaz · Rio do Rastro")
-
----
+[video](https://www.youtube.com/watch?v=ymxmQWYt8e0 "Destination – Rio do Rastro")
