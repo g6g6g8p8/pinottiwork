@@ -22,14 +22,6 @@ The insight that drove everything: to beat VISA, every touchpoint had to feel co
 
 ---
 
-## Get Closer — Copa América 2019
-
-The most complex and impactful activation of the entire account — a campaign that turned a single word printed on every POS terminal in Brazil into the umbrella concept for Mastercard's Copa América sponsorship. On the main brand tracker index, it surpassed VISA for the first time, establishing a new record.
-
-→ [See the full case: Get Closer](/project/mastercard-get-closer)
-
----
-
 ## Mastercard Black — Priceless Travel, Latin America
 
 As Mastercard expanded its Affluent proposition across Latin America and the Caribbean, the brief was to translate the premium tier's benefits — airport lounges, cashback abroad, room upgrades, chef experiences — into a campaign that felt genuinely elevated, not just functional.
@@ -47,6 +39,14 @@ The campaign starred rock musician Derrick Green of Sepultura. The casting alone
 [video](https://player.vimeo.com/video/848462258?h=e1f1262c50 "Chef Experiences")
 
 [video](https://player.vimeo.com/video/848462290?h=07b267dceb "Free Corkage")
+
+---
+
+## Get Closer — Copa América 2019
+
+The most complex and impactful activation of the entire account — a campaign that turned a single word printed on every POS terminal in Brazil into the umbrella concept for Mastercard's Copa América sponsorship. On the main brand tracker index, it surpassed VISA for the first time, establishing a new record.
+
+:::project slug=mastercard-get-closer:::
 
 ---
 
