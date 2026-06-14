@@ -63,7 +63,7 @@ An original track was composed specifically for the campaign by Flavio Waiteman 
 
 Mitsubishi sponsored more than 200 tennis matches on ESPN throughout 2021 — Australian Open, US Open, Masters 1000, ATP Finals. Instead of standard media placement, the brand wanted to show how its 4x4 identity actually connects with the sport.
 
-The answer was in the language: off-road, Mitsubishi owns *rally*. On a tennis court, a *rally* is the most intense exchange in the game. **4You4Rally** lived exactly in that overlap.
+The answer was in the language: off-road, Mitsubishi owns _rally_. On a tennis court, a _rally_ is the most intense exchange in the game. **4You4Rally** lived exactly in that overlap.
 
 Three full-3D short films follow a Pajero Sport crossing forest, plantation and beach terrain until it arrives at tennis courts built in the middle of nowhere — collapsing the two universes into a single image.
 
