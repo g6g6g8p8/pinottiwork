@@ -42,6 +42,14 @@ The campaign starred rock musician Derrick Green of Sepultura. The casting alone
 
 ---
 
+## Get Closer — Copa América 2019
+
+The most complex and impactful activation of the entire account — a campaign that turned a single word printed on every POS terminal in Brazil into the umbrella concept for Mastercard's Copa América sponsorship. On the main brand tracker index, it surpassed VISA for the first time, establishing a new record.
+
+:::project slug=mastercard-get-closer:::
+
+---
+
 ## Collection of Memories — Two Films About What Stays
 
 Not every piece of the account was built around a sponsorship or a product benefit. Collection of Memories was a pair of short films that sat squarely inside the emotional core of the Priceless platform — exploring the difference between what you buy and what you keep.
