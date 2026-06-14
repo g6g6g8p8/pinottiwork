@@ -4,19 +4,16 @@ import { X as CloseIcon, Share2, ChevronLeft, ChevronRight } from 'lucide-react'
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { useProject } from '../../hooks/useProject';
-import { useProjects } from '../../hooks/useProjects';
 import { getImageColor, toSlug } from '../../lib/portfolio-utils';
 import Portal from './Portal';
 import { SkeletonDetail } from './Skeleton';
 import Toast from './Toast';
 import RelatedProjects from './RelatedProjects';
-import ProjectCard from './ProjectCard';
 import type { ContentBlock } from '../../lib/parseMarkdown';
 
 export default function ProjectDetail() {
   const { slug } = useParams({ from: '/projects/$slug' });
   const { project, content, loading } = useProject(slug);
-  const { projects: allProjects } = useProjects();
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState<Record<number, number>>({});
   const [toast, setToast] = useState('');
@@ -230,17 +227,6 @@ export default function ProjectDetail() {
               className="w-full h-full object-cover"
               loading="lazy"
             />
-          </div>
-        );
-      }
-
-      case 'project-card': {
-        const targetSlug = section.content.slug;
-        const target = allProjects.find((p) => p.slug === targetSlug);
-        if (!target) return null;
-        return (
-          <div className="max-w-md">
-            <ProjectCard project={target} forceAspect="card" layout="below" />
           </div>
         );
       }

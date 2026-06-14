@@ -1,12 +1,11 @@
 export interface ContentBlock {
-  type: 'text' | 'image' | 'gallery' | 'video' | 'project-card';
+  type: 'text' | 'image' | 'gallery' | 'video';
   content: {
     text?: string;
     url?: string;
     title?: string;
     gallery?: string[];
     autoplay?: boolean;
-    slug?: string;
   };
   order: number;
 }
@@ -15,7 +14,7 @@ export function parseMarkdownContent(body: string): ContentBlock[] {
   const blocks: ContentBlock[] = [];
   let order = 0;
 
-  const sections = body.split(/(:::gallery[\s\S]*?:::|:::project\s+slug=[\w-]+\s*:::|\[video(?:\s+autoplay)?\]\([^)]+\))/g);
+  const sections = body.split(/(:::gallery[\s\S]*?:::|\[video(?:\s+autoplay)?\]\([^)]+\))/g);
 
   for (const section of sections) {
     const trimmed = section.trim();
@@ -30,16 +29,6 @@ export function parseMarkdownContent(body: string): ContentBlock[] {
           order: order++,
         });
       }
-      continue;
-    }
-
-    const projectMatch = trimmed.match(/^:::project\s+slug=([\w-]+)\s*:::$/);
-    if (projectMatch) {
-      blocks.push({
-        type: 'project-card',
-        content: { slug: projectMatch[1] },
-        order: order++,
-      });
       continue;
     }
 

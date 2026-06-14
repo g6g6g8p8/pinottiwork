@@ -2,7 +2,7 @@
 title: '6 Years of a Priceless Journey'
 slug: mastercard-priceless-ecosystem
 client: Mastercard
-role: Senior Art Director
+role: Art Director
 category: Advertising
 tags:
   - Brand Governance
@@ -10,10 +10,11 @@ tags:
   - Purpose-Driven
   - Creative Systems
 order: 4
-hero: /assets/mastercard/hero-cooking.jpg
+hero: >-
+  /__l5e/assets-v1/0e1acb09-8851-4179-92d6-4f40aac862cc/Screenshot_2026-05-25_at_10.33.59_d0lso8.png
 aspect_ratio: '9:4'
 description: >-
-  Six years sustaining the Priceless platform across dozens of verticals — from Copa América to jazz festivals — and making history on the main brand tracker index.
+  Sustaining the Priceless platform across dozens of verticals and making history on the main brand tracker index.
 ---
 
 Managing a legacy brand like Mastercard at scale means something most portfolios don't show: the work between the big campaigns. The governance, the visual consistency across dozens of simultaneous verticals, the ability to pivot fast without breaking the brand. For six years, I was a core part of that creative structure at WMcCann — bridging elite art direction with complex account demands across sponsorships, product launches, affluent segments, cultural activations, and rapid-response tactical content.
@@ -22,11 +23,17 @@ The insight that drove everything: to beat VISA, every touchpoint had to feel co
 
 ---
 
-## Get Closer — Copa América 2019
+## Aproxime — Copa América 2019
 
-The most complex and impactful activation of the entire account — a campaign that turned a single word printed on every POS terminal in Brazil into the umbrella concept for Mastercard's Copa América sponsorship. On the main brand tracker index, it surpassed VISA for the first time, establishing a new record.
+The most complex and impactful activation of the entire account. Mastercard was the official sponsor of Copa América 2019, and the challenge was to turn that sponsorship into something that went beyond logo placement and media buys — it needed to elevate the brand through a distinct idea that only Mastercard could own.
 
-→ [See the full case: Get Closer](/project/mastercard-get-closer)
+The word "aproxime" appeared on every contactless POS terminal in Brazil. It means "bring closer" — a functional instruction that also carried an emotional charge perfectly aligned with how Brazilians experience football: together, close, warm.
+
+That dual meaning became the umbrella concept for the entire campaign.
+
+[video](https://player.vimeo.com/video/882200378?h=fa6e81ef49 "Aproxime — Copa América 2019")
+
+The results set a new benchmark. Aproxime became a global reference within the Mastercard network — and on the main brand tracker index, the campaign surpassed VISA for the first time, establishing a new record.
 
 ---
 
@@ -80,3 +87,5 @@ Out-of-home took over bus shelters and prime urban surfaces across São Paulo. O
 :::
 
 [video](https://player.vimeo.com/video/848393121?h=3fe594dc6c "Mastercard Jazz — Campaign Film")
+
+---
