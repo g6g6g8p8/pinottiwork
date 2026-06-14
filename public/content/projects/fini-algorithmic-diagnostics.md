@@ -1,36 +1,67 @@
 ---
 id: 2
-title: 'A Fun Content System'
+title: 'Agile Production & Algorithmic Governance'
 slug: fini-algorithmic-diagnostics
 client: Fini
 role: Creative Director
-category: Content
-tags:
-  - Data-Driven
-  - DesignOps
-  - VTR Optimization
-  - Creative Systems
-order: 4
-hero: '/__l5e/assets-v1/c750d3ed-b467-4d1c-923d-9e94f8879336/main_vxvqfp.png'
-aspect_ratio: '4:3'
+category: Creative Operations
+order: 2
+hero: 'https://assets.pinotti.work/fini/content/Download%20(49)-2634.mp4'
+aspect_ratio: '9:4'
 description: >-
-  An agile production pipeline using data to shatter
-  historical engagement KPIs without inflating studio budgets.
+  How a systemic operational shift rescued agency margins and slashed TikTok CPE by 62%.
+tags:
+  - DesignOps
+  - Creative Systems
+  - Performance Strategy
 ---
 
-Fini, a dominant brand in the candy industry, needed to maintain a massive cultural footprint on platforms like TikTok and Instagram. Producing high volumes of content blindly is a fast track to operational burnout and diluted brand equity. The challenge: sustain an aggressive output schedule and dynamic seasonal campaigns without massive external studio budgets, while actively improving audience retention.
+## 1. The Challenge
 
-**The Diagnosis**
+The operation was bleeding margin due to severe scope creep. The agency's creative team had devolved into a free production house, absorbing 9 external shoots in just 90 days. This operational error consumed **75% of the team's billable hours in manual labor** (logistics, setups, reflows), leaving only 25% for strategic creative intelligence.
 
-Instead of relying solely on creative intuition, I initiated a deep algorithmic diagnostic. By analyzing retention curves and View-Through Rates (VTR) on TikTok, the data revealed a critical flaw. Traditional editing formats and hooks were actively causing attention drop-offs in the first few seconds. We were bleeding engagement not because the ideas were bad, but because the mechanical execution wasn't platform-native.
+Simultaneously, the brand was forcing traditional, over-produced agency scripts into TikTok. The platform's algorithm rejected this corporate aesthetic, causing high distribution costs and digital fatigue.
 
-**The Architecture**
+![](https://assets.pinotti.work/fini/content/Image.gif)
 
-Acting on this data, I restructured our entire agile production pipeline into a new hybrid model. We pivoted video production and editing guidelines to prioritize optimization, ensuring every frame worked alongside the algorithm to retain attention.
+## 2. The Insight
 
-I decentralized production by transforming the internal creative team into hybrid content creators (CGC). Products were sent directly to their homes, allowing them to shoot natively in their own routines, merging agile pre-production with authentic social language. We managed this entire ecosystem remotely through Monday, Slack and Google Slides — keeping clients integrated during pre-production drastically reduced approval times and reflows.
+An audit crossing paid media with internal timesheets exposed a systemic flaw: the agency was exhausting its human capital to produce content that cost significantly more to distribute.
 
-**The Impact**
+Traditional long-form videos (>10 seconds) with internal actors were underperforming. The creative department didn't need better ideas; it needed a **mechanical shift in governance and pacing** to match modern media algorithms.
+
+:::gallery
+![](<https://assets.pinotti.work/fini/content/Download%20(2).mp4>)
+![](<https://assets.pinotti.work/fini/content/Download%20(10).mp4>)
+:::
+
+## 3. The System
+
+I re-engineered the creative pipeline by establishing a specialized, decentralized framework:
+
+- **The Viability Filter:** Implemented a strict internal gateway. The client approved broad strategic "territories," while the creative team retained total control over format execution (POV, Faceless, UGC).
+- **The Capacity Slot Matrix:** Converted the rigid monthly video SLA into a "16-Slot Capacity System." Multivariate media variations, A/B tests, or live coverage consumed specific slots, forcing both media teams and clients to prioritize high-yield assets.
+- **Aesthetic Bifurcation:** Decoupled production into two distinct engines:
+  - _Instagram:_ Polished, brand-owned visual assets optimizing for low-cost engagement (achieving an R$ 0.13 CPE benchmark).
+  - _TikTok:_ A 100% "Faceless" model. Zero complex acting; focused strictly on native platform triggers (POV framing, ASMR, under 10-second clips).
+
+## Instagram
+
+:::gallery
+![](https://assets.pinotti.work/fini/content/pasted-movie-3004.png)
+![](https://assets.pinotti.work/fini/content/pasted-movie-3016.png)
+![](https://assets.pinotti.work/fini/content/Fini-Pa%CC%81scoaCoelho-twitter.png)
+:::
+
+## Tiktok
+
+:::gallery
+![](<https://assets.pinotti.work/fini/content/Download%20(5)-2829.mp4>)
+![](<https://assets.pinotti.work/fini/content/Download%20(19)-2757.mp4>)
+![](<https://assets.pinotti.work/fini/content/Download%20(17)-2769.mp4>)
+:::
+
+## 4. The Impact
 
 :::stats
 70+ | assets per month
@@ -38,4 +69,7 @@ I decentralized production by transforming the internal creative team into hybri
 0 | operational bottlenecks
 :::
 
-This systemic pivot proved that data-driven operations amplify creative resonance and business KPIs. We sustained a rigorous output of 70+ assets per month, completely eliminating operational bottlenecks. We shattered the brand's historical engagement KPIs — specific cultural activations, such as the Festa Junina campaign featuring a strategic squad of influencers, generated over 170,000 pure organic interactions. The agile pipeline effortlessly sustained massive seasonal demands, translating brand concepts into authentic, high-performing pop-culture hits.
+- **62% Reduction in TikTok CPE:** Traditional acted videos cost R$ 0.53 per engagement. Moving to the hyper-native "Faceless" model dropped the cost to R$ 0.20, preventing a 165% cost penalty for the brand.
+- **+75% Gen-Z Retention (VTR):** Midpoint video retention had collapsed to 11%. By launching an outsourced native creator network, view-through rates among Gen-Z reached 20.31% at a highly efficient R$ 0.29 cost.
+- **Massive Organic Scale:** By giving external creators full production autonomy, a single initiative (Rafa Baricala) generated nearly 3 million organic views and an 8%+ engagement rate, breaking reliance on paid amplification.
+- **Reclaimed Bandwidth & Margin Protection:** Offloading production to the automated system **freed up 75% of the internal creative team's time**. This newly recovered capacity was redirected entirely into high-impact, revenue-generating seasonal campaigns (Halloween, Winter, Easter), protecting agency profit margins.
