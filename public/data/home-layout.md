@@ -31,4 +31,4 @@ trio | the-reconquest | give-yourself-this-chance | mit-cada-km-mit-conta
 career-wall
 hero | mastercard-priceless-ecosystem
 trio | mastercard-get-closer | connecting-clients | alternative-investments
-trio | amazon-count-on-us
+duo | amazon-count-on-us | americanas-qr-code
