@@ -82,8 +82,10 @@ We built the campaign around portraits by photographer **Maurício Nahas** — f
 Out-of-home took over bus shelters and prime urban surfaces across São Paulo. On Instagram Stories, the festival broadcast live artist chats and stage snippets across both days.
 
 :::gallery
-![](/__l5e/assets-v1/b12baad5-0524-4f2d-a4f5-a290390a3c8f/ooh-01.jpg)
-![](/__l5e/assets-v1/8b2c5413-5ef8-4cff-a5db-6ff700cf8f6e/ooh-02.jpg)
+![](https://assets.pinotti.work/mastercard/logo.mp4)
+![](https://assets.pinotti.work/mastercard/jazz_02_2.jpg)
+![](https://assets.pinotti.work/mastercard/jazz_02.jpg)
+![](https://assets.pinotti.work/mastercard/coverage.mp4)
 :::
 
 [video](https://player.vimeo.com/video/848393121?h=3fe594dc6c "Mastercard Jazz — Campaign Film")
