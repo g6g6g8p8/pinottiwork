@@ -13,7 +13,7 @@ order: 2
 hero: '/__l5e/assets-v1/4e25dbfe-5fbf-47c2-b1b9-ffdca94fb872/CRUSH_LIVE_MK_01_egvlqr.jpg'
 aspect_ratio: '9:4'
 description: >-
-  How a systemic community mobilization culminated in a Guinness World Records title for Mary Kay causing massive social impact.
+  The broadcast that won a Guinness World Records title by causing massive social impact.
 ---
 
 ## The Challenge
