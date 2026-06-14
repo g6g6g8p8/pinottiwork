@@ -3,7 +3,7 @@ id: 1
 title: 'Under the hood of a Global Powerhouse'
 slug: mary-kay-global-ecosystem
 client: Mary Kay Brazil
-role: Creative Director & Head of Creative Operations
+role: Creative Director
 category: Content System
 tags:
   - DesignOps
@@ -11,12 +11,11 @@ tags:
   - Full-Funnel
   - Content Machine
 order: 1
-hero: 'https://assets.pinotti.work/marykay/VIDEO__A_realistic_pink_Jeep_C.mp4'
+hero: '/__l5e/assets-v1/cde1f0aa-0b9d-4e82-8785-5791b785100a/15-b_zhcxb5.png'
 og_image: '/__l5e/assets-v1/cde1f0aa-0b9d-4e82-8785-5791b785100a/15-b_zhcxb5.png'
 aspect_ratio: '9:4'
 description: >-
-  Escaping the reactive 'always-on' loop to build a full-funnel Content Ecosystem that
-  propelled Mary Kay Brazil to their top.
+  The full-funnel creative system that rejuvenated the brand.
 ---
 
 Mary Kay Brasil needed to rejuvenate its brand perception and connect with the Gen-Z audience without diluting the rigor of a global beauty powerhouse. The existing production model was centralized, slow, and expensive — locked in a reactive cycle that was filling the content calendar but failing to build an actual community or drive agile performance.
@@ -58,7 +57,7 @@ I integrated the client directly into the pre-production phase and on-set routin
 
 ## The Impact
 
-The operational overhaul directly translated into historic business milestones. We maximized margins by sustaining a high-volume output of top-tier assets while significantly lowering the cost-per-asset. The ecosystem proved its cultural relevance without over-reliance on paid media, generating over 3.4M organic interactions and propelling a +75% increase in the Gen-Z audience across digital channels.
+The operational overhaul directly translated into historic business milestones. We maximized margins by sustaining a high-volume output of top-tier assets while significantly lowering the cost-per-asset. The ecosystem proved its cultural relevance without over-reliance on paid media, generating only in 2025 over 3.4M organic interactions and propelling a +75% increase in the Gen-Z audience across digital channels.
 
 [video](https://player.vimeo.com/video/1197811675?h=99f788aaef "2025 Recap")
 

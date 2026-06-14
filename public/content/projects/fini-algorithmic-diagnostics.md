@@ -3,7 +3,7 @@ id: 2
 title: 'A Fun Content System'
 slug: fini-algorithmic-diagnostics
 client: Fini
-role: Creative Director & Head of Creative Operations
+role: Creative Director
 category: Content System
 tags:
   - Data-Driven

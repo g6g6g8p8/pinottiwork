@@ -33,10 +33,6 @@ From this campaign onward, every Mitsubishi product in Brazil would carry the 4Y
 
 [video](https://www.youtube.com/watch?v=fwedmzWiL2g "4You4 — New Generation Manifesto")
 
-A field-side endorsement for the L200 Triton Sport with country-music duo Fernando & Sorocaba, where rural life meets the truck's tech — the most literal expression of "4You4" for Mitsubishi's heartland audience.
-
-[video](https://www.youtube.com/watch?v=4GHOZE61kO4 "L200 Triton Sport — Field & Technology, with Fernando & Sorocaba")
-
 :::gallery
 ![](/__l5e/assets-v1/d63eeb0d-ea0a-4df7-a806-d6486de19519/kv-01.jpg)
 ![](/__l5e/assets-v1/98b5e73b-5f03-475b-bc9f-c5ab44ebfc6a/kv-02.jpg)
@@ -44,6 +40,10 @@ A field-side endorsement for the L200 Triton Sport with country-music duo Fernan
 ![](/__l5e/assets-v1/ba65b458-043b-4321-9300-72cb71665da2/kv-04.jpg)
 ![](/__l5e/assets-v1/23667c25-cfd2-49da-bab9-410255890118/kv-05.jpg)
 :::
+
+A field-side endorsement for the L200 Triton Sport with country-music duo Fernando & Sorocaba, where rural life meets the truck's tech — the most literal expression of "4You4" for Mitsubishi's heartland audience.
+
+[video](https://www.youtube.com/watch?v=4GHOZE61kO4 "L200 Triton Sport — Field & Technology, with Fernando & Sorocaba")
 
 ---
 
@@ -61,7 +61,7 @@ Three full-3D short films follow a Pajero Sport crossing forest, plantation and 
 
 [video](https://vimeo.com/568442383 "Beach")
 
-Three 5-second idents ran throughout the sponsored broadcasts on ESPN and Band.
+Three 5 and 15-seconds idents ran throughout the sponsored broadcasts on ESPN and Band.
 
 :::gallery
 ![](/__l5e/assets-v1/8a62f011-4cad-49a6-9d0d-160618755440/hero-01.png)
