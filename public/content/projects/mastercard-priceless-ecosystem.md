@@ -22,11 +22,19 @@ The insight that drove everything: to beat VISA, every touchpoint had to feel co
 
 ---
 
+## Get Closer — Copa América 2019
+
+The most complex and impactful activation of the entire account — a campaign that turned a single word printed on every POS terminal in Brazil into the umbrella concept for Mastercard's Copa América sponsorship. On the main brand tracker index, it surpassed VISA for the first time, establishing a new record.
+
+→ [See the full case: Get Closer](/project/mastercard-get-closer)
+
+---
+
 ## Mastercard Black — Priceless Travel, Latin America
 
 As Mastercard expanded its Affluent proposition across Latin America and the Caribbean, the brief was to translate the premium tier's benefits — airport lounges, cashback abroad, room upgrades, chef experiences — into a campaign that felt genuinely elevated, not just functional.
 
-The campaign starred rock musician Derrick Green of Sepultura. The casting alone repositioned what "luxury" looks like in Brazil: less aspirational cliché, more genuine cultural weight. Each film focused on a single benefit, unified by the platform line: *Start living new experiences. Start something Priceless.*
+The campaign starred rock musician Derrick Green of Sepultura. The casting alone repositioned what "luxury" looks like in Brazil: less aspirational cliché, more genuine cultural weight. Each film focused on a single benefit, unified by the platform line: _Start living new experiences. Start something Priceless._
 
 [video](https://player.vimeo.com/video/848462193?h=f73b028b13 "Boingo Wi-Fi")
 
@@ -39,14 +47,6 @@ The campaign starred rock musician Derrick Green of Sepultura. The casting alone
 [video](https://player.vimeo.com/video/848462258?h=e1f1262c50 "Chef Experiences")
 
 [video](https://player.vimeo.com/video/848462290?h=07b267dceb "Free Corkage")
-
----
-
-## Get Closer — Copa América 2019
-
-The most complex and impactful activation of the entire account — a campaign that turned a single word printed on every POS terminal in Brazil into the umbrella concept for Mastercard's Copa América sponsorship. On the main brand tracker index, it surpassed VISA for the first time, establishing a new record.
-
-:::project slug=mastercard-get-closer:::
 
 ---
 
@@ -80,15 +80,3 @@ Out-of-home took over bus shelters and prime urban surfaces across São Paulo. O
 :::
 
 [video](https://player.vimeo.com/video/848393121?h=3fe594dc6c "Mastercard Jazz — Campaign Film")
-
----
-
-## Credits
-
-**Get Closer / Copa América 2019** — Agency: WMcCann · CCO: Hugo Rodrigues, André Marques · Creative Director: Alexandre Prado · Art Director: Giulio Pinotti
-
-**Mastercard Black Latam** — Agency: WMcCann · Creative Director: Alexandre Prado · Art Director: Giulio Pinotti
-
-**Collection of Memories** — Agency: WMcCann · Creative Director: Duda Hernandez · Creative Team: Giulio Pinotti, Tatiana Jacobsohn · Production: Fantástica Filmes e Post · Sound: HEYHEYMYMY
-
-**Mastercard Jazz** — Agency: WMcCann · CCO: Hugo Rodrigues, André Marques · COO: Kevin Zung · Creative Director: Alexandre Prado · Creative Team: Bruno Mukai, Erica Igue, Francisco Oliveira, Giulio Pinotti, Leandro Oliveira, Paulo Fontana · Photographer: Maurício Nahas · Image Retouching: Fujocka Creative Images
