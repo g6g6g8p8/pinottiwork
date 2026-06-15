@@ -9,16 +9,18 @@ import {
 import { useAbout } from '../../hooks/useAbout';
 import type { CareerHighlight } from '../../hooks/useAbout';
 
+// Card: -25% width, +25% height vs previous defaults.
+// min-h ensures consistent height across cards regardless of content length.
 function Card({ h }: { h: CareerHighlight }) {
   return (
     <div
       className="
-        bg-card rounded-2xl p-4 h-full w-full
+        bg-card rounded-2xl p-4 h-full w-full min-h-[200px] md:min-h-[240px]
         border border-foreground/5 hover:border-foreground/15
         transition-colors flex flex-col
       "
     >
-      <div className="flex items-start gap-3 md:gap-4 mb-2">
+      <div className="flex items-start gap-3 md:gap-4 mb-3">
         <img
           src={h.logo_url}
           alt={h.company}
@@ -41,6 +43,9 @@ function Card({ h }: { h: CareerHighlight }) {
   );
 }
 
+// Card widths: -25% from original (78→58, 48→36, 32→24)
+const CARD_W = 'w-[58vw] sm:w-[36vw] lg:w-[24vw]';
+
 export default function CareerWall() {
   const { about } = useAbout();
   const reduced = useReducedMotion();
@@ -58,7 +63,8 @@ export default function CareerWall() {
   });
 
   const xRaw = useTransform(scrollYProgress, [0, 1], [0, -distance]);
-  const x = useSpring(xRaw, { stiffness: 120, damping: 22, mass: 0.4 });
+  // Reduced spring stiffness for smoother cross-browser rendering (esp. Firefox)
+  const x = useSpring(xRaw, { stiffness: 80, damping: 20, mass: 0.5 });
 
   useEffect(() => {
     const measure = () => {
@@ -86,19 +92,20 @@ export default function CareerWall() {
 
   const highlights = about.career_highlights;
 
-  // Fallback: reduced motion → simple horizontal scroll with snap.
+  // Reduced motion fallback: native horizontal scroll with snap.
+  // scrollbar-hide keeps it clean on Windows/Chrome where scrollbars are always visible.
   if (reduced) {
     return (
       <section aria-label="Career highlights" className="py-2 -mx-5 md:-mx-8 lg:mx-0">
         <h3 className="text-[14px] leading-[17px] font-medium opacity-60 mb-4 px-5 md:px-8 lg:px-0">
           CAREER HIGHLIGHTS
         </h3>
-        <div className="overflow-x-auto snap-x snap-mandatory px-5 md:px-8 lg:px-0">
-          <div className="flex gap-premium-md">
+        <div className="overflow-x-auto snap-x snap-mandatory px-5 md:px-8 lg:px-0 scrollbar-hide">
+          <div className="flex gap-premium-md pb-2">
             {highlights.map((h) => (
               <div
                 key={h.id}
-                className="snap-start shrink-0 w-[78vw] sm:w-[48vw] lg:w-[32vw]"
+                className={`snap-start shrink-0 ${CARD_W}`}
               >
                 <Card h={h} />
               </div>
@@ -109,8 +116,8 @@ export default function CareerWall() {
     );
   }
 
-  // Section height drives how much vertical scroll is converted into horizontal motion.
-  // 1 viewport height to enter + N extra to scroll through. Clamped by actual measured distance.
+  // Section height: 100svh to enter + scrollable distance.
+  // svh unit handles iOS Safari address-bar collapse correctly (vs vh).
   const sectionHeight = mounted && distance > 0
     ? `calc(100svh + ${distance}px)`
     : `${Math.max(1, highlights.length) * 100}svh`;
@@ -126,7 +133,16 @@ export default function CareerWall() {
       <div
         ref={viewportRef}
         className="sticky top-0 h-[100svh] overflow-hidden flex flex-col justify-center"
-        style={{ touchAction: 'pan-y' }}
+        style={{
+          // pan-y: lets the browser handle vertical scroll natively while
+          // Framer Motion drives horizontal translation via scroll progress.
+          // This avoids conflicts on iOS where touch events fight between
+          // native scroll and JS-driven horizontal movement.
+          touchAction: 'pan-y',
+          // will-change hint improves compositing on Chrome/Safari.
+          // Omitted on Firefox (handled by Framer's own logic).
+          WebkitOverflowScrolling: 'touch',
+        }}
       >
         <h3 className="text-[14px] leading-[17px] font-medium opacity-60 mb-4 px-5 md:px-8 lg:px-0">
           CAREER HIGHLIGHTS
@@ -140,10 +156,7 @@ export default function CareerWall() {
           {highlights.map((h) => (
             <div
               key={h.id}
-              className="
-                shrink-0
-                w-[78vw] sm:w-[48vw] lg:w-[32vw]
-              "
+              className={`shrink-0 ${CARD_W}`}
             >
               <Card h={h} />
             </div>
