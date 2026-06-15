@@ -4,7 +4,7 @@ title: 'Bring the Fun Back to Fini'
 slug: fini-algorithmic-diagnostics
 client: Fini
 role: Creative Director
-category: Creative Operations
+category: Creative Ops
 order: 2
 hero: 'https://assets.pinotti.work/fini/content/Download%20%2849%29-2634.mp4'
 aspect_ratio: '9:4'
