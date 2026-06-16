@@ -27,8 +27,16 @@ export interface Category {
   icon: LucideIcon;
 }
 
+const CATEGORY_ORDER = [
+  'creative ops',
+  'content',
+  'social impact',
+  'branded content',
+  'advertising',
+  'branding',
+];
+
 export function deriveCategories(projects: Project[]): Category[] {
-  const seen = new Set<string>();
   const ordered: Category[] = [];
 
   ordered.push({
@@ -38,18 +46,37 @@ export function deriveCategories(projects: Project[]): Category[] {
     icon: CATEGORY_ICONS['all'],
   });
 
-  const sorted = [...projects].sort((a, b) => a.order - b.order);
-  for (const project of sorted) {
-    const id = project.category.toLowerCase();
-    if (!seen.has(id)) {
-      seen.add(id);
-      ordered.push({
-        id,
-        name: project.category,
-        count: projects.filter((p) => p.category.toLowerCase() === id).length,
-        icon: CATEGORY_ICONS[id] ?? FileText,
-      });
-    }
+  const byId = new Map<string, Project[]>();
+  for (const p of projects) {
+    const id = p.category.toLowerCase();
+    if (!byId.has(id)) byId.set(id, []);
+    byId.get(id)!.push(p);
+  }
+
+  const seen = new Set<string>();
+  for (const id of CATEGORY_ORDER) {
+    const list = byId.get(id);
+    if (!list?.length) continue;
+    seen.add(id);
+    ordered.push({
+      id,
+      name: list[0].category,
+      count: list.length,
+      icon: CATEGORY_ICONS[id] ?? FileText,
+    });
+  }
+
+  // Fallback: any unknown categories appended at the end, sorted by project order.
+  const leftovers = [...byId.entries()]
+    .filter(([id]) => !seen.has(id))
+    .sort((a, b) => a[1][0].order - b[1][0].order);
+  for (const [id, list] of leftovers) {
+    ordered.push({
+      id,
+      name: list[0].category,
+      count: list.length,
+      icon: CATEGORY_ICONS[id] ?? FileText,
+    });
   }
 
   return ordered;
