@@ -11,22 +11,23 @@ export default function SidebarAwards() {
     <Tooltip.Provider delayDuration={150}>
       <div
         aria-label="Awards"
-        className="flex items-center justify-start gap-3 px-1 pb-3"
+        className="flex flex-wrap items-center justify-start gap-x-3 gap-y-2 px-1 pb-3"
       >
         {awards.map((award, i) => {
-          // Per-award size overrides (base h-9 = 36px, max-w 73px)
+          // Per-award size overrides — +25% vs previous baseline.
+          // Wraps to multiple rows when sidebar width can't fit them inline.
           const isNYF = /new york|midas|nyf/i.test(award.name);
           const isGuinness = /guinness/i.test(award.name);
           const sizeClass = isNYF
-            ? 'h-[43px] max-w-[88px] min-w-[43px]'
+            ? 'h-[54px] max-w-[110px] min-w-[54px]'
             : isGuinness
-              ? 'h-[32px] max-w-[66px] min-w-[32px]'
-              : 'h-9 max-w-[73px] min-w-[36px]';
+              ? 'h-[40px] max-w-[83px] min-w-[40px]'
+              : 'h-[45px] max-w-[91px] min-w-[45px]';
           const imgClass = isNYF
-            ? 'h-[43px] max-w-[88px]'
+            ? 'h-[54px] max-w-[110px]'
             : isGuinness
-              ? 'h-[32px] max-w-[66px]'
-              : 'h-9 max-w-[73px]';
+              ? 'h-[40px] max-w-[83px]'
+              : 'h-[45px] max-w-[91px]';
           return (
           <Tooltip.Root key={i}>
             <Tooltip.Trigger asChild>
