@@ -25,7 +25,7 @@
 # Formato: slot | slug | [slug2] | [slug3]
 
 hero | mary-kay-global-ecosystem
-trio | pink-news | mary-kay-guinness-record | fini-algorithmic-diagnostics
+duo | mary-kay-guinness-record | fini-algorithmic-diagnostics
 hero | mitsubishi-4you4-platform
 trio | the-reconquest | give-yourself-this-chance | mit-cada-km-mit-conta
 career-wall
