@@ -1,4 +1,5 @@
 ---
+draft: true
 id: 11
 title: Pink News
 slug: pink-news
