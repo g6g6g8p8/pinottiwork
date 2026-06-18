@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pinottiwork.lovable.app/sitemap.xml
+Sitemap: https://pinotti.work/sitemap.xml

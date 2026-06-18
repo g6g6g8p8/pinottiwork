@@ -109,7 +109,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@type": "Person",
           name: "Giulio Pinotti",
           jobTitle: "Creative Director",
-          url: "https://pinottiwork.lovable.app",
+          url: "https://pinotti.work",
           address: {
             "@type": "PostalAddress",
             addressLocality: "São Paulo",

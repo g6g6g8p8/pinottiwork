@@ -37,7 +37,7 @@ export const Route = createFileRoute("/projects/$slug")({
     const baseDesc = meta?.description?.trim() || "";
     const ctx = meta?.client ? `${meta.client}${meta.role ? ` · ${meta.role}` : ""}. ` : "";
     let description = (ctx + baseDesc).trim();
-    if (description.length > 300) description = description.slice(0, 297) + "…";
+    if (description.length > 160) description = description.slice(0, 157) + "…";
     if (!description) description = "Selected project by Giulio Pinotti, Creative Director.";
 
     const ogImage = resolveOgImage(meta);

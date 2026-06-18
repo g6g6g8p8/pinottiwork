@@ -4,7 +4,7 @@ import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import matter from 'gray-matter';
 
-const BASE_URL = 'https://pinottiwork.lovable.app';
+const BASE_URL = 'https://pinotti.work';
 
 function toSlug(s: string): string {
   return (s || '')
