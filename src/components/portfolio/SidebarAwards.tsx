@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import * as Tooltip from '@radix-ui/react-tooltip';
 import { Trophy } from 'lucide-react';
 import { useAbout } from '../../hooks/useAbout';
@@ -29,7 +30,8 @@ export default function SidebarAwards() {
               ? 'h-[40px] max-w-[83px]'
               : 'h-[45px] max-w-[91px]';
           return (
-          <Tooltip.Root key={i}>
+          <Fragment key={i}>
+          <Tooltip.Root>
             <Tooltip.Trigger asChild>
               <span
                 aria-label={award.name}
@@ -71,6 +73,8 @@ export default function SidebarAwards() {
               </Tooltip.Content>
             </Tooltip.Portal>
           </Tooltip.Root>
+          {isGuinness ? <div aria-hidden className="basis-full h-0" /> : null}
+          </Fragment>
           );
         })}
       </div>
