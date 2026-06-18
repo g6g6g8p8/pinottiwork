@@ -272,6 +272,7 @@ export default function ProjectDetail() {
       <Portal>
         <button
           onClick={() => navigate({ to: '/' })}
+          aria-label="Close project"
           className="fixed top-6 right-6 z-[100] w-9 h-9 flex items-center justify-center rounded-full bg-black/40 hover:bg-black/60 backdrop-blur-sm text-white transition-colors"
         >
           <CloseIcon size={17} />
@@ -310,7 +311,7 @@ export default function ProjectDetail() {
               />
               <div className="absolute inset-x-0 bottom-0 p-6 z-10">
                 <p className="text-[11px] font-semibold uppercase tracking-[.07em] text-white/60 mb-1">{project.client}</p>
-                <h2 className="text-[22px] font-bold leading-tight tracking-[-0.02em] text-white mb-2">{project.title}</h2>
+                <h1 className="text-[22px] font-bold leading-tight tracking-[-0.02em] text-white mb-2">{project.title}</h1>
                 <p className="text-[14px] leading-[20px] text-white/80 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.category && (

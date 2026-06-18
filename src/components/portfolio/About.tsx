@@ -63,6 +63,7 @@ export default function About() {
         </Link>
         <button
           onClick={() => navigate({ to: '/' })}
+          aria-label="Close about"
           className="w-8 h-8 flex items-center justify-center rounded-full
             bg-foreground/10 hover:bg-foreground/20
             text-foreground/60 hover:text-foreground transition-colors"

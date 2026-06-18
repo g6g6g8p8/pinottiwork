@@ -33,7 +33,7 @@ export default function Home() {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.3, ease: 'easeOut' }}
     >
-      <h1 className="sr-only">Giulio Pinotti — Creative Director portfolio</h1>
+      
       {/* Header mobile */}
       <div className="lg:hidden sticky top-0 z-40 -mx-5 md:-mx-8 px-5 md:px-8 py-3
         bg-background/95 backdrop-blur-xl
