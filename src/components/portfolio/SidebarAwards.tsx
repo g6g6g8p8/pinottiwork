@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import * as Tooltip from '@radix-ui/react-tooltip';
 import { Trophy } from 'lucide-react';
 import { useAbout } from '../../hooks/useAbout';
