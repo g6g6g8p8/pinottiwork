@@ -29,6 +29,8 @@ export default function SidebarAwards() {
               ? 'h-[40px] max-w-[83px]'
               : 'h-[45px] max-w-[91px]';
           return (
+          <>
+          {isGuinness && i > 0 ? null : null}
           <Tooltip.Root key={i}>
             <Tooltip.Trigger asChild>
               <span
