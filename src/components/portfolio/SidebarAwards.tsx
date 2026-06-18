@@ -29,9 +29,8 @@ export default function SidebarAwards() {
               ? 'h-[40px] max-w-[83px]'
               : 'h-[45px] max-w-[91px]';
           return (
-          <>
-          {isGuinness && i > 0 ? null : null}
-          <Tooltip.Root key={i}>
+          <Fragment key={i}>
+          <Tooltip.Root>
             <Tooltip.Trigger asChild>
               <span
                 aria-label={award.name}
@@ -73,6 +72,8 @@ export default function SidebarAwards() {
               </Tooltip.Content>
             </Tooltip.Portal>
           </Tooltip.Root>
+          {isGuinness ? <div aria-hidden className="basis-full h-0" /> : null}
+          </Fragment>
           );
         })}
       </div>
