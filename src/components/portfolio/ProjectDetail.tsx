@@ -302,6 +302,17 @@ export default function ProjectDetail() {
                   sizes="(max-width: 1024px) 100vw, 40vw"
                 />
               )}
+              {project.slug === 'mary-kay-guinness-record' && (
+                <img
+                  src={guinnessAsset.url}
+                  alt="Guinness World Record"
+                  className="absolute top-4 right-4 md:top-6 md:right-6 z-20 w-20 h-20 md:w-28 md:h-28 rounded-full pointer-events-none"
+                  style={{
+                    boxShadow: '0 6px 20px rgba(0,0,0,0.4), 0 0 0 2px rgba(255,255,255,0.95)',
+                    background: 'white',
+                  }}
+                />
+              )}
               <div
                 className="absolute inset-0 pointer-events-none"
                 style={{
