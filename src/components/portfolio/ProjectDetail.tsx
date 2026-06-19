@@ -10,6 +10,7 @@ import { SkeletonDetail } from './Skeleton';
 import Toast from './Toast';
 import RelatedProjects from './RelatedProjects';
 import type { ContentBlock } from '../../lib/parseMarkdown';
+import guinnessAsset from '../../assets/awards/guinness.png.asset.json';
 
 export default function ProjectDetail() {
   const { slug } = useParams({ from: '/projects/$slug' });
