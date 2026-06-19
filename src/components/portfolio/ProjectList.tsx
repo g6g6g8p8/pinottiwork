@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useProjects } from '../../hooks/useProjects';
 import type { Project } from '../../hooks/useProject';
 import { toSlug } from '../../lib/portfolio-utils';
+import guinnessAsset from '../../assets/awards/guinness.png.asset.json';
 
 interface Props {
   kind: 'client' | 'role' | 'category';
@@ -84,6 +85,17 @@ export default function ProjectList({ kind, slug }: Props) {
                       alt={p.title}
                       loading="lazy"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                    />
+                  )}
+                  {p.slug === 'mary-kay-guinness-record' && (
+                    <img
+                      src={guinnessAsset.url}
+                      alt="Guinness World Record"
+                      className="absolute top-3 right-3 md:top-4 md:right-4 z-30 w-12 h-12 md:w-16 md:h-16 rounded-full pointer-events-none"
+                      style={{
+                        boxShadow: '0 4px 14px rgba(0,0,0,0.35), 0 0 0 2px rgba(255,255,255,0.9)',
+                        background: 'white',
+                      }}
                     />
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
