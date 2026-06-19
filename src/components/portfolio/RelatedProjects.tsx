@@ -2,6 +2,7 @@ import { Link } from '@tanstack/react-router';
 import type { Project } from '../../hooks/useProject';
 import { useProjects } from '../../hooks/useProjects';
 import { toSlug } from '../../lib/portfolio-utils';
+import guinnessAsset from '../../assets/awards/guinness.png.asset.json';
 
 interface Props {
   current: Project;
