@@ -34,29 +34,47 @@ export default function SidebarAwards() {
           <Fragment key={i}>
           <Tooltip.Root>
             <Tooltip.Trigger asChild>
-              <span
-                aria-label={award.name}
-                className={`inline-flex items-center justify-center w-auto opacity-80 hover:opacity-100 transition-opacity cursor-default ${sizeClass}`}
-              >
-                {award.logo_light ? (
-                  <>
-                    <img
-                      src={award.logo_light}
-                      alt={award.name}
-                      loading="lazy"
-                      className={`w-auto object-contain dark:hidden ${imgClass}`}
-                    />
-                    <img
-                      src={award.logo_dark}
-                      alt={award.name}
-                      loading="lazy"
-                      className={`w-auto object-contain hidden dark:block ${imgClass}`}
-                    />
-                  </>
-                ) : (
-                  <Trophy size={17} strokeWidth={1.8} className="text-foreground/60" />
-                )}
-              </span>
+              {isGuinness ? (
+                <Link
+                  to="/projects/$slug"
+                  params={{ slug: 'mary-kay-guinness-record' }}
+                  aria-label={`${award.name} — view project`}
+                  className={`inline-flex items-center justify-center w-auto opacity-80 hover:opacity-100 transition-opacity ${sizeClass}`}
+                >
+                  {award.logo_light ? (
+                    <>
+                      <img src={award.logo_light} alt={award.name} loading="lazy" className={`w-auto object-contain dark:hidden ${imgClass}`} />
+                      <img src={award.logo_dark} alt={award.name} loading="lazy" className={`w-auto object-contain hidden dark:block ${imgClass}`} />
+                    </>
+                  ) : (
+                    <Trophy size={17} strokeWidth={1.8} className="text-foreground/60" />
+                  )}
+                </Link>
+              ) : (
+                <span
+                  aria-label={award.name}
+                  className={`inline-flex items-center justify-center w-auto opacity-80 hover:opacity-100 transition-opacity cursor-default ${sizeClass}`}
+                >
+                  {award.logo_light ? (
+                    <>
+                      <img
+                        src={award.logo_light}
+                        alt={award.name}
+                        loading="lazy"
+                        className={`w-auto object-contain dark:hidden ${imgClass}`}
+                      />
+                      <img
+                        src={award.logo_dark}
+                        alt={award.name}
+                        loading="lazy"
+                        className={`w-auto object-contain hidden dark:block ${imgClass}`}
+                      />
+                    </>
+                  ) : (
+                    <Trophy size={17} strokeWidth={1.8} className="text-foreground/60" />
+                  )}
+                </span>
+              )}
             </Tooltip.Trigger>
             <Tooltip.Portal>
               <Tooltip.Content
