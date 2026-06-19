@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+import { Link } from '@tanstack/react-router';
 import * as Tooltip from '@radix-ui/react-tooltip';
 import { Trophy } from 'lucide-react';
 import { useAbout } from '../../hooks/useAbout';
