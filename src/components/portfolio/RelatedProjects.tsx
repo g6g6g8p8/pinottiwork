@@ -32,6 +32,17 @@ function MiniCard({ project }: { project: Project }) {
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
           />
         )}
+        {project.slug === 'mary-kay-guinness-record' && (
+          <img
+            src={guinnessAsset.url}
+            alt="Guinness World Record"
+            className="absolute top-2 right-2 md:top-3 md:right-3 z-30 w-10 h-10 md:w-12 md:h-12 rounded-full pointer-events-none"
+            style={{
+              boxShadow: '0 4px 14px rgba(0,0,0,0.35), 0 0 0 2px rgba(255,255,255,0.9)',
+              background: 'white',
+            }}
+          />
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
         <div className="absolute inset-x-0 bottom-0 p-4">
           <p className="text-[10px] font-semibold uppercase tracking-[.07em] text-white/60 mb-1">
