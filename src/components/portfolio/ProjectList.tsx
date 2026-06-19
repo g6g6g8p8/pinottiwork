@@ -87,6 +87,17 @@ export default function ProjectList({ kind, slug }: Props) {
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                     />
                   )}
+                  {p.slug === 'mary-kay-guinness-record' && (
+                    <img
+                      src={guinnessAsset.url}
+                      alt="Guinness World Record"
+                      className="absolute top-3 right-3 md:top-4 md:right-4 z-30 w-12 h-12 md:w-16 md:h-16 rounded-full pointer-events-none"
+                      style={{
+                        boxShadow: '0 4px 14px rgba(0,0,0,0.35), 0 0 0 2px rgba(255,255,255,0.9)',
+                        background: 'white',
+                      }}
+                    />
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
                   <div className="absolute inset-x-0 bottom-0 p-5">
                     <p className="text-[10px] font-semibold uppercase tracking-[.07em] text-white/60 mb-1">
