@@ -30,6 +30,22 @@ export default function ProjectList({ kind, slug }: Props) {
     .filter((p) => toSlug(pickField(p, kind)) === slug)
     .sort((a, b) => a.order - b.order);
 
+  const [imageColors, setImageColors] = useState<Record<number, string>>({});
+
+  useEffect(() => {
+    if (matches.length === 0) return;
+    let cancelled = false;
+    (async () => {
+      const colors: Record<number, string> = {};
+      for (const p of matches) {
+        if (p.image_url) colors[p.id] = await getImageColor(p.image_url, 'bottom');
+      }
+      if (!cancelled) setImageColors(colors);
+    })();
+    return () => { cancelled = true; };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [matches.map((p) => p.id).join(',')]);
+
   const displayName = matches[0] ? pickField(matches[0], kind) : slug.replace(/-/g, ' ');
 
   return (
