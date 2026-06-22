@@ -1,8 +1,9 @@
+import { useEffect, useState } from 'react';
 import { Link } from '@tanstack/react-router';
 import { motion } from 'framer-motion';
 import { useProjects } from '../../hooks/useProjects';
 import type { Project } from '../../hooks/useProject';
-import { toSlug } from '../../lib/portfolio-utils';
+import { toSlug, getImageColor } from '../../lib/portfolio-utils';
 import guinnessAsset from '../../assets/awards/guinness.png.asset.json';
 
 interface Props {
@@ -28,6 +29,22 @@ export default function ProjectList({ kind, slug }: Props) {
   const matches = (projects || [])
     .filter((p) => toSlug(pickField(p, kind)) === slug)
     .sort((a, b) => a.order - b.order);
+
+  const [imageColors, setImageColors] = useState<Record<number, string>>({});
+
+  useEffect(() => {
+    if (matches.length === 0) return;
+    let cancelled = false;
+    (async () => {
+      const colors: Record<number, string> = {};
+      for (const p of matches) {
+        if (p.image_url) colors[p.id] = await getImageColor(p.image_url, 'bottom');
+      }
+      if (!cancelled) setImageColors(colors);
+    })();
+    return () => { cancelled = true; };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [matches.map((p) => p.id).join(',')]);
 
   const displayName = matches[0] ? pickField(matches[0], kind) : slug.replace(/-/g, ' ');
 
@@ -98,7 +115,14 @@ export default function ProjectList({ kind, slug }: Props) {
                       }}
                     />
                   )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
+                  <div
+                    className="absolute inset-0 pointer-events-none"
+                    style={{
+                      background: imageColors[p.id]
+                        ? `linear-gradient(to top, ${imageColors[p.id]}ee 0%, ${imageColors[p.id]}44 55%, transparent 100%)`
+                        : 'linear-gradient(to top, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.3) 55%, transparent 100%)',
+                    }}
+                  />
                   <div className="absolute inset-x-0 bottom-0 p-5">
                     <p className="text-[10px] font-semibold uppercase tracking-[.07em] text-white/60 mb-1">
                       {p.category}
