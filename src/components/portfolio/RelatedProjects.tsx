@@ -1,14 +1,15 @@
+import { useEffect, useState } from 'react';
 import { Link } from '@tanstack/react-router';
 import type { Project } from '../../hooks/useProject';
 import { useProjects } from '../../hooks/useProjects';
-import { toSlug } from '../../lib/portfolio-utils';
+import { toSlug, getImageColor } from '../../lib/portfolio-utils';
 import guinnessAsset from '../../assets/awards/guinness.png.asset.json';
 
 interface Props {
   current: Project;
 }
 
-function MiniCard({ project }: { project: Project }) {
+function MiniCard({ project, imageColor }: { project: Project; imageColor?: string }) {
   const isVideo = project.image_url.endsWith('.mp4') || project.image_url.endsWith('.mov');
   return (
     <Link
@@ -43,7 +44,14 @@ function MiniCard({ project }: { project: Project }) {
             }}
           />
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: imageColor
+              ? `linear-gradient(to top, ${imageColor}ee 0%, ${imageColor}44 55%, transparent 100%)`
+              : 'linear-gradient(to top, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.3) 55%, transparent 100%)',
+          }}
+        />
         <div className="absolute inset-x-0 bottom-0 p-4">
           <p className="text-[10px] font-semibold uppercase tracking-[.07em] text-white/60 mb-1">
             {project.category}
@@ -57,14 +65,22 @@ function MiniCard({ project }: { project: Project }) {
   );
 }
 
-function Row({ label, projects }: { label: string; projects: Project[] }) {
+function Row({
+  label,
+  projects,
+  imageColors,
+}: {
+  label: string;
+  projects: Project[];
+  imageColors: Record<number, string>;
+}) {
   if (projects.length === 0) return null;
   return (
     <div className="space-y-4">
       <p className="text-[11px] font-semibold uppercase tracking-[.07em] opacity-60">{label}</p>
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
         {projects.map((p) => (
-          <MiniCard key={p.slug} project={p} />
+          <MiniCard key={p.slug} project={p} imageColor={imageColors[p.id]} />
         ))}
       </div>
     </div>
@@ -73,9 +89,8 @@ function Row({ label, projects }: { label: string; projects: Project[] }) {
 
 export default function RelatedProjects({ current }: Props) {
   const { projects } = useProjects();
-  if (!projects || projects.length === 0) return null;
 
-  const others = projects.filter((p) => p.slug !== current.slug);
+  const others = (projects || []).filter((p) => p.slug !== current.slug);
   const sameClient = others
     .filter((p) => toSlug(p.client) === toSlug(current.client) && current.client)
     .sort((a, b) => a.order - b.order)
@@ -91,12 +106,31 @@ export default function RelatedProjects({ current }: Props) {
     .sort((a, b) => a.order - b.order)
     .slice(0, 3);
 
+  const related = [...sameClient, ...sameCategory];
+
+  const [imageColors, setImageColors] = useState<Record<number, string>>({});
+
+  useEffect(() => {
+    if (related.length === 0) return;
+    let cancelled = false;
+    (async () => {
+      const colors: Record<number, string> = {};
+      for (const p of related) {
+        if (p.image_url) colors[p.id] = await getImageColor(p.image_url, 'bottom');
+      }
+      if (!cancelled) setImageColors(colors);
+    })();
+    return () => { cancelled = true; };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [related.map((p) => p.id).join(',')]);
+
+  if (!projects || projects.length === 0) return null;
   if (sameClient.length === 0 && sameCategory.length === 0) return null;
 
   return (
     <div className="mt-16 pt-12 border-t border-foreground/10 space-y-10">
-      <Row label={`More from ${current.client}`} projects={sameClient} />
-      <Row label={`More in ${current.category}`} projects={sameCategory} />
+      <Row label={`More from ${current.client}`} projects={sameClient} imageColors={imageColors} />
+      <Row label={`More in ${current.category}`} projects={sameCategory} imageColors={imageColors} />
     </div>
   );
 }
