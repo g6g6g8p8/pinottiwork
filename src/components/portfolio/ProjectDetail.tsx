@@ -344,15 +344,6 @@ export default function ProjectDetail() {
                       {project.role}
                     </Link>
                   )}
-                  {project.client && (
-                    <Link
-                      to="/clients/$client"
-                      params={{ client: toSlug(project.client) }}
-                      className="px-3 py-1 bg-white/15 hover:bg-white/25 backdrop-blur-sm rounded-full text-[12px] text-white/90 transition-colors"
-                    >
-                      {project.client}
-                    </Link>
-                  )}
                 </div>
               </div>
             </div>
