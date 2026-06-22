@@ -1,8 +1,9 @@
+import { useEffect, useState } from 'react';
 import { Link } from '@tanstack/react-router';
 import { motion } from 'framer-motion';
 import { useProjects } from '../../hooks/useProjects';
 import type { Project } from '../../hooks/useProject';
-import { toSlug } from '../../lib/portfolio-utils';
+import { toSlug, getImageColor } from '../../lib/portfolio-utils';
 import guinnessAsset from '../../assets/awards/guinness.png.asset.json';
 
 interface Props {
