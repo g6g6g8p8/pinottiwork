@@ -191,7 +191,7 @@ export default function ProjectDetail() {
         return (
           <div className="space-y-4">
             {section.content.title && (
-              <h3 className="text-sf-headline">{section.content.title}</h3>
+              <h2 className="text-sf-headline">{section.content.title}</h2>
             )}
             <div className="relative w-full overflow-hidden rounded-sf-xl">
               {isVideoUrl ? (

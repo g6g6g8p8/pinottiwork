@@ -56,9 +56,9 @@ function MiniCard({ project, imageColor }: { project: Project; imageColor?: stri
           <p className="text-[10px] font-semibold uppercase tracking-[.07em] text-white/60 mb-1">
             {project.category}
           </p>
-          <h3 className="text-[15px] font-bold leading-tight tracking-[-0.01em] text-white">
+          <h2 className="text-[15px] font-bold leading-tight tracking-[-0.01em] text-white">
             {project.title}
-          </h3>
+          </h2>
         </div>
       </div>
     </Link>
