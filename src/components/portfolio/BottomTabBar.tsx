@@ -66,7 +66,7 @@ export default function BottomTabBar() {
                   placeholder="Projects, clients, categories..."
                   value={searchQuery}
                   onChange={(e) => handleSearch(e.target.value)}
-                  className="flex-1 text-[17px] bg-transparent outline-none placeholder:text-foreground/30"
+                  className="flex-1 text-[17px] bg-transparent outline-none placeholder:text-foreground/60"
                 />
                 {searchQuery ? (
                   <button
