@@ -206,7 +206,7 @@ export default function Sidebar() {
           }
           className="w-full h-8 pl-8 pr-8
             bg-foreground/10
-            text-[13px] placeholder:text-foreground/40
+            text-[13px] placeholder:text-foreground/60
             border border-transparent focus:border-border/30
             outline-none transition-all rounded-sf-sm"
         />
