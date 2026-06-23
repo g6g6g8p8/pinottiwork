@@ -54,6 +54,7 @@ export default function Home() {
           </div>
           <Link
             to="/about"
+            aria-label="About"
             className="w-9 h-9 flex items-center justify-center rounded-full overflow-hidden shrink-0"
             {...aboutPrefetch}
           >
