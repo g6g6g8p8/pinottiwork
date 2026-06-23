@@ -14,6 +14,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as RolesRoleRouteImport } from './routes/roles.$role'
 import { Route as ProjectsSlugRouteImport } from './routes/projects.$slug'
+import { Route as GuidesCreativeDirectorPortfolioRouteImport } from './routes/guides.creative-director-portfolio'
 import { Route as ClientsClientRouteImport } from './routes/clients.$client'
 import { Route as CategoriesCategoryRouteImport } from './routes/categories.$category'
 
@@ -42,6 +43,12 @@ const ProjectsSlugRoute = ProjectsSlugRouteImport.update({
   path: '/projects/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GuidesCreativeDirectorPortfolioRoute =
+  GuidesCreativeDirectorPortfolioRouteImport.update({
+    id: '/guides/creative-director-portfolio',
+    path: '/guides/creative-director-portfolio',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ClientsClientRoute = ClientsClientRouteImport.update({
   id: '/clients/$client',
   path: '/clients/$client',
@@ -59,6 +66,7 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/categories/$category': typeof CategoriesCategoryRoute
   '/clients/$client': typeof ClientsClientRoute
+  '/guides/creative-director-portfolio': typeof GuidesCreativeDirectorPortfolioRoute
   '/projects/$slug': typeof ProjectsSlugRoute
   '/roles/$role': typeof RolesRoleRoute
 }
@@ -68,6 +76,7 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/categories/$category': typeof CategoriesCategoryRoute
   '/clients/$client': typeof ClientsClientRoute
+  '/guides/creative-director-portfolio': typeof GuidesCreativeDirectorPortfolioRoute
   '/projects/$slug': typeof ProjectsSlugRoute
   '/roles/$role': typeof RolesRoleRoute
 }
@@ -78,6 +87,7 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/categories/$category': typeof CategoriesCategoryRoute
   '/clients/$client': typeof ClientsClientRoute
+  '/guides/creative-director-portfolio': typeof GuidesCreativeDirectorPortfolioRoute
   '/projects/$slug': typeof ProjectsSlugRoute
   '/roles/$role': typeof RolesRoleRoute
 }
@@ -89,6 +99,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/categories/$category'
     | '/clients/$client'
+    | '/guides/creative-director-portfolio'
     | '/projects/$slug'
     | '/roles/$role'
   fileRoutesByTo: FileRoutesByTo
@@ -98,6 +109,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/categories/$category'
     | '/clients/$client'
+    | '/guides/creative-director-portfolio'
     | '/projects/$slug'
     | '/roles/$role'
   id:
@@ -107,6 +119,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/categories/$category'
     | '/clients/$client'
+    | '/guides/creative-director-portfolio'
     | '/projects/$slug'
     | '/roles/$role'
   fileRoutesById: FileRoutesById
@@ -117,6 +130,7 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   CategoriesCategoryRoute: typeof CategoriesCategoryRoute
   ClientsClientRoute: typeof ClientsClientRoute
+  GuidesCreativeDirectorPortfolioRoute: typeof GuidesCreativeDirectorPortfolioRoute
   ProjectsSlugRoute: typeof ProjectsSlugRoute
   RolesRoleRoute: typeof RolesRoleRoute
 }
@@ -158,6 +172,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/guides/creative-director-portfolio': {
+      id: '/guides/creative-director-portfolio'
+      path: '/guides/creative-director-portfolio'
+      fullPath: '/guides/creative-director-portfolio'
+      preLoaderRoute: typeof GuidesCreativeDirectorPortfolioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/clients/$client': {
       id: '/clients/$client'
       path: '/clients/$client'
@@ -181,6 +202,7 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   CategoriesCategoryRoute: CategoriesCategoryRoute,
   ClientsClientRoute: ClientsClientRoute,
+  GuidesCreativeDirectorPortfolioRoute: GuidesCreativeDirectorPortfolioRoute,
   ProjectsSlugRoute: ProjectsSlugRoute,
   RolesRoleRoute: RolesRoleRoute,
 }
