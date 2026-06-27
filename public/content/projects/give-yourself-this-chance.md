@@ -3,7 +3,7 @@ id: 2
 title: Give yourself this chance
 slug: give-yourself-this-chance
 client: Mitsubishi Motors
-role: Art Director
+role: Senior Art Director
 category: Advertising
 tags: []
 order: 4
