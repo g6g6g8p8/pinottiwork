@@ -2,7 +2,7 @@
 title: 'Every Mit Mile Counts'
 slug: mit-cada-km-mit-conta
 client: Mitsubishi Motors
-role: Art Director
+role: Senior Art Director
 category: Social Impact
 tags:
   - Brand Purpose
