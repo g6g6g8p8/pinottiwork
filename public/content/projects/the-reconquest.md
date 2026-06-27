@@ -3,7 +3,7 @@ id: 1
 title: The Reconquest
 slug: the-reconquest
 client: Mitsubishi Motors
-role: Art Director
+role: Senior Art Director
 category: Branded Content
 tags: []
 order: 3
