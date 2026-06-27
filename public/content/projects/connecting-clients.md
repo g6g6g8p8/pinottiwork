@@ -3,7 +3,7 @@ id: 3
 title: Connecting Clients
 slug: connecting-clients
 client: Next IP
-role: Art Director
+role: Senior Art Director
 category: Branding
 tags: []
 order: 2
