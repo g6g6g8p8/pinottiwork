@@ -3,7 +3,7 @@ id: 4
 title: "Alternative Investments Platform"
 slug: "alternative-investments"
 client: "Jive Investments"
-role: "Art Director"
+role: Senior Art Director
 category: "Branding"
 tags: []
 order: 3
