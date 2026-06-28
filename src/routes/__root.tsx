@@ -94,6 +94,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:image", content: `https://pinotti.work${socialShareAsset.url}` },
       { name: "twitter:image", content: `https://pinotti.work${socialShareAsset.url}` },
       { property: "og:site_name", content: "Giulio Pinotti" },
+      { name: "google-site-verification", content: "UjJ4s-2gMihLb32qblR78-JPJJdQdxgHfYWpiDk82K8" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
