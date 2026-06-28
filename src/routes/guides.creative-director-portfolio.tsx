@@ -7,7 +7,7 @@ const OG_IMAGE = `${SITE}${socialShareAsset.url}`;
 
 const TITLE = "How to Build a Creative Director Portfolio";
 const DESCRIPTION =
-  "A working Creative Director's guide to building a portfolio that gets hired — what to include, how to sequence projects, and portfolio examples that earn second meetings.";
+  "A working Creative Director's guide to building a portfolio that gets hired — what to include, how to sequence projects, and examples that win meetings.";
 
 export const Route = createFileRoute("/guides/creative-director-portfolio")({
   head: () => ({
