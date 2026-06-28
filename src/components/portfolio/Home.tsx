@@ -66,10 +66,10 @@ export default function Home() {
         </motion.div>
       </div>
 
-      {/* Big title desktop */}
+      {/* Big title */}
       <motion.div
         ref={titleRef}
-        className="hidden lg:block pt-3 pb-6"
+        className="pt-3 pb-6"
         style={{ opacity: titleOpacity, y: titleY }}
       >
         <motion.h1
@@ -77,7 +77,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.35, ease: 'easeOut', delay: 0.05 }}
-          className="text-[34px] xl:text-[40px] font-bold tracking-[-0.03em] leading-tight"
+          className="text-[28px] md:text-[34px] xl:text-[40px] font-bold tracking-[-0.03em] leading-tight"
         >
           {selectedCategory === 'all' || !selectedCategory
             ? 'Selected Works'
