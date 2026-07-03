@@ -13,7 +13,7 @@ export default function SidebarAwards() {
     <Tooltip.Provider delayDuration={150}>
       <div
         aria-label="Awards"
-        className="flex flex-wrap items-center justify-start gap-x-3 gap-y-2 px-1 pb-3"
+        className="flex flex-col items-start gap-3 px-1 pb-3"
       >
         {awards.map((award, i) => {
           // Per-award size overrides — +25% vs previous baseline.
