@@ -341,7 +341,7 @@ export default function Sidebar() {
       <div className="mt-6 pt-4 border-t border-foreground/10">
         <Link
           to="/about"
-          className="flex items-center gap-3 group px-1 py-1 rounded-sf-md
+          className="flex flex-col items-center gap-2 group px-1 py-2 rounded-sf-md
             hover:bg-foreground/5 transition-colors"
         >
           <div className="w-9 h-9 rounded-full overflow-hidden shrink-0
