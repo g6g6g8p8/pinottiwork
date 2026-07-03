@@ -92,7 +92,6 @@ export default function SidebarAwards() {
               </Tooltip.Content>
             </Tooltip.Portal>
           </Tooltip.Root>
-          {isGuinness ? <div aria-hidden className="basis-full h-0" /> : null}
           </Fragment>
           );
         })}
