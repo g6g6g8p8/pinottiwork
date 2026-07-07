@@ -1,22 +1,59 @@
-## Objetivo
+# Integração AirOps
 
-Mesmo overlay tingido (amostrado da região `'bottom'` da imagem) em todo lugar que renderiza card de projeto: home, busca/filtros (categoria, cliente, role), relacionados dentro do modal e página de detalhe. Hoje só a home e a página de detalhe tingem — e ainda com regiões diferentes.
+Conectar o site ao AirOps (workflow `69569`) enviando eventos automáticos em background, mais um endpoint de webhook autorizado para o AirOps chamar de volta.
 
-## Mudanças
+## 1. Secrets no backend
 
-1. **`src/components/portfolio/FeaturedProjects.tsx`** (home)
-   - Linha 47: trocar `getImageColor(p.image_url, 'left')` por `getImageColor(p.image_url, 'bottom')`.
+- `AIROPS_API_KEY` — a chave que você já compartilhou (`dq3Q…SWqlGWB`), salva como secret do backend. Nunca vai para o bundle do cliente.
+- `AIROPS_WEBHOOK_SECRET` — token aleatório gerado automaticamente. Você copia e cola no AirOps como header `x-airops-secret` (ou similar) para autorizar callbacks.
 
-2. **`src/components/portfolio/ProjectList.tsx`** (rotas `/categories/...`, `/clients/...`, `/roles/...`)
-   - Importar `getImageColor` de `../../lib/portfolio-utils`.
-   - Adicionar `useState<Record<number,string>>` para `imageColors` e um `useEffect` que percorre `matches` e popula via `getImageColor(p.image_url, 'bottom')` (mesmo padrão do `FeaturedProjects`, com flag `cancelled`).
-   - Substituir o `<div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent ...">` (linha 101) por um `<div className="absolute inset-0 pointer-events-none" style={{ background: imageColors[p.id] ? \`linear-gradient(to top, ${c}ee 0%, ${c}44 55%, transparent 100%)\` : 'linear-gradient(to top, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.3) 55%, transparent 100%)' }} />`.
+## 2. Endpoints no site
 
-3. **`src/components/portfolio/RelatedProjects.tsx`** (carrossel de relacionados dentro do modal)
-   - Mesma mudança que `ProjectList`: extrair `imageColors` via `getImageColor(url, 'bottom')` e trocar o gradiente fixo da linha 46 pelo gradiente tingido com fallback preto idêntico.
+Todos criados como server routes TanStack Start:
 
-4. **`src/components/portfolio/ProjectDetail.tsx`** — sem alteração; já usa `'bottom'` e o mesmo gradiente. Fica de referência visual.
+- `POST /api/public/airops-track` — recebe eventos do navegador (fire-and-forget via `sendBeacon`), acrescenta metadados de servidor (IP, país via headers) e faz `POST` para AirOps:
+  - URL: `https://app.airops.com/public_api/airops_apps/69569/execute_stream_async` (assíncrono, não bloqueia)
+  - Header: `Authorization: Bearer $AIROPS_API_KEY`
+  - Body: `{ inputs: { event, path, referrer, userAgent, locale, screen, timestamp, sessionId } }`
+  - Responde `204` sempre; erros só vão pro log.
+- `POST /api/public/airops-webhook` — endpoint que o AirOps chama de volta com resultados de workflow. Valida `x-airops-secret` (compare timing-safe) antes de processar. Por enquanto só loga o payload; podemos plugar em algo depois (ex.: gravar em tabela, disparar email).
 
-## Resultado
+## 3. Eventos disparados pelo site
 
-O card do "Live de Batom por Elas" (e de todos os outros) usa exatamente o mesmo tom avermelhado em qualquer lugar do site: home, listagens filtradas, relacionados e na hero do modal de detalhe.
+Um pequeno client tracker (`src/lib/airops.ts` + hook em `__root.tsx`) envia:
+
+- `page_view` — a cada mudança de rota (via `useRouterState`).
+- `project_view` — ao abrir `/projects/$slug` (inclui slug).
+- `outbound_click` — clique em link externo (LinkedIn, email, etc.).
+
+Todos com `sessionId` gerado em `sessionStorage` para correlacionar. Chamadas usam `navigator.sendBeacon` quando disponível para não bloquear navegação.
+
+## 4. Verificação
+
+- Build local passa sem erro.
+- No preview: abrir DevTools → Network → confirmar `POST /api/public/airops-track` em cada navegação, status `204`, e que o header `Authorization` NÃO aparece no request do browser (fica no server).
+- Confirmar no dashboard AirOps que o workflow `69569` recebeu execuções.
+- Testar webhook com `curl` usando o secret certo e um secret errado — o certo responde `200`, o errado `401`.
+
+## Detalhes técnicos
+
+```
+src/
+  lib/
+    airops.server.ts        # fetch para AirOps + tipos
+    airops-track.ts         # client helper (sendBeacon/fetch)
+  routes/api/public/
+    airops-track.ts         # POST recebe evento e encaminha
+    airops-webhook.ts       # POST recebe callback autorizado
+  routes/__root.tsx         # useEffect que dispara page_view por rota
+```
+
+- `airops.server.ts` lê `process.env.AIROPS_API_KEY` **dentro** do handler (não no top-level) — regra do Workers runtime.
+- Webhook usa `timingSafeEqual` sobre o header `x-airops-secret` vs `process.env.AIROPS_WEBHOOK_SECRET`.
+- CORS não é necessário: track é chamado same-origin; webhook é server-to-server.
+- Nada de PII sensível é enviado — só metadados de navegação já visíveis no GA.
+
+## O que você precisa fazer depois
+
+1. No AirOps, configurar o workflow `69569` para chamar de volta em `https://pinotti.work/api/public/airops-webhook` com o header `x-airops-secret: <valor que vou te mostrar>`.
+2. Me dizer se quer eventos adicionais (ex.: envio de formulário de contato, download de CV) além dos três listados.
