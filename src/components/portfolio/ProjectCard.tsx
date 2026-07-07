@@ -86,7 +86,8 @@ export default function ProjectCard({ project, imageColor, className, forceAspec
       variants={imageVariants}
       loading={priority ? 'eager' : 'lazy'}
       fetchPriority={priority ? 'high' : 'auto'}
-      sizes="(max-width: 768px) 100vw, 50vw"
+      decoding={priority ? 'sync' : 'async'}
+      sizes={priority && forceAspect === 'hero' ? '100vw' : '(max-width: 768px) 100vw, 50vw'}
     />
   );
 
