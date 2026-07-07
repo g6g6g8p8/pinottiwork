@@ -24,7 +24,15 @@ export const Route = createFileRoute("/")({
       { property: "og:image", content: OG_IMAGE },
       { name: "twitter:image", content: OG_IMAGE },
     ],
-    links: [{ rel: "canonical", href: `${SITE}/` }],
+    links: [
+      { rel: "canonical", href: `${SITE}/` },
+      {
+        rel: "preload",
+        as: "image",
+        href: "/__l5e/assets-v1/cde1f0aa-0b9d-4e82-8785-5791b785100a/15-b_zhcxb5.png",
+        fetchpriority: "high",
+      },
+    ],
   }),
   component: Home,
 });
