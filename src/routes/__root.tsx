@@ -16,6 +16,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SearchProvider } from "../context/SearchContext";
 import Sidebar from "../components/portfolio/Sidebar";
 import BottomTabBar from "../components/portfolio/BottomTabBar";
+import { trackAirOps } from "../lib/airops-track";
 
 function NotFoundComponent() {
   return (
@@ -148,6 +149,35 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const hideSidebar = pathname.startsWith("/about") || pathname.startsWith("/projects/");
+
+  useEffect(() => {
+    const projectMatch = pathname.match(/^\/projects\/([^/]+)/);
+    if (projectMatch) {
+      trackAirOps({ event: "project_view", path: pathname, slug: projectMatch[1] });
+    } else {
+      trackAirOps({ event: "page_view", path: pathname });
+    }
+  }, [pathname]);
+
+  useEffect(() => {
+    const onClick = (e: MouseEvent) => {
+      const target = (e.target as HTMLElement | null)?.closest("a");
+      if (!target) return;
+      const href = target.getAttribute("href");
+      if (!href) return;
+      try {
+        const url = new URL(href, window.location.origin);
+        if (url.origin !== window.location.origin) {
+          trackAirOps({ event: "outbound_click", path: window.location.pathname, href: url.href });
+        }
+      } catch {
+        // ignore malformed hrefs
+      }
+    };
+    document.addEventListener("click", onClick, { capture: true });
+    return () => document.removeEventListener("click", onClick, { capture: true } as EventListenerOptions);
+  }, []);
+
 
   return (
     <QueryClientProvider client={queryClient}>

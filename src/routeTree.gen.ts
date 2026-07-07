@@ -17,6 +17,8 @@ import { Route as ProjectsSlugRouteImport } from './routes/projects.$slug'
 import { Route as GuidesCreativeDirectorPortfolioRouteImport } from './routes/guides.creative-director-portfolio'
 import { Route as ClientsClientRouteImport } from './routes/clients.$client'
 import { Route as CategoriesCategoryRouteImport } from './routes/categories.$category'
+import { Route as ApiPublicAiropsWebhookRouteImport } from './routes/api/public/airops-webhook'
+import { Route as ApiPublicAiropsTrackRouteImport } from './routes/api/public/airops-track'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
@@ -59,6 +61,16 @@ const CategoriesCategoryRoute = CategoriesCategoryRouteImport.update({
   path: '/categories/$category',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPublicAiropsWebhookRoute = ApiPublicAiropsWebhookRouteImport.update({
+  id: '/api/public/airops-webhook',
+  path: '/api/public/airops-webhook',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPublicAiropsTrackRoute = ApiPublicAiropsTrackRouteImport.update({
+  id: '/api/public/airops-track',
+  path: '/api/public/airops-track',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -69,6 +81,8 @@ export interface FileRoutesByFullPath {
   '/guides/creative-director-portfolio': typeof GuidesCreativeDirectorPortfolioRoute
   '/projects/$slug': typeof ProjectsSlugRoute
   '/roles/$role': typeof RolesRoleRoute
+  '/api/public/airops-track': typeof ApiPublicAiropsTrackRoute
+  '/api/public/airops-webhook': typeof ApiPublicAiropsWebhookRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -79,6 +93,8 @@ export interface FileRoutesByTo {
   '/guides/creative-director-portfolio': typeof GuidesCreativeDirectorPortfolioRoute
   '/projects/$slug': typeof ProjectsSlugRoute
   '/roles/$role': typeof RolesRoleRoute
+  '/api/public/airops-track': typeof ApiPublicAiropsTrackRoute
+  '/api/public/airops-webhook': typeof ApiPublicAiropsWebhookRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -90,6 +106,8 @@ export interface FileRoutesById {
   '/guides/creative-director-portfolio': typeof GuidesCreativeDirectorPortfolioRoute
   '/projects/$slug': typeof ProjectsSlugRoute
   '/roles/$role': typeof RolesRoleRoute
+  '/api/public/airops-track': typeof ApiPublicAiropsTrackRoute
+  '/api/public/airops-webhook': typeof ApiPublicAiropsWebhookRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -102,6 +120,8 @@ export interface FileRouteTypes {
     | '/guides/creative-director-portfolio'
     | '/projects/$slug'
     | '/roles/$role'
+    | '/api/public/airops-track'
+    | '/api/public/airops-webhook'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -112,6 +132,8 @@ export interface FileRouteTypes {
     | '/guides/creative-director-portfolio'
     | '/projects/$slug'
     | '/roles/$role'
+    | '/api/public/airops-track'
+    | '/api/public/airops-webhook'
   id:
     | '__root__'
     | '/'
@@ -122,6 +144,8 @@ export interface FileRouteTypes {
     | '/guides/creative-director-portfolio'
     | '/projects/$slug'
     | '/roles/$role'
+    | '/api/public/airops-track'
+    | '/api/public/airops-webhook'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -133,6 +157,8 @@ export interface RootRouteChildren {
   GuidesCreativeDirectorPortfolioRoute: typeof GuidesCreativeDirectorPortfolioRoute
   ProjectsSlugRoute: typeof ProjectsSlugRoute
   RolesRoleRoute: typeof RolesRoleRoute
+  ApiPublicAiropsTrackRoute: typeof ApiPublicAiropsTrackRoute
+  ApiPublicAiropsWebhookRoute: typeof ApiPublicAiropsWebhookRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -193,6 +219,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CategoriesCategoryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/airops-webhook': {
+      id: '/api/public/airops-webhook'
+      path: '/api/public/airops-webhook'
+      fullPath: '/api/public/airops-webhook'
+      preLoaderRoute: typeof ApiPublicAiropsWebhookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/airops-track': {
+      id: '/api/public/airops-track'
+      path: '/api/public/airops-track'
+      fullPath: '/api/public/airops-track'
+      preLoaderRoute: typeof ApiPublicAiropsTrackRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -205,17 +245,9 @@ const rootRouteChildren: RootRouteChildren = {
   GuidesCreativeDirectorPortfolioRoute: GuidesCreativeDirectorPortfolioRoute,
   ProjectsSlugRoute: ProjectsSlugRoute,
   RolesRoleRoute: RolesRoleRoute,
+  ApiPublicAiropsTrackRoute: ApiPublicAiropsTrackRoute,
+  ApiPublicAiropsWebhookRoute: ApiPublicAiropsWebhookRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
