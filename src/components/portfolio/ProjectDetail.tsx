@@ -240,7 +240,7 @@ export default function ProjectDetail() {
             {stats.map((stat, i) => (
               <div key={i} className="flex flex-col items-center justify-center px-3 py-6 md:px-3 md:py-8 min-h-[140px] md:min-h-[180px] text-center first:pl-0 last:pr-0">
                 <span className="text-[36px] md:text-[44px] font-bold leading-none tracking-[-0.03em] text-foreground">{stat.value}</span>
-                <span className="mt-2 text-[11px] font-semibold uppercase tracking-[.07em] text-foreground/50 whitespace-pre-line">{stat.label}</span>
+                <span className="mt-2 text-[11px] font-semibold uppercase tracking-[.07em] text-foreground/70 whitespace-pre-line">{stat.label}</span>
               </div>
             ))}
           </div>

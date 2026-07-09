@@ -59,7 +59,7 @@ export default function BottomTabBar() {
                 shadow-2xl overflow-hidden"
             >
               <div className="flex items-center gap-3 px-4 py-4 border-b border-foreground/10">
-                <Search size={17} className="text-foreground/40 shrink-0" />
+                <Search size={17} className="text-foreground/70 shrink-0" />
                 <input
                   ref={inputRef}
                   type="text"
@@ -71,7 +71,7 @@ export default function BottomTabBar() {
                 {searchQuery ? (
                   <button
                     onClick={() => handleSearch('')}
-                    className="text-[13px] font-medium text-foreground/50 hover:text-foreground shrink-0"
+                    className="text-[13px] font-medium text-foreground/70 hover:text-foreground shrink-0"
                   >
                     Clear
                   </button>
@@ -87,7 +87,7 @@ export default function BottomTabBar() {
 
               {!searchQuery && (
                 <div className="px-4 py-3">
-                  <p className="text-[11px] font-semibold uppercase tracking-[.06em] text-foreground/40 mb-2">
+                  <p className="text-[11px] font-semibold uppercase tracking-[.06em] text-foreground/70 mb-2">
                     Categories
                   </p>
                   <div className="flex flex-wrap gap-2">
@@ -145,7 +145,7 @@ export default function BottomTabBar() {
                   whileTap={{ scale: 0.9 }}
                   className={`shrink-0 flex flex-col items-center justify-center gap-[3px] px-3 py-1
                     transition-all duration-200
-                    ${isActive ? 'text-foreground' : 'text-foreground/40'}`}
+                    ${isActive ? 'text-foreground' : 'text-foreground/70'}`}
                 >
                   <Icon size={22} strokeWidth={isActive ? 2.2 : 1.6} />
                   <span className="text-[10px] font-medium leading-none whitespace-nowrap">

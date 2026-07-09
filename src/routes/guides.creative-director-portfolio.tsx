@@ -69,7 +69,7 @@ function GuidePage() {
       </div>
 
       <article className="max-w-[720px] mx-auto px-5 lg:px-0 pt-6 pb-24">
-        <p className="text-[12px] uppercase tracking-[.12em] font-semibold text-foreground/50 mb-4">
+        <p className="text-[12px] uppercase tracking-[.12em] font-semibold text-foreground/70 mb-4">
           Guide
         </p>
         <h1 className="text-[34px] md:text-[44px] font-bold tracking-[-0.03em] leading-[1.05] mb-6">
