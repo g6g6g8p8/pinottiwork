@@ -14,6 +14,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as RolesRoleRouteImport } from './routes/roles.$role'
 import { Route as ProjectsSlugRouteImport } from './routes/projects.$slug'
+import { Route as GuidesPortfolioExamplesRouteImport } from './routes/guides.portfolio-examples'
 import { Route as GuidesCreativeDirectorPortfolioRouteImport } from './routes/guides.creative-director-portfolio'
 import { Route as ClientsClientRouteImport } from './routes/clients.$client'
 import { Route as CategoriesCategoryRouteImport } from './routes/categories.$category'
@@ -43,6 +44,11 @@ const RolesRoleRoute = RolesRoleRouteImport.update({
 const ProjectsSlugRoute = ProjectsSlugRouteImport.update({
   id: '/projects/$slug',
   path: '/projects/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GuidesPortfolioExamplesRoute = GuidesPortfolioExamplesRouteImport.update({
+  id: '/guides/portfolio-examples',
+  path: '/guides/portfolio-examples',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GuidesCreativeDirectorPortfolioRoute =
@@ -79,6 +85,7 @@ export interface FileRoutesByFullPath {
   '/categories/$category': typeof CategoriesCategoryRoute
   '/clients/$client': typeof ClientsClientRoute
   '/guides/creative-director-portfolio': typeof GuidesCreativeDirectorPortfolioRoute
+  '/guides/portfolio-examples': typeof GuidesPortfolioExamplesRoute
   '/projects/$slug': typeof ProjectsSlugRoute
   '/roles/$role': typeof RolesRoleRoute
   '/api/public/airops-track': typeof ApiPublicAiropsTrackRoute
@@ -91,6 +98,7 @@ export interface FileRoutesByTo {
   '/categories/$category': typeof CategoriesCategoryRoute
   '/clients/$client': typeof ClientsClientRoute
   '/guides/creative-director-portfolio': typeof GuidesCreativeDirectorPortfolioRoute
+  '/guides/portfolio-examples': typeof GuidesPortfolioExamplesRoute
   '/projects/$slug': typeof ProjectsSlugRoute
   '/roles/$role': typeof RolesRoleRoute
   '/api/public/airops-track': typeof ApiPublicAiropsTrackRoute
@@ -104,6 +112,7 @@ export interface FileRoutesById {
   '/categories/$category': typeof CategoriesCategoryRoute
   '/clients/$client': typeof ClientsClientRoute
   '/guides/creative-director-portfolio': typeof GuidesCreativeDirectorPortfolioRoute
+  '/guides/portfolio-examples': typeof GuidesPortfolioExamplesRoute
   '/projects/$slug': typeof ProjectsSlugRoute
   '/roles/$role': typeof RolesRoleRoute
   '/api/public/airops-track': typeof ApiPublicAiropsTrackRoute
@@ -118,6 +127,7 @@ export interface FileRouteTypes {
     | '/categories/$category'
     | '/clients/$client'
     | '/guides/creative-director-portfolio'
+    | '/guides/portfolio-examples'
     | '/projects/$slug'
     | '/roles/$role'
     | '/api/public/airops-track'
@@ -130,6 +140,7 @@ export interface FileRouteTypes {
     | '/categories/$category'
     | '/clients/$client'
     | '/guides/creative-director-portfolio'
+    | '/guides/portfolio-examples'
     | '/projects/$slug'
     | '/roles/$role'
     | '/api/public/airops-track'
@@ -142,6 +153,7 @@ export interface FileRouteTypes {
     | '/categories/$category'
     | '/clients/$client'
     | '/guides/creative-director-portfolio'
+    | '/guides/portfolio-examples'
     | '/projects/$slug'
     | '/roles/$role'
     | '/api/public/airops-track'
@@ -155,6 +167,7 @@ export interface RootRouteChildren {
   CategoriesCategoryRoute: typeof CategoriesCategoryRoute
   ClientsClientRoute: typeof ClientsClientRoute
   GuidesCreativeDirectorPortfolioRoute: typeof GuidesCreativeDirectorPortfolioRoute
+  GuidesPortfolioExamplesRoute: typeof GuidesPortfolioExamplesRoute
   ProjectsSlugRoute: typeof ProjectsSlugRoute
   RolesRoleRoute: typeof RolesRoleRoute
   ApiPublicAiropsTrackRoute: typeof ApiPublicAiropsTrackRoute
@@ -196,6 +209,13 @@ declare module '@tanstack/react-router' {
       path: '/projects/$slug'
       fullPath: '/projects/$slug'
       preLoaderRoute: typeof ProjectsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/guides/portfolio-examples': {
+      id: '/guides/portfolio-examples'
+      path: '/guides/portfolio-examples'
+      fullPath: '/guides/portfolio-examples'
+      preLoaderRoute: typeof GuidesPortfolioExamplesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/guides/creative-director-portfolio': {
@@ -243,6 +263,7 @@ const rootRouteChildren: RootRouteChildren = {
   CategoriesCategoryRoute: CategoriesCategoryRoute,
   ClientsClientRoute: ClientsClientRoute,
   GuidesCreativeDirectorPortfolioRoute: GuidesCreativeDirectorPortfolioRoute,
+  GuidesPortfolioExamplesRoute: GuidesPortfolioExamplesRoute,
   ProjectsSlugRoute: ProjectsSlugRoute,
   RolesRoleRoute: RolesRoleRoute,
   ApiPublicAiropsTrackRoute: ApiPublicAiropsTrackRoute,
@@ -251,13 +272,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}

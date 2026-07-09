@@ -186,7 +186,7 @@ export default function Sidebar() {
 
       {/* Search */}
       <div className="relative mb-5">
-        <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-foreground/40 pointer-events-none z-10" />
+        <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-foreground/70 pointer-events-none z-10" />
         <input
           ref={inputRef}
           type="text"
@@ -213,7 +213,7 @@ export default function Sidebar() {
         {searchQuery && (
           <button
             onClick={() => setSearchQuery('')}
-            className="absolute right-2.5 top-1/2 -translate-y-1/2 text-foreground/40 hover:text-foreground/70 z-10"
+            className="absolute right-2.5 top-1/2 -translate-y-1/2 text-foreground/70 hover:text-foreground/70 z-10"
           >
             <X size={12} />
           </button>
@@ -234,7 +234,7 @@ export default function Sidebar() {
                 overflow-hidden"
             >
               <div className="px-3 pt-2.5 pb-1.5">
-                <p className="text-[10px] font-semibold uppercase tracking-[.07em] text-foreground/40">
+                <p className="text-[10px] font-semibold uppercase tracking-[.07em] text-foreground/70">
                   {searchQuery.trim()
                     ? `${suggestions.length} result${suggestions.length !== 1 ? 's' : ''}`
                     : 'Suggestions'}
@@ -242,7 +242,7 @@ export default function Sidebar() {
               </div>
 
               {suggestions.length === 0 ? (
-                <div className="px-3 pb-3 text-[12px] text-foreground/50">
+                <div className="px-3 pb-3 text-[12px] text-foreground/70">
                   No matches.
                 </div>
               ) : (
@@ -271,7 +271,7 @@ export default function Sidebar() {
                               {renderHighlight(s.label)}
                             </p>
                             {s.subtitle && (
-                              <p className="text-[11px] text-foreground/40 truncate leading-tight mt-0.5">
+                              <p className="text-[11px] text-foreground/70 truncate leading-tight mt-0.5">
                                 {s.subtitle}
                               </p>
                             )}
@@ -296,7 +296,7 @@ export default function Sidebar() {
 
       {isHome && (
         <nav>
-          <p className="text-[11px] font-semibold uppercase tracking-[.07em] text-foreground/40 mb-1.5 px-2">
+          <p className="text-[11px] font-semibold uppercase tracking-[.07em] text-foreground/70 mb-1.5 px-2">
             Work
           </p>
           <ul className="space-y-0.5">
@@ -321,7 +321,7 @@ export default function Sidebar() {
                       size={15}
                       strokeWidth={isActive ? 2.2 : 1.8}
                       style={isActive && activeColor ? { color: activeColor } : {}}
-                      className={!isActive ? 'text-foreground/50' : ''}
+                      className={!isActive ? 'text-foreground/70' : ''}
                     />
                     <span className={`text-[13px] flex-1 ${isActive ? 'font-medium' : ''}`}>
                       {cat.name}
@@ -354,7 +354,7 @@ export default function Sidebar() {
           </div>
           <div className="min-w-0">
             <p className="text-[13px] font-semibold leading-tight truncate">Giulio Pinotti</p>
-            <p className="text-[11px] text-foreground/50 leading-tight truncate">Creative Director</p>
+            <p className="text-[11px] text-foreground/70 leading-tight truncate">Creative Director</p>
           </div>
         </Link>
       </div>

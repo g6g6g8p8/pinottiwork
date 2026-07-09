@@ -90,7 +90,7 @@ export default function FeaturedProjects() {
     return (
       <div className="flex flex-col items-center justify-center py-24 text-center">
         <p className="text-[17px] font-semibold mb-1">No results</p>
-        <p className="text-[14px] text-foreground/50">Try a different search or category.</p>
+        <p className="text-[14px] text-foreground/70">Try a different search or category.</p>
       </div>
     );
   }

@@ -162,7 +162,7 @@ export default function ProjectCard({ project, imageColor, className, forceAspec
 
         {effectiveLayout === 'below' && (
           <div className="pt-premium-md">
-            <p className="text-[11px] font-semibold uppercase tracking-[.07em] text-foreground/50 mb-1">
+            <p className="text-[11px] font-semibold uppercase tracking-[.07em] text-foreground/70 mb-1">
               {project.client}
             </p>
             <h2 className="text-sf-title-3 text-foreground mb-2">{project.title}</h2>
