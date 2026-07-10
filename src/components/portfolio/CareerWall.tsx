@@ -44,7 +44,7 @@ function Card({ h }: { h: CareerHighlight }) {
 }
 
 // Card widths: -25% from original (78→58, 48→36, 32→24)
-const CARD_W = 'w-[58vw] sm:w-[36vw] lg:w-[24vw]';
+const CARD_W = 'w-[58vw] sm:w-[36vw] lg:w-[18vw] lg:min-w-[260px]';
 
 export default function CareerWall() {
   const { about } = useAbout();
