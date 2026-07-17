@@ -11,8 +11,8 @@ tags:
   - Full-Funnel
   - Content Machine
 order: 1
-hero: '/__l5e/assets-v1/cde1f0aa-0b9d-4e82-8785-5791b785100a/15-b_zhcxb5.png'
-og_image: '/__l5e/assets-v1/cde1f0aa-0b9d-4e82-8785-5791b785100a/15-b_zhcxb5.png'
+hero: '/__l5e/assets-v1/6d53fff7-2a00-4616-85d3-74c0cb972d30/mkb-hero.mp4'
+og_image: '/__l5e/assets-v1/b7590514-26bc-4bda-8b12-a3dca7535808/mkb-hero.jpg'
 aspect_ratio: '9:4'
 description: >-
   The full-funnel creative system that rejuvenated the brand.
