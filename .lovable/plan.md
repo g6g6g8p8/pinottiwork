@@ -1,17 +1,25 @@
-## Plan: Adjust CareerWall card proportions on desktop
+## Problem
 
-### What to change
-- In `src/components/portfolio/CareerWall.tsx`, reduce the desktop card width so the card feels closer to a 7:6 width-to-height ratio instead of the current long rectangle.
-- Current desktop width: `lg:w-[24vw]`.
-- Proposed desktop width: `lg:w-[18vw] lg:min-w-[260px]` (≈ 278 px at 1543 px viewport, ≈ 7:6 against the 240 px min-height).
-- Leave mobile (`w-[58vw]`) and tablet (`sm:w-[36vw]`) breakpoints untouched so the mobile experience stays the same.
-- Keep `min-h-[200px] md:min-h-[240px]`, padding, typography, and gap values unchanged.
+`CareerWall` uses a sticky scroll-jack (section grows to `100svh + distance`, sticky viewport, horizontal `translateX` driven by `useScroll`) on every viewport except when `prefers-reduced-motion` is set. On mobile Safari this pattern is fragile:
 
-### Why this approach
-- The user asked for option A (reduce width) and suggested a 7:6 ratio rather than a perfect square.
-- Adding `lg:min-w-[260px]` prevents the card from becoming too narrow on smaller desktop screens (around 1024 px), where 18 vw alone would make it taller than wide.
-- The horizontal scroll distance adjusts automatically because the `distance` is measured from the track width at runtime.
+- iOS Safari's dynamic toolbar changes `svh` mid-scroll, which resets `scrollYProgress` and can wedge the sticky container.
+- On newer iPhones (iOS 17/18) the touch handling around a tall sticky section with `touchAction: pan-y` + JS-driven X often ends up "capturing" the gesture and blocks further vertical scroll — the page freezes exactly where the section pins, which matches what the user reports.
+- The in-app Instagram browser behaves slightly differently (older WebKit fork), which is why it half-works there.
+
+The scroll-jack was designed for desktop. On phones, a horizontal scroll-jack inside a vertical page is the wrong interaction anyway — thumb-scrolling a horizontal rail is more natural.
+
+## Fix
+
+Restrict the sticky scroll-jack to `lg` and up. On mobile and tablet, always render the existing "reduced motion" branch: a normal horizontal scroll strip with snap and hidden scrollbar. No JS scroll math, no sticky section, no `svh` height — so nothing can wedge iOS.
+
+### Changes in `src/components/portfolio/CareerWall.tsx`
+
+1. Detect desktop (e.g. `useEffect` + `matchMedia('(min-width: 1024px)')` → `isDesktop` state, false during SSR).
+2. Render the native horizontal-scroll branch (currently under `if (reduced)`) whenever `reduced || !isDesktop`. Extract it into a small local component or keep the early return, just widen the condition.
+3. Only run the `useScroll` / `useTransform` / `useSpring` / measurement `useEffect` path when `isDesktop && !reduced`. Guarding the effect and the sticky JSX behind that flag avoids attaching scroll listeners on mobile at all.
+4. Keep card sizing (`CARD_W`) and `Card` markup unchanged — this is purely an interaction change.
 
 ### Verification
-- Inspect the rendered card in the live preview at a desktop viewport.
-- Confirm the card is visibly less rectangular and the horizontal scroll still has enough room to reveal subsequent cards.
+
+- Desktop (≥1024px): scroll-jack still works, cards translate horizontally as the page scrolls. No visual change.
+- Mobile/tablet: section renders as a single-row horizontal scroller with snap; vertical page scroll is never intercepted; test in iOS Safari and Instagram in-app browser to confirm the page keeps scrolling past the section.

@@ -56,6 +56,18 @@ export default function CareerWall() {
 
   const [distance, setDistance] = useState(0);
   const [mounted, setMounted] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || !window.matchMedia) return;
+    const mq = window.matchMedia('(min-width: 1024px)');
+    const update = () => setIsDesktop(mq.matches);
+    update();
+    mq.addEventListener?.('change', update);
+    return () => mq.removeEventListener?.('change', update);
+  }, []);
+
+  const useScrollJack = isDesktop && !reduced;
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -67,6 +79,11 @@ export default function CareerWall() {
   const x = useSpring(xRaw, { stiffness: 80, damping: 20, mass: 0.5 });
 
   useEffect(() => {
+    if (!useScrollJack) {
+      setMounted(false);
+      setDistance(0);
+      return;
+    }
     const measure = () => {
       const vp = viewportRef.current;
       const tr = trackRef.current;
@@ -86,15 +103,16 @@ export default function CareerWall() {
       window.removeEventListener('resize', measure);
       window.removeEventListener('orientationchange', measure);
     };
-  }, [about?.career_highlights.length]);
+  }, [about?.career_highlights.length, useScrollJack]);
 
   if (!about || about.career_highlights.length === 0) return null;
 
   const highlights = about.career_highlights;
 
-  // Reduced motion fallback: native horizontal scroll with snap.
-  // scrollbar-hide keeps it clean on Windows/Chrome where scrollbars are always visible.
-  if (reduced) {
+  // Mobile/tablet + reduced motion: native horizontal scroll with snap.
+  // Avoids the sticky scroll-jack pattern which locks up on iOS Safari
+  // (dynamic toolbar + svh + touch capture wedges the page on iOS 17/18).
+  if (!useScrollJack) {
     return (
       <section aria-label="Career highlights" className="py-2 -mx-5 md:-mx-8 lg:mx-0">
         <h3 className="text-[14px] leading-[17px] font-medium opacity-60 mb-4 px-5 md:px-8 lg:px-0">
