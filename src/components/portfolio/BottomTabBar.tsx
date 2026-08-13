@@ -77,6 +77,8 @@ export default function BottomTabBar() {
                   </button>
                 ) : (
                   <button
+                    type="button"
+                    aria-label="Close search"
                     onClick={closeSearch}
                     className="w-6 h-6 rounded-full bg-foreground/10 flex items-center justify-center shrink-0"
                   >
