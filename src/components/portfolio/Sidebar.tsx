@@ -212,6 +212,8 @@ export default function Sidebar() {
         />
         {searchQuery && (
           <button
+            type="button"
+            aria-label="Clear search"
             onClick={() => setSearchQuery('')}
             className="absolute right-2.5 top-1/2 -translate-y-1/2 text-foreground/70 hover:text-foreground/70 z-10"
           >
