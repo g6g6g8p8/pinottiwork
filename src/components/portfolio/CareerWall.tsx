@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useLayoutEffect } from 'react';
 import {
   motion,
   useReducedMotion,
@@ -46,28 +46,37 @@ function Card({ h }: { h: CareerHighlight }) {
 // Card widths: -25% from original (78→58, 48→36, 32→24)
 const CARD_W = 'w-[58vw] sm:w-[36vw] lg:w-[18vw] lg:min-w-[260px]';
 
-export default function CareerWall() {
-  const { about } = useAbout();
-  const reduced = useReducedMotion();
+// Mobile/tablet: native horizontal scroll with snap.
+// Avoids the sticky scroll-jack pattern which locks up on iOS Safari.
+function MobileHighlights({ highlights }: { highlights: CareerHighlight[] }) {
+  return (
+    <section aria-label="Career highlights" className="py-2 -mx-5 md:-mx-8 lg:mx-0">
+      <h3 className="text-[14px] leading-[17px] font-medium opacity-60 mb-4 px-5 md:px-8 lg:px-0">
+        CAREER HIGHLIGHTS
+      </h3>
+      <div className="overflow-x-auto snap-x snap-mandatory px-5 md:px-8 lg:px-0 scrollbar-hide">
+        <div className="flex gap-premium-md pb-2">
+          {highlights.map((h) => (
+            <div key={h.id} className={`snap-start shrink-0 ${CARD_W}`}>
+              <Card h={h} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
+// Desktop only: sticky scroll-jack driven by vertical scroll.
+// Only mounted after hydration so the Framer Motion scroll hooks only run on the client
+// with a real DOM element and a stable layout, preventing SSR/hydration mismatch errors.
+function DesktopScrollJack({ highlights }: { highlights: CareerHighlight[] }) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const viewportRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
 
   const [distance, setDistance] = useState(0);
   const [mounted, setMounted] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(false);
-
-  useEffect(() => {
-    if (typeof window === 'undefined' || !window.matchMedia) return;
-    const mq = window.matchMedia('(min-width: 1024px)');
-    const update = () => setIsDesktop(mq.matches);
-    update();
-    mq.addEventListener?.('change', update);
-    return () => mq.removeEventListener?.('change', update);
-  }, []);
-
-  const useScrollJack = isDesktop && !reduced;
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -75,15 +84,9 @@ export default function CareerWall() {
   });
 
   const xRaw = useTransform(scrollYProgress, [0, 1], [0, -distance]);
-  // Reduced spring stiffness for smoother cross-browser rendering (esp. Firefox)
   const x = useSpring(xRaw, { stiffness: 80, damping: 20, mass: 0.5 });
 
   useEffect(() => {
-    if (!useScrollJack) {
-      setMounted(false);
-      setDistance(0);
-      return;
-    }
     const measure = () => {
       const vp = viewportRef.current;
       const tr = trackRef.current;
@@ -103,39 +106,8 @@ export default function CareerWall() {
       window.removeEventListener('resize', measure);
       window.removeEventListener('orientationchange', measure);
     };
-  }, [about?.career_highlights.length, useScrollJack]);
+  }, [highlights.length]);
 
-  if (!about || about.career_highlights.length === 0) return null;
-
-  const highlights = about.career_highlights;
-
-  // Mobile/tablet + reduced motion: native horizontal scroll with snap.
-  // Avoids the sticky scroll-jack pattern which locks up on iOS Safari
-  // (dynamic toolbar + svh + touch capture wedges the page on iOS 17/18).
-  if (!useScrollJack) {
-    return (
-      <section aria-label="Career highlights" className="py-2 -mx-5 md:-mx-8 lg:mx-0">
-        <h3 className="text-[14px] leading-[17px] font-medium opacity-60 mb-4 px-5 md:px-8 lg:px-0">
-          CAREER HIGHLIGHTS
-        </h3>
-        <div className="overflow-x-auto snap-x snap-mandatory px-5 md:px-8 lg:px-0 scrollbar-hide">
-          <div className="flex gap-premium-md pb-2">
-            {highlights.map((h) => (
-              <div
-                key={h.id}
-                className={`snap-start shrink-0 ${CARD_W}`}
-              >
-                <Card h={h} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    );
-  }
-
-  // Section height: 100svh to enter + scrollable distance.
-  // svh unit handles iOS Safari address-bar collapse correctly (vs vh).
   const sectionHeight = mounted && distance > 0
     ? `calc(100svh + ${distance}px)`
     : `${Math.max(1, highlights.length) * 100}svh`;
@@ -152,13 +124,7 @@ export default function CareerWall() {
         ref={viewportRef}
         className="sticky top-0 h-[100svh] overflow-hidden flex flex-col justify-center"
         style={{
-          // pan-y: lets the browser handle vertical scroll natively while
-          // Framer Motion drives horizontal translation via scroll progress.
-          // This avoids conflicts on iOS where touch events fight between
-          // native scroll and JS-driven horizontal movement.
           touchAction: 'pan-y',
-          // will-change hint improves compositing on Chrome/Safari.
-          // Omitted on Firefox (handled by Framer's own logic).
           WebkitOverflowScrolling: 'touch',
         }}
       >
@@ -172,10 +138,7 @@ export default function CareerWall() {
           className="flex gap-premium-md pl-5 md:pl-8 lg:pl-0 pr-[20vw]"
         >
           {highlights.map((h) => (
-            <div
-              key={h.id}
-              className={`shrink-0 ${CARD_W}`}
-            >
+            <div key={h.id} className={`shrink-0 ${CARD_W}`}>
               <Card h={h} />
             </div>
           ))}
@@ -185,4 +148,31 @@ export default function CareerWall() {
       </div>
     </section>
   );
+}
+
+export default function CareerWall() {
+  const { about } = useAbout();
+  const reduced = useReducedMotion();
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  // Detect desktop after hydration so the server and initial client render match.
+  // The desktop scroll-jack only mounts on large viewports and when reduced motion is off.
+  useLayoutEffect(() => {
+    if (typeof window === 'undefined' || !window.matchMedia) return;
+    const mq = window.matchMedia('(min-width: 1024px)');
+    const update = () => setIsDesktop(mq.matches);
+    update();
+    mq.addEventListener?.('change', update);
+    return () => mq.removeEventListener?.('change', update);
+  }, []);
+
+  if (!about || about.career_highlights.length === 0) return null;
+
+  const highlights = about.career_highlights;
+
+  if (!isDesktop || reduced) {
+    return <MobileHighlights highlights={highlights} />;
+  }
+
+  return <DesktopScrollJack highlights={highlights} />;
 }
