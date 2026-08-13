@@ -5,7 +5,7 @@ const SITE = "https://pinotti.work";
 const URL = `${SITE}/guides/portfolio-examples`;
 const OG_IMAGE = `${SITE}${socialShareAsset.url}`;
 
-const TITLE = "10 Best Creative Director Portfolio Examples and Why They Work";
+const TITLE = "10 Best Creative Director Portfolio Examples";
 const DESCRIPTION =
   "A working Creative Director breaks down 10 portfolios that get hired — project selection, sequencing, and the case-study decisions that actually convert.";
 
