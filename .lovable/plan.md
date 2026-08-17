@@ -1,25 +1,40 @@
-## Problem
+# Publicar código no GitHub
 
-`CareerWall` uses a sticky scroll-jack (section grows to `100svh + distance`, sticky viewport, horizontal `translateX` driven by `useScroll`) on every viewport except when `prefers-reduced-motion` is set. On mobile Safari this pattern is fragile:
+## Objetivo
+Sincronizar o código-fonte do projeto no GitHub, usando um repositório existente como destino.
 
-- iOS Safari's dynamic toolbar changes `svh` mid-scroll, which resets `scrollYProgress` and can wedge the sticky container.
-- On newer iPhones (iOS 17/18) the touch handling around a tall sticky section with `touchAction: pan-y` + JS-driven X often ends up "capturing" the gesture and blocks further vertical scroll — the page freezes exactly where the section pins, which matches what the user reports.
-- The in-app Instagram browser behaves slightly differently (older WebKit fork), which is why it half-works there.
+## Estado atual verificado
+- O projeto ainda não está conectado a um repositório GitHub (`.git` aponta para o template interno do Lovable, não para um repo externo).
+- `.gitignore` já está configurado corretamente para excluir `node_modules`, `dist`, `.vinxi`, `.wrangler`, etc.
 
-The scroll-jack was designed for desktop. On phones, a horizontal scroll-jack inside a vertical page is the wrong interaction anyway — thumb-scrolling a horizontal rail is more natural.
+## Limitação importante
+A integração nativa de sync do Lovable com GitHub **não conecta diretamente a repositórios existentes**. Ela cria um novo repositório no momento da conexão. Há duas formas de contornar isso:
 
-## Fix
+### Opção A — Usar o repositório existente (recomendado se você quer manter a URL/histórico atual)
+1. Conectar o projeto Lovable ao GitHub criando um **novo repositório** temporário via Lovable (Plus menu → GitHub → Connect project).
+2. Após o sync inicial, clonar esse repositório localmente.
+3. Adicionar o repositório existente como novo `origin` (ou `upstream`) e fazer push com `--force` para sobrescrever o conteúdo do repo existente.
+4. (Opcional) Arquivar o repositório temporário criado pelo Lovable.
 
-Restrict the sticky scroll-jack to `lg` and up. On mobile and tablet, always render the existing "reduced motion" branch: a normal horizontal scroll strip with snap and hidden scrollbar. No JS scroll math, no sticky section, no `svh` height — so nothing can wedge iOS.
+**Risco:** o histórico de commits do repositório existente será substituído pelo conteúdo do projeto Lovable. Se o repo existente tiver commits que você quer preservar, essa opção exige merge manual.
 
-### Changes in `src/components/portfolio/CareerWall.tsx`
+### Opção B — Criar um novo repositório e usar ele como oficial
+1. Conectar o projeto Lovable ao GitHub criando um novo repositório (ex: `pinotti-portfolio`).
+2. Usar esse novo repositório como o repositório oficial do projeto.
+3. (Opcional) Adicionar uma nota no README do repositório antigo apontando para o novo.
 
-1. Detect desktop (e.g. `useEffect` + `matchMedia('(min-width: 1024px)')` → `isDesktop` state, false during SSR).
-2. Render the native horizontal-scroll branch (currently under `if (reduced)`) whenever `reduced || !isDesktop`. Extract it into a small local component or keep the early return, just widen the condition.
-3. Only run the `useScroll` / `useTransform` / `useSpring` / measurement `useEffect` path when `isDesktop && !reduced`. Guarding the effect and the sticky JSX behind that flag avoids attaching scroll listeners on mobile at all.
-4. Keep card sizing (`CARD_W`) and `Card` markup unchanged — this is purely an interaction change.
+## Etapas do plano
+1. Confirmar com você qual opção prefere (A ou B) e, se A, qual a URL/nome do repositório existente.
+2. Iniciar a conexão GitHub no Lovable pela UI (Plus menu → GitHub → Connect project).
+3. Resolver conflitos de arquivos de configuração sensíveis (`.env`, segredos de API como `AIROPS_API_KEY`, `AIROPS_WEBHOOK_SECRET`) para que **não vazem no repositório público**. Verificar se `.env` já está no `.gitignore` (sim, ele não está listado, mas `.env` geralmente é ignorado por padrão — precisamos adicionar se necessário).
+4. Se Opção A: executar os comandos Git localmente para substituir o conteúdo do repositório existente.
+5. Se Opção B: validar o novo repositório no GitHub e ativar o sync contínuo.
+6. Verificar se o sync bidirecional está funcionando (fazer uma pequena alteração no Lovable e confirmar que reflete no GitHub, ou vice-versa).
 
-### Verification
+## O que muda no código?
+Provavelmente nada, exceto ajustes de segurança: garantir que arquivos de segredo (`.env`, variáveis de API) não sejam versionados. Se o repositório for público, isso é crítico.
 
-- Desktop (≥1024px): scroll-jack still works, cards translate horizontally as the page scrolls. No visual change.
-- Mobile/tablet: section renders as a single-row horizontal scroller with snap; vertical page scroll is never intercepted; test in iOS Safari and Instagram in-app browser to confirm the page keeps scrolling past the section.
+## Segurança
+- **Não commitar** `.env` com valores reais.
+- **Não commitar** `supabase/config.toml` se contiver segredos (verificar antes).
+- Documentar no README quais variáveis de ambiente são necessárias para rodar o projeto localmente.
