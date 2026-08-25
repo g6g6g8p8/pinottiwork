@@ -3,7 +3,7 @@ import ProjectList from '../components/portfolio/ProjectList';
 import socialShareAsset from '../assets/social-share.png.asset.json';
 
 const SITE = 'https://pinotti.work';
-const OG_IMAGE = `${SITE}${socialShareAsset.url}`;
+const OG_IMAGE = socialShareAsset.url;
 
 export const Route = createFileRoute('/categories/$category')({
   head: ({ params }) => {

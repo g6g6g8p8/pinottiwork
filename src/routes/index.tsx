@@ -3,7 +3,7 @@ import Home from "../components/portfolio/Home";
 import socialShareAsset from "../assets/social-share.png.asset.json";
 
 const SITE = "https://pinotti.work";
-const OG_IMAGE = `${SITE}${socialShareAsset.url}`;
+const OG_IMAGE = socialShareAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -29,7 +29,7 @@ export const Route = createFileRoute("/")({
       {
         rel: "preload",
         as: "image",
-        href: "/__l5e/assets-v1/cde1f0aa-0b9d-4e82-8785-5791b785100a/15-b_zhcxb5.png",
+        href: "https://pub-f954e96828a8472492a1a2b053f2adb6.r2.dev/assets-v1/cde1f0aa-0b9d-4e82-8785-5791b785100a/15-b_zhcxb5.png",
         fetchpriority: "high",
       },
     ],

@@ -89,33 +89,41 @@ highlights:
 
 ## Media
 
-Mídia (imagens, GIFs, vídeos) é servida pelo **Lovable Assets** — CDN próprio
-do Lovable (Cloudflare R2), sem conta externa, sem limite de plano. Cada
-upload gera uma URL imutável no formato `/__l5e/assets-v1/{uuid}/{arquivo}`
-que você cola no markdown (`hero:`, `![](...)`, `[video autoplay](...)`).
+Mídia (imagens, GIFs, vídeos) é servida por um bucket **Cloudflare R2**
+próprio (`pinotti-assets`), fora da Lovable. Cada arquivo vive em
+`assets-v1/{uuid}/{arquivo}` dentro do bucket e é acessado publicamente via:
+
+```
+https://pub-f954e96828a8472492a1a2b053f2adb6.r2.dev/assets-v1/{uuid}/{arquivo}
+```
+
+(Esse é o domínio público padrão do R2. Pode virar um domínio próprio tipo
+`media.pinotti.work` mais pra frente, apontando DNS pro bucket — nesse caso
+só troque o host nesta seção e nos `.md` existentes.)
 
 ### Subindo mídia para um novo case
 
-1. Mande o(s) arquivo(s) no chat do Lovable. Eles ficam disponíveis em
-   `/mnt/user-uploads/<arquivo>`.
-2. Peça pra eu (agente) subir — eu rodo no sandbox:
+1. Gere um uuid novo (`uuidgen` no terminal) para a pasta do arquivo — mantém
+   o mesmo padrão dos assets existentes e evita colisão de nomes.
+2. Suba pro bucket via AWS CLI (compatível com S3), usando as credenciais
+   R2 salvas localmente:
 
    ```bash
-   mkdir -p src/assets/cases/<slug-do-projeto>
-   lovable-assets create \
-     --file /mnt/user-uploads/<arquivo> \
-     --filename <arquivo> \
-     > src/assets/cases/<slug-do-projeto>/<arquivo>.asset.json
+   source ~/.config/pinottiwork-migration/r2.env
+   export AWS_ACCESS_KEY_ID="$R2_ACCESS_KEY_ID"
+   export AWS_SECRET_ACCESS_KEY="$R2_SECRET_ACCESS_KEY"
+   aws s3 cp <arquivo-local> \
+     "s3://$R2_BUCKET/assets-v1/<uuid-novo>/<arquivo>" \
+     --endpoint-url "$R2_ENDPOINT" --region auto
    ```
 
-3. O comando devolve um JSON com o campo `url`. Eu colo essa URL no `.md`
-   do case (`hero:`, `![](url)` ou `[video autoplay](url)`).
+3. Cole a URL pública resultante no `.md` do case (`hero:`, `![](url)` ou
+   `[video autoplay](url)`).
 
 Para vídeos como hero, defina também `og_image:` no frontmatter com uma
 URL de imagem (poster), senão a prévia de compartilhamento sai sem imagem.
 
-URLs externas (Vimeo, YouTube, imgur) continuam funcionando — só não use
-mais Cloudinary; a conta gratuita esbarrou no limite de banda.
+URLs externas (Vimeo, YouTube, imgur) continuam funcionando.
 
 ## Why this format?
 

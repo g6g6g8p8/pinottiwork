@@ -11,7 +11,7 @@ tags:
   - Copa América
 order: 5
 hero: >-
-  /__l5e/assets-v1/0e1acb09-8851-4179-92d6-4f40aac862cc/Screenshot_2026-05-25_at_10.33.59_d0lso8.png
+  https://pub-f954e96828a8472492a1a2b053f2adb6.r2.dev/assets-v1/0e1acb09-8851-4179-92d6-4f40aac862cc/Screenshot_2026-05-25_at_10.33.59_d0lso8.png
 aspect_ratio: '9:4'
 description: >-
   Beating VISA at Copa América 2019 sponsorship.

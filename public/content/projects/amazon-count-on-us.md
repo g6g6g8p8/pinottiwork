@@ -10,7 +10,7 @@ tags:
   - Brand Storytelling
   - Early Career
 order: 5
-hero: '/__l5e/assets-v1/bcdb0eb0-a191-4a8c-96e9-253f839fc7dd/amazon-gamer.gif'
+hero: 'https://pub-f954e96828a8472492a1a2b053f2adb6.r2.dev/assets-v1/bcdb0eb0-a191-4a8c-96e9-253f839fc7dd/amazon-gamer.gif'
 aspect_ratio: '16:9'
 description: >-
   Official launch campaign for Amazon in Brazil.
@@ -27,9 +27,9 @@ Amazon's official arrival in Brazil demanded an unmistakable message: the brand 
 [video](https://vimeo.com/315103707)
 
 :::gallery
-![Mother](/__l5e/assets-v1/f0cbe867-5cf6-4eb4-b35a-14ade6c985e9/amazon-mae.gif)
-![Girl](/__l5e/assets-v1/cfc46071-19d0-4f6f-8db8-501fec46b894/amazon-menina.gif)
-![Extra](/__l5e/assets-v1/90540da0-02c4-43cd-82bc-58cfc1773024/amazon-extra.gif)
+![Mother](https://pub-f954e96828a8472492a1a2b053f2adb6.r2.dev/assets-v1/f0cbe867-5cf6-4eb4-b35a-14ade6c985e9/amazon-mae.gif)
+![Girl](https://pub-f954e96828a8472492a1a2b053f2adb6.r2.dev/assets-v1/cfc46071-19d0-4f6f-8db8-501fec46b894/amazon-menina.gif)
+![Extra](https://pub-f954e96828a8472492a1a2b053f2adb6.r2.dev/assets-v1/90540da0-02c4-43cd-82bc-58cfc1773024/amazon-extra.gif)
 :::
 
 ## The Campaign

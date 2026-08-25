@@ -3,7 +3,7 @@ import socialShareAsset from "../assets/social-share.png.asset.json";
 
 const SITE = "https://pinotti.work";
 const URL = `${SITE}/guides/creative-director-portfolio`;
-const OG_IMAGE = `${SITE}${socialShareAsset.url}`;
+const OG_IMAGE = socialShareAsset.url;
 
 const TITLE = "How to Build a Creative Director Portfolio";
 const DESCRIPTION =
