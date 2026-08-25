@@ -27,8 +27,20 @@ interface ProjectCardProps {
   priority?: boolean;
 }
 
+function useRetryableSrc(src: string, maxRetries = 2) {
+  const [attempt, setAttempt] = useState(0);
+  useEffect(() => setAttempt(0), [src]);
+  const onError = () => {
+    if (attempt >= maxRetries) return;
+    setTimeout(() => setAttempt((a) => a + 1), 400 * (attempt + 1));
+  };
+  const resolvedSrc = attempt === 0 ? src : `${src}${src.includes('?') ? '&' : '?'}retry=${attempt}`;
+  return { src: resolvedSrc, onError };
+}
+
 export default function ProjectCard({ project, imageColor, className, forceAspect, layout = 'overlay', priority = false }: ProjectCardProps) {
   const isMobile = useIsMobile();
+  const retryableImage = useRetryableSrc(project.image_url);
   const prefetchProps = usePrefetchLink(`/projects/${project.slug}`);
   const effectiveLayout = isMobile ? 'overlay' : layout;
 
@@ -80,7 +92,8 @@ export default function ProjectCard({ project, imageColor, className, forceAspec
     />
   ) : (
     <motion.img
-      src={project.image_url}
+      src={retryableImage.src}
+      onError={retryableImage.onError}
       alt={project.title}
       className="w-full h-full object-cover z-0"
       variants={imageVariants}
