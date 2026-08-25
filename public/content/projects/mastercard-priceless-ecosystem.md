@@ -65,9 +65,9 @@ We built the campaign around portraits by photographer **Maurício Nahas** — f
 Out-of-home took over bus shelters and prime urban surfaces across São Paulo. On Instagram Stories, the festival broadcast live artist chats and stage snippets across both days.
 
 :::gallery
-![](https://assets.pinotti.work/mastercard/logo.mp4)
-![](https://assets.pinotti.work/mastercard/jazz_02_2.jpg)
-![](https://assets.pinotti.work/mastercard/jazz_02.jpg)
+![](https://assets.pinotti.work/mastercard/logo.mp4?cb=1)
+![](https://assets.pinotti.work/mastercard/jazz_02_2.jpg?cb=1)
+![](https://assets.pinotti.work/mastercard/jazz_02.jpg?cb=1)
 :::
 
 ---

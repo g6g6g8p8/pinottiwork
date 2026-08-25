@@ -6,7 +6,7 @@ client: Fini
 role: Creative Director
 category: Creative Ops
 order: 2
-hero: 'https://assets.pinotti.work/fini/content/Download%20%2849%29-2634.mp4'
+hero: 'https://assets.pinotti.work/fini/content/Download%20%2849%29-2634.mp4?cb=1'
 aspect_ratio: '9:4'
 description: >-
   Operational shift that rescued agency margins and slashed TikTok CPE by 62%.
@@ -22,7 +22,7 @@ The operation was bleeding margin due to severe scope creep. The agency's creati
 
 Simultaneously, the brand was forcing traditional, over-produced agency scripts into TikTok. The platform's algorithm rejected this corporate aesthetic, causing high distribution costs and digital fatigue.
 
-![](https://assets.pinotti.work/fini/content/Image.gif)
+![](https://assets.pinotti.work/fini/content/Image.gif?cb=1)
 
 ## 2. The Insight
 
@@ -31,8 +31,8 @@ An audit crossing paid media with internal timesheets exposed a systemic flaw: t
 Traditional long-form videos (>10 seconds) with internal actors were underperforming. The creative department didn't need better ideas; it needed a **mechanical shift in governance and pacing** to match modern media algorithms.
 
 :::gallery
-![](https://assets.pinotti.work/fini/content/Download%20%282%29.mp4)
-![](https://assets.pinotti.work/fini/content/Download%20%2810%29.mp4)
+![](https://assets.pinotti.work/fini/content/Download%20%282%29.mp4?cb=1)
+![](https://assets.pinotti.work/fini/content/Download%20%2810%29.mp4?cb=1)
 :::
 
 ## 3. The System
@@ -48,17 +48,17 @@ I re-engineered the creative pipeline by establishing a specialized, decentraliz
 ## Instagram
 
 :::gallery
-![](https://assets.pinotti.work/fini/content/pasted-movie-3004.png)
-![](https://assets.pinotti.work/fini/content/pasted-movie-3016.png)
-![](https://assets.pinotti.work/fini/content/Fini-Pa%CC%81scoaCoelho-twitter.png)
+![](https://assets.pinotti.work/fini/content/pasted-movie-3004.png?cb=1)
+![](https://assets.pinotti.work/fini/content/pasted-movie-3016.png?cb=1)
+![](https://assets.pinotti.work/fini/content/Fini-Pa%CC%81scoaCoelho-twitter.png?cb=1)
 :::
 
 ## Tiktok
 
 :::gallery
-![](https://assets.pinotti.work/fini/content/Download%20%285%29-2829.mp4)
-![](https://assets.pinotti.work/fini/content/Download%20%2819%29-2757.mp4)
-![](https://assets.pinotti.work/fini/content/Download%20%2817%29-2769.mp4)
+![](https://assets.pinotti.work/fini/content/Download%20%285%29-2829.mp4?cb=1)
+![](https://assets.pinotti.work/fini/content/Download%20%2819%29-2757.mp4?cb=1)
+![](https://assets.pinotti.work/fini/content/Download%20%2817%29-2769.mp4?cb=1)
 :::
 
 ## 4. The Impact

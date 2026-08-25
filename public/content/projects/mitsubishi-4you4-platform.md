@@ -10,8 +10,8 @@ tags:
   - Branded Content
   - 3D
 order: 7
-hero: https://assets.pinotti.work/mitsubishi/062a30142785687.626d685a666c8.webp
-og_image: https://assets.pinotti.work/mitsubishi/062a30142785687.626d685a666c8.webp
+hero: https://assets.pinotti.work/mitsubishi/062a30142785687.626d685a666c8.webp?cb=1
+og_image: https://assets.pinotti.work/mitsubishi/062a30142785687.626d685a666c8.webp?cb=1
 aspect_ratio: '16:9'
 description: >-
   2+ years building the creative legs of Mitsubishi's 4You4 identity in Brazil.
@@ -34,11 +34,11 @@ From this campaign onward, every Mitsubishi product in Brazil would carry the 4Y
 [video](https://www.youtube.com/watch?v=fwedmzWiL2g "4You4 — New Generation Manifesto")
 
 :::gallery
-![](https://assets.pinotti.work/assets-v1/d63eeb0d-ea0a-4df7-a806-d6486de19519/kv-01.jpg)
-![](https://assets.pinotti.work/assets-v1/98b5e73b-5f03-475b-bc9f-c5ab44ebfc6a/kv-02.jpg)
-![](https://assets.pinotti.work/assets-v1/5b5be0dd-b061-4595-99fc-3917dda89fa1/kv-03.jpg)
-![](https://assets.pinotti.work/assets-v1/ba65b458-043b-4321-9300-72cb71665da2/kv-04.jpg)
-![](https://assets.pinotti.work/assets-v1/23667c25-cfd2-49da-bab9-410255890118/kv-05.jpg)
+![](https://assets.pinotti.work/assets-v1/d63eeb0d-ea0a-4df7-a806-d6486de19519/kv-01.jpg?cb=1)
+![](https://assets.pinotti.work/assets-v1/98b5e73b-5f03-475b-bc9f-c5ab44ebfc6a/kv-02.jpg?cb=1)
+![](https://assets.pinotti.work/assets-v1/5b5be0dd-b061-4595-99fc-3917dda89fa1/kv-03.jpg?cb=1)
+![](https://assets.pinotti.work/assets-v1/ba65b458-043b-4321-9300-72cb71665da2/kv-04.jpg?cb=1)
+![](https://assets.pinotti.work/assets-v1/23667c25-cfd2-49da-bab9-410255890118/kv-05.jpg?cb=1)
 :::
 
 A field-side endorsement for the L200 Triton Sport with country-music duo Fernando & Sorocaba, where rural life meets the truck's tech — the most literal expression of "4You4" for Mitsubishi's heartland audience.
@@ -64,9 +64,9 @@ Three full-3D short films follow a Pajero Sport crossing forest, plantation and 
 Three 5 and 15-seconds idents ran throughout the sponsored broadcasts on ESPN and Band.
 
 :::gallery
-![](https://assets.pinotti.work/assets-v1/8a62f011-4cad-49a6-9d0d-160618755440/hero-01.png)
-![](https://assets.pinotti.work/assets-v1/48ac5e83-686e-4224-9748-26f9cdbd5afe/hero-02.png)
-![](https://assets.pinotti.work/assets-v1/83fd0020-a714-487c-9497-3a3a5f4f75a1/hero-03.png)
+![](https://assets.pinotti.work/assets-v1/8a62f011-4cad-49a6-9d0d-160618755440/hero-01.png?cb=1)
+![](https://assets.pinotti.work/assets-v1/48ac5e83-686e-4224-9748-26f9cdbd5afe/hero-02.png?cb=1)
+![](https://assets.pinotti.work/assets-v1/83fd0020-a714-487c-9497-3a3a5f4f75a1/hero-03.png?cb=1)
 :::
 
 ---

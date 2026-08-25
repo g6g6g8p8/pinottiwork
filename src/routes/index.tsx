@@ -29,7 +29,7 @@ export const Route = createFileRoute("/")({
       {
         rel: "preload",
         as: "image",
-        href: "https://assets.pinotti.work/assets-v1/cde1f0aa-0b9d-4e82-8785-5791b785100a/15-b_zhcxb5.png",
+        href: "https://assets.pinotti.work/assets-v1/cde1f0aa-0b9d-4e82-8785-5791b785100a/15-b_zhcxb5.png?cb=1",
         fetchpriority: "high",
       },
     ],
