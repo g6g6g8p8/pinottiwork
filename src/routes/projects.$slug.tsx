@@ -9,16 +9,17 @@ function resolveOgImage(meta: ProjectMeta | null | undefined): string | null {
   if (meta.og_image) return meta.og_image;
   const hero = meta.hero || "";
   if (!hero) return null;
-  const isVideo = /\.(mp4|mov)$/i.test(hero);
+  const heroPath = hero.split(/[?#]/)[0];
+  const isVideo = /\.(mp4|mov)$/i.test(heroPath);
   if (!isVideo) return hero;
   // Derive poster from common video providers
   if (/i\.imgur\.com\//i.test(hero)) {
-    return hero.replace(/\.(mp4|mov)$/i, ".jpg");
+    return hero.replace(/\.(mp4|mov)([?#].*)?$/i, ".jpg$2");
   }
   if (/res\.cloudinary\.com\/.*\/video\/upload\//i.test(hero)) {
     return hero
       .replace(/\/video\/upload\//i, "/image/upload/")
-      .replace(/\.(mp4|mov)$/i, ".jpg");
+      .replace(/\.(mp4|mov)([?#].*)?$/i, ".jpg$2");
   }
   return null;
 }

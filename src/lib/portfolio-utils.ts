@@ -2,6 +2,18 @@ export function cn(...classes: (string | boolean | undefined)[]) {
   return classes.filter(Boolean).join(' ');
 }
 
+export function isVideoUrl(url: string): boolean {
+  const path = (url || '').split(/[?#]/)[0];
+  return path.endsWith('.mp4') || path.endsWith('.mov');
+}
+
+// Derives a poster-image URL from a video URL (e.g. hero.mp4 -> hero.jpg),
+// preserving any query string (cache-busting params etc.) after the swap.
+export function toPosterUrl(url: string): string {
+  const [path, ...rest] = (url || '').split(/([?#].*)/);
+  return path.replace(/\.(mp4|mov)$/i, '.jpg') + (rest[0] || '');
+}
+
 export function toSlug(s: string): string {
   return (s || '')
     .toLowerCase()

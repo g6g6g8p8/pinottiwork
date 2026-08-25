@@ -4,7 +4,7 @@ import { X as CloseIcon, Share2, ChevronLeft, ChevronRight } from 'lucide-react'
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { useProject } from '../../hooks/useProject';
-import { getImageColor, toSlug } from '../../lib/portfolio-utils';
+import { getImageColor, toSlug, isVideoUrl, toPosterUrl } from '../../lib/portfolio-utils';
 import Portal from './Portal';
 import { SkeletonDetail } from './Skeleton';
 import Toast from './Toast';
@@ -94,14 +94,14 @@ export default function ProjectDetail() {
                 onTouchEnd={handleTouchEnd}
               >
                 {gallery.map((media, index) => {
-                  const isVideo = media.endsWith('.mp4') || media.endsWith('.mov');
+                  const isVideo = isVideoUrl(media);
                   return isVideo ? (
                     <video
                       key={index}
                       src={media}
                       className="w-full h-full object-cover flex-shrink-0"
                       autoPlay loop muted playsInline
-                      poster={media.replace(/\.(mp4|mov)$/i, '.jpg')}
+                      poster={toPosterUrl(media)}
                     />
                   ) : (
                     <img
@@ -152,7 +152,7 @@ export default function ProjectDetail() {
       case 'video': {
         const videoSrc = section.content.url || '';
         const autoplay = Boolean(section.content.autoplay);
-        const isVideoUrl = videoSrc.endsWith('.mp4') || videoSrc.endsWith('.mov');
+        const isMp4Video = isVideoUrl(videoSrc);
         const isYouTube = videoSrc.includes('youtube.com') || videoSrc.includes('youtu.be');
         const isVimeo = videoSrc.includes('vimeo.com');
         let videoUrl = videoSrc;
@@ -194,12 +194,12 @@ export default function ProjectDetail() {
               <h2 className="text-sf-headline">{section.content.title}</h2>
             )}
             <div className="relative w-full overflow-hidden rounded-sf-xl">
-              {isVideoUrl ? (
+              {isMp4Video ? (
                 <video
                   src={videoSrc}
                   className="w-full h-full"
                   autoPlay loop muted playsInline
-                  poster={videoSrc.replace(/\.(mp4|mov)$/i, '.jpg')}
+                  poster={toPosterUrl(videoSrc)}
                   style={{ objectFit: 'contain' }}
                 />
               ) : (
@@ -266,7 +266,7 @@ export default function ProjectDetail() {
     );
   }
 
-  const isVideo = project.image_url.endsWith('.mp4') || project.image_url.endsWith('.mov');
+  const isVideo = isVideoUrl(project.image_url);
 
   return (
     <div className="lg:min-h-screen">
@@ -291,7 +291,7 @@ export default function ProjectDetail() {
                   src={project.image_url}
                   className="w-full h-full object-cover"
                   autoPlay loop muted playsInline
-                  poster={project.image_url.replace(/\.(mp4|mov)$/i, '.jpg')}
+                  poster={toPosterUrl(project.image_url)}
                 />
               ) : (
                 <img

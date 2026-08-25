@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from '@tanstack/react-router';
 import type { Project } from '../../hooks/useProject';
 import { useProjects } from '../../hooks/useProjects';
-import { toSlug, getImageColor } from '../../lib/portfolio-utils';
+import { toSlug, getImageColor, isVideoUrl, toPosterUrl } from '../../lib/portfolio-utils';
 import guinnessAsset from '../../assets/awards/guinness.png.asset.json';
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
 }
 
 function MiniCard({ project, imageColor }: { project: Project; imageColor?: string }) {
-  const isVideo = project.image_url.endsWith('.mp4') || project.image_url.endsWith('.mov');
+  const isVideo = isVideoUrl(project.image_url);
   return (
     <Link
       to="/projects/$slug"
@@ -23,7 +23,7 @@ function MiniCard({ project, imageColor }: { project: Project; imageColor?: stri
             src={project.image_url}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
             autoPlay loop muted playsInline
-            poster={project.image_url.replace(/\.(mp4|mov)$/i, '.jpg')}
+            poster={toPosterUrl(project.image_url)}
           />
         ) : (
           <img

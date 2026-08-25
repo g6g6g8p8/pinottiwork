@@ -3,6 +3,7 @@ import { Link } from '@tanstack/react-router';
 import { motion } from 'framer-motion';
 import type { Project } from '../../hooks/useProject';
 import { usePrefetchLink } from '../../lib/prefetch';
+import { isVideoUrl, toPosterUrl } from '../../lib/portfolio-utils';
 import guinnessAsset from '../../assets/awards/guinness.png.asset.json';
 
 function useIsMobile() {
@@ -55,9 +56,9 @@ export default function ProjectCard({ project, imageColor, className, forceAspec
     }
   };
 
-  const isVideo = (url: string) => url.endsWith('.mp4') || url.endsWith('.mov');
+  const isVideo = isVideoUrl;
 
-  
+
 
   const cardVariants = {
     initial: { opacity: 1, y: 0 },
@@ -81,14 +82,15 @@ export default function ProjectCard({ project, imageColor, className, forceAspec
 
   const mediaEl = isVideo(project.image_url) ? (
     <motion.video
-      src={project.image_url}
+      src={retryableImage.src}
+      onError={retryableImage.onError}
       className="w-full h-full object-cover z-0"
       variants={imageVariants}
       autoPlay
       loop
       muted
       playsInline
-      poster={project.image_url.replace(/\.(mp4|mov)$/i, '.jpg')}
+      poster={toPosterUrl(project.image_url)}
     />
   ) : (
     <motion.img

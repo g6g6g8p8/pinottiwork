@@ -3,7 +3,7 @@ import { Link } from '@tanstack/react-router';
 import { motion } from 'framer-motion';
 import { useProjects } from '../../hooks/useProjects';
 import type { Project } from '../../hooks/useProject';
-import { toSlug, getImageColor } from '../../lib/portfolio-utils';
+import { toSlug, getImageColor, isVideoUrl, toPosterUrl } from '../../lib/portfolio-utils';
 import guinnessAsset from '../../assets/awards/guinness.png.asset.json';
 
 interface Props {
@@ -80,7 +80,7 @@ export default function ProjectList({ kind, slug }: Props) {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {matches.map((p) => {
-            const isVideo = p.image_url.endsWith('.mp4') || p.image_url.endsWith('.mov');
+            const isVideo = isVideoUrl(p.image_url);
             return (
               <Link
                 key={p.slug}
@@ -94,7 +94,7 @@ export default function ProjectList({ kind, slug }: Props) {
                       src={p.image_url}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                       autoPlay loop muted playsInline
-                      poster={p.image_url.replace(/\.(mp4|mov)$/i, '.jpg')}
+                      poster={toPosterUrl(p.image_url)}
                     />
                   ) : (
                     <img
