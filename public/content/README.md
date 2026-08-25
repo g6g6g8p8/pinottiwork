@@ -94,12 +94,12 @@ próprio (`pinotti-assets`), fora da Lovable. Cada arquivo vive em
 `assets-v1/{uuid}/{arquivo}` dentro do bucket e é acessado publicamente via:
 
 ```
-https://pub-f954e96828a8472492a1a2b053f2adb6.r2.dev/assets-v1/{uuid}/{arquivo}
+https://assets.pinotti.work/assets-v1/{uuid}/{arquivo}
 ```
 
-(Esse é o domínio público padrão do R2. Pode virar um domínio próprio tipo
-`media.pinotti.work` mais pra frente, apontando DNS pro bucket — nesse caso
-só troque o host nesta seção e nos `.md` existentes.)
+(`assets.pinotti.work` é um domínio custom do Cloudflare apontando pro bucket
+R2, com CORS liberado pra `*`. Já é o domínio da zona `pinotti.work`, então
+não depende de nenhuma conta de terceiro além da sua.)
 
 ### Subindo mídia para um novo case
 

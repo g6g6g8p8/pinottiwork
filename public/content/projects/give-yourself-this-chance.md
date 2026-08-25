@@ -8,8 +8,8 @@ category: Advertising
 tags: []
 order: 4
 hero: >-
-  https://pub-f954e96828a8472492a1a2b053f2adb6.r2.dev/assets-v1/73686a31-8bfe-4e05-92c6-b02ddc8305d3/destaque_r29tx5.mov
-og_image: https://pub-f954e96828a8472492a1a2b053f2adb6.r2.dev/assets-v1/99820272-9d23-457c-835b-8d77dd47b2b8/destaque_poster.jpg
+  https://assets.pinotti.work/assets-v1/73686a31-8bfe-4e05-92c6-b02ddc8305d3/destaque_r29tx5.mov
+og_image: https://assets.pinotti.work/assets-v1/99820272-9d23-457c-835b-8d77dd47b2b8/destaque_poster.jpg
 aspect_ratio: '4:3'
 description: 'A pick-up truck is just for the countryside? Well, that''s over.'
 ---
@@ -21,8 +21,8 @@ Mitsubishi Motors and Tech and Soul redefined versatility with the L200 Triton S
 With a powerful call to action, the campaign highlights how advanced technology and safety make this pickup more than just off-road.
 
 :::gallery
-![](https://pub-f954e96828a8472492a1a2b053f2adb6.r2.dev/assets-v1/2fb1d0fa-41cc-4632-9fe3-87c1ca8fbce3/2_bvkglq.mov)
-![](https://pub-f954e96828a8472492a1a2b053f2adb6.r2.dev/assets-v1/ec588b8c-9c22-4a0b-8cc2-ca30485b5fe9/3_zwzql7.mov)
+![](https://assets.pinotti.work/assets-v1/2fb1d0fa-41cc-4632-9fe3-87c1ca8fbce3/2_bvkglq.mov)
+![](https://assets.pinotti.work/assets-v1/ec588b8c-9c22-4a0b-8cc2-ca30485b5fe9/3_zwzql7.mov)
 :::
 
 Spanning TV, OOH, and digital platforms, the message resonates with every lifestyle.
