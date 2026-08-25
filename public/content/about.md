@@ -2,6 +2,9 @@
 name: Giulio Pinotti
 email: giulio@pinotti.work
 title: Creative Director & Head of Creative Operations
+open_to: Open to Creative Director / Head of Creative Operations roles
+linkedin_url: https://linkedin.com/in/pinotti
+resume_url: /resume/giulio-pinotti-cv.pdf
 brands:
   - Mastercard
   - Mary Kay

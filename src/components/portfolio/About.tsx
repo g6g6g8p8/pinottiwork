@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from '@tanstack/react-router';
-import { X as CloseIcon, Share2 } from 'lucide-react';
+import { X as CloseIcon, Share2, Mail, Linkedin, Download } from 'lucide-react';
 import { useAbout } from '../../hooks/useAbout';
 import Toast from './Toast';
 
@@ -93,6 +93,44 @@ export default function About() {
             </div>
             <div className="h-px bg-foreground/10 my-4" />
             <h2 className="text-[18px] leading-[22px]">{about.title}</h2>
+
+            {about.open_to && (
+              <p className="mt-2 inline-flex items-center gap-1.5 text-footnote text-foreground/70">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                {about.open_to}
+              </p>
+            )}
+
+            <div className="mt-4 flex flex-wrap gap-2">
+              <a
+                href={`mailto:${about.email}`}
+                className="inline-flex items-center gap-1.5 px-4 py-2 bg-foreground/5 hover:bg-foreground/10 rounded-full text-footnote transition-colors"
+              >
+                <Mail size={14} />
+                Email
+              </a>
+              {about.linkedin_url && (
+                <a
+                  href={about.linkedin_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 bg-foreground/5 hover:bg-foreground/10 rounded-full text-footnote transition-colors"
+                >
+                  <Linkedin size={14} />
+                  LinkedIn
+                </a>
+              )}
+              {about.resume_url && (
+                <a
+                  href={about.resume_url}
+                  download
+                  className="inline-flex items-center gap-1.5 px-4 py-2 bg-foreground text-background hover:opacity-90 rounded-full text-footnote transition-opacity"
+                >
+                  <Download size={14} />
+                  Download Résumé
+                </a>
+              )}
+            </div>
           </div>
 
           {/* About me */}

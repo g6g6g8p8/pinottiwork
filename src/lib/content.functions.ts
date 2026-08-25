@@ -178,6 +178,9 @@ export interface AboutData {
   name: string;
   email: string;
   title: string;
+  open_to: string;
+  linkedin_url: string;
+  resume_url: string;
   avatar_url: string;
   short_bio: string;
   what_i_do: string;
@@ -213,6 +216,9 @@ export const getAbout = createServerFn({ method: 'GET' }).handler(
         name: data.name || '',
         email: data.email || '',
         title: data.title || '',
+        open_to: data.open_to || '',
+        linkedin_url: data.linkedin_url || '',
+        resume_url: data.resume_url || '',
         avatar_url: data.avatar_url || data.avatar || '',
         short_bio: (bio || '').trim(),
         what_i_do: data.what_i_do || '',
