@@ -95,14 +95,25 @@ export default function ProjectDetail() {
               >
                 {gallery.map((media, index) => {
                   const isVideo = isVideoUrl(media);
+                  const isActive = index === currentIndex;
                   return isVideo ? (
-                    <video
-                      key={index}
-                      src={media}
-                      className="w-full h-full object-cover flex-shrink-0"
-                      autoPlay loop muted playsInline
-                      poster={toPosterUrl(media)}
-                    />
+                    isActive ? (
+                      <video
+                        key={index}
+                        src={media}
+                        className="w-full h-full object-cover flex-shrink-0"
+                        autoPlay loop muted playsInline
+                        poster={toPosterUrl(media)}
+                      />
+                    ) : (
+                      <img
+                        key={index}
+                        src={toPosterUrl(media)}
+                        alt={`Gallery media ${index + 1}`}
+                        className="w-full h-full object-cover flex-shrink-0"
+                        loading="lazy"
+                      />
+                    )
                   ) : (
                     <img
                       key={index}
