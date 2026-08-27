@@ -20,7 +20,7 @@ description: >-
 
 SAS Brasil delivers medical care to isolated communities in Brazil's backlands — places where the road ends and only a 4x4 can get through. To extend that reach, the NGO needed more fuel, more kilometers and more visibility.
 
-## Insight
+## The Insight
 
 The adventure of driving a Mitsubishi could turn into real care. Every kilometer driven with the brand during Rally dos Sertões would become a direct donation to keep SAS Brasil moving forward.
 
@@ -47,7 +47,9 @@ R$1 | DONATED PER 10K KM DRIVEN
 100% | HEALTHCARE COVERED AREA BY SAS BRASIL
 :::
 
-## Results
+## The Results
+
++14M kilometers driven by the community turned into direct funding for SAS Brasil — enough to help keep 100% of its coverage area funded for the length of the campaign. A rally became a supply chain for healthcare, one dashboard photo at a time — strong enough on its own to earn national press coverage without a media budget behind it.
 
 [video autoplay](https://vimeo.com/625841483)
 

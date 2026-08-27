@@ -29,6 +29,6 @@ The campaign rolled out as a cast of everyday superheroes, each tied to one mone
 [video](https://vimeo.com/187872926 "Mastercard Supereconomics — Incredible Bill Man")
 [video](https://vimeo.com/187872991 "Mastercard Supereconomics — Spending Demolisher")
 
-## Credits
+## The Credits
 
 Creative Director: Duda Hernandez · Content Director: Eduardo Oliveira · Head of Copy: Clauber Volinksky · Head of Art: Duda di Pietro · Art Director: Giulio Pinotti · Copywriter: Tatiana Jacobsohn · Illustration: Opala Rosa Choque · Production: Big Studios

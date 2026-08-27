@@ -16,34 +16,28 @@ tags:
   - Performance Strategy
 ---
 
-## 1. The Challenge
+## The Challenge
 
-The operation was bleeding margin due to severe scope creep. The agency's creative team had devolved into a free production house, absorbing 9 external shoots in just 90 days. This operational error consumed **75% of the team's billable hours in manual labor** (logistics, setups, reflows), leaving only 25% for strategic creative intelligence.
-
-Simultaneously, the brand was forcing traditional, over-produced agency scripts into TikTok. The platform's algorithm rejected this corporate aesthetic, causing high distribution costs and digital fatigue.
+The team had turned into a free production house — nine external shoots in ninety days. Three-quarters of billable hours went to logistics and reshoots, not ideas. Meanwhile, polished agency-style scripts were dying on TikTok: the platform doesn't reward a corporate look, and distribution costs were climbing to prove it.
 
 ![](https://assets.pinotti.work/fini/content/Image.gif?cb=1)
 
-## 2. The Insight
+## The Insight
 
-An audit crossing paid media with internal timesheets exposed a systemic flaw: the agency was exhausting its human capital to produce content that cost significantly more to distribute.
-
-Traditional long-form videos (>10 seconds) with internal actors were underperforming. The creative department didn't need better ideas; it needed a **mechanical shift in governance and pacing** to match modern media algorithms.
+An audit crossing paid media against internal timesheets made it obvious: the team was burning its people to make content that cost more to distribute than it earned back. The problem wasn't the ideas. It was the shape of the pipeline.
 
 :::gallery
 ![](https://assets.pinotti.work/fini/content/Download%20%282%29.mp4?cb=1)
 ![](https://assets.pinotti.work/fini/content/Download%20%2810%29.mp4?cb=1)
 :::
 
-## 3. The System
+## The System
 
-I re-engineered the creative pipeline by establishing a specialized, decentralized framework:
+Two rules rebuilt the pipeline:
 
-- **The Viability Filter:** Implemented a strict internal gateway. The client approved broad strategic "territories," while the creative team retained total control over format execution (POV, Faceless, UGC).
-- **The Capacity Slot Matrix:** Converted the rigid monthly video SLA into a "16-Slot Capacity System." Multivariate media variations, A/B tests, or live coverage consumed specific slots, forcing both media teams and clients to prioritize high-yield assets.
-- **Aesthetic Bifurcation:** Decoupled production into two distinct engines:
-  - _Instagram:_ Polished, brand-owned visual assets optimizing for low-cost engagement (achieving an R$ 0.13 CPE benchmark).
-  - _TikTok:_ A 100% "Faceless" model. Zero complex acting; focused strictly on native platform triggers (POV framing, ASMR, under 10-second clips).
+- **The Viability Filter:** the client approved broad creative territories; the team kept total control over execution — format, tone, pacing.
+- **The Capacity Slot Matrix:** an open-ended monthly brief became a "16-Slot Capacity System," forcing every idea — every A/B test, every live-coverage moment — to earn its place.
+- **Two Tracks, Not One:** _Instagram_ kept the polished, brand-owned look, built for a R$ 0.13 cost-per-engagement benchmark. _TikTok_ went fully faceless — no actors, no sets, just native formats: POV, ASMR, clips under ten seconds.
 
 ## Instagram
 
@@ -61,12 +55,12 @@ I re-engineered the creative pipeline by establishing a specialized, decentraliz
 ![](https://assets.pinotti.work/fini/content/Download%20%2817%29-2769.mp4?cb=1)
 :::
 
-## 4. The Impact
+## The Impact
 
 :::stats
 -62% | TikTok CPE (R$ 0.20)
-+75% | gen-z retention (VTR)
-+75% | creative team's time to think
++75% | Gen-Z retention (VTR)
+~3M | organic views from one creator partnership (Rafa Baricala)
 :::
 
-- **Massive Organic Scale:** By giving external creators full production autonomy, a single initiative (Rafa Baricala) generated nearly 3 million organic views and an 8%+ engagement rate, breaking reliance on paid amplification.
+**Massive Organic Scale:** one creator partnership alone — Rafa Baricala — pulled in nearly 3 million organic views at an 8%+ engagement rate, with zero paid amplification behind it. And the team got something it hadn't had in months: time to actually think, instead of just produce.

@@ -20,7 +20,7 @@ description: >-
 
 Amazon's official arrival in Brazil demanded an unmistakable message: the brand was here to stay and to serve the Brazilian audience with the same reliability it was known for worldwide.
 
-## Insight
+## The Insight
 
 "Conta com a gente" ("You can count on us") — a simple, direct and warm promise, translated into everyday stories of different Brazilians who, from now on, could count on Amazon.
 
@@ -34,7 +34,7 @@ Amazon's official arrival in Brazil demanded an unmistakable message: the brand 
 
 ## The Campaign
 
-A 45s manifesto film followed by four complementary 15s films, each portraying a customer profile: Grandpa, Mother, Gamer and Girl.
+A 45-second manifesto film, followed by four 15-second films, each built around a different customer: Grandpa, Mother, Gamer, Girl — four different reasons to trust the same brand.
 
 [video](https://vimeo.com/315120054)
 
@@ -43,3 +43,5 @@ A 45s manifesto film followed by four complementary 15s films, each portraying a
 [video](https://vimeo.com/315120078)
 
 [video](https://vimeo.com/315120116)
+
+It was Amazon's introduction to Brazil — not a logo landing in a new market, but a promise made to four kinds of people who'd actually use it.

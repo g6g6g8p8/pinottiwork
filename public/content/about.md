@@ -40,16 +40,22 @@ what_i_do: >-
 avatar_url: '/assets/profile.png'
 ---
 
-I believe creativity only reaches its true business value when backed by flawless operational engineering.
+Most creative teams don't fail from a lack of good ideas. They fail because good ideas get diluted — by misalignment, slow decisions, or systems that don't scale past one campaign.
 
-My journey didn't start in a traditional advertising layout pad — it began in the core of digital native environments as a web designer coding HTML and CSS. This early exposure to analytics and digital metrics shaped my understanding that design must serve a functional, human, and business purpose.
+I'm a Creative Director with 15+ years leading creative teams across agencies and global brands — Mastercard, Mary Kay, Amazon, Fini, Mitsubishi Motors, L'Oréal.
 
-Over the past 15 years, I evolved into a Senior Art Director at top-tier agencies like WMcCann and Tech and Soul, directing large-scale integrated campaigns, branded content, and visual identity systems for global giants such as Mastercard, Mitsubishi Motors, L'Oréal, Jive Investments, and Americanas.com. This era solidified my foundation in aesthetic excellence and storytelling, earning global accolades including Effie and Midas awards.
+I started as a web designer, coding HTML and CSS, which is probably why I never separated "creative" from "how it actually gets built." Over the years that turned into a specific belief: craft comes first, but craft alone doesn't scale — the team, the decisions, and the way of working around it do.
 
-Navigating high-volume corporate environments revealed a universal truth: the greatest threat to modern brands isn't a lack of good ideas — it's operational debt. Reactive always-on loops, fragmented workflows, and friction-filled approval layers actively bleed business margins and exhaust creative teams. I realized my role needed to evolve from executing concepts to architecting the very engines that produce them.
+That's what I build. As Senior Art Director at WMcCann and Tech and Soul, I led large-scale campaigns and identity systems for global brands, picking up Effie and Midas recognition along the way. As Creative Director and Head of Creative Operations at Agência Crush, I went further upstream — rebuilding how the creative teams behind Fini and Mary Kay Brazil actually worked, not just what they made.
 
-As Creative Director and Head of Creative Operations at Agência Crush, I became the bridge between business strategy and content execution — treating creative operations like a product, deploying DesignOps methodologies, automated project frameworks, and hybrid production models to eliminate friction and accelerate time-to-market.
+A few things I've led that I'm proud of:
 
-For Fini, I restructured agile production pipelines based on algorithmic diagnostics, shattering historical engagement KPIs without sacrificing pop-culture warmth. For Mary Kay Brazil, I architected a full-funnel content ecosystem that drove the brand to the #1 social account globally — a strategic leadership that culminated in a Guinness World Records title for "Live de Batom por Elas".
+- Directed a Mary Kay campaign that set an official Guinness World Record, mobilizing 3,000 independent consultants in partnership with Instituto Fala Mulher.
+- Restructured Fini's production pipeline, cutting TikTok cost-per-engagement by 62% while sustaining 70+ assets a month.
+- Spearheaded Amazon's official launch campaign in Brazil.
+- Led a full creative-operations diagnostic for a 20-person agency, rebuilding workflows and decision-making across three key accounts.
+- Recognized with Effie Gold, two Effie Bronze, and a Silver Midas Award (New York Festivals).
 
-I don't just evaluate ideas; I map workflows and build infrastructure. Whether orchestrating a hybrid content factory or guiding a premium legacy brand through a digital transformation, my goal is to create environments where top-tier creativity scales with speed, precision, and healthy business margins.
+I'm currently open to Creative Director / Head of Creative roles with global, remote-first teams — and taking on select creative and marketing-operations consulting in the meantime.
+
+If you're building — or rebuilding — a creative organization, my inbox is open.

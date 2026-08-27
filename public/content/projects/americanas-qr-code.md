@@ -26,6 +26,6 @@ With a single scannable code, the audience could go from the couch to the Americ
 
 ![](https://mir-s3-cdn-cf.behance.net/project_modules/disp/ce27ec135092929.61e17c5b50d06.gif)
 
-The results spoke for themselves: after this, every TV merchandising slot started carrying a QR code.
+The results spoke for themselves: the format drove a 160% increase in app downloads, and after that, every TV merchandising slot on the account started carrying a QR code.
 
 ![](https://mir-s3-cdn-cf.behance.net/project_modules/disp/5c2882135092929.61e17c5b5041a.gif)

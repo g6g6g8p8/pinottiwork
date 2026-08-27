@@ -13,10 +13,10 @@ order: 4
 hero: /assets/mastercard/hero-cooking.jpg
 aspect_ratio: '9:4'
 description: >-
-  Sustaining the Priceless platform across dozens of verticals and making history on the main brand tracker index.
+  Six years keeping one premium brand consistent across dozens of moving parts, at Latin America scale.
 ---
 
-Managing a legacy brand like Mastercard at scale means something most portfolios don't show: the work between the big campaigns. The governance, the visual consistency across dozens of simultaneous verticals, the ability to pivot fast without breaking the brand. For six years, I was a core part of that creative structure at WMcCann — bridging elite art direction with complex account demands across sponsorships, product launches, affluent segments, cultural activations, and rapid-response tactical content.
+Managing a legacy brand like Mastercard at scale means handling the work most portfolios don't show: governance, visual consistency across dozens of simultaneous verticals, the ability to move fast without breaking the brand. For six years at WMcCann, I was part of that creative backbone — across sponsorships, product launches, affluent segments, cultural activations and rapid-response content.
 
 ---
 
@@ -71,3 +71,5 @@ Out-of-home took over bus shelters and prime urban surfaces across São Paulo. O
 :::
 
 ---
+
+Six years, one brand, dozens of verticals — and not one of them broke the line.

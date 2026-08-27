@@ -55,7 +55,7 @@ Functional technology meets emotional truth — both living in a single word tha
 
 ---
 
-## Campaing
+## Campaign
 
 The contactless interaction became a creative mechanic in itself — animated across digital touchpoints to demonstrate the gesture and reinforce the emotional meaning simultaneously.
 
@@ -69,4 +69,4 @@ The contactless interaction became a creative mechanic in itself — animated ac
 
 ## Outcome
 
-Card-usage expectations were exceeded. The campaign became a global reference inside the Mastercard network. On the main brand tracker index, *Get Closer* surpassed VISA for the first time — a new record that had never been achieved on the account.
+Card-usage expectations were exceeded. The campaign became a reference case inside the global Mastercard network. And on the main brand tracker index, *Get Closer* did something that had never happened on the account before: it put Mastercard ahead of Visa.

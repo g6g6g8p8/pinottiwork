@@ -14,15 +14,15 @@ aspect_ratio: '4:3'
 description: 'A pick-up truck is just for the countryside? Well, that''s over.'
 ---
 
-Mitsubishi Motors and Tech and Soul redefined versatility with the L200 Triton Sport in the Give Yourself This Chance campaign. Set to Rita Lee's iconic track, the film breaks stereotypes, showing women, young drivers, and families embracing the L200 as the perfect companion for city streets, countryside escapes, and beach adventures alike.
+Mitsubishi Motors and Tech and Soul redefined what versatility means for the L200 Triton Sport. Set to Rita Lee's music, the film breaks the stereotype outright — women, young drivers and families using the L200 for city streets, weekend escapes and beach trips alike, not just dirt roads.
 
 [video](https://player.vimeo.com/video/840171784 "60s Advert")
 
-With a powerful call to action, the campaign highlights how advanced technology and safety make this pickup more than just off-road.
+The technology and safety on board do the arguing: this is an everyday vehicle first, an off-road machine second.
 
 :::gallery
 ![](https://assets.pinotti.work/assets-v1/2fb1d0fa-41cc-4632-9fe3-87c1ca8fbce3/2_bvkglq.mov?cb=1)
 ![](https://assets.pinotti.work/assets-v1/ec588b8c-9c22-4a0b-8cc2-ca30485b5fe9/3_zwzql7.mov?cb=1)
 :::
 
-Spanning TV, OOH, and digital platforms, the message resonates with every lifestyle.
+It ran across TV, out-of-home and digital — one film, built to look like it was made for whoever happened to be watching: a family, a young driver, someone who'd never considered a pickup until this one.
