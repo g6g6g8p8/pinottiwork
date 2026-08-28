@@ -18,7 +18,7 @@ tags:
 
 ## O Desafio
 
-O time tinha virado uma produtora gratuita — nove diárias externas em noventa dias. Três quartos das horas faturáveis iam pra logística e refação, não pra ideias. Enquanto isso, roteiros com cara de agência estavam morrendo no TikTok: a plataforma não premia visual corporativo, e o custo de distribuição subia pra provar isso.
+O time tinha virado uma produtora gratuita: nove diárias externas em noventa dias. Três quartos das horas faturáveis iam pra logística e refação, não pra ideias. Enquanto isso, roteiros com cara de agência estavam morrendo no TikTok: a plataforma não premia visual corporativo, e o custo de distribuição subia pra provar isso.
 
 ![](https://assets.pinotti.work/fini/content/Image.gif?cb=1)
 
@@ -35,9 +35,9 @@ Um cruzamento entre mídia paga e apontamento interno de horas deixou óbvio: o 
 
 Duas regras reconstruíram o pipeline:
 
-- **O Filtro de Viabilidade:** o cliente aprovava territórios criativos amplos; o time mantinha controle total sobre a execução — formato, tom, ritmo.
-- **A Matriz de Capacidade por Slot:** um briefing mensal aberto virou um "Sistema de Capacidade de 16 Slots", forçando cada ideia — cada teste A/B, cada momento de cobertura ao vivo — a conquistar seu lugar.
-- **Duas Frentes, Não Uma:** o _Instagram_ mantinha o visual polido, dono da marca, construído pra um benchmark de R$ 0,13 de custo por engajamento. O _TikTok_ foi totalmente sem rosto — sem atores, sem cenário, só formatos nativos: POV, ASMR, clipes de menos de dez segundos.
+- **O Filtro de Viabilidade:** o cliente aprovava territórios criativos amplos; o time mantinha controle total sobre a execução: formato, tom, ritmo.
+- **A Matriz de Capacidade por Slot:** um briefing mensal aberto virou um "Sistema de Capacidade de 16 Slots", forçando cada ideia, cada teste A/B, cada momento de cobertura ao vivo, a conquistar seu lugar.
+- **Duas Frentes, Não Uma:** o _Instagram_ mantinha o visual polido, dono da marca, construído pra um benchmark de R$ 0,13 de custo por engajamento. O _TikTok_ foi totalmente sem rosto, sem atores, sem cenário, só formatos nativos: POV, ASMR, clipes de menos de dez segundos.
 
 ## Instagram
 
@@ -63,4 +63,4 @@ Duas regras reconstruíram o pipeline:
 ~3M | visualizações orgânicas de uma parceria com creator (Rafa Baricala)
 :::
 
-**Escala orgânica massiva:** uma única parceria com creator — Rafa Baricala — trouxe quase 3 milhões de visualizações orgânicas com taxa de engajamento acima de 8%, sem nenhuma verba de mídia paga por trás. E o time ganhou algo que não tinha há meses: tempo pra pensar de verdade, em vez de só produzir.
+**Escala orgânica massiva:** uma única parceria com creator, Rafa Baricala, trouxe quase 3 milhões de visualizações orgânicas com taxa de engajamento acima de 8%, sem nenhuma verba de mídia paga por trás. E o time ganhou algo que não tinha há meses: tempo pra pensar de verdade, em vez de só produzir.

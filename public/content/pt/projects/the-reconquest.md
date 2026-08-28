@@ -14,11 +14,11 @@ description: >-
   Um campeão mundial de skimboard reconquistou um túnel de trem alagado, com a força do Mitsubishi L200 Triton.
 ---
 
-A Mitsubishi Motors e a agência Tech and Soul levaram a L200 Triton pra reconquistar o Túnel Fábio Rego — uma passagem ferroviária abandonada e alagada em Jaguariaíva, Paraná. 900 metros de extensão, água com até um metro de profundidade, e o palco de um feito inédito no mundo: o bicampeão Lucas Fink andando de skimboard por toda a extensão.
+A Mitsubishi Motors e a agência Tech and Soul levaram a L200 Triton pra reconquistar o Túnel Fábio Rego: uma passagem ferroviária abandonada e alagada em Jaguariaíva, Paraná. 900 metros de extensão, água com até um metro de profundidade, e o palco de um feito inédito no mundo: o bicampeão Lucas Fink andando de skimboard por toda a extensão.
 
 [video](https://player.vimeo.com/video/622895482?h=99f788aaef "Primeiras Impressões")
 
-O fotógrafo de ação Pablo Vaz — conhecido pelo trabalho com esportes radicais — registrou o evento, com produção da Sector One cuidando da logística que uma proeza dessas realmente exige.
+O fotógrafo de ação Pablo Vaz, conhecido pelo trabalho com esportes radicais, registrou o evento, com produção da Sector One cuidando da logística que uma proeza dessas realmente exige.
 
 :::gallery
 ![](https://github.com/g6g6g8p8/project/blob/1200/src/assets/the-reconquest/carrossel-1/1.jpg?raw=true)
@@ -30,7 +30,7 @@ O fotógrafo de ação Pablo Vaz — conhecido pelo trabalho com esportes radica
 
 [video](https://player.vimeo.com/video/619980294?h=fd8b896854 "Trailer")
 
-Os wakeboarders Pedro Zucki e Gustavo Reichert se juntaram a Fink, colocando habilidade humana contra a L200 Triton e a Eclipse Cross. A Reconquista também lançou a plataforma 4You4Challenge da Mitsubishi — construída pra dar aos atletas exatamente esse tipo de palco.
+Os wakeboarders Pedro Zucki e Gustavo Reichert se juntaram a Fink, colocando habilidade humana contra a L200 Triton e a Eclipse Cross. A Reconquista também lançou a plataforma 4You4Challenge da Mitsubishi, construída pra dar aos atletas exatamente esse tipo de palco.
 
 :::gallery
 ![](https://github.com/g6g6g8p8/project/blob/1200/src/assets/the-reconquest/carrossel-2/1.jpg?raw=true)
@@ -50,4 +50,4 @@ Os wakeboarders Pedro Zucki e Gustavo Reichert se juntaram a Fink, colocando hab
 ![](https://github.com/g6g6g8p8/project/blob/1200/src/assets/the-reconquest/_VAZ7931.jpg?raw=true)
 :::
 
-Uma picape chegando a um lugar que um carro nunca chegaria — e um campeão mundial transformando esse lugar num feito inédito no mundo. Sem roteiro de produto necessário. O túnel falou por si.
+Uma picape chegando a um lugar que um carro nunca chegaria, e um campeão mundial transformando esse lugar num feito inédito no mundo. Sem roteiro de produto necessário. O túnel falou por si.

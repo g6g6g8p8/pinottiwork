@@ -16,7 +16,7 @@ description: >-
 ---
 
 
-Introduzimos o QR code no merchandising de TV brasileiro — um formato que sempre foi construído em torno de um apresentador lendo um roteiro e uma logo na tela.
+Introduzimos o QR code no merchandising de TV brasileiro: um formato que sempre foi construído em torno de um apresentador lendo um roteiro e uma logo na tela.
 
 [video](https://vimeo.com/625807152 "Como Fizemos")
 

@@ -18,16 +18,16 @@ description: >-
 
 ## A Campanha
 
-No Brasil, o cartão de crédito costuma ser o vilão do orçamento doméstico. Supereconomia inverteu esse quadro: uma série de conteúdo de educação financeira mostrando que você não precisa de superpoderes pra economizar, organizar as contas e usar o crédito com responsabilidade — só precisa dos hábitos certos.
+No Brasil, o cartão de crédito costuma ser o vilão do orçamento doméstico. Supereconomia inverteu esse quadro: uma série de conteúdo de educação financeira mostrando que você não precisa de superpoderes pra economizar, organizar as contas e usar o crédito com responsabilidade: só precisa dos hábitos certos.
 
 A campanha ganhou vida como um elenco de super-heróis do cotidiano, cada um ligado a uma habilidade financeira: pagar as contas em dia, dominar o cartão, organizar os gastos, fazer o dinheiro render.
 
 ## Os Filmes
 
-[video](https://vimeo.com/187872917 "Mastercard Supereconomia — Mulher Elástica")
-[video](https://vimeo.com/187872922 "Mastercard Supereconomia — Guru do Cartão")
-[video](https://vimeo.com/187872926 "Mastercard Supereconomia — Incrível Homem das Contas")
-[video](https://vimeo.com/187872991 "Mastercard Supereconomia — Demolidor de Gastos")
+[video](https://vimeo.com/187872917 "Mastercard Supereconomia: Mulher Elástica")
+[video](https://vimeo.com/187872922 "Mastercard Supereconomia: Guru do Cartão")
+[video](https://vimeo.com/187872926 "Mastercard Supereconomia: Incrível Homem das Contas")
+[video](https://vimeo.com/187872991 "Mastercard Supereconomia: Demolidor de Gastos")
 
 ## Os Créditos
 

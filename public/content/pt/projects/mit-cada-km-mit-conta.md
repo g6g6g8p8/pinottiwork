@@ -18,7 +18,7 @@ description: >-
 
 ## O Desafio
 
-A SAS Brasil leva atendimento médico a comunidades isoladas no sertão brasileiro — lugares onde a estrada acaba e só um 4x4 consegue passar. Pra estender esse alcance, a ONG precisava de mais combustível, mais quilômetros e mais visibilidade.
+A SAS Brasil leva atendimento médico a comunidades isoladas no sertão brasileiro: lugares onde a estrada acaba e só um 4x4 consegue passar. Pra estender esse alcance, a ONG precisava de mais combustível, mais quilômetros e mais visibilidade.
 
 ## O Insight
 
@@ -49,7 +49,7 @@ R$1 | DOADO A CADA 10 MIL KM RODADOS
 
 ## Os Resultados
 
-+14 milhões de quilômetros rodados pela comunidade viraram financiamento direto pra SAS Brasil — o suficiente pra ajudar a manter 100% da sua área de cobertura financiada durante toda a campanha. Um rally virou uma cadeia de suprimentos pra saúde, uma foto de painel de cada vez — forte o bastante por si só pra render cobertura de imprensa nacional sem nenhuma verba de mídia por trás.
++14 milhões de quilômetros rodados pela comunidade viraram financiamento direto pra SAS Brasil: o suficiente pra ajudar a manter 100% da sua área de cobertura financiada durante toda a campanha. Um rally virou uma cadeia de suprimentos pra saúde, uma foto de painel de cada vez, forte o bastante por si só pra render cobertura de imprensa nacional sem nenhuma verba de mídia por trás.
 
 [video autoplay](https://vimeo.com/625841483)
 

@@ -40,13 +40,13 @@ what_i_do: >-
 avatar_url: '/assets/profile.png'
 ---
 
-A maioria dos times criativos não falha por falta de boa ideia. Falha porque a ideia boa se perde no caminho — desalinhamento, decisão lenta, sistema que não aguenta passar de uma campanha.
+A maioria dos times criativos não falha por falta de boa ideia. Falha porque a ideia boa se perde no caminho: desalinhamento, decisão lenta, sistema que não aguenta passar de uma campanha.
 
-Sou Diretor de Criação, com mais de 15 anos liderando times criativos em agência e em marca grande — Mastercard, Mary Kay, Amazon, Fini, Mitsubishi Motors, L'Oréal.
+Sou Diretor de Criação, com mais de 15 anos liderando times criativos em agência e em marca grande: Mastercard, Mary Kay, Amazon, Fini, Mitsubishi Motors, L'Oréal.
 
 Comecei como web designer, programando HTML e CSS. Isso provavelmente explica por que nunca separei "criativo" de "como a coisa realmente é construída". Com o tempo isso virou uma convicção: craft vem primeiro, mas craft sozinho não escala. Quem escala é o time, as decisões e o jeito de trabalhar em volta dele.
 
-É isso que eu construo. Como Senior Art Director na WMcCann e na Tech and Soul, liderei campanhas grandes e sistemas de identidade pra marcas globais, e no caminho vieram Effie e Midas. Como Diretor de Criação e Head de Operações Criativas na Agência Crush, fui mais fundo — reconstruindo como os times por trás da Fini e da Mary Kay Brasil realmente trabalhavam, não só o que eles entregavam.
+É isso que eu construo. Como Senior Art Director na WMcCann e na Tech and Soul, liderei campanhas grandes e sistemas de identidade pra marcas globais, e no caminho vieram Effie e Midas. Como Diretor de Criação e Head de Operações Criativas na Agência Crush, fui mais fundo, reconstruindo como os times por trás da Fini e da Mary Kay Brasil realmente trabalhavam, não só o que eles entregavam.
 
 Um pouco do que eu liderei, e do que mais me orgulho:
 
@@ -56,6 +56,6 @@ Um pouco do que eu liderei, e do que mais me orgulho:
 - Fiz o diagnóstico completo de operações criativas de uma agência de 20 pessoas, reconstruindo fluxo de trabalho e processo de decisão em três contas-chave.
 - Effie Ouro, dois Effie Bronze, e um Silver Midas Award (New York Festivals).
 
-Hoje estou aberto a posições de Diretor de Criação / Head de Criação em times globais e remote-first — e topando projetos pontuais de consultoria em operações criativas e de marketing nesse meio tempo.
+Hoje estou aberto a posições de Diretor de Criação / Head de Criação em times globais e remote-first, e topando projetos pontuais de consultoria em operações criativas e de marketing nesse meio tempo.
 
-Se você está montando — ou remontando — uma área criativa, pode me chamar.
+Se você está montando (ou remontando) uma área criativa, pode me chamar.

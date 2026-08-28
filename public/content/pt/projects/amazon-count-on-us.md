@@ -22,7 +22,7 @@ A chegada oficial da Amazon ao Brasil exigia uma mensagem inconfundível: a marc
 
 ## O Insight
 
-"Conta com a gente" — uma promessa simples, direta e calorosa, traduzida em histórias do dia a dia de brasileiros diferentes que, a partir de agora, podiam contar com a Amazon.
+"Conta com a gente": uma promessa simples, direta e calorosa, traduzida em histórias do dia a dia de brasileiros diferentes que, a partir de agora, podiam contar com a Amazon.
 
 [video](https://vimeo.com/315103707)
 
@@ -34,7 +34,7 @@ A chegada oficial da Amazon ao Brasil exigia uma mensagem inconfundível: a marc
 
 ## A Campanha
 
-Um filme manifesto de 45 segundos, seguido de quatro filmes de 15 segundos, cada um construído em torno de um cliente diferente: Vovô, Mãe, Gamer, Menina — quatro razões diferentes para confiar na mesma marca.
+Um filme manifesto de 45 segundos, seguido de quatro filmes de 15 segundos, cada um construído em torno de um cliente diferente: Vovô, Mãe, Gamer, Menina, quatro razões diferentes para confiar na mesma marca.
 
 [video](https://vimeo.com/315120054)
 
@@ -44,4 +44,4 @@ Um filme manifesto de 45 segundos, seguido de quatro filmes de 15 segundos, cada
 
 [video](https://vimeo.com/315120116)
 
-Foi a apresentação da Amazon ao Brasil — não uma logo pousando num novo mercado, mas uma promessa feita a quatro tipos de pessoas que realmente iriam usá-la.
+Foi a apresentação da Amazon ao Brasil: não uma logo pousando num novo mercado, mas uma promessa feita a quatro tipos de pessoas que realmente iriam usá-la.

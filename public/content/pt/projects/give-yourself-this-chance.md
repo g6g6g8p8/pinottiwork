@@ -14,7 +14,7 @@ aspect_ratio: '4:3'
 description: 'Uma picape é coisa só pra interior? Isso acabou.'
 ---
 
-A Mitsubishi Motors e a Tech and Soul redefiniram o que versatilidade significa para o L200 Triton Sport. Ao som de Rita Lee, o filme quebra o estereótipo de cara — mulheres, jovens motoristas e famílias usando a L200 tanto nas ruas da cidade quanto em escapadas de fim de semana e idas à praia, não só em estrada de terra.
+A Mitsubishi Motors e a Tech and Soul redefiniram o que versatilidade significa para o L200 Triton Sport. Ao som de Rita Lee, o filme quebra o estereótipo de cara: mulheres, jovens motoristas e famílias usando a L200 tanto nas ruas da cidade quanto em escapadas de fim de semana e idas à praia, não só em estrada de terra.
 
 [video](https://player.vimeo.com/video/840171784 "Comercial de 60s")
 
@@ -25,4 +25,4 @@ A tecnologia e a segurança de bordo fazem o argumento: primeiro um veículo do 
 ![](https://assets.pinotti.work/assets-v1/ec588b8c-9c22-4a0b-8cc2-ca30485b5fe9/3_zwzql7.mov?cb=1)
 :::
 
-Rodou em TV, mídia externa e digital — um único filme, feito pra parecer que foi criado pra quem quer que estivesse assistindo: uma família, um jovem motorista, alguém que nunca tinha considerado uma picape até essa.
+Rodou em TV, mídia externa e digital: um único filme, feito pra parecer que foi criado pra quem quer que estivesse assistindo, uma família, um jovem motorista, alguém que nunca tinha considerado uma picape até essa.
