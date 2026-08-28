@@ -5,20 +5,33 @@ import socialShareAsset from "../assets/social-share.png.asset.json";
 const SITE = "https://pinotti.work";
 const OG_IMAGE = socialShareAsset.url;
 
+const SEO = {
+  en: {
+    title: "Giulio Pinotti | Creative Director Portfolio",
+    description:
+      "Portfolio of Giulio Pinotti, Creative Director — branding, content, advertising and design based in São Paulo, Brazil.",
+  },
+  pt: {
+    title: "Giulio Pinotti | Portfólio de Diretor de Criação",
+    description:
+      "Portfólio de Giulio Pinotti, Diretor de Criação — branding, conteúdo, publicidade e design, com base em São Paulo.",
+  },
+};
+
 export const Route = createFileRoute("/")({
-  head: () => ({
+  head: ({ match }) => {
+    const s = SEO[match.context.locale];
+    return {
     meta: [
-      { title: "Giulio Pinotti | Creative Director Portfolio" },
+      { title: s.title },
       {
         name: "description",
-        content:
-          "Portfolio of Giulio Pinotti, Creative Director — branding, content, advertising and design based in São Paulo, Brazil.",
+        content: s.description,
       },
-      { property: "og:title", content: "Giulio Pinotti | Creative Director Portfolio" },
+      { property: "og:title", content: s.title },
       {
         property: "og:description",
-        content:
-          "Portfolio of Giulio Pinotti, Creative Director — branding, content, advertising and design based in São Paulo, Brazil.",
+        content: s.description,
       },
       { property: "og:url", content: `${SITE}/` },
       { property: "og:image", content: OG_IMAGE },
@@ -33,6 +46,7 @@ export const Route = createFileRoute("/")({
         fetchpriority: "high",
       },
     ],
-  }),
+    };
+  },
   component: Home,
 });

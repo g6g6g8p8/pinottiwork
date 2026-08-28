@@ -3,9 +3,13 @@ import { Link, useNavigate } from '@tanstack/react-router';
 import { X as CloseIcon, Share2, Mail, Linkedin, Download } from 'lucide-react';
 import { useAbout } from '../../hooks/useAbout';
 import Toast from './Toast';
+import { useLocale } from '../../context/LocaleContext';
+import { t } from '../../lib/i18n-strings';
 
 export default function About() {
   const { about, loading } = useAbout();
+  const { locale } = useLocale();
+  const strings = t(locale);
   const navigate = useNavigate();
   const [toast, setToast] = React.useState('');
   const [lightboxOpen, setLightboxOpen] = React.useState(false);
@@ -34,7 +38,7 @@ export default function About() {
         await navigator.share(shareData);
       } else if (typeof navigator !== 'undefined' && navigator.clipboard) {
         await navigator.clipboard.writeText(window.location.href);
-        setToast('Link copied!');
+        setToast(strings.linkCopied);
       }
     } catch (error) {
       console.error('Error sharing:', error);
@@ -59,11 +63,11 @@ export default function About() {
           to="/"
           className="text-[13px] font-medium text-foreground/70 hover:text-foreground transition-colors"
         >
-          ← Back
+          ← {strings.back}
         </Link>
         <button
           onClick={() => navigate({ to: '/' })}
-          aria-label="Close about"
+          aria-label={strings.closeAbout}
           className="w-8 h-8 flex items-center justify-center rounded-full
             bg-foreground/10 hover:bg-foreground/20
             text-foreground/60 hover:text-foreground transition-colors"
@@ -82,7 +86,7 @@ export default function About() {
                 type="button"
                 onClick={() => setLightboxOpen(true)}
                 className="rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground/40"
-                aria-label="Open profile picture"
+                aria-label={strings.openProfilePicture}
               >
                 <img src={about.avatar_url} alt="" className="w-16 h-16 rounded-full cursor-zoom-in hover:opacity-90 transition-opacity" loading="lazy" />
               </button>
@@ -107,7 +111,7 @@ export default function About() {
                 className="inline-flex items-center gap-1.5 px-4 py-2 bg-foreground/5 hover:bg-foreground/10 rounded-full text-footnote transition-colors"
               >
                 <Mail size={14} />
-                Email
+                {strings.email}
               </a>
               {about.linkedin_url && (
                 <a
@@ -117,7 +121,7 @@ export default function About() {
                   className="inline-flex items-center gap-1.5 px-4 py-2 bg-foreground/5 hover:bg-foreground/10 rounded-full text-footnote transition-colors"
                 >
                   <Linkedin size={14} />
-                  LinkedIn
+                  {strings.linkedin}
                 </a>
               )}
               {about.resume_url && (
@@ -127,7 +131,7 @@ export default function About() {
                   className="inline-flex items-center gap-1.5 px-4 py-2 bg-foreground text-background hover:opacity-90 rounded-full text-footnote transition-opacity"
                 >
                   <Download size={14} />
-                  Download Résumé
+                  {strings.downloadResume}
                 </a>
               )}
             </div>
@@ -135,7 +139,7 @@ export default function About() {
 
           {/* About me */}
           <div className="bg-card rounded-2xl p-6">
-            <h3 className="text-[18px] leading-[22px] mb-4">About me</h3>
+            <h3 className="text-[18px] leading-[22px] mb-4">{strings.aboutMe}</h3>
             <div className="prose">
               <p className="text-body whitespace-pre-line">{about.short_bio}</p>
             </div>
@@ -143,7 +147,7 @@ export default function About() {
 
           {/* Career highlights */}
           <div className="space-y-5">
-            <h3 className="text-subheadline font-medium opacity-60">CAREER HIGHLIGHTS</h3>
+            <h3 className="text-subheadline font-medium opacity-60">{strings.careerHighlights}</h3>
             <div className="bg-card rounded-2xl p-6">
               {about.career_highlights.map((h, index) => (
                 <React.Fragment key={h.id}>
@@ -157,7 +161,7 @@ export default function About() {
                       />
                       <div className="flex-1 min-w-0 space-y-1">
                         <div className="text-[22px] leading-[27px] font-semibold">{h.company}</div>
-                        <div className="text-[16px] leading-[19px] text-foreground/60">at {h.role}</div>
+                        <div className="text-[16px] leading-[19px] text-foreground/60">{strings.at} {h.role}</div>
                       </div>
                     </div>
                     <p className="text-[16px] leading-[24px] text-foreground/80">{h.period}</p>
@@ -172,7 +176,7 @@ export default function About() {
 
           {/* What I do */}
           <div className="space-y-5">
-            <h3 className="text-[14px] leading-[17px] font-medium opacity-60">WHAT I DO</h3>
+            <h3 className="text-[14px] leading-[17px] font-medium opacity-60">{strings.whatIDo}</h3>
             <div className="bg-card rounded-2xl p-6">
               <p className="text-body whitespace-pre-line">{about.what_i_do}</p>
             </div>
@@ -180,7 +184,7 @@ export default function About() {
 
           {/* Brands */}
           <div className="space-y-5">
-            <h3 className="text-[14px] leading-[17px] font-medium opacity-60">BRANDS I'VE WORKED WITH</h3>
+            <h3 className="text-[14px] leading-[17px] font-medium opacity-60">{strings.brandsWorkedWith}</h3>
             <div className="bg-card rounded-2xl p-6">
               <div className="flex flex-wrap gap-2">
                 {about.brands.map((brand, i) => (
@@ -194,7 +198,7 @@ export default function About() {
 
           {/* Awards */}
           <div className="space-y-5">
-            <h3 className="text-[14px] leading-[17px] font-medium opacity-60">AWARDS</h3>
+            <h3 className="text-[14px] leading-[17px] font-medium opacity-60">{strings.awards}</h3>
             <div className="bg-card rounded-2xl p-6">
               <div className="space-y-3">
                 {about.awards.map((a, i) => (
@@ -230,7 +234,7 @@ export default function About() {
             className="inline-flex items-center gap-2 px-6 py-3 border border-border hover:bg-foreground/5 rounded-lg text-callout transition-colors"
           >
             <Share2 size={18} />
-            Share
+            {strings.share}
           </button>
         </div>
       </div>
@@ -245,7 +249,7 @@ export default function About() {
           <button
             type="button"
             onClick={() => setLightboxOpen(false)}
-            aria-label="Close"
+            aria-label={strings.close}
             className="absolute top-4 right-4 w-9 h-9 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
           >
             <CloseIcon size={18} />

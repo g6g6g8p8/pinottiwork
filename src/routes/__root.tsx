@@ -14,25 +14,30 @@ import appCss from "../styles.css?url";
 import socialShareAsset from "../assets/social-share.png.asset.json";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SearchProvider } from "../context/SearchContext";
+import { LocaleProvider } from "../context/LocaleContext";
 import Sidebar from "../components/portfolio/Sidebar";
 import BottomTabBar from "../components/portfolio/BottomTabBar";
 import { trackAirOps } from "../lib/airops-track";
+import { resolveLocale, type Locale } from "../lib/locale";
+import { t } from "../lib/i18n-strings";
 
 function NotFoundComponent() {
+  const { locale } = Route.useRouteContext();
+  const strings = t(locale);
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
+        <h2 className="mt-4 text-xl font-semibold text-foreground">{strings.pageNotFoundTitle}</h2>
         <p className="mt-2 text-sm text-foreground/60">
-          The page you're looking for doesn't exist or has been moved.
+          {strings.pageNotFoundBody}
         </p>
         <div className="mt-6">
           <Link
             to="/"
             className="inline-flex items-center justify-center rounded-md bg-foreground px-4 py-2 text-sm font-medium text-background transition-colors hover:opacity-90"
           >
-            Go home
+            {strings.goHome}
           </Link>
         </div>
       </div>
@@ -43,6 +48,8 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
+  const { locale } = Route.useRouteContext();
+  const strings = t(locale);
   useEffect(() => {
     reportLovableError(error, { boundary: "tanstack_root_error_component" });
   }, [error]);
@@ -51,10 +58,10 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-xl font-semibold tracking-tight text-foreground">
-          This page didn't load
+          {strings.somethingWentWrongTitle}
         </h1>
         <p className="mt-2 text-sm text-foreground/60">
-          Something went wrong on our end. You can try refreshing or head back home.
+          {strings.somethingWentWrongBody}
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
@@ -64,13 +71,13 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
             }}
             className="inline-flex items-center justify-center rounded-md bg-foreground px-4 py-2 text-sm font-medium text-background transition-colors hover:opacity-90"
           >
-            Try again
+            {strings.tryAgain}
           </button>
           <a
             href="/"
             className="inline-flex items-center justify-center rounded-md border border-border bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-foreground/5"
           >
-            Go home
+            {strings.goHome}
           </a>
         </div>
       </div>
@@ -78,8 +85,12 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
-export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
+export const Route = createRootRouteWithContext<{ queryClient: QueryClient; locale: Locale }>()({
+  beforeLoad: async () => {
+    const locale = await resolveLocale();
+    return { locale };
+  },
+  head: ({ match }) => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -114,7 +125,7 @@ gtag('config', 'G-J1KB94KVL3');`,
           "@context": "https://schema.org",
           "@type": "Person",
           name: "Giulio Pinotti",
-          jobTitle: "Creative Director",
+          jobTitle: match.context.locale === "pt" ? "Diretor de Criação" : "Creative Director",
           url: "https://pinotti.work",
           address: {
             "@type": "PostalAddress",
@@ -132,8 +143,9 @@ gtag('config', 'G-J1KB94KVL3');`,
 });
 
 function RootShell({ children }: { children: ReactNode }) {
+  const { locale } = Route.useRouteContext();
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         <HeadContent />
       </head>
@@ -146,7 +158,7 @@ function RootShell({ children }: { children: ReactNode }) {
 }
 
 function RootComponent() {
-  const { queryClient } = Route.useRouteContext();
+  const { queryClient, locale } = Route.useRouteContext();
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const hideSidebar = pathname.startsWith("/about") || pathname.startsWith("/projects/");
 
@@ -181,17 +193,19 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <SearchProvider>
-        <div className="min-h-screen bg-background text-foreground">
-          <div className="flex max-w-[1400px] mx-auto">
-            {!hideSidebar && <Sidebar />}
-            <main className="flex-1 min-w-0 pb-[100px] lg:pb-0">
-              <Outlet />
-            </main>
+      <LocaleProvider initialLocale={locale}>
+        <SearchProvider>
+          <div className="min-h-screen bg-background text-foreground">
+            <div className="flex max-w-[1400px] mx-auto">
+              {!hideSidebar && <Sidebar />}
+              <main className="flex-1 min-w-0 pb-[100px] lg:pb-0">
+                <Outlet />
+              </main>
+            </div>
+            <BottomTabBar />
           </div>
-          <BottomTabBar />
-        </div>
-      </SearchProvider>
+        </SearchProvider>
+      </LocaleProvider>
     </QueryClientProvider>
   );
 }

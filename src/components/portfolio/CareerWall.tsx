@@ -8,10 +8,12 @@ import {
 } from 'framer-motion';
 import { useAbout } from '../../hooks/useAbout';
 import type { CareerHighlight } from '../../hooks/useAbout';
+import { useLocale } from '../../context/LocaleContext';
+import { t } from '../../lib/i18n-strings';
 
 // Card: -25% width, +25% height vs previous defaults.
 // min-h ensures consistent height across cards regardless of content length.
-function Card({ h }: { h: CareerHighlight }) {
+function Card({ h, at }: { h: CareerHighlight; at: string }) {
   return (
     <div
       className="
@@ -32,7 +34,7 @@ function Card({ h }: { h: CareerHighlight }) {
             {h.company}
           </div>
           <div className="text-[13px] leading-[17px] md:text-[15px] md:leading-[19px] text-foreground/60 truncate">
-            at {h.role}
+            {at} {h.role}
           </div>
         </div>
       </div>
@@ -48,17 +50,17 @@ const CARD_W = 'w-[58vw] sm:w-[36vw] lg:w-[18vw] lg:min-w-[260px]';
 
 // Mobile/tablet: native horizontal scroll with snap.
 // Avoids the sticky scroll-jack pattern which locks up on iOS Safari.
-function MobileHighlights({ highlights }: { highlights: CareerHighlight[] }) {
+function MobileHighlights({ highlights, strings }: { highlights: CareerHighlight[]; strings: ReturnType<typeof t> }) {
   return (
-    <section aria-label="Career highlights" className="py-2 -mx-5 md:-mx-8 lg:mx-0">
+    <section aria-label={strings.careerHighlights} className="py-2 -mx-5 md:-mx-8 lg:mx-0">
       <h3 className="text-[14px] leading-[17px] font-medium opacity-60 mb-4 px-5 md:px-8 lg:px-0">
-        CAREER HIGHLIGHTS
+        {strings.careerHighlights}
       </h3>
       <div className="overflow-x-auto snap-x snap-mandatory px-5 md:px-8 lg:px-0 scrollbar-hide">
         <div className="flex gap-premium-md pb-2">
           {highlights.map((h) => (
             <div key={h.id} className={`snap-start shrink-0 ${CARD_W}`}>
-              <Card h={h} />
+              <Card h={h} at={strings.at} />
             </div>
           ))}
         </div>
@@ -70,7 +72,7 @@ function MobileHighlights({ highlights }: { highlights: CareerHighlight[] }) {
 // Desktop only: sticky scroll-jack driven by vertical scroll.
 // Only mounted after hydration so the Framer Motion scroll hooks only run on the client
 // with a real DOM element and a stable layout, preventing SSR/hydration mismatch errors.
-function DesktopScrollJack({ highlights }: { highlights: CareerHighlight[] }) {
+function DesktopScrollJack({ highlights, strings }: { highlights: CareerHighlight[]; strings: ReturnType<typeof t> }) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const viewportRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
@@ -115,7 +117,7 @@ function DesktopScrollJack({ highlights }: { highlights: CareerHighlight[] }) {
   return (
     <section
       ref={sectionRef}
-      aria-label="Career highlights"
+      aria-label={strings.careerHighlights}
       role="region"
       className="relative -mx-5 md:-mx-8 lg:mx-0"
       style={{ height: sectionHeight }}
@@ -129,7 +131,7 @@ function DesktopScrollJack({ highlights }: { highlights: CareerHighlight[] }) {
         }}
       >
         <h3 className="text-[14px] leading-[17px] font-medium opacity-60 mb-4 px-5 md:px-8 lg:px-0">
-          CAREER HIGHLIGHTS
+          {strings.careerHighlights}
         </h3>
 
         <motion.div
@@ -139,12 +141,12 @@ function DesktopScrollJack({ highlights }: { highlights: CareerHighlight[] }) {
         >
           {highlights.map((h) => (
             <div key={h.id} className={`shrink-0 ${CARD_W}`}>
-              <Card h={h} />
+              <Card h={h} at={strings.at} />
             </div>
           ))}
         </motion.div>
 
-        <span className="sr-only">Scroll to reveal more career highlights</span>
+        <span className="sr-only">{strings.scrollForMore}</span>
       </div>
     </section>
   );
@@ -152,6 +154,8 @@ function DesktopScrollJack({ highlights }: { highlights: CareerHighlight[] }) {
 
 export default function CareerWall() {
   const { about } = useAbout();
+  const { locale } = useLocale();
+  const strings = t(locale);
   const reduced = useReducedMotion();
   const [isDesktop, setIsDesktop] = useState(false);
 
@@ -171,8 +175,8 @@ export default function CareerWall() {
   const highlights = about.career_highlights;
 
   if (!isDesktop || reduced) {
-    return <MobileHighlights highlights={highlights} />;
+    return <MobileHighlights highlights={highlights} strings={strings} />;
   }
 
-  return <DesktopScrollJack highlights={highlights} />;
+  return <DesktopScrollJack highlights={highlights} strings={strings} />;
 }

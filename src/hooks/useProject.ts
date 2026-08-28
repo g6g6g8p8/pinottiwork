@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useServerFn } from '@tanstack/react-start';
 import { parseMarkdownContent, type ContentBlock } from '../lib/parseMarkdown';
 import { getProject } from '../lib/content.functions';
+import { useLocale } from '../context/LocaleContext';
 
 export interface Project {
   id: number;
@@ -23,6 +24,7 @@ export function useProject(slug: string | undefined) {
   const [content, setContent] = useState<ContentBlock[] | null>(null);
   const [loading, setLoading] = useState(true);
   const fetchProject = useServerFn(getProject);
+  const { locale } = useLocale();
 
   useEffect(() => {
     if (!slug) { setLoading(false); return; }
@@ -31,7 +33,7 @@ export function useProject(slug: string | undefined) {
     let cancelled = false;
     (async () => {
       try {
-        const result = await fetchProject({ data: { slug } });
+        const result = await fetchProject({ data: { slug, locale } });
         if (cancelled) return;
         if (!result) {
           setProject(null);
@@ -48,7 +50,7 @@ export function useProject(slug: string | undefined) {
       }
     })();
     return () => { cancelled = true; };
-  }, [slug, fetchProject]);
+  }, [slug, fetchProject, locale]);
 
   return { project, content, loading };
 }

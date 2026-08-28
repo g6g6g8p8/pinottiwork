@@ -4,6 +4,8 @@ import type { Project } from '../../hooks/useProject';
 import { useProjects } from '../../hooks/useProjects';
 import { toSlug, getImageColor, isVideoUrl, toPosterUrl } from '../../lib/portfolio-utils';
 import guinnessAsset from '../../assets/awards/guinness.png.asset.json';
+import { useLocale } from '../../context/LocaleContext';
+import { t } from '../../lib/i18n-strings';
 
 interface Props {
   current: Project;
@@ -89,6 +91,8 @@ function Row({
 
 export default function RelatedProjects({ current }: Props) {
   const { projects } = useProjects();
+  const { locale } = useLocale();
+  const strings = t(locale);
 
   const others = (projects || []).filter((p) => p.slug !== current.slug);
   const sameClient = others
@@ -129,8 +133,8 @@ export default function RelatedProjects({ current }: Props) {
 
   return (
     <div className="mt-16 pt-12 border-t border-foreground/10 space-y-10">
-      <Row label={`More from ${current.client}`} projects={sameClient} imageColors={imageColors} />
-      <Row label={`More in ${current.category}`} projects={sameCategory} imageColors={imageColors} />
+      <Row label={`${strings.moreFrom} ${current.client}`} projects={sameClient} imageColors={imageColors} />
+      <Row label={`${strings.moreIn} ${current.category}`} projects={sameCategory} imageColors={imageColors} />
     </div>
   );
 }

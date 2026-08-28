@@ -6,6 +6,8 @@ import { useSearch } from '../../context/SearchContext';
 import { deriveCategories } from '../../lib/categories';
 import { useProjects } from '../../hooks/useProjects';
 import Portal from './Portal';
+import { useLocale } from '../../context/LocaleContext';
+import { t } from '../../lib/i18n-strings';
 
 export default function BottomTabBar() {
   const location = useLocation();
@@ -13,7 +15,9 @@ export default function BottomTabBar() {
   const { searchQuery, setSearchQuery, selectedCategory, setSelectedCategory, searchOpen, setSearchOpen } = useSearch();
   const inputRef = useRef<HTMLInputElement>(null);
   const { projects } = useProjects();
-  const categories = deriveCategories(projects);
+  const { locale } = useLocale();
+  const strings = t(locale);
+  const categories = deriveCategories(projects, locale);
 
   const isHome = location.pathname === '/';
   if (!isHome) return null;
@@ -63,7 +67,7 @@ export default function BottomTabBar() {
                 <input
                   ref={inputRef}
                   type="text"
-                  placeholder="Projects, clients, categories..."
+                  placeholder={strings.searchPlaceholderLong}
                   value={searchQuery}
                   onChange={(e) => handleSearch(e.target.value)}
                   className="flex-1 text-[17px] bg-transparent outline-none placeholder:text-foreground/60"
@@ -78,7 +82,7 @@ export default function BottomTabBar() {
                 ) : (
                   <button
                     type="button"
-                    aria-label="Close search"
+                    aria-label={strings.closeSearch}
                     onClick={closeSearch}
                     className="w-6 h-6 rounded-full bg-foreground/10 flex items-center justify-center shrink-0"
                   >

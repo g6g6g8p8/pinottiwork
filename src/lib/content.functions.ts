@@ -1,28 +1,59 @@
 import { createServerFn } from '@tanstack/react-start';
 import matter from 'gray-matter';
+import type { Locale } from './locale';
 
 // Embed markdown content into the bundle at build time so it works in any
 // runtime (Node dev/preview + Cloudflare Workers production). Avoid fs/cwd —
 // those only work in the Lovable Node sandbox.
-const projectFiles = import.meta.glob('/public/content/projects/*.md', {
+// PT content mirrors the EN tree one-for-one under content/pt/ — same
+// filenames, same slugs — so locale selection is just picking which glob
+// record to read from, with EN as the fallback if a PT file is missing.
+const projectFilesEn = import.meta.glob('/public/content/projects/*.md', {
   query: '?raw',
   import: 'default',
   eager: true,
 }) as Record<string, string>;
 
-const aboutFiles = import.meta.glob('/public/content/about.md', {
+const projectFilesPt = import.meta.glob('/public/content/pt/projects/*.md', {
   query: '?raw',
   import: 'default',
   eager: true,
 }) as Record<string, string>;
 
-const careerFiles = import.meta.glob('/public/content/career-highlights.md', {
+const aboutFilesEn = import.meta.glob('/public/content/about.md', {
   query: '?raw',
   import: 'default',
   eager: true,
 }) as Record<string, string>;
 
-const PROJECT_PATH_PREFIX = '/public/content/projects/';
+const aboutFilesPt = import.meta.glob('/public/content/pt/about.md', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+}) as Record<string, string>;
+
+const careerFilesEn = import.meta.glob('/public/content/career-highlights.md', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+}) as Record<string, string>;
+
+const careerFilesPt = import.meta.glob('/public/content/pt/career-highlights.md', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+}) as Record<string, string>;
+
+function projectFiles(locale: Locale) {
+  return locale === 'pt' ? projectFilesPt : projectFilesEn;
+}
+
+const PROJECT_PATH_PREFIX_EN = '/public/content/projects/';
+const PROJECT_PATH_PREFIX_PT = '/public/content/pt/projects/';
+
+function projectPathPrefix(locale: Locale) {
+  return locale === 'pt' ? PROJECT_PATH_PREFIX_PT : PROJECT_PATH_PREFIX_EN;
+}
 
 export interface ProjectData {
   id?: number;
@@ -50,8 +81,23 @@ function safeSlug(s: string) {
   return s.replace(/[^a-z0-9-]/gi, '');
 }
 
-function slugFromPath(p: string) {
-  return p.slice(PROJECT_PATH_PREFIX.length).replace(/\.md$/, '');
+function slugFromPath(p: string, locale: Locale) {
+  return p.slice(projectPathPrefix(locale).length).replace(/\.md$/, '');
+}
+
+// Slug -> raw markdown, preferring `locale` but falling back to EN for any
+// slug that doesn't have a translation yet (so a missing .pt.md never makes
+// a project disappear from the PT site — it just shows in English).
+function mergedProjectEntries(locale: Locale): Record<string, string> {
+  if (locale === 'en') return projectFilesEn;
+  const merged: Record<string, string> = {};
+  for (const [path, raw] of Object.entries(projectFilesEn)) {
+    merged[slugFromPath(path, 'en')] = raw;
+  }
+  for (const [path, raw] of Object.entries(projectFilesPt)) {
+    merged[slugFromPath(path, 'pt')] = raw;
+  }
+  return merged;
 }
 
 function normalizeProject(raw: any, fallbackSlug: string): ProjectData {
@@ -75,9 +121,9 @@ function normalizeProject(raw: any, fallbackSlug: string): ProjectData {
   };
 }
 
-function readProjectBySlug(slug: string): ProjectFull | null {
+function readProjectBySlug(slug: string, locale: Locale): ProjectFull | null {
   const safe = safeSlug(slug);
-  const raw = projectFiles[`${PROJECT_PATH_PREFIX}${safe}.md`];
+  const raw = mergedProjectEntries(locale)[safe];
   if (!raw) return null;
   try {
     const { data, content } = matter(raw);
@@ -89,18 +135,19 @@ function readProjectBySlug(slug: string): ProjectFull | null {
   }
 }
 
-export const listProjects = createServerFn({ method: 'GET' }).handler(
-  async (): Promise<ProjectData[]> => {
+export const listProjects = createServerFn({ method: 'GET' })
+  .inputValidator((d: { locale?: Locale } = {}) => d)
+  .handler(async ({ data }): Promise<ProjectData[]> => {
+    const locale = data?.locale ?? 'en';
     const items: ProjectData[] = [];
-    for (const [path, raw] of Object.entries(projectFiles)) {
-      const slug = slugFromPath(path);
+    for (const [slug, raw] of Object.entries(mergedProjectEntries(locale))) {
       try {
-        const { data } = matter(raw);
-        if (!data || !data.title) {
+        const { data: fm } = matter(raw);
+        if (!fm || !fm.title) {
           console.warn(`[content] skipping ${slug}.md: missing title`);
           continue;
         }
-        const project = normalizeProject(data, slug);
+        const project = normalizeProject(fm, slug);
         if (!project.published) continue;
         items.push(project);
       } catch (e) {
@@ -108,25 +155,22 @@ export const listProjects = createServerFn({ method: 'GET' }).handler(
       }
     }
     return items.sort((a, b) => a.order - b.order);
-  },
-);
+  });
 
 export const getProject = createServerFn({ method: 'GET' })
-  .inputValidator((d: { slug: string }) => d)
+  .inputValidator((d: { slug: string; locale?: Locale }) => d)
   .handler(async ({ data }): Promise<ProjectFull | null> => {
-    const p = readProjectBySlug(data.slug);
+    const p = readProjectBySlug(data.slug, data.locale ?? 'en');
     if (!p || !p.data.published) return null;
     return p;
   });
 
 export const getAllProjectSlugs = createServerFn({ method: 'GET' }).handler(
   async (): Promise<string[]> => {
-    return Object.keys(projectFiles)
-      .map(slugFromPath)
-      .filter((slug) => {
-        const p = readProjectBySlug(slug);
-        return p?.data.published === true;
-      });
+    return Object.keys(mergedProjectEntries('en')).filter((slug) => {
+      const p = readProjectBySlug(slug, 'en');
+      return p?.data.published === true;
+    });
   },
 );
 
@@ -142,9 +186,9 @@ export interface ProjectMeta {
 }
 
 export const getProjectMeta = createServerFn({ method: 'GET' })
-  .inputValidator((d: { slug: string }) => d)
+  .inputValidator((d: { slug: string; locale?: Locale }) => d)
   .handler(async ({ data }): Promise<ProjectMeta | null> => {
-    const p = readProjectBySlug(data.slug);
+    const p = readProjectBySlug(data.slug, data.locale ?? 'en');
     if (!p || !p.data.published) return null;
     return {
       title: p.data.title,
@@ -189,10 +233,14 @@ export interface AboutData {
   career_highlights: CareerHighlight[];
 }
 
-export const getAbout = createServerFn({ method: 'GET' }).handler(
-  async (): Promise<AboutData | null> => {
+export const getAbout = createServerFn({ method: 'GET' })
+  .inputValidator((d: { locale?: Locale } = {}) => d)
+  .handler(async ({ data: input }): Promise<AboutData | null> => {
+    const locale = input?.locale ?? 'en';
     try {
-      const aboutRaw = aboutFiles['/public/content/about.md'];
+      const aboutRaw =
+        (locale === 'pt' && aboutFilesPt['/public/content/pt/about.md']) ||
+        aboutFilesEn['/public/content/about.md'];
       if (!aboutRaw) {
         console.error('[content] about.md not found in bundle');
         return null;
@@ -200,7 +248,9 @@ export const getAbout = createServerFn({ method: 'GET' }).handler(
       const { data, content: bio } = matter(aboutRaw);
 
       let highlights: any[] = [];
-      const chRaw = careerFiles['/public/content/career-highlights.md'];
+      const chRaw =
+        (locale === 'pt' && careerFilesPt['/public/content/pt/career-highlights.md']) ||
+        careerFilesEn['/public/content/career-highlights.md'];
       if (chRaw) {
         try {
           const parsed = matter(chRaw);

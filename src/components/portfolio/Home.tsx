@@ -8,12 +8,16 @@ import FeaturedProjects from './FeaturedProjects';
 import { useSearch } from '../../context/SearchContext';
 import { deriveCategories } from '../../lib/categories';
 import { useProjects } from '../../hooks/useProjects';
+import { useLocale } from '../../context/LocaleContext';
+import { t } from '../../lib/i18n-strings';
 
 export default function Home() {
   const { about } = useAbout();
   const { selectedCategory } = useSearch();
   const { projects } = useProjects();
-  const categories = deriveCategories(projects);
+  const { locale } = useLocale();
+  const strings = t(locale);
+  const categories = deriveCategories(projects, locale);
   const aboutPrefetch = usePrefetchLink('/about');
 
   const titleRef = useRef<HTMLDivElement>(null);
@@ -49,12 +53,12 @@ export default function Home() {
               Giulio Pinotti,
             </Link>
             <span className="text-[20px] leading-[25px] tracking-[-.021em] text-foreground/60">
-              Creative Director
+              {strings.creativeDirector}
             </span>
           </div>
           <Link
             to="/about"
-            aria-label="About"
+            aria-label={strings.aboutMe}
             className="w-9 h-9 flex items-center justify-center rounded-full overflow-hidden shrink-0"
             {...aboutPrefetch}
           >
@@ -80,8 +84,8 @@ export default function Home() {
           className="text-[28px] md:text-[34px] xl:text-[40px] font-bold tracking-[-0.03em] leading-tight"
         >
           {selectedCategory === 'all' || !selectedCategory
-            ? 'Selected Works'
-            : categories.find((c) => c.id === selectedCategory)?.name ?? 'Work'}
+            ? strings.selectedWorks
+            : categories.find((c) => c.id === selectedCategory)?.name ?? strings.work}
         </motion.h1>
       </motion.div>
 

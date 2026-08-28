@@ -7,7 +7,9 @@ export const getRouter = () => {
 
   const router = createRouter({
     routeTree,
-    context: { queryClient },
+    // `locale` is a placeholder here — the root route's `beforeLoad` always
+    // resolves and overrides it before anything renders.
+    context: { queryClient, locale: "en" as const },
     scrollRestoration: true,
     defaultPreloadStaleTime: 0,
   });

@@ -5,6 +5,8 @@ import {
   type LucideIcon,
 } from 'lucide-react';
 import type { Project } from '../hooks/useProject';
+import type { Locale } from './locale';
+import { t } from './i18n-strings';
 
 export const CATEGORY_ICONS: Record<string, LucideIcon> = {
   'all':             LayoutGrid,
@@ -36,12 +38,12 @@ const CATEGORY_ORDER = [
   'branding',
 ];
 
-export function deriveCategories(projects: Project[]): Category[] {
+export function deriveCategories(projects: Project[], locale: Locale = 'en'): Category[] {
   const ordered: Category[] = [];
 
   ordered.push({
     id: 'all',
-    name: 'Selected Works',
+    name: t(locale).selectedWorks,
     count: projects.length,
     icon: CATEGORY_ICONS['all'],
   });

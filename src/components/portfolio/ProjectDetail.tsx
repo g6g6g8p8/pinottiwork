@@ -11,8 +11,12 @@ import Toast from './Toast';
 import RelatedProjects from './RelatedProjects';
 import type { ContentBlock } from '../../lib/parseMarkdown';
 import guinnessAsset from '../../assets/awards/guinness.png.asset.json';
+import { useLocale } from '../../context/LocaleContext';
+import { t } from '../../lib/i18n-strings';
 
 export default function ProjectDetail() {
+  const { locale } = useLocale();
+  const strings = t(locale);
   const { slug } = useParams({ from: '/projects/$slug' });
   const { project, content, loading } = useProject(slug);
   const navigate = useNavigate();
@@ -39,7 +43,7 @@ export default function ProjectDetail() {
         await navigator.share(shareData);
       } else if (typeof navigator !== 'undefined' && navigator.clipboard) {
         await navigator.clipboard.writeText(window.location.href);
-        setToast('Link copied!');
+        setToast(strings.linkCopied);
       }
     } catch (error) {
       console.error('Error sharing:', error);

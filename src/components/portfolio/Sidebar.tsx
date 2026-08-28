@@ -8,6 +8,9 @@ import { useSearch } from '../../context/SearchContext';
 import { getImageColor } from '../../lib/portfolio-utils';
 import { deriveCategories } from '../../lib/categories';
 import { useProjects } from '../../hooks/useProjects';
+import { useLocale } from '../../context/LocaleContext';
+import { t } from '../../lib/i18n-strings';
+import LanguageToggle from './LanguageToggle';
 
 type SuggestionType = 'project' | 'client' | 'category' | 'tag';
 
@@ -35,6 +38,8 @@ export default function Sidebar() {
   const { about } = useAbout();
   const { projects: projectsData } = useProjects();
   const { searchQuery, setSearchQuery, selectedCategory, setSelectedCategory } = useSearch();
+  const { locale } = useLocale();
+  const strings = t(locale);
   const location = useLocation();
   const navigate = useNavigate();
   const inputRef = useRef<HTMLInputElement>(null);
@@ -43,7 +48,7 @@ export default function Sidebar() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const isHome = location.pathname === '/';
-  const categories = deriveCategories(projectsData);
+  const categories = deriveCategories(projectsData, locale);
   const showDropdown = searchFocused;
 
   // Build flat suggestion index from projects
@@ -190,7 +195,7 @@ export default function Sidebar() {
         <input
           ref={inputRef}
           type="text"
-          placeholder="Search"
+          placeholder={strings.search}
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           onFocus={() => setSearchFocused(true)}
@@ -299,7 +304,7 @@ export default function Sidebar() {
       {isHome && (
         <nav>
           <p className="text-[11px] font-semibold uppercase tracking-[.07em] text-foreground/70 mb-1.5 px-2">
-            Work
+            {strings.work}
           </p>
           <ul className="space-y-0.5">
             {categories.map((cat) => {
@@ -340,10 +345,10 @@ export default function Sidebar() {
 
       {isHome && <SidebarAwards />}
 
-      <div className="mt-6 pt-4 border-t border-foreground/10">
+      <div className="mt-6 pt-4 border-t border-foreground/10 flex items-center gap-2">
         <Link
           to="/about"
-          className="flex items-center gap-3 group px-1 py-1 rounded-sf-md
+          className="flex-1 min-w-0 flex items-center gap-3 group px-1 py-1 rounded-sf-md
             hover:bg-foreground/5 transition-colors"
         >
           <div className="w-9 h-9 rounded-full overflow-hidden shrink-0
@@ -356,9 +361,10 @@ export default function Sidebar() {
           </div>
           <div className="min-w-0">
             <p className="text-[13px] font-semibold leading-tight truncate">Giulio Pinotti</p>
-            <p className="text-[11px] text-foreground/70 leading-tight truncate">Creative Director</p>
+            <p className="text-[11px] text-foreground/70 leading-tight truncate">{strings.creativeDirector}</p>
           </div>
         </Link>
+        <LanguageToggle />
       </div>
     </aside>
   );

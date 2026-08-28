@@ -25,11 +25,12 @@ function resolveOgImage(meta: ProjectMeta | null | undefined): string | null {
 }
 
 export const Route = createFileRoute("/projects/$slug")({
-  loader: async ({ params }) => {
-    const meta = await getProjectMeta({ data: { slug: params.slug } });
+  loader: async ({ params, context }) => {
+    const meta = await getProjectMeta({ data: { slug: params.slug, locale: context.locale } });
     return { meta };
   },
-  head: ({ params, loaderData }) => {
+  head: ({ params, loaderData, match }) => {
+    const locale = match.context.locale;
     const meta = loaderData?.meta;
     const url = `${SITE}/projects/${params.slug}`;
     const title = meta
@@ -39,7 +40,12 @@ export const Route = createFileRoute("/projects/$slug")({
     const ctx = meta?.client ? `${meta.client}${meta.role ? ` · ${meta.role}` : ""}. ` : "";
     let description = (ctx + baseDesc).trim();
     if (description.length > 160) description = description.slice(0, 157) + "…";
-    if (!description) description = "Selected project by Giulio Pinotti, Creative Director.";
+    if (!description) {
+      description =
+        locale === "pt"
+          ? "Projeto selecionado de Giulio Pinotti, Diretor de Criação."
+          : "Selected project by Giulio Pinotti, Creative Director.";
+    }
 
     const ogImage = resolveOgImage(meta);
 
@@ -75,7 +81,7 @@ export const Route = createFileRoute("/projects/$slug")({
               creator: {
                 "@type": "Person",
                 name: "Giulio Pinotti",
-                jobTitle: "Creative Director",
+                jobTitle: locale === "pt" ? "Diretor de Criação" : "Creative Director",
                 url: SITE,
               },
               ...(meta.client ? { sourceOrganization: { "@type": "Organization", name: meta.client } } : {}),

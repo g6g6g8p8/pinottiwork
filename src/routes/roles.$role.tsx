@@ -6,10 +6,14 @@ const SITE = 'https://pinotti.work';
 const OG_IMAGE = socialShareAsset.url;
 
 export const Route = createFileRoute('/roles/$role')({
-  head: ({ params }) => {
+  head: ({ params, match }) => {
     const name = (params.role || '').replace(/-/g, ' ');
-    const title = `${name} projects — Giulio Pinotti`;
-    const description = `Selected work by Giulio Pinotti, Creative Director based in São Paulo, in the role of ${name} — branding, content, advertising and design.`;
+    const locale = match.context.locale;
+    const title = locale === 'pt' ? `Projetos como ${name} — Giulio Pinotti` : `${name} projects — Giulio Pinotti`;
+    const description =
+      locale === 'pt'
+        ? `Trabalho selecionado de Giulio Pinotti, Diretor de Criação com base em São Paulo, como ${name} — branding, conteúdo, publicidade e design.`
+        : `Selected work by Giulio Pinotti, Creative Director based in São Paulo, in the role of ${name} — branding, content, advertising and design.`;
     const url = `${SITE}/roles/${params.role}`;
     return {
       meta: [

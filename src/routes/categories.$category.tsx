@@ -6,10 +6,14 @@ const SITE = 'https://pinotti.work';
 const OG_IMAGE = socialShareAsset.url;
 
 export const Route = createFileRoute('/categories/$category')({
-  head: ({ params }) => {
+  head: ({ params, match }) => {
     const name = (params.category || '').replace(/-/g, ' ');
+    const locale = match.context.locale;
     const title = `${name} — Giulio Pinotti`;
-    const description = `Explore selected ${name} projects by Giulio Pinotti, Creative Director based in São Paulo — branding, content, advertising and design.`;
+    const description =
+      locale === 'pt'
+        ? `Explore projetos selecionados de ${name} por Giulio Pinotti, Diretor de Criação com base em São Paulo — branding, conteúdo, publicidade e design.`
+        : `Explore selected ${name} projects by Giulio Pinotti, Creative Director based in São Paulo — branding, content, advertising and design.`;
     const url = `${SITE}/categories/${params.category}`;
     return {
       meta: [
