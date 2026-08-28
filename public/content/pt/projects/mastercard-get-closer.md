@@ -17,7 +17,7 @@ description: >-
   Superando a VISA no patrocínio da Copa América 2019.
 ---
 
-A Mastercard era a patrocinadora oficial da Conmebol Copa América 2019 e patrocinadora oficial da seleção brasileira. O briefing era claro: fazer o patrocínio significar algo que só a Mastercard poderia ser dona. Nada de logo em painel, nada de energia genérica de futebol. Uma ideia de verdade.
+A Mastercard era a patrocinadora oficial da Conmebol Copa América 2019 e patrocinadora oficial da seleção brasileira. O briefing era claro: fazer o patrocínio representar algo que só a Mastercard pudesse chamar de seu. Nada de logo em painel, nada de energia genérica de futebol. Uma ideia de verdade.
 
 A tensão era real. A tecnologia de pagamento por aproximação já estava amplamente espalhada no Brasil — toda maquininha do país trazia a palavra *aproxime* como instrução funcional. Mas o comportamento ainda não tinha virado hábito. Os brasileiros conheciam a palavra. Só não tinham feito dela sua.
 
@@ -27,7 +27,7 @@ Essa distância era a oportunidade.
 
 ## A Ideia: Aproxime
 
-*Aproxime* está impressa em toda maquininha sem contato do Brasil. É uma instrução técnica — aproxime o cartão. Mas em português, a palavra carrega um segundo sentido inteiro. Aproximar é diminuir a distância entre as pessoas. E é exatamente assim que o brasileiro vive o futebol: junto, caloroso, fisicamente perto.
+*Aproxime* está impressa em toda maquininha sem contato do Brasil. É uma instrução técnica — aproxime o cartão. Mas em português, a palavra tem outro significado. Aproximar é diminuir a distância entre as pessoas. E é assim que o brasileiro vive o futebol: junto, caloroso, fisicamente perto.
 
 ![](https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/13ce73135092917.61e17c4ee076b.gif)
 
@@ -35,7 +35,7 @@ Essa distância era a oportunidade.
 
 O duplo sentido virou a espinha dorsal da campanha. **Aproxime. Comece algo Priceless.**
 
-Tecnologia funcional encontra verdade emocional — as duas vivendo numa única palavra que a Mastercard já era dona em toda superfície de pagamento do país.
+Tecnologia funcional encontrando verdade emocional — as duas moram na mesma palavra, e essa palavra já era da Mastercard em toda superfície de pagamento do país.
 
 ---
 

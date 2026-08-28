@@ -21,7 +21,7 @@ highlights:
     logo: >-
       https://assets.pinotti.work/assets-v1/76d04943-2497-4fdc-b38a-acf11575e2a4/regular_logol-ore-cc-81al_el13ql.png?cb=1
     description: >-
-      Teve papel-chave em conquistar a conta digital através de um pitch
+      Teve papel-chave em conquistar a conta digital, com um pitch
       bem-sucedido.
     order: 3
   - company: Mitsubishi Motors
