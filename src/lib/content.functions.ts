@@ -89,13 +89,14 @@ function slugFromPath(p: string, locale: Locale) {
 // slug that doesn't have a translation yet (so a missing .pt.md never makes
 // a project disappear from the PT site — it just shows in English).
 function mergedProjectEntries(locale: Locale): Record<string, string> {
-  if (locale === 'en') return projectFilesEn;
   const merged: Record<string, string> = {};
   for (const [path, raw] of Object.entries(projectFilesEn)) {
     merged[slugFromPath(path, 'en')] = raw;
   }
-  for (const [path, raw] of Object.entries(projectFilesPt)) {
-    merged[slugFromPath(path, 'pt')] = raw;
+  if (locale === 'pt') {
+    for (const [path, raw] of Object.entries(projectFilesPt)) {
+      merged[slugFromPath(path, 'pt')] = raw;
+    }
   }
   return merged;
 }
