@@ -58,7 +58,7 @@ For me, this was one of the earliest pieces on the account — and one that made
 
 In 2019, Mastercard created its first jazz festival in Brazil — a free, two-day event at Auditório Ibirapuera with a lineup mixing international names like Christian Scott aTunde Adjuah with new Brazilian voices like Bixiga 70 and Xênia França.
 
-The campaign brief was clear: don't make it look like a corporate sponsorship. Make it feel like the music.
+The campaign brief was clear: don't make it look like a corporate sponsorship. Make it feel like part of the lineup.
 
 We built the campaign around portraits by photographer **Maurício Nahas** — frames with grain, movement, and a modern energy that spoke to jazz purists and younger audiences discovering the genre through digital platforms at the same time.
 

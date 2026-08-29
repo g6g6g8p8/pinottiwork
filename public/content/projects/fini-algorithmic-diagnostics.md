@@ -63,4 +63,4 @@ Two rules rebuilt the pipeline:
 ~3M | organic views from one creator partnership (Rafa Baricala)
 :::
 
-**Massive Organic Scale:** one creator partnership alone — Rafa Baricala — pulled in nearly 3 million organic views at an 8%+ engagement rate, with zero paid amplification behind it. And the team got something it hadn't had in months: time to actually think, instead of just produce.
+**Massive Organic Scale:** one creator partnership alone — Rafa Baricala — pulled in nearly 3 million organic views at an 8%+ engagement rate, with zero paid amplification behind it. And the team got back what it had lost: not just time to think, but the fun of creating loose and playful again, the way the brand always sounded.

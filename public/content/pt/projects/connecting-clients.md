@@ -16,7 +16,7 @@ A Next IP passou mais de 20 anos se adaptando dentro da indústria de comunicaç
 
 [video](https://i.imgur.com/pGw735P.mp4 "Conceito")
 
-Quando o time de marketing decidiu que era hora de evoluir, trouxeram a Agência Crush para liderar um rebranding completo. A nova identidade visual, e o tagline por trás dela, nasceu de pesquisa com times internos e públicos externos, construída em torno do real propósito da empresa: conexão.
+Quando o time de marketing decidiu que era hora de evoluir, trouxeram a Agência Crush para liderar um rebranding completo. A nova identidade visual, e o tagline por trás dela, nasceram de pesquisa com times internos e públicos externos, construída em torno do real propósito da empresa: conexão.
 
 :::gallery
 ![](https://assets.pinotti.work/assets-v1/9322cba5-9e0c-4705-82b2-63527cb446cb/jyga8auoiw2w5apxvfgo.mp4?cb=1)

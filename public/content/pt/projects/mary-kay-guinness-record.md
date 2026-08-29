@@ -18,7 +18,7 @@ description: >-
 
 ## O Desafio
 
-A Mary Kay Brasil vende através de uma força de vendas independente de consultoras: pessoas reais, não atrizes. A marca precisava provar que estava do lado delas, não só falando com elas, numa escala grande o suficiente pra importar globalmente.
+A Mary Kay Brasil vende com uma força de vendas independente de consultoras: pessoas reais, não atrizes. A marca precisava provar que estava do lado delas, não só falando com elas, numa escala grande o suficiente pra ter peso no mundo todo.
 
 [video autoplay](https://assets.pinotti.work/assets-v1/11ec54e8-5f65-4217-a39d-10ced62b2f5e/2025-12-01_11-42-43_cxa1kr.mp4?cb=1)
 
@@ -33,7 +33,7 @@ As consultoras não precisavam ser a plateia. Precisavam ser o show.
 
 ## A Campanha
 
-A "Live de Batom por Elas" colocou as consultoras da Mary Kay no centro de uma transmissão única e coordenada, em parceria com o Instituto Fala Mulher, ligando o evento a uma causa maior que a própria marca. Como Diretor de Criação e Head de Operações Criativas, liderei a estratégia e a direção de conteúdo, construindo um pipeline que deixava as consultoras protagonizarem o momento em vez de só aparecerem nele.
+A "Live de Batom por Elas" colocou as consultoras da Mary Kay no centro de uma transmissão única e coordenada, alinhada com a maior live do ano da marca, com Diretoras Nacionais de Vendas na frente da campanha como embaixadoras. O mecanismo tornou a causa concreta: cada onda de participação virava apoio direto pra mulheres, em parceria com o Instituto Protea e a Associação Fala Mulher. Como Diretor de Criação e Head de Operações Criativas, liderei a estratégia e a direção de conteúdo.
 
 :::gallery
 ![](https://assets.pinotti.work/assets-v1/a3dd75ce-3cb2-4b1f-9dbd-9a6d14bb561c/depimentos_smiiq4.mp4?cb=1)
@@ -50,12 +50,12 @@ A "Live de Batom por Elas" colocou as consultoras da Mary Kay no centro de uma t
 
 ## O Impacto (Os Resultados)
 
-3.000 consultoras independentes foram ao ar ao mesmo tempo, na mesma transmissão: o suficiente pra fechar um ciclo de 3 anos de muito sucesso na conta com um título oficial do Guinness World Records.
+3.000 consultoras independentes passaram batom ao mesmo tempo, na mesma transmissão: um título oficial do Guinness World Records, auditado e homologado.
 
 :::gallery
 ![](https://assets.pinotti.work/assets-v1/720f7266-0159-4e4d-98d1-7f2fae05d03a/S02_12.12_REELS_Entrega_zo5xb0.mp4?cb=1)
 :::
 
-- **Marco Global:** 3.000 consultoras independentes ao vivo ao mesmo tempo, garantindo à Mary Kay Brasil um título oficial do Guinness World Records.
-- **Mobilização de Comunidade:** prova de que a operação conseguia mobilizar sua própria força de vendas numa escala que nenhuma campanha paga conseguiria comprar.
-- **Autoridade de Marca:** uma credencial internacional que a rede global da Mary Kay pode apontar diretamente: não uma alegação, um recorde.
+- **Marco Global:** 3.000 participantes ao vivo ao mesmo tempo, garantindo à Mary Kay Brasil um título oficial do Guinness World Records.
+- **Apoio Real:** o recorde virou 120 atendimentos completos, jurídicos, psicológicos e sociais, pra mulheres, através da Associação Fala Mulher.
+- **Autoridade de Marca:** uma credencial internacional que a rede global da Mary Kay pode apontar diretamente, não uma alegação, um recorde.

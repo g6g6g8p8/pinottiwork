@@ -19,7 +19,7 @@ description: >-
 
 Quando a Tech and Soul lançou a plataforma **4You4** para a Mitsubishi Motors Brasil, o briefing era ancorar a marca em torno de um novo tipo de motorista: mais diverso, mais conectado à tecnologia dentro do carro do que à lama fora dele. Toda campanha que veio depois precisava carregar o mesmo DNA: espírito 4x4, redefinido.
 
-Ao longo de dois anos, ajudei a construir e expandir essa plataforma através de lançamentos de produto, conteúdo de marca e um grande patrocínio esportivo: cinco expressões diferentes de uma ideia, cada uma construída pra se sustentar sozinha e ainda assim ler como a mesma marca.
+Ao longo de dois anos, ajudei a construir e expandir essa plataforma através de lançamentos de produto, conteúdo de marca e um grande patrocínio esportivo: cinco expressões diferentes de uma ideia, cada uma construída pra se sustentar sozinha e ainda assim manter a cara da marca.
 
 ---
 
@@ -91,7 +91,7 @@ Se o 4You4Rally emprestou a linguagem do tênis, esse é o original: os eventos 
 
 ## MIT Drivelines: A Companheira de Viagem 4x4
 
-Uma plataforma de conteúdo de marca que transformou o DNA 4x4 numa proposta de viagem, construída com estética completa de companhia aérea. Com as viagens internacionais severamente restritas durante a pandemia, a Mitsubishi lançou uma companhia de viagens fictícia chamada MIT Drivelines, convidando os brasileiros a descobrir o país de carro, com o conforto e a tecnologia de um veículo premium no lugar do assento de primeira classe.
+Uma plataforma de conteúdo de marca que transformou o DNA 4x4 numa proposta de viagem, construída com estética completa de companhia aérea. Com as viagens internacionais travadas pela pandemia, a Mitsubishi lançou uma companhia de viagens fictícia chamada MIT Drivelines, convidando os brasileiros a descobrir o país de carro, com o conforto e a tecnologia de um veículo premium no lugar do assento de primeira classe.
 
 "Comissárias" apresentavam roteiros de viagem por estrada selecionados pelo Brasil (aventura, cultura, comida, família), acessíveis por um hotsite dedicado, onde os proprietários também desbloqueavam benefícios com parceiros em hotéis e restaurantes ao longo das rotas.
 

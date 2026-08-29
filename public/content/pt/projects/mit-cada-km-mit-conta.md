@@ -28,7 +28,7 @@ A aventura de dirigir uma Mitsubishi podia virar cuidado de verdade. Cada quilô
 
 ## A Campanha
 
-Pra cada quilômetro rodado, R$1 era doado à SAS Brasil. Bastava postar uma foto do painel da Mitsubishi com a hashtag #CadaKmMitConta. A jornada dos pilotos pelo sertão virou uma corrida coletiva por mais atendimento médico nas regiões mais remotas do país.
+A cada 10 mil quilômetros rodados, R$1 era doado à SAS Brasil. Bastava postar uma foto do painel da Mitsubishi com a hashtag #CadaKmMitConta. A jornada dos pilotos pelo sertão virou uma corrida coletiva por mais atendimento médico nas regiões mais remotas do país.
 
 [video](https://vimeo.com/625822810)
 

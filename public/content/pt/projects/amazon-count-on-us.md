@@ -34,7 +34,7 @@ A chegada oficial da Amazon ao Brasil exigia uma mensagem inconfundível: a marc
 
 ## A Campanha
 
-Um filme manifesto de 45 segundos, seguido de quatro filmes de 15 segundos, cada um construído em torno de um cliente diferente: Vovô, Mãe, Gamer, Menina, quatro razões diferentes para confiar na mesma marca.
+Um filme manifesto de 45 segundos, seguido de quatro filmes de 15 segundos, cada um construído em torno de um cliente diferente: Vovô, Mãe, Gamer, Menina. Quatro razões diferentes para confiar na mesma marca.
 
 [video](https://vimeo.com/315120054)
 

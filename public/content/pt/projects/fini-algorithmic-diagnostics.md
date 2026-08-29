@@ -63,4 +63,4 @@ Duas regras reconstruíram o pipeline:
 ~3M | visualizações orgânicas de uma parceria com creator (Rafa Baricala)
 :::
 
-**Escala orgânica massiva:** uma única parceria com creator, Rafa Baricala, trouxe quase 3 milhões de visualizações orgânicas com taxa de engajamento acima de 8%, sem nenhuma verba de mídia paga por trás. E o time ganhou algo que não tinha há meses: tempo pra pensar de verdade, em vez de só produzir.
+**Escala orgânica massiva:** uma única parceria com creator, Rafa Baricala, trouxe quase 3 milhões de visualizações orgânicas com taxa de engajamento acima de 8%, sem nenhuma verba de mídia paga por trás. E o time recuperou o que tinha perdido: não só tempo pra pensar, mas a diversão de criar solto de novo, do jeito que a marca sempre soou.

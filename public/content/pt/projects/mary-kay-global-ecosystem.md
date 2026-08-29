@@ -18,7 +18,7 @@ description: >-
   O sistema criativo full-funnel que rejuvenesceu a marca.
 ---
 
-A Mary Kay Brasil precisava conquistar a Gen Z sem abrir mão do acabamento que uma marca global de beleza não pode perder. O problema não era falta de ideias: era a máquina por trás delas. A produção era centralizada, lenta e cara: feita pra preencher um calendário, não pra construir uma comunidade.
+A Mary Kay Brasil precisava conquistar a Gen Z sem perder o padrão que uma marca global de beleza não pode abrir mão. O problema não era falta de ideias: era a máquina por trás delas. A produção era centralizada, lenta e cara: feita pra preencher um calendário, não pra construir uma comunidade.
 
 [video autoplay](https://vimeo.com/1198004054?fl=tl&fe=ec "First Things First: Social Playbook")
 
@@ -30,7 +30,7 @@ A Mary Kay Brasil precisava conquistar a Gen Z sem abrir mão do acabamento que 
 
 ## O Diagnóstico
 
-Mapeei o funil inteiro: o que fazíamos, com que velocidade, e o que acontecia depois que ia ao ar. O padrão era claro: conteúdo com qualidade de estúdio não conseguia acompanhar a velocidade das plataformas, e essa distância estava custando relevância e dinheiro pra marca. O objetivo não era fazer mais conteúdo. Era construir um sistema onde volume, margem apertada e relevância cultural pudessem coexistir.
+Mapeei o funil inteiro: o que fazíamos, com que velocidade, e o que acontecia depois que ia ao ar. O padrão era claro: conteúdo com qualidade de estúdio não conseguia acompanhar a velocidade das plataformas, e isso estava custando relevância e dinheiro pra marca. O objetivo não era fazer mais conteúdo. Era construir um sistema onde volume, margem apertada e relevância cultural andassem juntos.
 
 :::gallery
 ![](https://assets.pinotti.work/assets-v1/d2fc8e90-4c78-4882-b3a3-5b04f4793b21/tiktok_marykaybrasil_7423790208056823046_yokvw3.mp4?cb=1)
@@ -42,7 +42,7 @@ Mapeei o funil inteiro: o que fazíamos, com que velocidade, e o que acontecia d
 
 ## A Arquitetura
 
-Como Head de Operações Criativas, reconstruí o modelo do zero. Em vez de um único pipeline de estúdio, rodei dois em paralelo: produção de design de alto nível junto com uma rede de creators mobile gravando conteúdo nativo, estilo UGC: o tipo que as plataformas realmente premiam.
+Como Head de Operações Criativas, reconstruí o modelo do zero. Em vez de um único pipeline de estúdio, rodei dois em paralelo: produção de design de alto nível e uma rede de creators mobile gravando conteúdo nativo, estilo UGC, o tipo que as plataformas realmente premiam.
 
 :::gallery
 ![](https://assets.pinotti.work/assets-v1/4ebad2c9-a355-4442-95f5-b2b4e4a32f4e/tiktok_marykaybrasil_7498406125818203397_sc5hrk.mp4?cb=1)
@@ -65,11 +65,11 @@ Também levei o cliente pra dentro da pré-produção em vez de só revisar o co
 #1 | conta de TikTok: Mary Kay no mundo
 :::
 
-3,4 milhões de interações orgânicas em 2025. Audiência Gen Z crescendo 75%. O sistema provou sua relevância sem depender de mídia paga, e manteve as margens saudáveis com o volume de produção subindo, não caindo.
+3,4 milhões de interações orgânicas em 2025. Audiência Gen Z crescendo 75%. O sistema provou sua relevância sem depender de mídia paga, e manteve a margem saudável com a produção subindo, não caindo.
 
 [video](https://player.vimeo.com/video/1197811675?h=99f788aaef "Recap 2025")
 
-Além dos números, foi esse sistema que tornou possível a "Live de Batom por Elas": a campanha que transformou a própria força de vendas da Mary Kay Brasil num Guinness World Record. A conta de TikTok da Mary Kay Brasil hoje é a #1 da marca no mundo. Não o maior mercado. O mais bem gerido.
+Além dos números, foi esse sistema que tornou possível a "Live de Batom por Elas": a campanha que transformou a própria força de vendas da Mary Kay Brasil num Guinness World Record. A conta de TikTok da Mary Kay Brasil hoje é a #1 da marca no mundo.
 
 :::gallery
 ![](https://assets.pinotti.work/assets-v1/676ed472-48f0-487f-9da2-bda81ac1116b/CRUSH_FEED_MATERIA_MK_01_ywyh6e.png?cb=1)

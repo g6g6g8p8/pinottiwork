@@ -33,7 +33,7 @@ The consultants didn't need to be the audience. They needed to be the show.
 
 ## The Campaign
 
-"Live de Batom por Elas" ("Lipstick Live, By Them") put Mary Kay's consultants at the center of a single, coordinated broadcast — in partnership with Instituto Fala Mulher, tying the event to a cause bigger than the brand itself. As Creative Director and Head of Creative Operations, I led the strategy and content direction, building a pipeline that let the consultants carry the moment instead of just appearing in it.
+"Live de Batom por Elas" ("Lipstick Live, By Them") put Mary Kay's consultants at the center of a single, coordinated broadcast, timed alongside the brand's biggest live event of the year, with National Sales Directors fronting the campaign as ambassadors. The mechanic made the cause literal: every wave of participation converted directly into support for women, in partnership with Instituto Protea and Associação Fala Mulher. As Creative Director and Head of Creative Operations, I led the strategy and content direction.
 
 :::gallery
 ![](https://assets.pinotti.work/assets-v1/a3dd75ce-3cb2-4b1f-9dbd-9a6d14bb561c/depimentos_smiiq4.mp4?cb=1)
@@ -42,7 +42,7 @@ The consultants didn't need to be the audience. They needed to be the show.
 :::
 
 - **Content Orchestration:** We structured the creative pipeline around the consultants, keeping strategy and content perfectly aligned with the brand's business goals.
-- **Community Protagonism:** The system let consultants lead the live event itself — turning a creative strategy into a genuine community mobilization.
+- **Community Protagonism:** The system let consultants lead the live event itself, turning a creative strategy into a genuine community mobilization.
 
 :::gallery
 ![](https://assets.pinotti.work/assets-v1/55f79578-e8fc-4f6e-aa6f-3fe45c7dce40/S01_15.12_REELS_Impacto_vxlvpr.mp4?cb=1)
@@ -50,12 +50,12 @@ The consultants didn't need to be the audience. They needed to be the show.
 
 ## The Impact (The Results)
 
-3,000 independent consultants went live at the same time, on the same broadcast — enough to close a highly successful 3-year run on the account with an official Guinness World Records title.
+3,000 independent consultants applied lipstick at the same time, on the same broadcast — an officially audited Guinness World Records title.
 
 :::gallery
 ![](https://assets.pinotti.work/assets-v1/720f7266-0159-4e4d-98d1-7f2fae05d03a/S02_12.12_REELS_Entrega_zo5xb0.mp4?cb=1)
 :::
 
-- **Global Milestone:** 3,000 independent consultants live at once, earning Mary Kay Brazil an official Guinness World Records title.
-- **Community Mobilization:** Proof that the operation could mobilize its own sales force at a scale no paid campaign could buy.
+- **Global Milestone:** 3,000 participants live at once, earning Mary Kay Brazil an official Guinness World Records title.
+- **Real Support:** The record converted into 120 complete legal, psychological and social support services for women, delivered through Associação Fala Mulher.
 - **Brand Authority:** An international credential Mary Kay's global network could point to directly — not a claim, a record.

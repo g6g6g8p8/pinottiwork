@@ -28,7 +28,7 @@ The adventure of driving a Mitsubishi could turn into real care. Every kilometer
 
 ## The Campaign
 
-For every kilometer driven, R$1 was donated to SAS Brasil. All it took was posting a photo of the Mitsubishi dashboard with the hashtag #CadaKmMitConta (EveryMitMileCounts). The drivers' journey through the backlands turned into a collective race for more medical care in the country's most remote regions.
+For every 10,000 kilometers driven, R$1 was donated to SAS Brasil. All it took was posting a photo of the Mitsubishi dashboard with the hashtag #CadaKmMitConta (EveryMitMileCounts). The drivers' journey through the backlands turned into a collective race for more medical care in the country's most remote regions.
 
 [video](https://vimeo.com/625822810)
 

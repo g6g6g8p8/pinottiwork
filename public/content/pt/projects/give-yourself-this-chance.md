@@ -25,4 +25,4 @@ A tecnologia e a segurança de bordo fazem o argumento: primeiro um veículo do 
 ![](https://assets.pinotti.work/assets-v1/ec588b8c-9c22-4a0b-8cc2-ca30485b5fe9/3_zwzql7.mov?cb=1)
 :::
 
-Rodou em TV, mídia externa e digital: um único filme, feito pra parecer que foi criado pra quem quer que estivesse assistindo, uma família, um jovem motorista, alguém que nunca tinha considerado uma picape até essa.
+Rodou em TV, mídia externa e digital: um único filme, feito pra parecer que foi criado pra quem quer que estivesse assistindo. Uma família, um jovem motorista, alguém que nunca tinha considerado uma picape até essa.

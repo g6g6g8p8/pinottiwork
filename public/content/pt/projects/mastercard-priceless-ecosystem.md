@@ -58,7 +58,7 @@ Pra mim, essa foi uma das primeiras peças na conta, e uma que deixou claro o qu
 
 Em 2019, a Mastercard criou seu primeiro festival de jazz no Brasil, um evento gratuito de dois dias no Auditório Ibirapuera, com um line-up misturando nomes internacionais como Christian Scott aTunde Adjuah com novas vozes brasileiras como Bixiga 70 e Xênia França.
 
-O briefing da campanha era claro: não parecer um patrocínio corporativo. Parecer a própria música.
+O briefing da campanha era claro: não parecer um patrocínio corporativo. Parecer parte do line-up.
 
 Construímos a campanha em torno de retratos do fotógrafo **Maurício Nahas**: enquadramentos com granulado, movimento, e uma energia moderna que conversava tanto com puristas de jazz quanto com públicos mais jovens descobrindo o gênero através das plataformas digitais.
 
