@@ -1,6 +1,6 @@
 ---
 id: 2
-title: Dê essa chance a você mesmo
+title: Dê essa chance pra você
 slug: give-yourself-this-chance
 client: Mitsubishi Motors
 role: Senior Art Director
